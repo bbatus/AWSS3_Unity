@@ -1,0 +1,871 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.KinesisVideoWebRTCStorage</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig">
+            <summary>
+            Configuration for accessing Amazon KinesisVideoWebRTCStorage service
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon KinesisVideoWebRTCStorage service
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            KinesisVideoWebRTCStorage
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters">
+            <summary>
+            Contains parameters used for resolving KinesisVideoWebRTCStorage endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal KinesisVideoWebRTCStorageEndpointProvider and KinesisVideoWebRTCStorageEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters.#ctor">
+            <summary>
+            KinesisVideoWebRTCStorageEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Endpoints.KinesisVideoWebRTCStorageEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException">
+            <summary>
+             Common exception for the KinesisVideoWebRTCStorage service.
+             </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonKinesisVideoWebRTCStorageException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonKinesisVideoWebRTCStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonKinesisVideoWebRTCStorageException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonKinesisVideoWebRTCStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonKinesisVideoWebRTCStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageEndpointProvider">
+            <summary>
+            Amazon KinesisVideoWebRTCStorage endpoint provider.
+            Resolves endpoint for given set of KinesisVideoWebRTCStorageEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for KinesisVideoWebRTCStorageEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageEndpointResolver">
+            <summary>
+            Amazon KinesisVideoWebRTCStorage endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for KinesisVideoWebRTCStorage service requests.
+            Collects values for KinesisVideoWebRTCStorageEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses KinesisVideoWebRTCStorageEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageMetadata">
+            <summary>
+            Service metadata for  Amazon KinesisVideoWebRTCStorage service
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Internal.AmazonKinesisVideoWebRTCStorageMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException">
+            <summary>
+            You do not have required permissions to perform this operation.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException">
+            <summary>
+            Kinesis Video Streams has throttled the request because you have exceeded the limit
+            of allowed client calls. Try making the call later.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ClientLimitExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ClientLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ClientLimitExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ClientLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ClientLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ClientLimitExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ClientLimitExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ClientLimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ClientLimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ClientLimitExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.InvalidArgumentExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidArgumentException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.InvalidArgumentExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.InvalidArgumentExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.InvalidArgumentExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionRequestMarshaller">
+            <summary>
+            JoinStorageSession Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionRequestMarshaller.Marshall(Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for JoinStorageSession operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.JoinStorageSessionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException">
+            <summary>
+            The value for this input parameter is invalid.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidArgumentException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidArgumentException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionRequest">
+            <summary>
+            Container for the parameters to the JoinStorageSession operation.
+            Join the ongoing one way-video and/or multi-way audio WebRTC session as a video producing
+            device for an input channel. If there’s no existing session for the channel, a new
+            streaming session needs to be created, and the Amazon Resource Name (ARN) of the signaling
+            channel must be provided. 
+            
+             
+            <para>
+            Currently for the <code>SINGLE_MASTER</code> type, a video producing device is able
+            to ingest both audio and video media into a stream, while viewers can only ingest
+            audio. Both a video producing device and viewers can join the session first, and wait
+            for other participants.
+            </para>
+             
+            <para>
+            While participants are having peer to peer conversations through webRTC, the ingested
+            media session will be stored into the Kinesis Video Stream. Multiple viewers are able
+            to playback real-time media.
+            </para>
+             
+            <para>
+            Customers can also use existing Kinesis Video Streams features like <code>HLS</code>
+            or <code>DASH</code> playback, Image generation, and more with ingested WebRTC media.
+            </para>
+             <note> 
+            <para>
+            Assume that only one video producing device client can be associated with a session
+            for the channel. If more than one client joins the session of a specific channel as
+            a video producing device, the most recent client request takes precedence. 
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionRequest.ChannelArn">
+            <summary>
+            Gets and sets the property ChannelArn. 
+            <para>
+             The Amazon Resource Name (ARN) of the signaling channel. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionResponse">
+            <summary>
+            This is the response object from the JoinStorageSession operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource is not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageRequest">
+            <summary>
+            Base class for KinesisVideoWebRTCStorage operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient">
+             <summary>
+             Implementation for accessing KinesisVideoWebRTCStorage
+            
+             
+             </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor">
+             <summary>
+             Constructs AmazonKinesisVideoWebRTCStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonKinesisVideoWebRTCStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig)">
+             <summary>
+             Constructs AmazonKinesisVideoWebRTCStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonKinesisVideoWebRTCStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Credentials and an
+            AmazonKinesisVideoWebRTCStorageClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonKinesisVideoWebRTCStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String,Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonKinesisVideoWebRTCStorageClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonKinesisVideoWebRTCStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.#ctor(System.String,System.String,System.String,Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageConfig)">
+            <summary>
+            Constructs AmazonKinesisVideoWebRTCStorageClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonKinesisVideoWebRTCStorageClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonKinesisVideoWebRTCStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.JoinStorageSessionAsync(Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Join the ongoing one way-video and/or multi-way audio WebRTC session as a video producing
+            device for an input channel. If there’s no existing session for the channel, a new
+            streaming session needs to be created, and the Amazon Resource Name (ARN) of the signaling
+            channel must be provided. 
+            
+             
+            <para>
+            Currently for the <code>SINGLE_MASTER</code> type, a video producing device is able
+            to ingest both audio and video media into a stream, while viewers can only ingest
+            audio. Both a video producing device and viewers can join the session first, and wait
+            for other participants.
+            </para>
+             
+            <para>
+            While participants are having peer to peer conversations through webRTC, the ingested
+            media session will be stored into the Kinesis Video Stream. Multiple viewers are able
+            to playback real-time media.
+            </para>
+             
+            <para>
+            Customers can also use existing Kinesis Video Streams features like <code>HLS</code>
+            or <code>DASH</code> playback, Image generation, and more with ingested WebRTC media.
+            </para>
+             <note> 
+            <para>
+            Assume that only one video producing device client can be associated with a session
+            for the channel. If more than one client joins the session of a specific channel as
+            a video producing device, the most recent client request takes precedence. 
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the JoinStorageSession service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the JoinStorageSession service method, as returned by KinesisVideoWebRTCStorage.</returns>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException">
+            You do not have required permissions to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException">
+            Kinesis Video Streams has throttled the request because you have exceeded the limit
+            of allowed client calls. Try making the call later.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException">
+            The value for this input parameter is invalid.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException">
+            The specified resource is not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-webrtc-storage-2018-05-10/JoinStorageSession">REST API Reference for JoinStorageSession Operation</seealso>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.AmazonKinesisVideoWebRTCStorageClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.KinesisVideoWebRTCStorage.IAmazonKinesisVideoWebRTCStorage">
+             <summary>
+             Interface for accessing KinesisVideoWebRTCStorage
+            
+             
+             </summary>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.IAmazonKinesisVideoWebRTCStorage.JoinStorageSessionAsync(Amazon.KinesisVideoWebRTCStorage.Model.JoinStorageSessionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Join the ongoing one way-video and/or multi-way audio WebRTC session as a video producing
+            device for an input channel. If there’s no existing session for the channel, a new
+            streaming session needs to be created, and the Amazon Resource Name (ARN) of the signaling
+            channel must be provided. 
+            
+             
+            <para>
+            Currently for the <code>SINGLE_MASTER</code> type, a video producing device is able
+            to ingest both audio and video media into a stream, while viewers can only ingest
+            audio. Both a video producing device and viewers can join the session first, and wait
+            for other participants.
+            </para>
+             
+            <para>
+            While participants are having peer to peer conversations through webRTC, the ingested
+            media session will be stored into the Kinesis Video Stream. Multiple viewers are able
+            to playback real-time media.
+            </para>
+             
+            <para>
+            Customers can also use existing Kinesis Video Streams features like <code>HLS</code>
+            or <code>DASH</code> playback, Image generation, and more with ingested WebRTC media.
+            </para>
+             <note> 
+            <para>
+            Assume that only one video producing device client can be associated with a session
+            for the channel. If more than one client joins the session of a specific channel as
+            a video producing device, the most recent client request takes precedence. 
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the JoinStorageSession service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the JoinStorageSession service method, as returned by KinesisVideoWebRTCStorage.</returns>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.AccessDeniedException">
+            You do not have required permissions to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.ClientLimitExceededException">
+            Kinesis Video Streams has throttled the request because you have exceeded the limit
+            of allowed client calls. Try making the call later.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.InvalidArgumentException">
+            The value for this input parameter is invalid.
+            </exception>
+            <exception cref="T:Amazon.KinesisVideoWebRTCStorage.Model.ResourceNotFoundException">
+            The specified resource is not found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-video-webrtc-storage-2018-05-10/JoinStorageSession">REST API Reference for JoinStorageSession Operation</seealso>
+        </member>
+        <member name="M:Amazon.KinesisVideoWebRTCStorage.IAmazonKinesisVideoWebRTCStorage.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

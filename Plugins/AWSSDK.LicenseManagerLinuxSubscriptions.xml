@@ -1,0 +1,1835 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.LicenseManagerLinuxSubscriptions</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig">
+            <summary>
+            Configuration for accessing Amazon LicenseManagerLinuxSubscriptions service
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon LicenseManagerLinuxSubscriptions service
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            LicenseManagerLinuxSubscriptions
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters">
+            <summary>
+            Contains parameters used for resolving LicenseManagerLinuxSubscriptions endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal LicenseManagerLinuxSubscriptionsEndpointProvider and LicenseManagerLinuxSubscriptionsEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters.#ctor">
+            <summary>
+            LicenseManagerLinuxSubscriptionsEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Endpoints.LicenseManagerLinuxSubscriptionsEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException">
+            <summary>
+             Common exception for the LicenseManagerLinuxSubscriptions service.
+             </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonLicenseManagerLinuxSubscriptionsException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonLicenseManagerLinuxSubscriptionsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonLicenseManagerLinuxSubscriptionsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonLicenseManagerLinuxSubscriptionsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonLicenseManagerLinuxSubscriptionsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsEndpointProvider">
+            <summary>
+            Amazon LicenseManagerLinuxSubscriptions endpoint provider.
+            Resolves endpoint for given set of LicenseManagerLinuxSubscriptionsEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for LicenseManagerLinuxSubscriptionsEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsEndpointResolver">
+            <summary>
+            Amazon LicenseManagerLinuxSubscriptions endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for LicenseManagerLinuxSubscriptions service requests.
+            Collects values for LicenseManagerLinuxSubscriptionsEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses LicenseManagerLinuxSubscriptionsEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsMetadata">
+            <summary>
+            Service metadata for  Amazon LicenseManagerLinuxSubscriptions service
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Internal.AmazonLicenseManagerLinuxSubscriptionsMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsRequest">
+            <summary>
+            Base class for LicenseManagerLinuxSubscriptions operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Filter">
+            <summary>
+            A filter object that is used to return more specific results from a describe operation.
+            Filters can be used to match a set of resources by specific criteria.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Filter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The type of name to filter by.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Filter.Operator">
+            <summary>
+            Gets and sets the property Operator. 
+            <para>
+            An operator for filtering results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Filter.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+            One or more values for the name to filter by.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsRequest">
+            <summary>
+            Container for the parameters to the GetServiceSettings operation.
+            Lists the Linux subscriptions service settings.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse">
+            <summary>
+            This is the response object from the GetServiceSettings operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse.HomeRegions">
+            <summary>
+            Gets and sets the property HomeRegions. 
+            <para>
+            The Region in which License Manager displays the aggregated data for Linux subscriptions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse.LinuxSubscriptionsDiscovery">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscovery. 
+            <para>
+            Lists if discovery has been enabled for Linux subscriptions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse.LinuxSubscriptionsDiscoverySettings">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscoverySettings. 
+            <para>
+            Lists the settings defined for Linux subscriptions discovery. The settings include
+            if Organizations integration has been enabled, and which Regions data will be aggregated
+            from.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            Indicates the status of Linux subscriptions settings being applied.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsResponse.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            A message which details the Linux subscriptions service settings current status.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance">
+            <summary>
+            Details discovered information about a running instance using Linux subscriptions.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.AccountID">
+            <summary>
+            Gets and sets the property AccountID. 
+            <para>
+            The account ID which owns the instance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.AmiId">
+            <summary>
+            Gets and sets the property AmiId. 
+            <para>
+            The AMI ID used to launch the instance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.InstanceID">
+            <summary>
+            Gets and sets the property InstanceID. 
+            <para>
+            The instance ID of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.InstanceType">
+            <summary>
+            Gets and sets the property InstanceType. 
+            <para>
+            The instance type of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.LastUpdatedTime">
+            <summary>
+            Gets and sets the property LastUpdatedTime. 
+            <para>
+            The time in which the last discovery updated the instance details.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.ProductCode">
+            <summary>
+            Gets and sets the property ProductCode. 
+            <para>
+            The product code for the instance. For more information, see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/linux-subscriptions-usage-operation.html">Usage
+            operation values</a> in the <i>License Manager User Guide</i> .
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.Region">
+            <summary>
+            Gets and sets the property Region. 
+            <para>
+            The Region the instance is running in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the instance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.SubscriptionName">
+            <summary>
+            Gets and sets the property SubscriptionName. 
+            <para>
+            The name of the subscription being used by the instance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Instance.UsageOperation">
+            <summary>
+            Gets and sets the property UsageOperation. 
+            <para>
+            The usage operation of the instance. For more information, see For more information,
+            see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/linux-subscriptions-usage-operation.html">Usage
+            operation values</a> in the <i>License Manager User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            <summary>
+            An exception occurred with the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.FilterMarshaller">
+            <summary>
+            Filter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.FilterMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.Filter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.FilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsRequestMarshaller">
+            <summary>
+            GetServiceSettings Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsRequestMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetServiceSettings operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.GetServiceSettingsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InstanceUnmarshaller">
+            <summary>
+            Response Unmarshaller for Instance Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InstanceUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LicenseManagerLinuxSubscriptions#Model#Instance,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InstanceUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InstanceUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsMarshaller">
+            <summary>
+            LinuxSubscriptionsDiscoverySettings Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.LinuxSubscriptionsDiscoverySettings,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsUnmarshaller">
+            <summary>
+            Response Unmarshaller for LinuxSubscriptionsDiscoverySettings Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LicenseManagerLinuxSubscriptions#Model#LinuxSubscriptionsDiscoverySettings,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.LinuxSubscriptionsDiscoverySettingsUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesRequestMarshaller">
+            <summary>
+            ListLinuxSubscriptionInstances Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesRequestMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListLinuxSubscriptionInstances operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionInstancesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsRequestMarshaller">
+            <summary>
+            ListLinuxSubscriptions Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsRequestMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListLinuxSubscriptions operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ListLinuxSubscriptionsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Subscription Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#LicenseManagerLinuxSubscriptions#Model#Subscription,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.SubscriptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsRequestMarshaller">
+            <summary>
+            UpdateServiceSettings Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsRequestMarshaller.Marshall(Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateServiceSettings operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.UpdateServiceSettingsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.LinuxSubscriptionsDiscoverySettings">
+            <summary>
+            Lists the settings defined for discovering Linux subscriptions.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.LinuxSubscriptionsDiscoverySettings.OrganizationIntegration">
+            <summary>
+            Gets and sets the property OrganizationIntegration. 
+            <para>
+            Details if you have enabled resource discovery across your accounts in Organizations.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.LinuxSubscriptionsDiscoverySettings.SourceRegions">
+            <summary>
+            Gets and sets the property SourceRegions. 
+            <para>
+            The Regions in which to discover data for Linux subscriptions.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest">
+            <summary>
+            Container for the parameters to the ListLinuxSubscriptionInstances operation.
+            Lists the running Amazon EC2 instances that were discovered with commercial Linux
+            subscriptions.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+            An array of structures that you can use to filter the results to those that match
+            one or more sets of key-value pairs that you specify. For example, you can filter
+            by the name of <code>AmiID</code> with an optional operator to see subscriptions that
+            match, partially match, or don't match a certain Amazon Machine Image (AMI) ID.
+            </para>
+             
+            <para>
+            The valid names for this filter are:
+            </para>
+             <ul> <li> 
+            <para>
+             <code>AmiID</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>InstanceID</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>AccountID</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>Status</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>Region</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>UsageOperation</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>ProductCode</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>InstanceType</code> 
+            </para>
+             </li> </ul> 
+            <para>
+            The valid Operators for this filter are:
+            </para>
+             <ul> <li> 
+            <para>
+             <code>contains</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>equals</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>Notequal</code> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            Maximum number of results to return in a single call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Token for the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesResponse">
+            <summary>
+            This is the response object from the ListLinuxSubscriptionInstances operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesResponse.Instances">
+            <summary>
+            Gets and sets the property Instances. 
+            <para>
+            An array that contains instance objects.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Token for the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest">
+            <summary>
+            Container for the parameters to the ListLinuxSubscriptions operation.
+            Lists the Linux subscriptions that have been discovered. If you have linked your organization,
+            the returned results will include data aggregated across your accounts in Organizations.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+            An array of structures that you can use to filter the results to those that match
+            one or more sets of key-value pairs that you specify. For example, you can filter
+            by the name of <code>Subscription</code> with an optional operator to see subscriptions
+            that match, partially match, or don't match a certain subscription's name.
+            </para>
+             
+            <para>
+            The valid names for this filter are:
+            </para>
+             <ul> <li> 
+            <para>
+             <code>Subscription</code> 
+            </para>
+             </li> </ul> 
+            <para>
+            The valid Operators for this filter are:
+            </para>
+             <ul> <li> 
+            <para>
+             <code>contains</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>equals</code> 
+            </para>
+             </li> <li> 
+            <para>
+             <code>Notequal</code> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            Maximum number of results to return in a single call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Token for the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsResponse">
+            <summary>
+            This is the response object from the ListLinuxSubscriptions operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Token for the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsResponse.Subscriptions">
+            <summary>
+            Gets and sets the property Subscriptions. 
+            <para>
+            An array that contains subscription objects.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.Subscription">
+            <summary>
+            An object which details a discovered Linux subscription.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Subscription.InstanceCount">
+            <summary>
+            Gets and sets the property InstanceCount. 
+            <para>
+            The total amount of running instances using this subscription.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Subscription.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the subscription.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.Subscription.Type">
+            <summary>
+            Gets and sets the property Type. 
+            <para>
+            The type of subscription. The type can be subscription-included with Amazon EC2, Bring
+            Your Own Subscription model (BYOS), or from the Amazon Web Services Marketplace. Certain
+            subscriptions may use licensing from the Amazon Web Services Marketplace as well as
+            OS licensing from Amazon EC2 or BYOS.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest">
+            <summary>
+            Container for the parameters to the UpdateServiceSettings operation.
+            Updates the service settings for Linux subscriptions.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest.AllowUpdate">
+            <summary>
+            Gets and sets the property AllowUpdate. 
+            <para>
+            Describes if updates are allowed to the service settings for Linux subscriptions.
+            If you allow updates, you can aggregate Linux subscription data in more than one home
+            Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest.LinuxSubscriptionsDiscovery">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscovery. 
+            <para>
+            Describes if the discovery of Linux subscriptions is enabled.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest.LinuxSubscriptionsDiscoverySettings">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscoverySettings. 
+            <para>
+            The settings defined for Linux subscriptions discovery. The settings include if Organizations
+            integration has been enabled, and which Regions data will be aggregated from.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse">
+            <summary>
+            This is the response object from the UpdateServiceSettings operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse.HomeRegions">
+            <summary>
+            Gets and sets the property HomeRegions. 
+            <para>
+            The Region in which License Manager displays the aggregated data for Linux subscriptions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse.LinuxSubscriptionsDiscovery">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscovery. 
+            <para>
+            Lists if discovery has been enabled for Linux subscriptions.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse.LinuxSubscriptionsDiscoverySettings">
+            <summary>
+            Gets and sets the property LinuxSubscriptionsDiscoverySettings. 
+            <para>
+            The settings defined for Linux subscriptions discovery. The settings include if Organizations
+            integration has been enabled, and which Regions data will be aggregated from.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            Indicates the status of Linux subscriptions settings being applied.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsResponse.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            A message which details the Linux subscriptions service settings current status.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            <summary>
+            The provided input is not valid. Try your request again.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ILicenseManagerLinuxSubscriptionsPaginatorFactory">
+             <summary>
+             Paginators for the LicenseManagerLinuxSubscriptions service
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ILicenseManagerLinuxSubscriptionsPaginatorFactory.ListLinuxSubscriptionInstances(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest)">
+             <summary>
+             Paginator for ListLinuxSubscriptionInstances operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.ILicenseManagerLinuxSubscriptionsPaginatorFactory.ListLinuxSubscriptions(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest)">
+             <summary>
+             Paginator for ListLinuxSubscriptions operation
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionInstancesPaginator">
+             <summary>
+             Paginator for the ListLinuxSubscriptionInstances operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionInstancesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionInstancesPaginator.Instances">
+            <summary>
+            Enumerable containing all of the Instances
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionsPaginator">
+             <summary>
+             Paginator for the ListLinuxSubscriptions operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.IListLinuxSubscriptionsPaginator.Subscriptions">
+            <summary>
+            Enumerable containing all of the Subscriptions
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.LicenseManagerLinuxSubscriptionsPaginatorFactory">
+             <summary>
+             Paginators for the LicenseManagerLinuxSubscriptions service
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.LicenseManagerLinuxSubscriptionsPaginatorFactory.ListLinuxSubscriptionInstances(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest)">
+             <summary>
+             Paginator for ListLinuxSubscriptionInstances operation
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Model.LicenseManagerLinuxSubscriptionsPaginatorFactory.ListLinuxSubscriptions(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest)">
+             <summary>
+             Paginator for ListLinuxSubscriptions operation
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesPaginator">
+            <summary>
+            Base class for ListLinuxSubscriptionInstances paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesPaginator.Instances">
+            <summary>
+            Enumerable containing all of the Instances
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsPaginator">
+            <summary>
+            Base class for ListLinuxSubscriptions paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsPaginator.Subscriptions">
+            <summary>
+            Enumerable containing all of the Subscriptions
+            </summary>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery">
+            <summary>
+            Constants used for properties of type LinuxSubscriptionsDiscovery.
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery.Disabled">
+            <summary>
+            Constant Disabled for LinuxSubscriptionsDiscovery
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery.Enabled">
+            <summary>
+            Constant Enabled for LinuxSubscriptionsDiscovery
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery.op_Implicit(System.String)~Amazon.LicenseManagerLinuxSubscriptions.LinuxSubscriptionsDiscovery">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Operator">
+            <summary>
+            Constants used for properties of type Operator.
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Operator.Contains">
+            <summary>
+            Constant Contains for Operator
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Operator.Equal">
+            <summary>
+            Constant Equal for Operator
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Operator.NotEqual">
+            <summary>
+            Constant NotEqual for Operator
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Operator.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Operator.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Operator.op_Implicit(System.String)~Amazon.LicenseManagerLinuxSubscriptions.Operator">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration">
+            <summary>
+            Constants used for properties of type OrganizationIntegration.
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration.Disabled">
+            <summary>
+            Constant Disabled for OrganizationIntegration
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration.Enabled">
+            <summary>
+            Constant Enabled for OrganizationIntegration
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration.op_Implicit(System.String)~Amazon.LicenseManagerLinuxSubscriptions.OrganizationIntegration">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.Status">
+            <summary>
+            Constants used for properties of type Status.
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Status.Completed">
+            <summary>
+            Constant Completed for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Status.Failed">
+            <summary>
+            Constant Failed for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Status.InProgress">
+            <summary>
+            Constant InProgress for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.LicenseManagerLinuxSubscriptions.Status.Successful">
+            <summary>
+            Constant Successful for Status
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Status.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Status.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.Status.op_Implicit(System.String)~Amazon.LicenseManagerLinuxSubscriptions.Status">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient">
+             <summary>
+             Implementation for accessing LicenseManagerLinuxSubscriptions
+            
+             With License Manager, you can discover and track your commercial Linux subscriptions
+             on running Amazon EC2 instances.
+             </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor">
+             <summary>
+             Constructs AmazonLicenseManagerLinuxSubscriptionsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonLicenseManagerLinuxSubscriptionsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig)">
+             <summary>
+             Constructs AmazonLicenseManagerLinuxSubscriptionsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonLicenseManagerLinuxSubscriptionsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Credentials and an
+            AmazonLicenseManagerLinuxSubscriptionsClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonLicenseManagerLinuxSubscriptionsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String,Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonLicenseManagerLinuxSubscriptionsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonLicenseManagerLinuxSubscriptionsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.#ctor(System.String,System.String,System.String,Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsConfig)">
+            <summary>
+            Constructs AmazonLicenseManagerLinuxSubscriptionsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonLicenseManagerLinuxSubscriptionsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonLicenseManagerLinuxSubscriptionsClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.GetServiceSettingsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Linux subscriptions service settings.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetServiceSettings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetServiceSettings service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetServiceSettings">REST API Reference for GetServiceSettings Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.ListLinuxSubscriptionInstancesAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the running Amazon EC2 instances that were discovered with commercial Linux
+            subscriptions.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListLinuxSubscriptionInstances service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListLinuxSubscriptionInstances service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListLinuxSubscriptionInstances">REST API Reference for ListLinuxSubscriptionInstances Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.ListLinuxSubscriptionsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Linux subscriptions that have been discovered. If you have linked your organization,
+            the returned results will include data aggregated across your accounts in Organizations.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListLinuxSubscriptions service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListLinuxSubscriptions service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListLinuxSubscriptions">REST API Reference for ListLinuxSubscriptions Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.UpdateServiceSettingsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates the service settings for Linux subscriptions.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateServiceSettings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateServiceSettings service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UpdateServiceSettings">REST API Reference for UpdateServiceSettings Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.AmazonLicenseManagerLinuxSubscriptionsClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions">
+             <summary>
+             Interface for accessing LicenseManagerLinuxSubscriptions
+            
+             With License Manager, you can discover and track your commercial Linux subscriptions
+             on running Amazon EC2 instances.
+             </summary>
+        </member>
+        <member name="P:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.GetServiceSettingsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.GetServiceSettingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Linux subscriptions service settings.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetServiceSettings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetServiceSettings service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/GetServiceSettings">REST API Reference for GetServiceSettings Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.ListLinuxSubscriptionInstancesAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionInstancesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the running Amazon EC2 instances that were discovered with commercial Linux
+            subscriptions.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListLinuxSubscriptionInstances service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListLinuxSubscriptionInstances service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListLinuxSubscriptionInstances">REST API Reference for ListLinuxSubscriptionInstances Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.ListLinuxSubscriptionsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.ListLinuxSubscriptionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Linux subscriptions that have been discovered. If you have linked your organization,
+            the returned results will include data aggregated across your accounts in Organizations.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListLinuxSubscriptions service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListLinuxSubscriptions service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/ListLinuxSubscriptions">REST API Reference for ListLinuxSubscriptions Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.UpdateServiceSettingsAsync(Amazon.LicenseManagerLinuxSubscriptions.Model.UpdateServiceSettingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates the service settings for Linux subscriptions.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateServiceSettings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateServiceSettings service method, as returned by LicenseManagerLinuxSubscriptions.</returns>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.InternalServerException">
+            An exception occurred with the service.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.LicenseManagerLinuxSubscriptions.Model.ValidationException">
+            The provided input is not valid. Try your request again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-linux-subscriptions-2018-05-10/UpdateServiceSettings">REST API Reference for UpdateServiceSettings Operation</seealso>
+        </member>
+        <member name="M:Amazon.LicenseManagerLinuxSubscriptions.IAmazonLicenseManagerLinuxSubscriptions.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

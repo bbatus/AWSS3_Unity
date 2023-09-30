@@ -1,0 +1,2326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.IoTFleetHub</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig">
+            <summary>
+            Configuration for accessing Amazon IoTFleetHub service
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon IoTFleetHub service
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            IoTFleetHub
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters">
+            <summary>
+            Contains parameters used for resolving IoTFleetHub endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal IoTFleetHubEndpointProvider and IoTFleetHubEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters.#ctor">
+            <summary>
+            IoTFleetHubEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Endpoints.IoTFleetHubEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.AmazonIoTFleetHubException">
+            <summary>
+             Common exception for the IoTFleetHub service.
+             </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonIoTFleetHubException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonIoTFleetHubException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonIoTFleetHubException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonIoTFleetHubException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonIoTFleetHubException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubEndpointProvider">
+            <summary>
+            Amazon IoTFleetHub endpoint provider.
+            Resolves endpoint for given set of IoTFleetHubEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for IoTFleetHubEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubEndpointResolver">
+            <summary>
+            Amazon IoTFleetHub endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for IoTFleetHub service requests.
+            Collects values for IoTFleetHubEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses IoTFleetHubEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubMetadata">
+            <summary>
+            Service metadata for  Amazon IoTFleetHub service
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Internal.AmazonIoTFleetHubMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.AmazonIoTFleetHubRequest">
+            <summary>
+            Base class for IoTFleetHub operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ApplicationSummary">
+            <summary>
+            A summary of information about a AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationCreationDate">
+            <summary>
+            Gets and sets the property ApplicationCreationDate. 
+            <para>
+            The date (in Unix epoch time) when the web application was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationDescription">
+            <summary>
+            Gets and sets the property ApplicationDescription. 
+            <para>
+            An optional description of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationLastUpdateDate">
+            <summary>
+            Gets and sets the property ApplicationLastUpdateDate. 
+            <para>
+            The date (in Unix epoch time) when the web application was last updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationName">
+            <summary>
+            Gets and sets the property ApplicationName. 
+            <para>
+            The name of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationState">
+            <summary>
+            Gets and sets the property ApplicationState. 
+            <para>
+            The current state of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ApplicationSummary.ApplicationUrl">
+            <summary>
+            Gets and sets the property ApplicationUrl. 
+            <para>
+            The URL of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ConflictException">
+            <summary>
+            The request conflicts with the current state of the resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.CreateApplicationRequest">
+            <summary>
+            Container for the parameters to the CreateApplication operation.
+            Creates a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationRequest.ApplicationDescription">
+            <summary>
+            Gets and sets the property ApplicationDescription. 
+            <para>
+            An optional description of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationRequest.ApplicationName">
+            <summary>
+            Gets and sets the property ApplicationName. 
+            <para>
+            The name of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationRequest.RoleArn">
+            <summary>
+            Gets and sets the property RoleArn. 
+            <para>
+            The ARN of the role that the web application assumes when it interacts with AWS IoT
+            Core.
+            </para>
+             <note> 
+            <para>
+            The name of the role must be in the form <code>AWSIotFleetHub_<i>random_string</i>
+            </code>.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A set of key/value pairs that you can use to manage the web application resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.CreateApplicationResponse">
+            <summary>
+            This is the response object from the CreateApplication operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationResponse.ApplicationArn">
+            <summary>
+            Gets and sets the property ApplicationArn. 
+            <para>
+            The ARN of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.CreateApplicationResponse.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.DeleteApplicationRequest">
+            <summary>
+            Container for the parameters to the DeleteApplication operation.
+            Deletes a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DeleteApplicationRequest.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DeleteApplicationRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.DeleteApplicationResponse">
+            <summary>
+            This is the response object from the DeleteApplication operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.DescribeApplicationRequest">
+            <summary>
+            Container for the parameters to the DescribeApplication operation.
+            Gets information about a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationRequest.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.DescribeApplicationResponse">
+            <summary>
+            This is the response object from the DescribeApplication operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationArn">
+            <summary>
+            Gets and sets the property ApplicationArn. 
+            <para>
+            The ARN of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationCreationDate">
+            <summary>
+            Gets and sets the property ApplicationCreationDate. 
+            <para>
+            The date (in Unix epoch time) when the application was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationDescription">
+            <summary>
+            Gets and sets the property ApplicationDescription. 
+            <para>
+            An optional description of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationLastUpdateDate">
+            <summary>
+            Gets and sets the property ApplicationLastUpdateDate. 
+            <para>
+            The date (in Unix epoch time) when the application was last updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationName">
+            <summary>
+            Gets and sets the property ApplicationName. 
+            <para>
+            The name of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationState">
+            <summary>
+            Gets and sets the property ApplicationState. 
+            <para>
+            The current state of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ApplicationUrl">
+            <summary>
+            Gets and sets the property ApplicationUrl. 
+            <para>
+            The URL of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            A message indicating why the <code>DescribeApplication</code> API failed.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.RoleArn">
+            <summary>
+            Gets and sets the property RoleArn. 
+            <para>
+            The ARN of the role that the web application assumes when it interacts with AWS IoT
+            Core.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.SsoClientId">
+            <summary>
+            Gets and sets the property SsoClientId. 
+            <para>
+            The Id of the single sign-on client that you use to authenticate and authorize users
+            on the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.DescribeApplicationResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A set of key/value pairs that you can use to manage the web application resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            <summary>
+            An unexpected error has occurred.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InternalFailureException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalFailureException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InternalFailureException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InternalFailureException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InternalFailureException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InternalFailureException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ApplicationSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ApplicationSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ApplicationSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#IoTFleetHub#Model#ApplicationSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ApplicationSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ApplicationSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationRequestMarshaller">
+            <summary>
+            CreateApplication Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.CreateApplicationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateApplication operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.CreateApplicationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationRequestMarshaller">
+            <summary>
+            DeleteApplication Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.DeleteApplicationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteApplication operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DeleteApplicationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationRequestMarshaller">
+            <summary>
+            DescribeApplication Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.DescribeApplicationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeApplication operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.DescribeApplicationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalFailureException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for LimitExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsRequestMarshaller">
+            <summary>
+            ListApplications Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.ListApplicationsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListApplications operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListApplicationsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationRequestMarshaller">
+            <summary>
+            UpdateApplication Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationRequestMarshaller.Marshall(Amazon.IoTFleetHub.Model.UpdateApplicationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateApplication operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.Internal.MarshallTransformations.UpdateApplicationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            <summary>
+            The request is not valid.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InvalidRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InvalidRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InvalidRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InvalidRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.InvalidRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.LimitExceededException">
+            <summary>
+            A limit has been exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.LimitExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new LimitExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.LimitExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.LimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.LimitExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.LimitExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ListApplicationsRequest">
+            <summary>
+            Container for the parameters to the ListApplications operation.
+            Gets a list of Fleet Hub for AWS IoT Device Management web applications for the current
+            account.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListApplicationsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token used to get the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ListApplicationsResponse">
+            <summary>
+            This is the response object from the ListApplications operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListApplicationsResponse.ApplicationSummaries">
+            <summary>
+            Gets and sets the property ApplicationSummaries. 
+            <para>
+            An array of objects that provide summaries of information about the web applications
+            in the list.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListApplicationsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            A token used to get the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists the tags for the specified resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The list of tags assigned to the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds to or modifies the tags of the specified resource. Tags are metadata which can
+            be used to manage a resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The new or modified tags for the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            <summary>
+            The rate exceeds the limit.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes the specified tags (metadata) from the resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The ARN of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            A list of the keys of the tags to be removed from the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.UpdateApplicationRequest">
+            <summary>
+            Container for the parameters to the UpdateApplication operation.
+            Updates information about a Fleet Hub for a AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UpdateApplicationRequest.ApplicationDescription">
+            <summary>
+            Gets and sets the property ApplicationDescription. 
+            <para>
+            An optional description of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UpdateApplicationRequest.ApplicationId">
+            <summary>
+            Gets and sets the property ApplicationId. 
+            <para>
+            The unique Id of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UpdateApplicationRequest.ApplicationName">
+            <summary>
+            Gets and sets the property ApplicationName. 
+            <para>
+            The name of the web application.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.UpdateApplicationRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A unique case-sensitive identifier that you can provide to ensure the idempotency
+            of the request. Don't reuse this client token if a new idempotent request is required.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.UpdateApplicationResponse">
+            <summary>
+            This is the response object from the UpdateApplication operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.IIoTFleetHubPaginatorFactory">
+             <summary>
+             Paginators for the IoTFleetHub service
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.IIoTFleetHubPaginatorFactory.ListApplications(Amazon.IoTFleetHub.Model.ListApplicationsRequest)">
+             <summary>
+             Paginator for ListApplications operation
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.IListApplicationsPaginator">
+             <summary>
+             Paginator for the ListApplications operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.IListApplicationsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.IListApplicationsPaginator.ApplicationSummaries">
+            <summary>
+            Enumerable containing all of the ApplicationSummaries
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.IoTFleetHubPaginatorFactory">
+             <summary>
+             Paginators for the IoTFleetHub service
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.Model.IoTFleetHubPaginatorFactory.ListApplications(Amazon.IoTFleetHub.Model.ListApplicationsRequest)">
+             <summary>
+             Paginator for ListApplications operation
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.Model.ListApplicationsPaginator">
+            <summary>
+            Base class for ListApplications paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListApplicationsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.Model.ListApplicationsPaginator.ApplicationSummaries">
+            <summary>
+            Enumerable containing all of the ApplicationSummaries
+            </summary>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.ApplicationState">
+            <summary>
+            Constants used for properties of type ApplicationState.
+            </summary>
+        </member>
+        <member name="F:Amazon.IoTFleetHub.ApplicationState.ACTIVE">
+            <summary>
+            Constant ACTIVE for ApplicationState
+            </summary>
+        </member>
+        <member name="F:Amazon.IoTFleetHub.ApplicationState.CREATE_FAILED">
+            <summary>
+            Constant CREATE_FAILED for ApplicationState
+            </summary>
+        </member>
+        <member name="F:Amazon.IoTFleetHub.ApplicationState.CREATING">
+            <summary>
+            Constant CREATING for ApplicationState
+            </summary>
+        </member>
+        <member name="F:Amazon.IoTFleetHub.ApplicationState.DELETE_FAILED">
+            <summary>
+            Constant DELETE_FAILED for ApplicationState
+            </summary>
+        </member>
+        <member name="F:Amazon.IoTFleetHub.ApplicationState.DELETING">
+            <summary>
+            Constant DELETING for ApplicationState
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.ApplicationState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.ApplicationState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.ApplicationState.op_Implicit(System.String)~Amazon.IoTFleetHub.ApplicationState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.AmazonIoTFleetHubClient">
+             <summary>
+             Implementation for accessing IoTFleetHub
+            
+             With Fleet Hub for AWS IoT Device Management you can build stand-alone web applications
+             for monitoring the health of your device fleets.
+             
+              <note> 
+             <para>
+             Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+             </para>
+              </note>
+             </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor">
+             <summary>
+             Constructs AmazonIoTFleetHubClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonIoTFleetHubClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(Amazon.IoTFleetHub.AmazonIoTFleetHubConfig)">
+             <summary>
+             Constructs AmazonIoTFleetHubClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonIoTFleetHubClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.IoTFleetHub.AmazonIoTFleetHubConfig)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Credentials and an
+            AmazonIoTFleetHubClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonIoTFleetHubClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String,Amazon.IoTFleetHub.AmazonIoTFleetHubConfig)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonIoTFleetHubClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonIoTFleetHubClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.#ctor(System.String,System.String,System.String,Amazon.IoTFleetHub.AmazonIoTFleetHubConfig)">
+            <summary>
+            Constructs AmazonIoTFleetHubClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonIoTFleetHubClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonIoTFleetHubClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.CreateApplicationAsync(Amazon.IoTFleetHub.Model.CreateApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.LimitExceededException">
+            A limit has been exceeded.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/CreateApplication">REST API Reference for CreateApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.DeleteApplicationAsync(Amazon.IoTFleetHub.Model.DeleteApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/DeleteApplication">REST API Reference for DeleteApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.DescribeApplicationAsync(Amazon.IoTFleetHub.Model.DescribeApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/DescribeApplication">REST API Reference for DescribeApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.ListApplicationsAsync(Amazon.IoTFleetHub.Model.ListApplicationsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of Fleet Hub for AWS IoT Device Management web applications for the current
+            account.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListApplications service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListApplications service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/ListApplications">REST API Reference for ListApplications Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.ListTagsForResourceAsync(Amazon.IoTFleetHub.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags for the specified resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.TagResourceAsync(Amazon.IoTFleetHub.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds to or modifies the tags of the specified resource. Tags are metadata which can
+            be used to manage a resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.UntagResourceAsync(Amazon.IoTFleetHub.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags (metadata) from the resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.UpdateApplicationAsync(Amazon.IoTFleetHub.Model.UpdateApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates information about a Fleet Hub for a AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ConflictException">
+            The request conflicts with the current state of the resource.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/UpdateApplication">REST API Reference for UpdateApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.AmazonIoTFleetHubClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.IoTFleetHub.IAmazonIoTFleetHub">
+             <summary>
+             Interface for accessing IoTFleetHub
+            
+             With Fleet Hub for AWS IoT Device Management you can build stand-alone web applications
+             for monitoring the health of your device fleets.
+             
+              <note> 
+             <para>
+             Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+             </para>
+              </note>
+             </summary>
+        </member>
+        <member name="P:Amazon.IoTFleetHub.IAmazonIoTFleetHub.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.CreateApplicationAsync(Amazon.IoTFleetHub.Model.CreateApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.LimitExceededException">
+            A limit has been exceeded.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/CreateApplication">REST API Reference for CreateApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.DeleteApplicationAsync(Amazon.IoTFleetHub.Model.DeleteApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/DeleteApplication">REST API Reference for DeleteApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.DescribeApplicationAsync(Amazon.IoTFleetHub.Model.DescribeApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a Fleet Hub for AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/DescribeApplication">REST API Reference for DescribeApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.ListApplicationsAsync(Amazon.IoTFleetHub.Model.ListApplicationsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of Fleet Hub for AWS IoT Device Management web applications for the current
+            account.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListApplications service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListApplications service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/ListApplications">REST API Reference for ListApplications Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.ListTagsForResourceAsync(Amazon.IoTFleetHub.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags for the specified resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.TagResourceAsync(Amazon.IoTFleetHub.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds to or modifies the tags of the specified resource. Tags are metadata which can
+            be used to manage a resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.UntagResourceAsync(Amazon.IoTFleetHub.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags (metadata) from the resource.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.UpdateApplicationAsync(Amazon.IoTFleetHub.Model.UpdateApplicationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates information about a Fleet Hub for a AWS IoT Device Management web application.
+            
+             <note> 
+            <para>
+            Fleet Hub for AWS IoT Device Management is in public preview and is subject to change.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateApplication service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateApplication service method, as returned by IoTFleetHub.</returns>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ConflictException">
+            The request conflicts with the current state of the resource.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IoTFleetHub.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iotfleethub-2020-11-03/UpdateApplication">REST API Reference for UpdateApplication Operation</seealso>
+        </member>
+        <member name="M:Amazon.IoTFleetHub.IAmazonIoTFleetHub.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

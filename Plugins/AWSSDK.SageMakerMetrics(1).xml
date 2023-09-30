@@ -1,0 +1,668 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.SageMakerMetrics</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig">
+            <summary>
+            Configuration for accessing Amazon SageMakerMetrics service
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon SageMakerMetrics service
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            SageMakerMetrics
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters">
+            <summary>
+            Contains parameters used for resolving SageMakerMetrics endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal SageMakerMetricsEndpointProvider and SageMakerMetricsEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters.#ctor">
+            <summary>
+            SageMakerMetricsEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Endpoints.SageMakerMetricsEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException">
+            <summary>
+             Common exception for the SageMakerMetrics service.
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonSageMakerMetricsException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonSageMakerMetricsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonSageMakerMetricsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSageMakerMetricsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSageMakerMetricsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsEndpointProvider">
+            <summary>
+            Amazon SageMakerMetrics endpoint provider.
+            Resolves endpoint for given set of SageMakerMetricsEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for SageMakerMetricsEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsEndpointResolver">
+            <summary>
+            Amazon SageMakerMetrics endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for SageMakerMetrics service requests.
+            Collects values for SageMakerMetricsEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses SageMakerMetricsEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsMetadata">
+            <summary>
+            Service metadata for  Amazon SageMakerMetrics service
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Internal.AmazonSageMakerMetricsMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.AmazonSageMakerMetricsRequest">
+            <summary>
+            Base class for SageMakerMetrics operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.BatchPutMetricsError">
+            <summary>
+            An error that occured when putting the metric data.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.BatchPutMetricsError.Code">
+            <summary>
+            Gets and sets the property Code. 
+            <para>
+            The error code of an error that occured when attempting to put metrics.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>METRIC_LIMIT_EXCEEDED</code>: The maximum amount of metrics per resource is
+            exceeded.
+            </para>
+             </li> <li> 
+            <para>
+             <code>INTERNAL_ERROR</code>: An internal error occured.
+            </para>
+             </li> <li> 
+            <para>
+             <code>VALIDATION_ERROR</code>: The metric data failed validation.
+            </para>
+             </li> <li> 
+            <para>
+             <code>CONFLICT_ERROR</code>: Multiple requests attempted to modify the same data
+            simultaneously.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.BatchPutMetricsError.MetricIndex">
+            <summary>
+            Gets and sets the property MetricIndex. 
+            <para>
+            An index that corresponds to the metric in the request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest">
+            <summary>
+            Container for the parameters to the BatchPutMetrics operation.
+            Used to ingest training metrics into SageMaker. These metrics can be visualized in
+            SageMaker Studio and retrieved with the <code>GetMetrics</code> API.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest.MetricData">
+            <summary>
+            Gets and sets the property MetricData. 
+            <para>
+            A list of raw metric values to put.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest.TrialComponentName">
+            <summary>
+            Gets and sets the property TrialComponentName. 
+            <para>
+            The name of the Trial Component to associate with the metrics.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.BatchPutMetricsResponse">
+            <summary>
+            This is the response object from the BatchPutMetrics operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.BatchPutMetricsResponse.Errors">
+            <summary>
+            Gets and sets the property Errors. 
+            <para>
+            Lists any errors that occur when inserting metric data.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsErrorUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchPutMetricsError Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsErrorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#SageMakerMetrics#Model#BatchPutMetricsError,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsErrorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsErrorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsRequestMarshaller">
+            <summary>
+            BatchPutMetrics Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsRequestMarshaller.Marshall(Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchPutMetrics operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.BatchPutMetricsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.RawMetricDataMarshaller">
+            <summary>
+            RawMetricData Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.RawMetricDataMarshaller.Marshall(Amazon.SageMakerMetrics.Model.RawMetricData,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.SageMakerMetrics.Model.Internal.MarshallTransformations.RawMetricDataMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.Model.RawMetricData">
+            <summary>
+            The raw metric data to associate with the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.RawMetricData.MetricName">
+            <summary>
+            Gets and sets the property MetricName. 
+            <para>
+            The name of the metric.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.RawMetricData.Step">
+            <summary>
+            Gets and sets the property Step. 
+            <para>
+            The metric step (epoch). 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.RawMetricData.Timestamp">
+            <summary>
+            Gets and sets the property Timestamp. 
+            <para>
+            The time that the metric was recorded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.Model.RawMetricData.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The metric value.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.PutMetricsErrorCode">
+            <summary>
+            Constants used for properties of type PutMetricsErrorCode.
+            </summary>
+        </member>
+        <member name="F:Amazon.SageMakerMetrics.PutMetricsErrorCode.CONFLICT_ERROR">
+            <summary>
+            Constant CONFLICT_ERROR for PutMetricsErrorCode
+            </summary>
+        </member>
+        <member name="F:Amazon.SageMakerMetrics.PutMetricsErrorCode.INTERNAL_ERROR">
+            <summary>
+            Constant INTERNAL_ERROR for PutMetricsErrorCode
+            </summary>
+        </member>
+        <member name="F:Amazon.SageMakerMetrics.PutMetricsErrorCode.METRIC_LIMIT_EXCEEDED">
+            <summary>
+            Constant METRIC_LIMIT_EXCEEDED for PutMetricsErrorCode
+            </summary>
+        </member>
+        <member name="F:Amazon.SageMakerMetrics.PutMetricsErrorCode.VALIDATION_ERROR">
+            <summary>
+            Constant VALIDATION_ERROR for PutMetricsErrorCode
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.PutMetricsErrorCode.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.PutMetricsErrorCode.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.PutMetricsErrorCode.op_Implicit(System.String)~Amazon.SageMakerMetrics.PutMetricsErrorCode">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient">
+             <summary>
+             Implementation for accessing SageMakerMetrics
+            
+             Contains all data plane API operations and data types for Amazon SageMaker Metrics.
+             Use these APIs to put and retrieve (get) features related to your training run.
+             
+              <ul> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_metrics_BatchPutMetrics.html">BatchPutMetrics</a>
+             
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor">
+             <summary>
+             Constructs AmazonSageMakerMetricsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonSageMakerMetricsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig)">
+             <summary>
+             Constructs AmazonSageMakerMetricsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonSageMakerMetricsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Credentials and an
+            AmazonSageMakerMetricsClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonSageMakerMetricsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String,Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSageMakerMetricsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonSageMakerMetricsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.#ctor(System.String,System.String,System.String,Amazon.SageMakerMetrics.AmazonSageMakerMetricsConfig)">
+            <summary>
+            Constructs AmazonSageMakerMetricsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSageMakerMetricsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonSageMakerMetricsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.BatchPutMetricsAsync(Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Used to ingest training metrics into SageMaker. These metrics can be visualized in
+            SageMaker Studio and retrieved with the <code>GetMetrics</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchPutMetrics service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchPutMetrics service method, as returned by SageMakerMetrics.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-metrics-2022-09-30/BatchPutMetrics">REST API Reference for BatchPutMetrics Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.AmazonSageMakerMetricsClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.SageMakerMetrics.IAmazonSageMakerMetrics">
+             <summary>
+             Interface for accessing SageMakerMetrics
+            
+             Contains all data plane API operations and data types for Amazon SageMaker Metrics.
+             Use these APIs to put and retrieve (get) features related to your training run.
+             
+              <ul> <li> 
+             <para>
+              <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_metrics_BatchPutMetrics.html">BatchPutMetrics</a>
+             
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.IAmazonSageMakerMetrics.BatchPutMetricsAsync(Amazon.SageMakerMetrics.Model.BatchPutMetricsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Used to ingest training metrics into SageMaker. These metrics can be visualized in
+            SageMaker Studio and retrieved with the <code>GetMetrics</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchPutMetrics service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchPutMetrics service method, as returned by SageMakerMetrics.</returns>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-metrics-2022-09-30/BatchPutMetrics">REST API Reference for BatchPutMetrics Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerMetrics.IAmazonSageMakerMetrics.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

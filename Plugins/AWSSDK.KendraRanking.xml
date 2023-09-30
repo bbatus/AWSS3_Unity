@@ -1,0 +1,2987 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.KendraRanking</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.KendraRanking.AmazonKendraRankingConfig">
+            <summary>
+            Configuration for accessing Amazon KendraRanking service
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon KendraRanking service
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            KendraRanking
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Endpoints.KendraRankingEndpointParameters">
+            <summary>
+            Contains parameters used for resolving KendraRanking endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal KendraRankingEndpointProvider and KendraRankingEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Endpoints.KendraRankingEndpointParameters.#ctor">
+            <summary>
+            KendraRankingEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Endpoints.KendraRankingEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Endpoints.KendraRankingEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Endpoints.KendraRankingEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.AmazonKendraRankingException">
+            <summary>
+             Common exception for the KendraRanking service.
+             </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonKendraRankingException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonKendraRankingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonKendraRankingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonKendraRankingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonKendraRankingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Internal.AmazonKendraRankingEndpointProvider">
+            <summary>
+            Amazon KendraRanking endpoint provider.
+            Resolves endpoint for given set of KendraRankingEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Internal.AmazonKendraRankingEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for KendraRankingEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Internal.AmazonKendraRankingEndpointResolver">
+            <summary>
+            Amazon KendraRanking endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for KendraRanking service requests.
+            Collects values for KendraRankingEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses KendraRankingEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Internal.AmazonKendraRankingMetadata">
+            <summary>
+            Service metadata for  Amazon KendraRanking service
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Internal.AmazonKendraRankingMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Internal.AmazonKendraRankingMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            <summary>
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.CapacityUnitsConfiguration">
+            <summary>
+            Sets additional capacity units configured for your rescore execution plan. A rescore
+            execution plan is an Amazon Kendra Intelligent Ranking resource used for provisioning
+            the <code>Rescore</code> API. You can add and remove capacity units to fit your usage
+            requirements.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CapacityUnitsConfiguration.RescoreCapacityUnits">
+            <summary>
+            Gets and sets the property RescoreCapacityUnits. 
+            <para>
+            The amount of extra capacity for your rescore execution plan.
+            </para>
+             
+            <para>
+            A single extra capacity unit for a rescore execution plan provides 0.01 rescore requests
+            per second. You can add up to 1000 extra capacity units.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ConflictException">
+            <summary>
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest">
+            <summary>
+            Container for the parameters to the CreateRescoreExecutionPlan operation.
+            Creates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You set the number
+            of capacity units that you require for Amazon Kendra Intelligent Ranking to rescore
+            or re-rank a search service's results.
+            
+             
+            <para>
+            For an example of using the <code>CreateRescoreExecutionPlan</code> API, including
+            using the Python and Java SDKs, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/search-service-rerank.html">Semantically
+            ranking a search service's results</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest.CapacityUnits">
+            <summary>
+            Gets and sets the property CapacityUnits. 
+            <para>
+            You can set additional capacity units to meet the needs of your rescore execution
+            plan. You are given a single capacity unit by default. If you want to use the default
+            capacity, you don't set additional capacity units. For more information on the default
+            capacity and additional capacity units, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting
+            capacity</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            A token that you provide to identify the request to create a rescore execution plan.
+            Multiple calls to the <code>CreateRescoreExecutionPlanRequest</code> API with the
+            same client token will create only one rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A description for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            A name for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A list of key-value pairs that identify or categorize your rescore execution plan.
+            You can also use tags to help control access to the rescore execution plan. Tag keys
+            and values can consist of Unicode letters, digits, white space, and any of the following
+            symbols: _ . : / = + - @.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanResponse">
+            <summary>
+            This is the response object from the CreateRescoreExecutionPlan operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.CreateRescoreExecutionPlanResponse.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanRequest">
+            <summary>
+            Container for the parameters to the DeleteRescoreExecutionPlan operation.
+            Deletes a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanRequest.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan that you want to delete.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanResponse">
+            <summary>
+            This is the response object from the DeleteRescoreExecutionPlan operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanRequest">
+            <summary>
+            Container for the parameters to the DescribeRescoreExecutionPlan operation.
+            Gets information about a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanRequest.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan that you want to get information on.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse">
+            <summary>
+            This is the response object from the DescribeRescoreExecutionPlan operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.CapacityUnits">
+            <summary>
+            Gets and sets the property CapacityUnits. 
+            <para>
+            The capacity units set for the rescore execution plan. A capacity of zero indicates
+            that the rescore execution plan is using the default capacity. For more information
+            on the default capacity and additional capacity units, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting
+            capacity</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+            The Unix timestamp of when the rescore execution plan was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The description for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            When the <code>Status</code> field value is <code>FAILED</code>, the <code>ErrorMessage</code>
+            field contains a message that explains why.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The current status of the rescore execution plan. When the value is <code>ACTIVE</code>,
+            the rescore execution plan is ready for use. If the <code>Status</code> field value
+            is <code>FAILED</code>, the <code>ErrorMessage</code> field contains a message that
+            explains why.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanResponse.UpdatedAt">
+            <summary>
+            Gets and sets the property UpdatedAt. 
+            <para>
+            The Unix timestamp of when the rescore execution plan was last updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Document">
+            <summary>
+            Information about a document from a search service such as OpenSearch (self managed).
+            Amazon Kendra Intelligent Ranking uses this information to rank and score on.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.Body">
+            <summary>
+            Gets and sets the property Body. 
+            <para>
+            The body text of the search service's document.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.GroupId">
+            <summary>
+            Gets and sets the property GroupId. 
+            <para>
+            The optional group identifier of the document from the search service. Documents with
+            the same group identifier are grouped together and processed as one document within
+            the service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the document from the search service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.OriginalScore">
+            <summary>
+            Gets and sets the property OriginalScore. 
+            <para>
+            The original document score or rank from the search service. Amazon Kendra Intelligent
+            Ranking gives the document a new score or rank based on its intelligent search algorithms.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.Title">
+            <summary>
+            Gets and sets the property Title. 
+            <para>
+            The title of the search service's document.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.TokenizedBody">
+            <summary>
+            Gets and sets the property TokenizedBody. 
+            <para>
+            The body text of the search service's document represented as a list of tokens or
+            words. You must choose to provide <code>Body</code> or <code>TokenizedBody</code>.
+            You cannot provide both.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Document.TokenizedTitle">
+            <summary>
+            Gets and sets the property TokenizedTitle. 
+            <para>
+            The title of the search service's document represented as a list of tokens or words.
+            You must choose to provide <code>Title</code> or <code>TokenizedTitle</code>. You
+            cannot provide both.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.InternalServerException">
+            <summary>
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationMarshaller">
+            <summary>
+            CapacityUnitsConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationMarshaller.Marshall(Amazon.KendraRanking.Model.CapacityUnitsConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for CapacityUnitsConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#KendraRanking#Model#CapacityUnitsConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CapacityUnitsConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanRequestMarshaller">
+            <summary>
+            CreateRescoreExecutionPlan Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateRescoreExecutionPlan operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.CreateRescoreExecutionPlanResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanRequestMarshaller">
+            <summary>
+            DeleteRescoreExecutionPlan Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteRescoreExecutionPlan operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DeleteRescoreExecutionPlanResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanRequestMarshaller">
+            <summary>
+            DescribeRescoreExecutionPlan Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeRescoreExecutionPlan operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DescribeRescoreExecutionPlanResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DocumentMarshaller">
+            <summary>
+            Document Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DocumentMarshaller.Marshall(Amazon.KendraRanking.Model.Document,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.KendraRanking.Model.Internal.MarshallTransformations.DocumentMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansRequestMarshaller">
+            <summary>
+            ListRescoreExecutionPlans Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansRequestMarshaller.Marshall(Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListRescoreExecutionPlans operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListRescoreExecutionPlansResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.KendraRanking.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreExecutionPlanSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for RescoreExecutionPlanSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreExecutionPlanSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#KendraRanking#Model#RescoreExecutionPlanSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreExecutionPlanSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreExecutionPlanSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreRequestMarshaller">
+            <summary>
+            Rescore Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreRequestMarshaller.Marshall(Amazon.KendraRanking.Model.RescoreRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for Rescore operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResultItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for RescoreResultItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResultItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#KendraRanking#Model#RescoreResultItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResultItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.RescoreResultItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ResourceUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagMarshaller">
+            <summary>
+            Tag Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagMarshaller.Marshall(Amazon.KendraRanking.Model.Tag,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.KendraRanking.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagUnmarshaller">
+            <summary>
+            Response Unmarshaller for Tag Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#KendraRanking#Model#Tag,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.TagUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.KendraRanking.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanRequestMarshaller">
+            <summary>
+            UpdateRescoreExecutionPlan Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanRequestMarshaller.Marshall(Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateRescoreExecutionPlan operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.UpdateRescoreExecutionPlanResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest">
+            <summary>
+            Container for the parameters to the ListRescoreExecutionPlans operation.
+            Lists your rescore execution plans. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of rescore execution plans to return.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If the response is truncated, Amazon Kendra Intelligent Ranking returns a pagination
+            token in the response. You can use this pagination token to retrieve the next set
+            of rescore execution plans.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ListRescoreExecutionPlansResponse">
+            <summary>
+            This is the response object from the ListRescoreExecutionPlans operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListRescoreExecutionPlansResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If the response is truncated, Amazon Kendra Intelligent Ranking returns a pagination
+            token in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListRescoreExecutionPlansResponse.SummaryItems">
+            <summary>
+            Gets and sets the property SummaryItems. 
+            <para>
+            An array of summary information for one or more rescore execution plans.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Gets a list of tags associated with a specified resource. A rescore execution plan
+            is an example of a resource that can have tags associated with it.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListTagsForResourceRequest.ResourceARN">
+            <summary>
+            Gets and sets the property ResourceARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the rescore execution plan to get a list of tags
+            for.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ListTagsForResourceResponse">
+            <summary>
+            If the action is successful, the service sends back an HTTP 200 response.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A list of tags associated with the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary">
+            <summary>
+            Summary information for a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary.CreatedAt">
+            <summary>
+            Gets and sets the property CreatedAt. 
+            <para>
+            The Unix timestamp when the rescore execution plan was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The current status of the rescore execution plan. When the value is <code>ACTIVE</code>,
+            the rescore execution plan is ready for use.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreExecutionPlanSummary.UpdatedAt">
+            <summary>
+            Gets and sets the property UpdatedAt. 
+            <para>
+            The Unix timestamp when the rescore execution plan was last updated.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.RescoreRequest">
+            <summary>
+            Container for the parameters to the Rescore operation.
+            Rescores or re-ranks search results from a search service such as OpenSearch (self
+            managed). You use the semantic search capabilities of Amazon Kendra Intelligent Ranking
+            to improve the search service's results.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreRequest.Documents">
+            <summary>
+            Gets and sets the property Documents. 
+            <para>
+            The list of documents for Amazon Kendra Intelligent Ranking to rescore or rank on.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreRequest.RescoreExecutionPlanId">
+            <summary>
+            Gets and sets the property RescoreExecutionPlanId. 
+            <para>
+            The identifier of the rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreRequest.SearchQuery">
+            <summary>
+            Gets and sets the property SearchQuery. 
+            <para>
+            The input query from the search service.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.RescoreResponse">
+            <summary>
+            This is the response object from the Rescore operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreResponse.RescoreId">
+            <summary>
+            Gets and sets the property RescoreId. 
+            <para>
+            The identifier associated with the scores that Amazon Kendra Intelligent Ranking gives
+            to the results. Amazon Kendra Intelligent Ranking rescores or re-ranks the results
+            for the search service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreResponse.ResultItems">
+            <summary>
+            Gets and sets the property ResultItems. 
+            <para>
+            A list of result items for documents with new relevancy scores. The results are in
+            descending order.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.RescoreResultItem">
+            <summary>
+            A result item for a document with a new relevancy score.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreResultItem.DocumentId">
+            <summary>
+            Gets and sets the property DocumentId. 
+            <para>
+            The identifier of the document from the search service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.RescoreResultItem.Score">
+            <summary>
+            Gets and sets the property Score. 
+            <para>
+            The relevancy score or rank that Amazon Kendra Intelligent Ranking gives to the result.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            <summary>
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            <summary>
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ResourceUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ServiceQuotaExceededException">
+            <summary>
+            You have exceeded the set limits for your Amazon Kendra Intelligent Ranking service.
+            Please see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>
+            for more information, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            to inquire about an increase of limits.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.Tag">
+            <summary>
+            A key-value pair that identifies or categorizes a rescore execution plan. A rescore
+            execution plan is an Amazon Kendra Intelligent Ranking resource used for provisioning
+            the <code>Rescore</code> API. You can also use a tag to help control access to a rescore
+            execution plan. A tag key and value can consist of Unicode letters, digits, white
+            space, and any of the following symbols: _ . : / = + - @.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Tag.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The key for the tag. Keys are not case sensitive and must be unique.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.Tag.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value associated with the tag. The value can be an empty string but it can't be
+            null.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds a specified tag to a specified rescore execution plan. A rescore execution plan
+            is an Amazon Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API. If the tag already exists, the existing value is replaced with the new value.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.TagResourceRequest.ResourceARN">
+            <summary>
+            Gets and sets the property ResourceARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the rescore execution plan to tag.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A list of tag keys to add to a rescore execution plan. If a tag already exists, the
+            existing value is replaced with the new value.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.TagResourceResponse">
+            <summary>
+            If the action is successful, the service sends back an HTTP 200 response with an empty
+            HTTP body.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes a tag from a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UntagResourceRequest.ResourceARN">
+            <summary>
+            Gets and sets the property ResourceARN. 
+            <para>
+            The Amazon Resource Name (ARN) of the rescore execution plan to remove the tag.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            A list of tag keys to remove from the rescore execution plan. If a tag key does not
+            exist on the resource, it is ignored.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.UntagResourceResponse">
+            <summary>
+            If the action is successful, the service sends back an HTTP 200 response with an empty
+            HTTP body.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest">
+            <summary>
+            Container for the parameters to the UpdateRescoreExecutionPlan operation.
+            Updates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You can update
+            the number of capacity units you require for Amazon Kendra Intelligent Ranking to
+            rescore or re-rank a search service's results.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest.CapacityUnits">
+            <summary>
+            Gets and sets the property CapacityUnits. 
+            <para>
+            You can set additional capacity units to meet the needs of your rescore execution
+            plan. You are given a single capacity unit by default. If you want to use the default
+            capacity, you don't set additional capacity units. For more information on the default
+            capacity and additional capacity units, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html">Adjusting
+            capacity</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            A new description for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The identifier of the rescore execution plan that you want to update.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            A new name for the rescore execution plan.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanResponse">
+            <summary>
+            This is the response object from the UpdateRescoreExecutionPlan operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.IKendraRankingPaginatorFactory">
+             <summary>
+             Paginators for the KendraRanking service
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.IKendraRankingPaginatorFactory.ListRescoreExecutionPlans(Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest)">
+             <summary>
+             Paginator for ListRescoreExecutionPlans operation
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.IListRescoreExecutionPlansPaginator">
+             <summary>
+             Paginator for the ListRescoreExecutionPlans operation
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.IListRescoreExecutionPlansPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.KendraRankingPaginatorFactory">
+             <summary>
+             Paginators for the KendraRanking service
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.Model.KendraRankingPaginatorFactory.ListRescoreExecutionPlans(Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest)">
+             <summary>
+             Paginator for ListRescoreExecutionPlans operation
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.Model.ListRescoreExecutionPlansPaginator">
+            <summary>
+            Base class for ListRescoreExecutionPlans paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.Model.ListRescoreExecutionPlansPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.AmazonKendraRankingRequest">
+            <summary>
+            Base class for KendraRanking operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.KendraRanking.RescoreExecutionPlanStatus">
+            <summary>
+            Constants used for properties of type RescoreExecutionPlanStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.KendraRanking.RescoreExecutionPlanStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for RescoreExecutionPlanStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.KendraRanking.RescoreExecutionPlanStatus.CREATING">
+            <summary>
+            Constant CREATING for RescoreExecutionPlanStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.KendraRanking.RescoreExecutionPlanStatus.DELETING">
+            <summary>
+            Constant DELETING for RescoreExecutionPlanStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.KendraRanking.RescoreExecutionPlanStatus.FAILED">
+            <summary>
+            Constant FAILED for RescoreExecutionPlanStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.KendraRanking.RescoreExecutionPlanStatus.UPDATING">
+            <summary>
+            Constant UPDATING for RescoreExecutionPlanStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.RescoreExecutionPlanStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.RescoreExecutionPlanStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.KendraRanking.RescoreExecutionPlanStatus.op_Implicit(System.String)~Amazon.KendraRanking.RescoreExecutionPlanStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.KendraRanking.AmazonKendraRankingClient">
+             <summary>
+             Implementation for accessing KendraRanking
+            
+             Amazon Kendra Intelligent Ranking uses Amazon Kendra semantic search capabilities
+             to intelligently re-rank a search service's results.
+             </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor">
+             <summary>
+             Constructs AmazonKendraRankingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonKendraRankingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(Amazon.KendraRanking.AmazonKendraRankingConfig)">
+             <summary>
+             Constructs AmazonKendraRankingClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonKendraRankingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.KendraRanking.AmazonKendraRankingConfig)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Credentials and an
+            AmazonKendraRankingClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonKendraRankingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String,Amazon.KendraRanking.AmazonKendraRankingConfig)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonKendraRankingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonKendraRankingClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.#ctor(System.String,System.String,System.String,Amazon.KendraRanking.AmazonKendraRankingConfig)">
+            <summary>
+            Constructs AmazonKendraRankingClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonKendraRankingClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonKendraRankingClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.KendraRanking.AmazonKendraRankingClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.CreateRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You set the number
+            of capacity units that you require for Amazon Kendra Intelligent Ranking to rescore
+            or re-rank a search service's results.
+            
+             
+            <para>
+            For an example of using the <code>CreateRescoreExecutionPlan</code> API, including
+            using the Python and Java SDKs, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/search-service-rerank.html">Semantically
+            ranking a search service's results</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ServiceQuotaExceededException">
+            You have exceeded the set limits for your Amazon Kendra Intelligent Ranking service.
+            Please see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>
+            for more information, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            to inquire about an increase of limits.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/CreateRescoreExecutionPlan">REST API Reference for CreateRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.DeleteRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/DeleteRescoreExecutionPlan">REST API Reference for DeleteRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.DescribeRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/DescribeRescoreExecutionPlan">REST API Reference for DescribeRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.ListRescoreExecutionPlansAsync(Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists your rescore execution plans. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRescoreExecutionPlans service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRescoreExecutionPlans service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/ListRescoreExecutionPlans">REST API Reference for ListRescoreExecutionPlans Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.ListTagsForResourceAsync(Amazon.KendraRanking.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of tags associated with a specified resource. A rescore execution plan
+            is an example of a resource that can have tags associated with it.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.RescoreAsync(Amazon.KendraRanking.Model.RescoreRequest,System.Threading.CancellationToken)">
+            <summary>
+            Rescores or re-ranks search results from a search service such as OpenSearch (self
+            managed). You use the semantic search capabilities of Amazon Kendra Intelligent Ranking
+            to improve the search service's results.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the Rescore service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the Rescore service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/Rescore">REST API Reference for Rescore Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.TagResourceAsync(Amazon.KendraRanking.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a specified tag to a specified rescore execution plan. A rescore execution plan
+            is an Amazon Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API. If the tag already exists, the existing value is replaced with the new value.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.UntagResourceAsync(Amazon.KendraRanking.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            operation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.UpdateRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You can update
+            the number of capacity units you require for Amazon Kendra Intelligent Ranking to
+            rescore or re-rank a search service's results.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ServiceQuotaExceededException">
+            You have exceeded the set limits for your Amazon Kendra Intelligent Ranking service.
+            Please see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>
+            for more information, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            to inquire about an increase of limits.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/UpdateRescoreExecutionPlan">REST API Reference for UpdateRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.AmazonKendraRankingClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.KendraRanking.IAmazonKendraRanking">
+             <summary>
+             Interface for accessing KendraRanking
+            
+             Amazon Kendra Intelligent Ranking uses Amazon Kendra semantic search capabilities
+             to intelligently re-rank a search service's results.
+             </summary>
+        </member>
+        <member name="P:Amazon.KendraRanking.IAmazonKendraRanking.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.CreateRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.CreateRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You set the number
+            of capacity units that you require for Amazon Kendra Intelligent Ranking to rescore
+            or re-rank a search service's results.
+            
+             
+            <para>
+            For an example of using the <code>CreateRescoreExecutionPlan</code> API, including
+            using the Python and Java SDKs, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/search-service-rerank.html">Semantically
+            ranking a search service's results</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ServiceQuotaExceededException">
+            You have exceeded the set limits for your Amazon Kendra Intelligent Ranking service.
+            Please see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>
+            for more information, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            to inquire about an increase of limits.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/CreateRescoreExecutionPlan">REST API Reference for CreateRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.DeleteRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.DeleteRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/DeleteRescoreExecutionPlan">REST API Reference for DeleteRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.DescribeRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.DescribeRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/DescribeRescoreExecutionPlan">REST API Reference for DescribeRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.ListRescoreExecutionPlansAsync(Amazon.KendraRanking.Model.ListRescoreExecutionPlansRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists your rescore execution plans. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRescoreExecutionPlans service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRescoreExecutionPlans service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/ListRescoreExecutionPlans">REST API Reference for ListRescoreExecutionPlans Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.ListTagsForResourceAsync(Amazon.KendraRanking.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets a list of tags associated with a specified resource. A rescore execution plan
+            is an example of a resource that can have tags associated with it.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.RescoreAsync(Amazon.KendraRanking.Model.RescoreRequest,System.Threading.CancellationToken)">
+            <summary>
+            Rescores or re-ranks search results from a search service such as OpenSearch (self
+            managed). You use the semantic search capabilities of Amazon Kendra Intelligent Ranking
+            to improve the search service's results.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the Rescore service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the Rescore service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/Rescore">REST API Reference for Rescore Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.TagResourceAsync(Amazon.KendraRanking.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds a specified tag to a specified rescore execution plan. A rescore execution plan
+            is an Amazon Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            API. If the tag already exists, the existing value is replaced with the new value.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.UntagResourceAsync(Amazon.KendraRanking.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes a tag from a rescore execution plan. A rescore execution plan is an Amazon
+            Kendra Intelligent Ranking resource used for provisioning the <code>Rescore</code>
+            operation.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceUnavailableException">
+            The resource you want to use is unavailable. Please check you have provided the correct
+            resource information and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.UpdateRescoreExecutionPlanAsync(Amazon.KendraRanking.Model.UpdateRescoreExecutionPlanRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates a rescore execution plan. A rescore execution plan is an Amazon Kendra Intelligent
+            Ranking resource used for provisioning the <code>Rescore</code> API. You can update
+            the number of capacity units you require for Amazon Kendra Intelligent Ranking to
+            rescore or re-rank a search service's results.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRescoreExecutionPlan service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRescoreExecutionPlan service method, as returned by KendraRanking.</returns>
+            <exception cref="T:Amazon.KendraRanking.Model.AccessDeniedException">
+            You don’t have sufficient access to perform this action. Please ensure you have the
+            required permission policies and user accounts and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ConflictException">
+            A conflict occurred with the request. Please fix any inconsistencies with your resources
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.InternalServerException">
+            An issue occurred with the internal server used for your Amazon Kendra Intelligent
+            Ranking service. Please wait a few minutes and try again, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            for help.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ResourceNotFoundException">
+            The resource you want to use doesn't exist. Please check you have provided the correct
+            resource and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ServiceQuotaExceededException">
+            You have exceeded the set limits for your Amazon Kendra Intelligent Ranking service.
+            Please see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas</a>
+            for more information, or contact <a href="http://aws.amazon.com/contact-us/">Support</a>
+            to inquire about an increase of limits.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ThrottlingException">
+            The request was denied due to request throttling. Please reduce the number of requests
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.KendraRanking.Model.ValidationException">
+            The input fails to satisfy the constraints set by the Amazon Kendra Intelligent Ranking
+            service. Please provide the correct input and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/kendra-ranking-2022-10-19/UpdateRescoreExecutionPlan">REST API Reference for UpdateRescoreExecutionPlan Operation</seealso>
+        </member>
+        <member name="M:Amazon.KendraRanking.IAmazonKendraRanking.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

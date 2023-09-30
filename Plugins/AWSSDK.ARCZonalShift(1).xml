@@ -1,0 +1,2874 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ARCZonalShift</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig">
+            <summary>
+            Configuration for accessing Amazon ARCZonalShift service
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ARCZonalShift service
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ARCZonalShift
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ARCZonalShift endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ARCZonalShiftEndpointProvider and ARCZonalShiftEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters.#ctor">
+            <summary>
+            ARCZonalShiftEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Endpoints.ARCZonalShiftEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.AmazonARCZonalShiftException">
+            <summary>
+             Common exception for the ARCZonalShift service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonARCZonalShiftException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonARCZonalShiftException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonARCZonalShiftException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonARCZonalShiftException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonARCZonalShiftException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftEndpointProvider">
+            <summary>
+            Amazon ARCZonalShift endpoint provider.
+            Resolves endpoint for given set of ARCZonalShiftEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ARCZonalShiftEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftEndpointResolver">
+            <summary>
+            Amazon ARCZonalShift endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ARCZonalShift service requests.
+            Collects values for ARCZonalShiftEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ARCZonalShiftEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftMetadata">
+            <summary>
+            Service metadata for  Amazon ARCZonalShift service
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Internal.AmazonARCZonalShiftMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.CancelZonalShiftRequest">
+            <summary>
+            Container for the parameters to the CancelZonalShift operation.
+            Cancel a zonal shift in Amazon Route 53 Application Recovery Controller that you've
+            started for a resource in your AWS account in an AWS Region.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftRequest.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The internally-generated identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse">
+            <summary>
+            This is the response object from the CancelZonalShift operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. A new comment overwrites any existing comment string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.ExpiryTime">
+            <summary>
+            Gets and sets the property ExpiryTime. 
+            <para>
+            The expiry time (expiration time) for the zonal shift. A zonal shift is temporary
+            and must be set to expire when you start the zonal shift. You can initially set a
+            zonal shift to expire in a maximum of three days (72 hours). However, you can update
+            a zonal shift to set a new expiration at any time. 
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Route 53 ARC converts to an expiry time (expiration time). You can cancel a zonal
+            shift, for example, if you're ready to restore traffic to the Availability Zone. Or
+            you can update the zonal shift to specify another length of time to expire in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time (UTC) when the zonal shift is started.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            A status for a zonal shift.
+            </para>
+             
+            <para>
+            The <code>Status</code> for a zonal shift can have one of the following values:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>ACTIVE:</b> The zonal shift is started and active.
+            </para>
+             </li> <li> 
+            <para>
+             <b>EXPIRED:</b> The zonal shift has expired (the expiry time was exceeded).
+            </para>
+             </li> <li> 
+            <para>
+             <b>CANCELED:</b> The zonal shift was canceled.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.CancelZonalShiftResponse.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ConflictException">
+            <summary>
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ConflictException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the conflict exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ConflictException.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The zonal shift ID associated with the conflict exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.GetManagedResourceRequest">
+            <summary>
+            Container for the parameters to the GetManagedResource operation.
+            Get information about a resource that's been registered for zonal shifts with Amazon
+            Route 53 Application Recovery Controller in this AWS Region. Resources that are registered
+            for zonal shifts are managed resources in Route 53 ARC.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.GetManagedResourceRequest.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.GetManagedResourceResponse">
+            <summary>
+            This is the response object from the GetManagedResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.GetManagedResourceResponse.AppliedWeights">
+            <summary>
+            Gets and sets the property AppliedWeights. 
+            <para>
+            A collection of key-value pairs that indicate whether resources are active in Availability
+            Zones or not. The key name is the Availability Zone where the resource is deployed.
+            The value is 1 or 0.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.GetManagedResourceResponse.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) for the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.GetManagedResourceResponse.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.GetManagedResourceResponse.ZonalShifts">
+            <summary>
+            Gets and sets the property ZonalShifts. 
+            <para>
+            The zonal shifts that are currently active for a resource. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            <summary>
+            There was an internal server error.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftRequestMarshaller">
+            <summary>
+            CancelZonalShift Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.CancelZonalShiftRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CancelZonalShift operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.CancelZonalShiftResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceRequestMarshaller">
+            <summary>
+            GetManagedResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.GetManagedResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetManagedResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.GetManagedResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesRequestMarshaller">
+            <summary>
+            ListManagedResources Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.ListManagedResourcesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListManagedResources operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListManagedResourcesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsRequestMarshaller">
+            <summary>
+            ListZonalShifts Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.ListZonalShiftsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListZonalShifts operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ListZonalShiftsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ManagedResourceSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ManagedResourceSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ManagedResourceSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ARCZonalShift#Model#ManagedResourceSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ManagedResourceSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ManagedResourceSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftRequestMarshaller">
+            <summary>
+            StartZonalShift Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.StartZonalShiftRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StartZonalShift operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.StartZonalShiftResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftRequestMarshaller">
+            <summary>
+            UpdateZonalShift Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftRequestMarshaller.Marshall(Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateZonalShift operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.UpdateZonalShiftResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftInResourceUnmarshaller">
+            <summary>
+            Response Unmarshaller for ZonalShiftInResource Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftInResourceUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ARCZonalShift#Model#ZonalShiftInResource,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftInResourceUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftInResourceUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ZonalShiftSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ARCZonalShift#Model#ZonalShiftSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.Internal.MarshallTransformations.ZonalShiftSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListManagedResourcesRequest">
+            <summary>
+            Container for the parameters to the ListManagedResources operation.
+            Lists all the resources in your AWS account in this AWS Region that are managed for
+            zonal shifts in Amazon Route 53 Application Recovery Controller, and information about
+            them. The information includes their Amazon Resource Names (ARNs), the Availability
+            Zones the resources are deployed in, and the resource name.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The number of objects that you want to return with this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Specifies that you want to receive the next page of results. Valid only if you received
+            a <code>NextToken</code> response in the previous request. If you did, it indicates
+            that more output is available. Set this parameter to the value provided by the previous
+            call's <code>NextToken</code> response to request the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListManagedResourcesResponse">
+            <summary>
+            This is the response object from the ListManagedResources operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesResponse.Items">
+            <summary>
+            Gets and sets the property Items. 
+            <para>
+            The items in the response list.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Specifies that you want to receive the next page of results. Valid only if you received
+            a <code>NextToken</code> response in the previous request. If you did, it indicates
+            that more output is available. Set this parameter to the value provided by the previous
+            call's <code>NextToken</code> response to request the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListZonalShiftsRequest">
+            <summary>
+            Container for the parameters to the ListZonalShifts operation.
+            Lists all the active zonal shifts in Amazon Route 53 Application Recovery Controller
+            in your AWS account in this AWS Region.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The number of objects that you want to return with this call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Specifies that you want to receive the next page of results. Valid only if you received
+            a <code>NextToken</code> response in the previous request. If you did, it indicates
+            that more output is available. Set this parameter to the value provided by the previous
+            call's <code>NextToken</code> response to request the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsRequest.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            A status for a zonal shift.
+            </para>
+             
+            <para>
+            The <code>Status</code> for a zonal shift can have one of the following values:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>ACTIVE</b>: The zonal shift is started and active.
+            </para>
+             </li> <li> 
+            <para>
+             <b>EXPIRED</b>: The zonal shift has expired (the expiry time was exceeded).
+            </para>
+             </li> <li> 
+            <para>
+             <b>CANCELED</b>: The zonal shift was canceled.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListZonalShiftsResponse">
+            <summary>
+            This is the response object from the ListZonalShifts operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsResponse.Items">
+            <summary>
+            Gets and sets the property Items. 
+            <para>
+            The items in the response list.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Specifies that you want to receive the next page of results. Valid only if you received
+            a <code>NextToken</code> response in the previous request. If you did, it indicates
+            that more output is available. Set this parameter to the value provided by the previous
+            call's <code>NextToken</code> response to request the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ManagedResourceSummary">
+            <summary>
+            A complex structure for a managed resource in an account.
+            
+             
+            <para>
+            A managed resource is a Network Load Balancer or Application Load Balancer that has
+            been registered with Route 53 ARC by Elastic Load Balancing. You can start a zonal
+            shift in Route 53 ARC for a managed resource to temporarily move traffic for the resource
+            away from an Availability Zone in an AWS Region.
+            </para>
+             <note> 
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ManagedResourceSummary.Arn">
+            <summary>
+            Gets and sets the property Arn. 
+            <para>
+            The Amazon Resource Name (ARN) for the managed resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ManagedResourceSummary.AvailabilityZones">
+            <summary>
+            Gets and sets the property AvailabilityZones. 
+            <para>
+            The Availability Zones that a resource is deployed in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ManagedResourceSummary.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the managed resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            <summary>
+            The input requested a resource that was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.StartZonalShiftRequest">
+            <summary>
+            Container for the parameters to the StartZonalShift operation.
+            You start a zonal shift to temporarily move load balancer traffic away from an Availability
+            Zone in a AWS Region, to help your application recover immediately, for example, from
+            a developer's bad code deployment or from an AWS infrastructure failure in a single
+            Availability Zone. You can start a zonal shift in Route 53 ARC only for managed resources
+            in your account in an AWS Region. Resources are automatically registered with Route
+            53 ARC by AWS services.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+             
+            <para>
+            When you start a zonal shift, traffic for the resource is no longer routed to the
+            Availability Zone. The zonal shift is created immediately in Route 53 ARC. However,
+            it can take a short time, typically up to a few minutes, for existing, in-progress
+            connections in the Availability Zone to complete.
+            </para>
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html">Zonal
+            shift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftRequest.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftRequest.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. A new comment overwrites any existing comment string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftRequest.ExpiresIn">
+            <summary>
+            Gets and sets the property ExpiresIn. 
+            <para>
+            The length of time that you want a zonal shift to be active, which Route 53 ARC converts
+            to an expiry time (expiration time). Zonal shifts are temporary. You can set a zonal
+            shift to be active initially for up to three days (72 hours).
+            </para>
+             
+            <para>
+            If you want to still keep traffic away from an Availability Zone, you can update the
+            zonal shift and set a new expiration. You can also cancel a zonal shift, before it
+            expires, for example, if you're ready to restore traffic to the Availability Zone.
+            </para>
+             
+            <para>
+            To set a length of time for a zonal shift to be active, specify a whole number, and
+            then one of the following, with no space:
+            </para>
+             <pre><code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;A lowercase letter m:&lt;/b&gt;
+            To specify that the value is in minutes.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;
+            &lt;b&gt;A lowercase letter h:&lt;/b&gt; To specify that the value is in hours.&lt;/p&gt;
+            &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For example: &lt;code&gt;20h&lt;/code&gt; means the
+            zonal shift expires in 20 hours. &lt;code&gt;120m&lt;/code&gt; means the zonal shift
+            expires in 120 minutes (2 hours).&lt;/p&gt; </code></pre>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftRequest.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.StartZonalShiftResponse">
+            <summary>
+            This is the response object from the StartZonalShift operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. A new comment overwrites any existing comment string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.ExpiryTime">
+            <summary>
+            Gets and sets the property ExpiryTime. 
+            <para>
+            The expiry time (expiration time) for the zonal shift. A zonal shift is temporary
+            and must be set to expire when you start the zonal shift. You can initially set a
+            zonal shift to expire in a maximum of three days (72 hours). However, you can update
+            a zonal shift to set a new expiration at any time. 
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Route 53 ARC converts to an expiry time (expiration time). You can cancel a zonal
+            shift, for example, if you're ready to restore traffic to the Availability Zone. Or
+            you can update the zonal shift to specify another length of time to expire in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time (UTC) when the zonal shift is started.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            A status for a zonal shift.
+            </para>
+             
+            <para>
+            The <code>Status</code> for a zonal shift can have one of the following values:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>ACTIVE:</b> The zonal shift is started and active.
+            </para>
+             </li> <li> 
+            <para>
+             <b>EXPIRED:</b> The zonal shift has expired (the expiry time was exceeded).
+            </para>
+             </li> <li> 
+            <para>
+             <b>CANCELED:</b> The zonal shift was canceled.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.StartZonalShiftResponse.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest">
+            <summary>
+            Container for the parameters to the UpdateZonalShift operation.
+            Update an active zonal shift in Amazon Route 53 Application Recovery Controller in
+            your AWS account. You can update a zonal shift to set a new expiration, or edit or
+            replace the comment for the zonal shift.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. A new comment overwrites any existing comment string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest.ExpiresIn">
+            <summary>
+            Gets and sets the property ExpiresIn. 
+            <para>
+            The length of time that you want a zonal shift to be active, which Route 53 ARC converts
+            to an expiry time (expiration time). Zonal shifts are temporary. You can set a zonal
+            shift to be active initially for up to three days (72 hours).
+            </para>
+             
+            <para>
+            If you want to still keep traffic away from an Availability Zone, you can update the
+            zonal shift and set a new expiration. You can also cancel a zonal shift, before it
+            expires, for example, if you're ready to restore traffic to the Availability Zone.
+            </para>
+             
+            <para>
+            To set a length of time for a zonal shift to be active, specify a whole number, and
+            then one of the following, with no space:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>A lowercase letter m:</b> To specify that the value is in minutes.
+            </para>
+             </li> <li> 
+            <para>
+             <b>A lowercase letter h:</b> To specify that the value is in hours.
+            </para>
+             </li> </ul> 
+            <para>
+            For example: <code>20h</code> means the zonal shift expires in 20 hours. <code>120m</code>
+            means the zonal shift expires in 120 minutes (2 hours).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse">
+            <summary>
+            This is the response object from the UpdateZonalShift operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. A new comment overwrites any existing comment string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.ExpiryTime">
+            <summary>
+            Gets and sets the property ExpiryTime. 
+            <para>
+            The expiry time (expiration time) for the zonal shift. A zonal shift is temporary
+            and must be set to expire when you start the zonal shift. You can initially set a
+            zonal shift to expire in a maximum of three days (72 hours). However, you can update
+            a zonal shift to set a new expiration at any time. 
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Route 53 ARC converts to an expiry time (expiration time). You can cancel a zonal
+            shift, for example, if you're ready to restore traffic to the Availability Zone. Or
+            you can update the zonal shift to specify another length of time to expire in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time (UTC) when the zonal shift is started.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            A status for a zonal shift.
+            </para>
+             
+            <para>
+            The <code>Status</code> for a zonal shift can have one of the following values:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>ACTIVE:</b> The zonal shift is started and active.
+            </para>
+             </li> <li> 
+            <para>
+             <b>EXPIRED:</b> The zonal shift has expired (the expiry time was exceeded).
+            </para>
+             </li> <li> 
+            <para>
+             <b>CANCELED:</b> The zonal shift was canceled.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.UpdateZonalShiftResponse.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an AWS service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the validation exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ZonalShiftInResource">
+            <summary>
+            A complex structure that lists the zonal shifts for a managed resource and their statuses
+            for the resource.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.AppliedStatus">
+            <summary>
+            Gets and sets the property AppliedStatus. 
+            <para>
+            An <code>appliedStatus</code> for a zonal shift for a resource can have one of two
+            values: <code>APPLIED</code> or <code>NOT_APPLIED</code>. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. That is, a new comment overwrites any existing comment
+            string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.ExpiryTime">
+            <summary>
+            Gets and sets the property ExpiryTime. 
+            <para>
+            The expiry time (expiration time) for the zonal shift. A zonal shift is temporary
+            and must be set to expire when you start the zonal shift. You can initially set a
+            zonal shift to expire in a maximum of three days (72 hours). However, you can update
+            a zonal shift to set a new expiration at any time. 
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Route 53 ARC converts to an expiry time (expiration time). You can cancel a zonal
+            shift, for example, if you're ready to restore traffic to the Availability Zone. Or
+            you can update the zonal shift to specify another length of time to expire in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time (UTC) when the zonal shift is started.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftInResource.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ZonalShiftSummary">
+            <summary>
+            You start a zonal shift to temporarily move load balancer traffic away from an Availability
+            Zone in a AWS Region. A zonal shift helps your application recover immediately, for
+            example, from a developer's bad code deployment or from an AWS infrastructure failure
+            in a single Availability Zone. You can start a zonal shift in Route 53 ARC only for
+            managed resources in your account in an AWS Region. Supported AWS resources are automatically
+            registered with Route 53 ARC.
+            
+             
+            <para>
+            Zonal shifts are temporary. A zonal shift can be active for up to three days (72 hours).
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Amazon Route 53 Application Recovery Controller converts to an expiry time (expiration
+            time). You can cancel a zonal shift, for example, if you're ready to restore traffic
+            to the Availability Zone. Or you can extend the zonal shift by updating the expiration
+            so the zonal shift is active longer.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.AwayFrom">
+            <summary>
+            Gets and sets the property AwayFrom. 
+            <para>
+            The Availability Zone that traffic is moved away from for a resource when you start
+            a zonal shift. Until the zonal shift expires or you cancel it, traffic for the resource
+            is instead moved to other Availability Zones in the AWS Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.Comment">
+            <summary>
+            Gets and sets the property Comment. 
+            <para>
+            A comment that you enter about the zonal shift. Only the latest comment is retained;
+            no comment history is maintained. That is, a new comment overwrites any existing comment
+            string.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.ExpiryTime">
+            <summary>
+            Gets and sets the property ExpiryTime. 
+            <para>
+            The expiry time (expiration time) for the zonal shift. A zonal shift is temporary
+            and must be set to expire when you start the zonal shift. You can initially set a
+            zonal shift to expire in a maximum of three days (72 hours). However, you can update
+            a zonal shift to set a new expiration at any time. 
+            </para>
+             
+            <para>
+            When you start a zonal shift, you specify how long you want it to be active, which
+            Route 53 ARC converts to an expiry time (expiration time). You can cancel a zonal
+            shift, for example, if you're ready to restore traffic to the Availability Zone. Or
+            you can update the zonal shift to specify another length of time to expire in.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.ResourceIdentifier">
+            <summary>
+            Gets and sets the property ResourceIdentifier. 
+            <para>
+            The identifier for the resource to include in a zonal shift. The identifier is the
+            Amazon Resource Name (ARN) for the resource.
+            </para>
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time (UTC) when the zonal shift is started.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            A status for a zonal shift.
+            </para>
+             
+            <para>
+            The <code>Status</code> for a zonal shift can have one of the following values:
+            </para>
+             <ul> <li> 
+            <para>
+             <b>ACTIVE:</b> The zonal shift is started and active.
+            </para>
+             </li> <li> 
+            <para>
+             <b>EXPIRED:</b> The zonal shift has expired (the expiry time was exceeded).
+            </para>
+             </li> <li> 
+            <para>
+             <b>CANCELED:</b> The zonal shift was canceled.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ZonalShiftSummary.ZonalShiftId">
+            <summary>
+            Gets and sets the property ZonalShiftId. 
+            <para>
+            The identifier of a zonal shift.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ARCZonalShiftPaginatorFactory">
+             <summary>
+             Paginators for the ARCZonalShift service
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ARCZonalShiftPaginatorFactory.ListManagedResources(Amazon.ARCZonalShift.Model.ListManagedResourcesRequest)">
+             <summary>
+             Paginator for ListManagedResources operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.ARCZonalShiftPaginatorFactory.ListZonalShifts(Amazon.ARCZonalShift.Model.ListZonalShiftsRequest)">
+             <summary>
+             Paginator for ListZonalShifts operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.IARCZonalShiftPaginatorFactory">
+             <summary>
+             Paginators for the ARCZonalShift service
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.IARCZonalShiftPaginatorFactory.ListManagedResources(Amazon.ARCZonalShift.Model.ListManagedResourcesRequest)">
+             <summary>
+             Paginator for ListManagedResources operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.Model.IARCZonalShiftPaginatorFactory.ListZonalShifts(Amazon.ARCZonalShift.Model.ListZonalShiftsRequest)">
+             <summary>
+             Paginator for ListZonalShifts operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.IListManagedResourcesPaginator">
+             <summary>
+             Paginator for the ListManagedResources operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.IListManagedResourcesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.IListManagedResourcesPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.IListZonalShiftsPaginator">
+             <summary>
+             Paginator for the ListZonalShifts operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.IListZonalShiftsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.IListZonalShiftsPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListManagedResourcesPaginator">
+            <summary>
+            Base class for ListManagedResources paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListManagedResourcesPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.Model.ListZonalShiftsPaginator">
+            <summary>
+            Base class for ListZonalShifts paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.Model.ListZonalShiftsPaginator.Items">
+            <summary>
+            Enumerable containing all of the Items
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.AmazonARCZonalShiftRequest">
+            <summary>
+            Base class for ARCZonalShift operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.AppliedStatus">
+            <summary>
+            Constants used for properties of type AppliedStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.AppliedStatus.APPLIED">
+            <summary>
+            Constant APPLIED for AppliedStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.AppliedStatus.NOT_APPLIED">
+            <summary>
+            Constant NOT_APPLIED for AppliedStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AppliedStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AppliedStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AppliedStatus.op_Implicit(System.String)~Amazon.ARCZonalShift.AppliedStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.ConflictExceptionReason">
+            <summary>
+            Constants used for properties of type ConflictExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ConflictExceptionReason.SimultaneousZonalShiftsConflict">
+            <summary>
+            Constant SimultaneousZonalShiftsConflict for ConflictExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ConflictExceptionReason.ZonalShiftAlreadyExists">
+            <summary>
+            Constant ZonalShiftAlreadyExists for ConflictExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ConflictExceptionReason.ZonalShiftStatusNotActive">
+            <summary>
+            Constant ZonalShiftStatusNotActive for ConflictExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ConflictExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ConflictExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ConflictExceptionReason.op_Implicit(System.String)~Amazon.ARCZonalShift.ConflictExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.InvalidAz">
+            <summary>
+            Constant InvalidAz for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.InvalidExpiresIn">
+            <summary>
+            Constant InvalidExpiresIn for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.InvalidResourceIdentifier">
+            <summary>
+            Constant InvalidResourceIdentifier for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.InvalidStatus">
+            <summary>
+            Constant InvalidStatus for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.InvalidToken">
+            <summary>
+            Constant InvalidToken for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.MissingValue">
+            <summary>
+            Constant MissingValue for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ValidationExceptionReason.UnsupportedAz">
+            <summary>
+            Constant UnsupportedAz for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ValidationExceptionReason.op_Implicit(System.String)~Amazon.ARCZonalShift.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.ZonalShiftStatus">
+            <summary>
+            Constants used for properties of type ZonalShiftStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ZonalShiftStatus.ACTIVE">
+            <summary>
+            Constant ACTIVE for ZonalShiftStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ZonalShiftStatus.CANCELED">
+            <summary>
+            Constant CANCELED for ZonalShiftStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ARCZonalShift.ZonalShiftStatus.EXPIRED">
+            <summary>
+            Constant EXPIRED for ZonalShiftStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ZonalShiftStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ZonalShiftStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.ZonalShiftStatus.op_Implicit(System.String)~Amazon.ARCZonalShift.ZonalShiftStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.AmazonARCZonalShiftClient">
+             <summary>
+             Implementation for accessing ARCZonalShift
+            
+             This is the API Reference Guide for the zonal shift feature of Amazon Route 53 Application
+             Recovery Controller. This guide is for developers who need detailed information about
+             zonal shift API actions, data types, and errors.
+             
+              
+             <para>
+             Zonal shift is in preview release for Amazon Route 53 Application Recovery Controller
+             and is subject to change.
+             </para>
+              
+             <para>
+             Zonal shift in Route 53 ARC enables you to move traffic for a load balancer resource
+             away from an Availability Zone. Starting a zonal shift helps your application recover
+             immediately, for example, from a developer's bad code deployment or from an AWS infrastructure
+             failure in a single Availability Zone, reducing the impact and time lost from an issue
+             in one zone. 
+             </para>
+              
+             <para>
+             Supported AWS resources are automatically registered with Route 53 ARC. Resources
+             that are registered for zonal shifts in Route 53 ARC are managed resources in Route
+             53 ARC. You can start a zonal shift for any managed resource in your account in a
+             Region. At this time, you can only start a zonal shift for Network Load Balancers
+             and Application Load Balancers with cross-zone load balancing turned off.
+             </para>
+              
+             <para>
+             Zonal shifts are temporary. You must specify an expiration when you start a zonal
+             shift, of up to three days initially. If you want to still keep traffic away from
+             an Availability Zone, you can update the zonal shift and set a new expiration. You
+             can also cancel a zonal shift, before it expires, for example, if you're ready to
+             restore traffic to the Availability Zone.
+             </para>
+              
+             <para>
+             For more information about using zonal shift, see the <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route53-recovery.html">Amazon
+             Route 53 Application Recovery Controller Developer Guide</a>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor">
+             <summary>
+             Constructs AmazonARCZonalShiftClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonARCZonalShiftClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(Amazon.ARCZonalShift.AmazonARCZonalShiftConfig)">
+             <summary>
+             Constructs AmazonARCZonalShiftClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonARCZonalShiftClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ARCZonalShift.AmazonARCZonalShiftConfig)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Credentials and an
+            AmazonARCZonalShiftClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonARCZonalShiftClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String,Amazon.ARCZonalShift.AmazonARCZonalShiftConfig)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonARCZonalShiftClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonARCZonalShiftClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.#ctor(System.String,System.String,System.String,Amazon.ARCZonalShift.AmazonARCZonalShiftConfig)">
+            <summary>
+            Constructs AmazonARCZonalShiftClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonARCZonalShiftClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonARCZonalShiftClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.CancelZonalShiftAsync(Amazon.ARCZonalShift.Model.CancelZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            Cancel a zonal shift in Amazon Route 53 Application Recovery Controller that you've
+            started for a resource in your AWS account in an AWS Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CancelZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CancelZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/CancelZonalShift">REST API Reference for CancelZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.GetManagedResourceAsync(Amazon.ARCZonalShift.Model.GetManagedResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get information about a resource that's been registered for zonal shifts with Amazon
+            Route 53 Application Recovery Controller in this AWS Region. Resources that are registered
+            for zonal shifts are managed resources in Route 53 ARC.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetManagedResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetManagedResource service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/GetManagedResource">REST API Reference for GetManagedResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.ListManagedResourcesAsync(Amazon.ARCZonalShift.Model.ListManagedResourcesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all the resources in your AWS account in this AWS Region that are managed for
+            zonal shifts in Amazon Route 53 Application Recovery Controller, and information about
+            them. The information includes their Amazon Resource Names (ARNs), the Availability
+            Zones the resources are deployed in, and the resource name.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListManagedResources service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListManagedResources service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/ListManagedResources">REST API Reference for ListManagedResources Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.ListZonalShiftsAsync(Amazon.ARCZonalShift.Model.ListZonalShiftsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all the active zonal shifts in Amazon Route 53 Application Recovery Controller
+            in your AWS account in this AWS Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListZonalShifts service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListZonalShifts service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/ListZonalShifts">REST API Reference for ListZonalShifts Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.StartZonalShiftAsync(Amazon.ARCZonalShift.Model.StartZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            You start a zonal shift to temporarily move load balancer traffic away from an Availability
+            Zone in a AWS Region, to help your application recover immediately, for example, from
+            a developer's bad code deployment or from an AWS infrastructure failure in a single
+            Availability Zone. You can start a zonal shift in Route 53 ARC only for managed resources
+            in your account in an AWS Region. Resources are automatically registered with Route
+            53 ARC by AWS services.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+             
+            <para>
+            When you start a zonal shift, traffic for the resource is no longer routed to the
+            Availability Zone. The zonal shift is created immediately in Route 53 ARC. However,
+            it can take a short time, typically up to a few minutes, for existing, in-progress
+            connections in the Availability Zone to complete.
+            </para>
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html">Zonal
+            shift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/StartZonalShift">REST API Reference for StartZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.UpdateZonalShiftAsync(Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            Update an active zonal shift in Amazon Route 53 Application Recovery Controller in
+            your AWS account. You can update a zonal shift to set a new expiration, or edit or
+            replace the comment for the zonal shift.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/UpdateZonalShift">REST API Reference for UpdateZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.AmazonARCZonalShiftClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.ARCZonalShift.IAmazonARCZonalShift">
+             <summary>
+             Interface for accessing ARCZonalShift
+            
+             This is the API Reference Guide for the zonal shift feature of Amazon Route 53 Application
+             Recovery Controller. This guide is for developers who need detailed information about
+             zonal shift API actions, data types, and errors.
+             
+              
+             <para>
+             Zonal shift is in preview release for Amazon Route 53 Application Recovery Controller
+             and is subject to change.
+             </para>
+              
+             <para>
+             Zonal shift in Route 53 ARC enables you to move traffic for a load balancer resource
+             away from an Availability Zone. Starting a zonal shift helps your application recover
+             immediately, for example, from a developer's bad code deployment or from an AWS infrastructure
+             failure in a single Availability Zone, reducing the impact and time lost from an issue
+             in one zone. 
+             </para>
+              
+             <para>
+             Supported AWS resources are automatically registered with Route 53 ARC. Resources
+             that are registered for zonal shifts in Route 53 ARC are managed resources in Route
+             53 ARC. You can start a zonal shift for any managed resource in your account in a
+             Region. At this time, you can only start a zonal shift for Network Load Balancers
+             and Application Load Balancers with cross-zone load balancing turned off.
+             </para>
+              
+             <para>
+             Zonal shifts are temporary. You must specify an expiration when you start a zonal
+             shift, of up to three days initially. If you want to still keep traffic away from
+             an Availability Zone, you can update the zonal shift and set a new expiration. You
+             can also cancel a zonal shift, before it expires, for example, if you're ready to
+             restore traffic to the Availability Zone.
+             </para>
+              
+             <para>
+             For more information about using zonal shift, see the <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route53-recovery.html">Amazon
+             Route 53 Application Recovery Controller Developer Guide</a>.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.ARCZonalShift.IAmazonARCZonalShift.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.CancelZonalShiftAsync(Amazon.ARCZonalShift.Model.CancelZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            Cancel a zonal shift in Amazon Route 53 Application Recovery Controller that you've
+            started for a resource in your AWS account in an AWS Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CancelZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CancelZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/CancelZonalShift">REST API Reference for CancelZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.GetManagedResourceAsync(Amazon.ARCZonalShift.Model.GetManagedResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get information about a resource that's been registered for zonal shifts with Amazon
+            Route 53 Application Recovery Controller in this AWS Region. Resources that are registered
+            for zonal shifts are managed resources in Route 53 ARC.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetManagedResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetManagedResource service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/GetManagedResource">REST API Reference for GetManagedResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.ListManagedResourcesAsync(Amazon.ARCZonalShift.Model.ListManagedResourcesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all the resources in your AWS account in this AWS Region that are managed for
+            zonal shifts in Amazon Route 53 Application Recovery Controller, and information about
+            them. The information includes their Amazon Resource Names (ARNs), the Availability
+            Zones the resources are deployed in, and the resource name.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListManagedResources service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListManagedResources service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/ListManagedResources">REST API Reference for ListManagedResources Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.ListZonalShiftsAsync(Amazon.ARCZonalShift.Model.ListZonalShiftsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all the active zonal shifts in Amazon Route 53 Application Recovery Controller
+            in your AWS account in this AWS Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListZonalShifts service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListZonalShifts service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/ListZonalShifts">REST API Reference for ListZonalShifts Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.StartZonalShiftAsync(Amazon.ARCZonalShift.Model.StartZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            You start a zonal shift to temporarily move load balancer traffic away from an Availability
+            Zone in a AWS Region, to help your application recover immediately, for example, from
+            a developer's bad code deployment or from an AWS infrastructure failure in a single
+            Availability Zone. You can start a zonal shift in Route 53 ARC only for managed resources
+            in your account in an AWS Region. Resources are automatically registered with Route
+            53 ARC by AWS services.
+            
+             
+            <para>
+            At this time, you can only start a zonal shift for Network Load Balancers and Application
+            Load Balancers with cross-zone load balancing turned off.
+            </para>
+             
+            <para>
+            When you start a zonal shift, traffic for the resource is no longer routed to the
+            Availability Zone. The zonal shift is created immediately in Route 53 ARC. However,
+            it can take a short time, typically up to a few minutes, for existing, in-progress
+            connections in the Availability Zone to complete.
+            </para>
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html">Zonal
+            shift</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/StartZonalShift">REST API Reference for StartZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.UpdateZonalShiftAsync(Amazon.ARCZonalShift.Model.UpdateZonalShiftRequest,System.Threading.CancellationToken)">
+            <summary>
+            Update an active zonal shift in Amazon Route 53 Application Recovery Controller in
+            your AWS account. You can update a zonal shift to set a new expiration, or edit or
+            replace the comment for the zonal shift.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateZonalShift service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateZonalShift service method, as returned by ARCZonalShift.</returns>
+            <exception cref="T:Amazon.ARCZonalShift.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ConflictException">
+            The request could not be processed because of conflict in the current state of the
+            resource.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ResourceNotFoundException">
+            The input requested a resource that was not found.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ARCZonalShift.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/arc-zonal-shift-2022-10-30/UpdateZonalShift">REST API Reference for UpdateZonalShift Operation</seealso>
+        </member>
+        <member name="M:Amazon.ARCZonalShift.IAmazonARCZonalShift.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

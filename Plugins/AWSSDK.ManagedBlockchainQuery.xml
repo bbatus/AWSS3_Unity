@@ -1,0 +1,3564 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ManagedBlockchainQuery</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig">
+            <summary>
+            Configuration for accessing Amazon ManagedBlockchainQuery service
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ManagedBlockchainQuery service
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ManagedBlockchainQuery
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ManagedBlockchainQuery endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ManagedBlockchainQueryEndpointProvider and ManagedBlockchainQueryEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters.#ctor">
+            <summary>
+            ManagedBlockchainQueryEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Endpoints.ManagedBlockchainQueryEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException">
+            <summary>
+             Common exception for the ManagedBlockchainQuery service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonManagedBlockchainQueryException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonManagedBlockchainQueryException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonManagedBlockchainQueryException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonManagedBlockchainQueryException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonManagedBlockchainQueryException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryEndpointProvider">
+            <summary>
+            Amazon ManagedBlockchainQuery endpoint provider.
+            Resolves endpoint for given set of ManagedBlockchainQueryEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ManagedBlockchainQueryEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryEndpointResolver">
+            <summary>
+            Amazon ManagedBlockchainQuery endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ManagedBlockchainQuery service requests.
+            Collects values for ManagedBlockchainQueryEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ManagedBlockchainQueryEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryMetadata">
+            <summary>
+            Service metadata for  Amazon ManagedBlockchainQuery service
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Internal.AmazonManagedBlockchainQueryMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            <summary>
+            The Amazon Web Services account doesn’t have access to this resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem">
+            <summary>
+            Error generated from a failed <code>BatchGetTokenBalance</code> request.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.ErrorCode">
+            <summary>
+            Gets and sets the property ErrorCode. 
+            <para>
+            The error code associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            The message associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.ErrorType">
+            <summary>
+            Gets and sets the property ErrorType. 
+            <para>
+            The type of error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceErrorItem.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceInputItem">
+            <summary>
+            The container for the input for getting a token balance.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceInputItem.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceInputItem.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceInputItem.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem">
+            <summary>
+            The container for the properties of a token balance output.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem.Balance">
+            <summary>
+            Gets and sets the property Balance. 
+            <para>
+            The container for the token balance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem.LastUpdatedTime">
+            <summary>
+            Gets and sets the property LastUpdatedTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceOutputItem.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceRequest">
+            <summary>
+            Container for the parameters to the BatchGetTokenBalance operation.
+            Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code>
+            action for every token in the request.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceRequest.GetTokenBalanceInputs">
+            <summary>
+            Gets and sets the property GetTokenBalanceInputs. 
+            <para>
+            An array of <code>GetTokenBalanceInput</code> objects whose balance is being requested.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceResponse">
+            <summary>
+            This is the response object from the BatchGetTokenBalance operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceResponse.Errors">
+            <summary>
+            Gets and sets the property Errors. 
+            <para>
+            An array of <code>BatchGetTokenBalanceErrorItem</code> objects returned from the request.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceResponse.TokenBalances">
+            <summary>
+            Gets and sets the property TokenBalances. 
+            <para>
+            An array of <code>BatchGetTokenBalanceOutputItem</code> objects returned by the response.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.BlockchainInstant">
+            <summary>
+            The container for time.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.BlockchainInstant.Time">
+            <summary>
+            Gets and sets the property Time. 
+            <para>
+            The container of the <code>Timestamp</code> of the blockchain instant.
+            </para>
+             <note> 
+            <para>
+            This <code>timestamp</code> will only be recorded up to the second.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest">
+            <summary>
+            Container for the parameters to the GetTokenBalance operation.
+            Gets the balance of a specific token, including native tokens, for a given address
+            (wallet or contract) on the blockchain.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant. 
+            <para>
+            The time for when the TokenBalance is requested or the current time if a time is not
+            provided in the request.
+            </para>
+             <note> 
+            <para>
+            This time will only be recorded up to the second.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier. 
+            <para>
+            The container for the identifier for the owner.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier. 
+            <para>
+            The container for the identifier for the token, including the unique token ID and
+            its blockchain network.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse">
+            <summary>
+            This is the response object from the GetTokenBalance operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse.Balance">
+            <summary>
+            Gets and sets the property Balance. 
+            <para>
+            The container for the token balance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse.LastUpdatedTime">
+            <summary>
+            Gets and sets the property LastUpdatedTime.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceResponse.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest">
+            <summary>
+            Container for the parameters to the GetTransaction operation.
+            Get the details of a transaction.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transaction occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest.TransactionHash">
+            <summary>
+            Gets and sets the property TransactionHash. 
+            <para>
+            The hash of the transaction. It is generated whenever a transaction is verified and
+            added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.GetTransactionResponse">
+            <summary>
+            This is the response object from the GetTransaction operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.GetTransactionResponse.Transaction">
+            <summary>
+            Gets and sets the property Transaction. 
+            <para>
+            Contains the details of the transaction.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            <summary>
+            The request processing has failed because of an internal error in the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The container of the <code>retryAfterSeconds</code> value.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceErrorItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetTokenBalanceErrorItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceErrorItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#BatchGetTokenBalanceErrorItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceErrorItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceErrorItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceInputItemMarshaller">
+            <summary>
+            BatchGetTokenBalanceInputItem Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceInputItemMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceInputItem,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceInputItemMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceOutputItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetTokenBalanceOutputItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceOutputItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#BatchGetTokenBalanceOutputItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceOutputItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceOutputItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceRequestMarshaller">
+            <summary>
+            BatchGetTokenBalance Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for BatchGetTokenBalance operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BatchGetTokenBalanceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantMarshaller">
+            <summary>
+            BlockchainInstant Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.BlockchainInstant,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantUnmarshaller">
+            <summary>
+            Response Unmarshaller for BlockchainInstant Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#BlockchainInstant,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.BlockchainInstantUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceRequestMarshaller">
+            <summary>
+            GetTokenBalance Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetTokenBalance operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTokenBalanceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionRequestMarshaller">
+            <summary>
+            GetTransaction Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetTransaction operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.GetTransactionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesRequestMarshaller">
+            <summary>
+            ListTokenBalances Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTokenBalances operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTokenBalancesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsRequestMarshaller">
+            <summary>
+            ListTransactionEvents Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTransactionEvents operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionEventsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsRequestMarshaller">
+            <summary>
+            ListTransactions Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsRequestMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTransactions operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsSortMarshaller">
+            <summary>
+            ListTransactionsSort Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsSortMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.ListTransactionsSort,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ListTransactionsSortMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerFilterMarshaller">
+            <summary>
+            OwnerFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerFilterMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.OwnerFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierMarshaller">
+            <summary>
+            OwnerIdentifier Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.OwnerIdentifier,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierUnmarshaller">
+            <summary>
+            Response Unmarshaller for OwnerIdentifier Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#OwnerIdentifier,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.OwnerIdentifierUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenBalanceUnmarshaller">
+            <summary>
+            Response Unmarshaller for TokenBalance Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenBalanceUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#TokenBalance,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenBalanceUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenBalanceUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenFilterMarshaller">
+            <summary>
+            TokenFilter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenFilterMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.TokenFilter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenFilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierMarshaller">
+            <summary>
+            TokenIdentifier Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierMarshaller.Marshall(Amazon.ManagedBlockchainQuery.Model.TokenIdentifier,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierUnmarshaller">
+            <summary>
+            Response Unmarshaller for TokenIdentifier Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#TokenIdentifier,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TokenIdentifierUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionEventUnmarshaller">
+            <summary>
+            Response Unmarshaller for TransactionEvent Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionEventUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#TransactionEvent,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionEventUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionEventUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionOutputItemUnmarshaller">
+            <summary>
+            Response Unmarshaller for TransactionOutputItem Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionOutputItemUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#TransactionOutputItem,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionOutputItemUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionOutputItemUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionUnmarshaller">
+            <summary>
+            Response Unmarshaller for Transaction Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#Transaction,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.TransactionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ManagedBlockchainQuery#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest">
+            <summary>
+            Container for the parameters to the ListTokenBalances operation.
+            This action returns the following for a given a blockchain network:
+            
+             <ul> <li> 
+            <para>
+            Lists all token balances owned by an address (either a contact address or a wallet
+            address).
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for all tokens created by a contract.
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for a given token.
+            </para>
+             </li> </ul> <note> 
+            <para>
+            You must always specify the network property of the <code>tokenFilter</code> when
+            using this operation.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of token balances to return.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest.OwnerFilter">
+            <summary>
+            Gets and sets the property OwnerFilter. 
+            <para>
+            The contract or wallet address on the blockchain network by which to filter the request.
+            You must specify the <code>address</code> property of the <code>ownerFilter</code>
+            when listing balances of tokens owned by the address.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest.TokenFilter">
+            <summary>
+            Gets and sets the property TokenFilter. 
+            <para>
+            The contract address or a token identifier on the blockchain network by which to filter
+            the request. You must specify the contractAddress property of this container when
+            listing tokens minted by a contract.
+            </para>
+             <note> 
+            <para>
+            You must always specify the network property of this container when using this operation.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesResponse">
+            <summary>
+            This is the response object from the ListTokenBalances operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesResponse.TokenBalances">
+            <summary>
+            Gets and sets the property TokenBalances. 
+            <para>
+            An array of <code>TokenBalance</code> objects. Each object contains details about
+            the token balance.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest">
+            <summary>
+            Container for the parameters to the ListTransactionEvents operation.
+            An array of <code>TransactionEvent</code> objects. Each object contains details about
+            the transaction event.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of transaction events to list.
+            </para>
+             <note> 
+            <para>
+            Even if additional results can be retrieved, the request can return less results than
+            <code>maxResults</code> or an empty array of results.
+            </para>
+             
+            <para>
+            To retrieve the next set of results, make another request with the returned <code>nextToken</code>
+            value. The value of <code>nextToken</code> is <code>null</code> when there are no
+            more results to return
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transaction events occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest.TransactionHash">
+            <summary>
+            Gets and sets the property TransactionHash. 
+            <para>
+            The hash of the transaction. It is generated whenever a transaction is verified and
+            added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsResponse">
+            <summary>
+            This is the response object from the ListTransactionEvents operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsResponse.Events">
+            <summary>
+            Gets and sets the property Events. 
+            <para>
+            An array of <code>TransactionEvent</code> objects. Each object contains details about
+            the transaction events.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest">
+            <summary>
+            Container for the parameters to the ListTransactions operation.
+            Lists all of the transactions on a given wallet address or to a specific contract.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.Address">
+            <summary>
+            Gets and sets the property Address. 
+            <para>
+            The address (either a contract or wallet), whose transactions are being requested.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.FromBlockchainInstant">
+            <summary>
+            Gets and sets the property FromBlockchainInstant.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of transactions to list.
+            </para>
+             <note> 
+            <para>
+            Even if additional results can be retrieved, the request can return less results than
+            <code>maxResults</code> or an empty array of results.
+            </para>
+             
+            <para>
+            To retrieve the next set of results, make another request with the returned <code>nextToken</code>
+            value. The value of <code>nextToken</code> is <code>null</code> when there are no
+            more results to return
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transactions occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.Sort">
+            <summary>
+            Gets and sets the property Sort. 
+            <para>
+            Sorts items in an ascending order if the first page starts at <code>fromTime</code>.
+            Sorts items in a descending order if the first page starts at <code>toTime</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest.ToBlockchainInstant">
+            <summary>
+            Gets and sets the property ToBlockchainInstant.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionsResponse">
+            <summary>
+            This is the response object from the ListTransactions operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The pagination token that indicates the next set of results to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsResponse.Transactions">
+            <summary>
+            Gets and sets the property Transactions. 
+            <para>
+            The array of transactions returned by the request.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionsSort">
+            <summary>
+            The container for determining how the list transaction result will be sorted.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsSort.SortBy">
+            <summary>
+            Gets and sets the property SortBy. 
+            <para>
+            Defaults to the value <code>TRANSACTION_TIMESTAMP</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsSort.SortOrder">
+            <summary>
+            Gets and sets the property SortOrder. 
+            <para>
+            The container for the <i>sort order</i> for <code>ListTransactions</code>. The <code>SortOrder</code>
+            field only accepts the values <code>ASCENDING</code> and <code>DESCENDING</code>.
+            Not providing <code>SortOrder</code> will default to <code>ASCENDING</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.OwnerFilter">
+            <summary>
+            The container for the owner information to filter by.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.OwnerFilter.Address">
+            <summary>
+            Gets and sets the property Address. 
+            <para>
+            The contract or wallet address.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.OwnerIdentifier">
+            <summary>
+            The container for the identifier of the owner.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.OwnerIdentifier.Address">
+            <summary>
+            Gets and sets the property Address. 
+            <para>
+            The contract or wallet address for the owner.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            <summary>
+            The resource was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The <code>resourceId</code> of the resource that caused the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The <code>resourceType</code> of the resource that caused the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            <summary>
+            The service quota has been exceeded for this resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The container for the <code>quotaCode</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The <code>resourceId</code> of the resource that caused the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The <code>resourceType</code> of the resource that caused the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The container for the <code>serviceCode</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            <summary>
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The container for the <code>quotaCode</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The container of the <code>retryAfterSeconds</code> value.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The container for the <code>serviceCode</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.TokenBalance">
+            <summary>
+            The balance of the token.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenBalance.AtBlockchainInstant">
+            <summary>
+            Gets and sets the property AtBlockchainInstant. 
+            <para>
+            The time for when the TokenBalance is requested or the current time if a time is not
+            provided in the request.
+            </para>
+             <note> 
+            <para>
+            This time will only be recorded up to the second.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenBalance.Balance">
+            <summary>
+            Gets and sets the property Balance. 
+            <para>
+            The container of the token balance.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenBalance.LastUpdatedTime">
+            <summary>
+            Gets and sets the property LastUpdatedTime. 
+            <para>
+            The <code>timestamp</code> of the last transaction at which the balance for the token
+            in the wallet was updated.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenBalance.OwnerIdentifier">
+            <summary>
+            Gets and sets the property OwnerIdentifier. 
+            <para>
+            The container for the identifier of the owner.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenBalance.TokenIdentifier">
+            <summary>
+            Gets and sets the property TokenIdentifier. 
+            <para>
+            The identifier for the token, including the unique token ID and its blockchain network.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.TokenFilter">
+            <summary>
+            The container of the token filter like the contract address on a given blockchain
+            network or a unique token identifier on a given blockchain network.
+            
+             <note> 
+            <para>
+            You must always specify the network property of this container when using this operation.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenFilter.ContractAddress">
+            <summary>
+            Gets and sets the property ContractAddress. 
+            <para>
+            This is the address of the contract.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenFilter.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network of the token.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenFilter.TokenId">
+            <summary>
+            Gets and sets the property TokenId. 
+            <para>
+            The unique identifier of the token.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.TokenIdentifier">
+            <summary>
+            The container for the identifier for the token including the unique token ID and its
+            blockchain network.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenIdentifier.ContractAddress">
+            <summary>
+            Gets and sets the property ContractAddress. 
+            <para>
+            This is the token's contract address.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenIdentifier.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network of the token.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TokenIdentifier.TokenId">
+            <summary>
+            Gets and sets the property TokenId. 
+            <para>
+            The unique identifier of the token.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.Transaction">
+            <summary>
+            There are two possible types of transactions used for this data type:
+            
+             <ul> <li> 
+            <para>
+            A Bitcoin transaction is a movement of BTC from one address to another.
+            </para>
+             </li> <li> 
+            <para>
+            An Ethereum transaction refers to an action initiated by an externally owned account,
+            which is an account managed by a human, not a contract. For example, if Bob sends
+            Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing
+            action occurs within a transaction.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.BlockHash">
+            <summary>
+            Gets and sets the property BlockHash. 
+            <para>
+            The block hash is a unique identifier for a block. It is a fixed-size string that
+            is calculated by using the information in the block. The block hash is used to verify
+            the integrity of the data in the block.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.BlockNumber">
+            <summary>
+            Gets and sets the property BlockNumber. 
+            <para>
+            The block number in which the transaction is recorded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.ContractAddress">
+            <summary>
+            Gets and sets the property ContractAddress. 
+            <para>
+            The blockchain address for the contract.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.CumulativeGasUsed">
+            <summary>
+            Gets and sets the property CumulativeGasUsed. 
+            <para>
+            The amount of gas used up to the specified point in the block.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.EffectiveGasPrice">
+            <summary>
+            Gets and sets the property EffectiveGasPrice. 
+            <para>
+            The effective gas price.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.From">
+            <summary>
+            Gets and sets the property From. 
+            <para>
+            The initiator of the transaction. It is either in the form a public key or a contract
+            address.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.GasUsed">
+            <summary>
+            Gets and sets the property GasUsed. 
+            <para>
+            The amount of gas used for the transaction.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transaction occured.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.NumberOfTransactions">
+            <summary>
+            Gets and sets the property NumberOfTransactions. 
+            <para>
+            The number of transactions in the block.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.SignatureR">
+            <summary>
+            Gets and sets the property SignatureR. 
+            <para>
+            The signature of the transaction. The X coordinate of a point R.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.SignatureS">
+            <summary>
+            Gets and sets the property SignatureS. 
+            <para>
+            The signature of the transaction. The Y coordinate of a point S.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.SignatureV">
+            <summary>
+            Gets and sets the property SignatureV. 
+            <para>
+            The signature of the transaction. The Z coordinate of a point V.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the transaction.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.To">
+            <summary>
+            Gets and sets the property To. 
+            <para>
+            The identifier of the transaction. It is generated whenever a transaction is verified
+            and added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.TransactionFee">
+            <summary>
+            Gets and sets the property TransactionFee. 
+            <para>
+            The transaction fee.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.TransactionHash">
+            <summary>
+            Gets and sets the property TransactionHash. 
+            <para>
+            The hash of the transaction. It is generated whenever a transaction is verified and
+            added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.TransactionId">
+            <summary>
+            Gets and sets the property TransactionId. 
+            <para>
+            The unique identifier of the transaction. It is generated whenever a transaction is
+            verified and added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.TransactionIndex">
+            <summary>
+            Gets and sets the property TransactionIndex. 
+            <para>
+            The index of the transaction within a blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.Transaction.TransactionTimestamp">
+            <summary>
+            Gets and sets the property TransactionTimestamp. 
+            <para>
+            The <code>Timestamp</code> of the transaction. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.TransactionEvent">
+            <summary>
+            The container for the properties of a transaction event.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.ContractAddress">
+            <summary>
+            Gets and sets the property ContractAddress. 
+            <para>
+            The blockchain address. for the contract
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.EventType">
+            <summary>
+            Gets and sets the property EventType. 
+            <para>
+            The type of transaction event.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.From">
+            <summary>
+            Gets and sets the property From. 
+            <para>
+            The wallet address initiating the transaction. It can either be a public key or a
+            contract.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transaction occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.To">
+            <summary>
+            Gets and sets the property To. 
+            <para>
+            The wallet address receiving the transaction. It can either be a public key or a contract.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.TokenId">
+            <summary>
+            Gets and sets the property TokenId. 
+            <para>
+            The unique identifier for the token involved in the transaction.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.TransactionHash">
+            <summary>
+            Gets and sets the property TransactionHash. 
+            <para>
+            The hash of the transaction. It is generated whenever a transaction is verified and
+            added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.TransactionId">
+            <summary>
+            Gets and sets the property TransactionId. 
+            <para>
+            The unique identifier of the transaction. It is generated whenever a transaction is
+            verified and added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The value that was transacted.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionEvent.VoutIndex">
+            <summary>
+            Gets and sets the property VoutIndex. 
+            <para>
+            The position of the vout in the transaction output list.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.TransactionOutputItem">
+            <summary>
+            The container of the transaction output.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionOutputItem.Network">
+            <summary>
+            Gets and sets the property Network. 
+            <para>
+            The blockchain network where the transaction occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionOutputItem.TransactionHash">
+            <summary>
+            Gets and sets the property TransactionHash. 
+            <para>
+            The hash of the transaction. It is generated whenever a transaction is verified and
+            added to the blockchain.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.TransactionOutputItem.TransactionTimestamp">
+            <summary>
+            Gets and sets the property TransactionTimestamp. 
+            <para>
+            The time when the transaction occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            <summary>
+            The resource passed is invalid.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            The container for the <code>fieldList</code> of the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The container for the reason for the exception
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ValidationExceptionField">
+            <summary>
+            The resource passed is invalid.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            The <code>ValidationException</code> message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the field that triggered the <code>ValidationException</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.IListTokenBalancesPaginator">
+             <summary>
+             Paginator for the ListTokenBalances operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTokenBalancesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTokenBalancesPaginator.TokenBalances">
+            <summary>
+            Enumerable containing all of the TokenBalances
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.IListTransactionEventsPaginator">
+             <summary>
+             Paginator for the ListTransactionEvents operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTransactionEventsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTransactionEventsPaginator.Events">
+            <summary>
+            Enumerable containing all of the Events
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.IListTransactionsPaginator">
+             <summary>
+             Paginator for the ListTransactions operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTransactionsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.IListTransactionsPaginator.Transactions">
+            <summary>
+            Enumerable containing all of the Transactions
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.IManagedBlockchainQueryPaginatorFactory">
+             <summary>
+             Paginators for the ManagedBlockchainQuery service
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.IManagedBlockchainQueryPaginatorFactory.ListTokenBalances(Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest)">
+             <summary>
+             Paginator for ListTokenBalances operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.IManagedBlockchainQueryPaginatorFactory.ListTransactionEvents(Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest)">
+             <summary>
+             Paginator for ListTransactionEvents operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.IManagedBlockchainQueryPaginatorFactory.ListTransactions(Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest)">
+             <summary>
+             Paginator for ListTransactions operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesPaginator">
+            <summary>
+            Base class for ListTokenBalances paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesPaginator.TokenBalances">
+            <summary>
+            Enumerable containing all of the TokenBalances
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsPaginator">
+            <summary>
+            Base class for ListTransactionEvents paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsPaginator.Events">
+            <summary>
+            Enumerable containing all of the Events
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ListTransactionsPaginator">
+            <summary>
+            Base class for ListTransactions paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.Model.ListTransactionsPaginator.Transactions">
+            <summary>
+            Enumerable containing all of the Transactions
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.Model.ManagedBlockchainQueryPaginatorFactory">
+             <summary>
+             Paginators for the ManagedBlockchainQuery service
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ManagedBlockchainQueryPaginatorFactory.ListTokenBalances(Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest)">
+             <summary>
+             Paginator for ListTokenBalances operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ManagedBlockchainQueryPaginatorFactory.ListTransactionEvents(Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest)">
+             <summary>
+             Paginator for ListTransactionEvents operation
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.Model.ManagedBlockchainQueryPaginatorFactory.ListTransactions(Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest)">
+             <summary>
+             Paginator for ListTransactions operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryRequest">
+            <summary>
+            Base class for ManagedBlockchainQuery operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.ErrorType">
+            <summary>
+            Constants used for properties of type ErrorType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ErrorType.RESOURCE_NOT_FOUND_EXCEPTION">
+            <summary>
+            Constant RESOURCE_NOT_FOUND_EXCEPTION for ErrorType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ErrorType.VALIDATION_EXCEPTION">
+            <summary>
+            Constant VALIDATION_EXCEPTION for ErrorType
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ErrorType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ErrorType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ErrorType.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.ErrorType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.ListTransactionsSortBy">
+            <summary>
+            Constants used for properties of type ListTransactionsSortBy.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ListTransactionsSortBy.TRANSACTION_TIMESTAMP">
+            <summary>
+            Constant TRANSACTION_TIMESTAMP for ListTransactionsSortBy
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ListTransactionsSortBy.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ListTransactionsSortBy.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ListTransactionsSortBy.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.ListTransactionsSortBy">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.QueryNetwork">
+            <summary>
+            Constants used for properties of type QueryNetwork.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryNetwork.BITCOIN_MAINNET">
+            <summary>
+            Constant BITCOIN_MAINNET for QueryNetwork
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryNetwork.ETHEREUM_MAINNET">
+            <summary>
+            Constant ETHEREUM_MAINNET for QueryNetwork
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryNetwork.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryNetwork.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryNetwork.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.QueryNetwork">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.QueryTransactionEventType">
+            <summary>
+            Constants used for properties of type QueryTransactionEventType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.BITCOIN_VIN">
+            <summary>
+            Constant BITCOIN_VIN for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.BITCOIN_VOUT">
+            <summary>
+            Constant BITCOIN_VOUT for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC1155_TRANSFER">
+            <summary>
+            Constant ERC1155_TRANSFER for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC20_BURN">
+            <summary>
+            Constant ERC20_BURN for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC20_DEPOSIT">
+            <summary>
+            Constant ERC20_DEPOSIT for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC20_MINT">
+            <summary>
+            Constant ERC20_MINT for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC20_TRANSFER">
+            <summary>
+            Constant ERC20_TRANSFER for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC20_WITHDRAWAL">
+            <summary>
+            Constant ERC20_WITHDRAWAL for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ERC721_TRANSFER">
+            <summary>
+            Constant ERC721_TRANSFER for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.ETH_TRANSFER">
+            <summary>
+            Constant ETH_TRANSFER for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.INTERNAL_ETH_TRANSFER">
+            <summary>
+            Constant INTERNAL_ETH_TRANSFER for QueryTransactionEventType
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionEventType.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.QueryTransactionEventType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.QueryTransactionStatus">
+            <summary>
+            Constants used for properties of type QueryTransactionStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionStatus.FAILED">
+            <summary>
+            Constant FAILED for QueryTransactionStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.QueryTransactionStatus.FINAL">
+            <summary>
+            Constant FINAL for QueryTransactionStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.QueryTransactionStatus.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.QueryTransactionStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.ResourceType">
+            <summary>
+            Constants used for properties of type ResourceType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ResourceType.Collection">
+            <summary>
+            Constant Collection for ResourceType
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ResourceType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ResourceType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ResourceType.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.ResourceType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.SortOrder">
+            <summary>
+            Constants used for properties of type SortOrder.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.SortOrder.ASCENDING">
+            <summary>
+            Constant ASCENDING for SortOrder
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.SortOrder.DESCENDING">
+            <summary>
+            Constant DESCENDING for SortOrder
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.SortOrder.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.SortOrder.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.SortOrder.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.SortOrder">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.ValidationExceptionReason.op_Implicit(System.String)~Amazon.ManagedBlockchainQuery.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient">
+             <summary>
+             Implementation for accessing ManagedBlockchainQuery
+            
+             Amazon Managed Blockchain (AMB) Query provides you with convenient access to multi-blockchain
+             network data, which makes it easier for you to extract contextual data related to
+             blockchain activity. You can use AMB Query to read data from public blockchain networks,
+             such as Bitcoin Mainnet and Ethereum Mainnet. You can also get information such as
+             the current and historical balances of addresses, or you can get a list of blockchain
+             transactions for a given time period. Additionally, you can get details of a given
+             transaction, such as transaction events, which you can further analyze or use in business
+             logic for your applications.
+             </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor">
+             <summary>
+             Constructs AmazonManagedBlockchainQueryClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonManagedBlockchainQueryClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig)">
+             <summary>
+             Constructs AmazonManagedBlockchainQueryClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonManagedBlockchainQueryClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Credentials and an
+            AmazonManagedBlockchainQueryClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonManagedBlockchainQueryClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String,Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonManagedBlockchainQueryClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonManagedBlockchainQueryClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.#ctor(System.String,System.String,System.String,Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryConfig)">
+            <summary>
+            Constructs AmazonManagedBlockchainQueryClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonManagedBlockchainQueryClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonManagedBlockchainQueryClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.BatchGetTokenBalanceAsync(Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code>
+            action for every token in the request.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetTokenBalance service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchGetTokenBalance service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/BatchGetTokenBalance">REST API Reference for BatchGetTokenBalance Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.GetTokenBalanceAsync(Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the balance of a specific token, including native tokens, for a given address
+            (wallet or contract) on the blockchain.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTokenBalance service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTokenBalance service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetTokenBalance">REST API Reference for GetTokenBalance Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.GetTransactionAsync(Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get the details of a transaction.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTransaction service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTransaction service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetTransaction">REST API Reference for GetTransaction Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.ListTokenBalancesAsync(Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest,System.Threading.CancellationToken)">
+            <summary>
+            This action returns the following for a given a blockchain network:
+            
+             <ul> <li> 
+            <para>
+            Lists all token balances owned by an address (either a contact address or a wallet
+            address).
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for all tokens created by a contract.
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for a given token.
+            </para>
+             </li> </ul> <note> 
+            <para>
+            You must always specify the network property of the <code>tokenFilter</code> when
+            using this operation.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTokenBalances service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTokenBalances service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTokenBalances">REST API Reference for ListTokenBalances Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.ListTransactionEventsAsync(Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            An array of <code>TransactionEvent</code> objects. Each object contains details about
+            the transaction event.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTransactionEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTransactionEvents service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTransactionEvents">REST API Reference for ListTransactionEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.ListTransactionsAsync(Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the transactions on a given wallet address or to a specific contract.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTransactions service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTransactions service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTransactions">REST API Reference for ListTransactions Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.AmazonManagedBlockchainQueryClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery">
+             <summary>
+             Interface for accessing ManagedBlockchainQuery
+            
+             Amazon Managed Blockchain (AMB) Query provides you with convenient access to multi-blockchain
+             network data, which makes it easier for you to extract contextual data related to
+             blockchain activity. You can use AMB Query to read data from public blockchain networks,
+             such as Bitcoin Mainnet and Ethereum Mainnet. You can also get information such as
+             the current and historical balances of addresses, or you can get a list of blockchain
+             transactions for a given time period. Additionally, you can get details of a given
+             transaction, such as transaction events, which you can further analyze or use in business
+             logic for your applications.
+             </summary>
+        </member>
+        <member name="P:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.BatchGetTokenBalanceAsync(Amazon.ManagedBlockchainQuery.Model.BatchGetTokenBalanceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the token balance for a batch of tokens by using the <code>GetTokenBalance</code>
+            action for every token in the request.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the BatchGetTokenBalance service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the BatchGetTokenBalance service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/BatchGetTokenBalance">REST API Reference for BatchGetTokenBalance Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.GetTokenBalanceAsync(Amazon.ManagedBlockchainQuery.Model.GetTokenBalanceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the balance of a specific token, including native tokens, for a given address
+            (wallet or contract) on the blockchain.
+            
+             <note> 
+            <para>
+            Only the native tokens BTC,ETH, and the ERC-20, ERC-721, and ERC 1155 token standards
+            are supported.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTokenBalance service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTokenBalance service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetTokenBalance">REST API Reference for GetTokenBalance Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.GetTransactionAsync(Amazon.ManagedBlockchainQuery.Model.GetTransactionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get the details of a transaction.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetTransaction service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetTransaction service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ResourceNotFoundException">
+            The resource was not found.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/GetTransaction">REST API Reference for GetTransaction Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.ListTokenBalancesAsync(Amazon.ManagedBlockchainQuery.Model.ListTokenBalancesRequest,System.Threading.CancellationToken)">
+            <summary>
+            This action returns the following for a given a blockchain network:
+            
+             <ul> <li> 
+            <para>
+            Lists all token balances owned by an address (either a contact address or a wallet
+            address).
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for all tokens created by a contract.
+            </para>
+             </li> <li> 
+            <para>
+            Lists all token balances for a given token.
+            </para>
+             </li> </ul> <note> 
+            <para>
+            You must always specify the network property of the <code>tokenFilter</code> when
+            using this operation.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTokenBalances service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTokenBalances service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTokenBalances">REST API Reference for ListTokenBalances Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.ListTransactionEventsAsync(Amazon.ManagedBlockchainQuery.Model.ListTransactionEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            An array of <code>TransactionEvent</code> objects. Each object contains details about
+            the transaction event.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTransactionEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTransactionEvents service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTransactionEvents">REST API Reference for ListTransactionEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.ListTransactionsAsync(Amazon.ManagedBlockchainQuery.Model.ListTransactionsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all of the transactions on a given wallet address or to a specific contract.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTransactions service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTransactions service method, as returned by ManagedBlockchainQuery.</returns>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.AccessDeniedException">
+            The Amazon Web Services account doesn’t have access to this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.InternalServerException">
+            The request processing has failed because of an internal error in the service.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ServiceQuotaExceededException">
+            The service quota has been exceeded for this resource.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ThrottlingException">
+            The request or operation couldn't be performed because a service is throttling requests.
+            The most common source of throttling errors is when you create resources that exceed
+            your service limit for this resource type. Request a limit increase or delete unused
+            resources, if possible.
+            </exception>
+            <exception cref="T:Amazon.ManagedBlockchainQuery.Model.ValidationException">
+            The resource passed is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/managedblockchain-query-2023-05-04/ListTransactions">REST API Reference for ListTransactions Operation</seealso>
+        </member>
+        <member name="M:Amazon.ManagedBlockchainQuery.IAmazonManagedBlockchainQuery.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

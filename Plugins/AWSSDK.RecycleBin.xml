@@ -1,0 +1,3413 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.RecycleBin</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.RecycleBin.AmazonRecycleBinConfig">
+            <summary>
+            Configuration for accessing Amazon RecycleBin service
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon RecycleBin service
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            RecycleBin
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters">
+            <summary>
+            Contains parameters used for resolving RecycleBin endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal RecycleBinEndpointProvider and RecycleBinEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters.#ctor">
+            <summary>
+            RecycleBinEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Endpoints.RecycleBinEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.AmazonRecycleBinException">
+            <summary>
+             Common exception for the RecycleBin service.
+             </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonRecycleBinException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonRecycleBinException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonRecycleBinException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRecycleBinException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRecycleBinException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.RecycleBin.Internal.AmazonRecycleBinEndpointProvider">
+            <summary>
+            Amazon RecycleBin endpoint provider.
+            Resolves endpoint for given set of RecycleBinEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Internal.AmazonRecycleBinEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for RecycleBinEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Internal.AmazonRecycleBinEndpointResolver">
+            <summary>
+            Amazon RecycleBin endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for RecycleBin service requests.
+            Collects values for RecycleBinEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses RecycleBinEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Internal.AmazonRecycleBinMetadata">
+            <summary>
+            Service metadata for  Amazon RecycleBin service
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Internal.AmazonRecycleBinMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Internal.AmazonRecycleBinMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.AmazonRecycleBinRequest">
+            <summary>
+            Base class for RecycleBin operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ConflictException">
+            <summary>
+            The specified retention rule lock request can't be completed.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ConflictException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.CreateRuleRequest">
+            <summary>
+            Container for the parameters to the CreateRule operation.
+            Creates a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-create-rule">
+            Create Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Specifies the resource tags to use to identify resources that are to be retained by
+            a tag-level retention rule. For tag-level retention rules, only deleted resources,
+            of the specified resource type, that have one or more of the specified tag key and
+            value pairs are retained. If a resource is deleted, but it does not have any of the
+            specified tag key and value pairs, it is immediately deleted without being retained
+            by the retention rule.
+            </para>
+             
+            <para>
+            You can add the same tag key and value pair to a maximum or five retention rules.
+            </para>
+             
+            <para>
+            To create a Region-level retention rule, omit this parameter. A Region-level retention
+            rule does not have any resource tags specified. It retains all deleted resources of
+            the specified resource type in the Region in which the rule is created, even if the
+            resources are not tagged.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type to be retained by the retention rule. Currently, only Amazon EBS
+            snapshots and EBS-backed AMIs are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>.
+            To retain EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod. 
+            <para>
+            Information about the retention period for which the retention rule is to retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags to assign to the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.CreateRuleResponse">
+            <summary>
+            This is the response object from the CreateRule operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The state of the retention rule. Only retention rules that are in the <code>available</code>
+            state retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.CreateRuleResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags assigned to the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.DeleteRuleRequest">
+            <summary>
+            Container for the parameters to the DeleteRule operation.
+            Deletes a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-delete-rule">
+            Delete Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.DeleteRuleRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.DeleteRuleResponse">
+            <summary>
+            This is the response object from the DeleteRule operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.GetRuleRequest">
+            <summary>
+            Container for the parameters to the GetRule operation.
+            Gets information about a Recycle Bin retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.GetRuleResponse">
+            <summary>
+            This is the response object from the GetRule operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.LockEndTime">
+            <summary>
+            Gets and sets the property LockEndTime. 
+            <para>
+            The date and time at which the unlock delay is set to expire. Only returned for retention
+            rules that have been unlocked and that are still within the unlock delay period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod. 
+            <para>
+            Information about the retention period for which the retention rule is to retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.GetRuleResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The state of the retention rule. Only retention rules that are in the <code>available</code>
+            state retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.InternalServerException">
+            <summary>
+            The service could not respond to the request due to an internal problem.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleRequestMarshaller">
+            <summary>
+            CreateRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.CreateRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.CreateRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleRequestMarshaller">
+            <summary>
+            DeleteRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.DeleteRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.DeleteRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleRequestMarshaller">
+            <summary>
+            GetRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.GetRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.GetRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesRequestMarshaller">
+            <summary>
+            ListRules Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesRequestMarshaller.Marshall(Amazon.RecycleBin.Model.ListRulesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListRules operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListRulesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.RecycleBin.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationMarshaller">
+            <summary>
+            LockConfiguration Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationMarshaller.Marshall(Amazon.RecycleBin.Model.LockConfiguration,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationUnmarshaller">
+            <summary>
+            Response Unmarshaller for LockConfiguration Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#LockConfiguration,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockConfigurationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleRequestMarshaller">
+            <summary>
+            LockRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.LockRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for LockRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.LockRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagMarshaller">
+            <summary>
+            ResourceTag Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Marshall(Amazon.RecycleBin.Model.ResourceTag,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceTag Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#ResourceTag,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ResourceTagUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodMarshaller">
+            <summary>
+            RetentionPeriod Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodMarshaller.Marshall(Amazon.RecycleBin.Model.RetentionPeriod,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodUnmarshaller">
+            <summary>
+            Response Unmarshaller for RetentionPeriod Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#RetentionPeriod,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RetentionPeriodUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RuleSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for RuleSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RuleSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#RuleSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RuleSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.RuleSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagMarshaller">
+            <summary>
+            Tag Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagMarshaller.Marshall(Amazon.RecycleBin.Model.Tag,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.RecycleBin.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagUnmarshaller">
+            <summary>
+            Response Unmarshaller for Tag Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#Tag,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.TagUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayMarshaller">
+            <summary>
+            UnlockDelay Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayMarshaller.Marshall(Amazon.RecycleBin.Model.UnlockDelay,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnlockDelay Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#RecycleBin#Model#UnlockDelay,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockDelayUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleRequestMarshaller">
+            <summary>
+            UnlockRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.UnlockRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnlockRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UnlockRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.RecycleBin.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleRequestMarshaller">
+            <summary>
+            UpdateRule Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleRequestMarshaller.Marshall(Amazon.RecycleBin.Model.UpdateRuleRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateRule operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.UpdateRuleResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ListRulesRequest">
+            <summary>
+            Container for the parameters to the ListRules operation.
+            Lists the Recycle Bin retention rules in the Region.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesRequest.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state of the retention rules to list. Only retention rules with the specified
+            lock state are returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results to return with a single call. To retrieve the remaining
+            results, make another call with the returned <code>NextToken</code> value.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token for the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesRequest.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule. Only retention rules that retain
+            the specified resource type are listed. Currently, only Amazon EBS snapshots and EBS-backed
+            AMIs are supported. To list retention rules that retain snapshots, specify <code>EBS_SNAPSHOT</code>.
+            To list retention rules that retain EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ListRulesResponse">
+            <summary>
+            This is the response object from the ListRules operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to use to retrieve the next page of results. This value is <code>null</code>
+            when there are no more results to return.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesResponse.Rules">
+            <summary>
+            Gets and sets the property Rules. 
+            <para>
+            Information about the retention rules.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists the tags assigned to a retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags assigned to the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.LockConfiguration">
+            <summary>
+            Information about a retention rule lock configuration.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockConfiguration.UnlockDelay">
+            <summary>
+            Gets and sets the property UnlockDelay. 
+            <para>
+            Information about the retention rule unlock delay.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.LockRuleRequest">
+            <summary>
+            Container for the parameters to the LockRule operation.
+            Locks a retention rule. A locked retention rule can't be modified or deleted.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleRequest.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.LockRuleResponse">
+            <summary>
+            This is the response object from the LockRule operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.LockRuleResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The state of the retention rule. Only retention rules that are in the <code>available</code>
+            state retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ResourceNotFoundException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ResourceTag">
+            <summary>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ResourceTag.ResourceTagKey">
+            <summary>
+            Gets and sets the property ResourceTagKey. 
+            <para>
+            The tag key.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ResourceTag.ResourceTagValue">
+            <summary>
+            Gets and sets the property ResourceTagValue. 
+            <para>
+            The tag value.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.RetentionPeriod">
+            <summary>
+            Information about the retention period for which the retention rule is to retain resources.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RetentionPeriod.RetentionPeriodUnit">
+            <summary>
+            Gets and sets the property RetentionPeriodUnit. 
+            <para>
+            The unit of time in which the retention period is measured. Currently, only <code>DAYS</code>
+            is supported.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RetentionPeriod.RetentionPeriodValue">
+            <summary>
+            Gets and sets the property RetentionPeriodValue. 
+            <para>
+            The period value for which the retention rule is to retain resources. The period is
+            measured using the unit specified for <b>RetentionPeriodUnit</b>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.RuleSummary">
+            <summary>
+            Information about a Recycle Bin retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RuleSummary.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RuleSummary.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RuleSummary.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.RuleSummary.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod. 
+            <para>
+            Information about the retention period for which the retention rule is to retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ServiceQuotaExceededException">
+            <summary>
+            The request would cause a service quota for the number of tags per resource to be
+            exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ServiceQuotaExceededException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.Tag">
+            <summary>
+            Information about the tags to assign to the retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Tag.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+            The tag key.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.Tag.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+            The tag value.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Assigns tags to the specified retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            Information about the tags to assign to the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UnlockDelay">
+            <summary>
+            Information about the retention rule unlock delay. The unlock delay is the period
+            after which a retention rule can be modified or edited after it has been unlocked
+            by a user with the required permissions. The retention rule can't be modified or deleted
+            during the unlock delay.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockDelay.UnlockDelayUnit">
+            <summary>
+            Gets and sets the property UnlockDelayUnit. 
+            <para>
+            The unit of time in which to measure the unlock delay. Currently, the unlock delay
+            can be measure only in days.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockDelay.UnlockDelayValue">
+            <summary>
+            Gets and sets the property UnlockDelayValue. 
+            <para>
+            The unlock delay period, measured in the unit specified for <b> UnlockDelayUnit</b>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UnlockRuleRequest">
+            <summary>
+            Container for the parameters to the UnlockRule operation.
+            Unlocks a retention rule. After a retention rule is unlocked, it can be modified or
+            deleted only after the unlock delay period expires.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UnlockRuleResponse">
+            <summary>
+            This is the response object from the UnlockRule operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.LockConfiguration">
+            <summary>
+            Gets and sets the property LockConfiguration. 
+            <para>
+            Information about the retention rule lock configuration.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.LockEndTime">
+            <summary>
+            Gets and sets the property LockEndTime. 
+            <para>
+            The date and time at which the unlock delay is set to expire. Only returned for retention
+            rules that have been unlocked and that are still within the unlock delay period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UnlockRuleResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The state of the retention rule. Only retention rules that are in the <code>available</code>
+            state retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Unassigns a tag from a retention rule.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            The tag keys of the tags to unassign. All tags that have the specified tag key are
+            unassigned.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UpdateRuleRequest">
+            <summary>
+            Container for the parameters to the UpdateRule operation.
+            Updates an existing Recycle Bin retention rule. You can update a retention rule's
+            description, resource tags, and retention period at any time after creation. You can't
+            update a retention rule's resource type after creation. For more information, see
+            <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-update-rule">
+            Update Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleRequest.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleRequest.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleRequest.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Specifies the resource tags to use to identify resources that are to be retained by
+            a tag-level retention rule. For tag-level retention rules, only deleted resources,
+            of the specified resource type, that have one or more of the specified tag key and
+            value pairs are retained. If a resource is deleted, but it does not have any of the
+            specified tag key and value pairs, it is immediately deleted without being retained
+            by the retention rule.
+            </para>
+             
+            <para>
+            You can add the same tag key and value pair to a maximum or five retention rules.
+            </para>
+             
+            <para>
+            To create a Region-level retention rule, omit this parameter. A Region-level retention
+            rule does not have any resource tags specified. It retains all deleted resources of
+            the specified resource type in the Region in which the rule is created, even if the
+            resources are not tagged.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleRequest.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. <note> 
+            <para>
+            This parameter is currently not supported. You can't update a retention rule's resource
+            type after creation.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleRequest.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod. 
+            <para>
+            Information about the retention period for which the retention rule is to retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.UpdateRuleResponse">
+            <summary>
+            This is the response object from the UpdateRule operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.Description">
+            <summary>
+            Gets and sets the property Description. 
+            <para>
+            The retention rule description.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.Identifier">
+            <summary>
+            Gets and sets the property Identifier. 
+            <para>
+            The unique ID of the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.LockEndTime">
+            <summary>
+            Gets and sets the property LockEndTime. 
+            <para>
+            The date and time at which the unlock delay is set to expire. Only returned for retention
+            rules that have been unlocked and that are still within the unlock delay period.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.LockState">
+            <summary>
+            Gets and sets the property LockState. 
+            <para>
+            The lock state for the retention rule.
+            </para>
+             <ul> <li> 
+            <para>
+             <code>locked</code> - The retention rule is locked and can't be modified or deleted.
+            </para>
+             </li> <li> 
+            <para>
+             <code>pending_unlock</code> - The retention rule has been unlocked but it is still
+            within the unlock delay period. The retention rule can be modified or deleted only
+            after the unlock delay period has expired.
+            </para>
+             </li> <li> 
+            <para>
+             <code>unlocked</code> - The retention rule is unlocked and it can be modified or
+            deleted by any user with the required permissions.
+            </para>
+             </li> <li> 
+            <para>
+             <code>null</code> - The retention rule has never been locked. Once a retention rule
+            has been locked, it can transition between the <code>locked</code> and <code>unlocked</code>
+            states only; it can never transition back to <code>null</code>.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.ResourceTags">
+            <summary>
+            Gets and sets the property ResourceTags. 
+            <para>
+            Information about the resource tags used to identify resources that are retained by
+            the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type retained by the retention rule.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.RetentionPeriod">
+            <summary>
+            Gets and sets the property RetentionPeriod.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.UpdateRuleResponse.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The state of the retention rule. Only retention rules that are in the <code>available</code>
+            state retain resources.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ValidationException">
+            <summary>
+            One or more of the parameters in the request is not valid.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason for the exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.IListRulesPaginator">
+             <summary>
+             Paginator for the ListRules operation
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.IListRulesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.IListRulesPaginator.Rules">
+            <summary>
+            Enumerable containing all of the Rules
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.IRecycleBinPaginatorFactory">
+             <summary>
+             Paginators for the RecycleBin service
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.IRecycleBinPaginatorFactory.ListRules(Amazon.RecycleBin.Model.ListRulesRequest)">
+             <summary>
+             Paginator for ListRules operation
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.ListRulesPaginator">
+            <summary>
+            Base class for ListRules paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.Model.ListRulesPaginator.Rules">
+            <summary>
+            Enumerable containing all of the Rules
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.Model.RecycleBinPaginatorFactory">
+             <summary>
+             Paginators for the RecycleBin service
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.Model.RecycleBinPaginatorFactory.ListRules(Amazon.RecycleBin.Model.ListRulesRequest)">
+             <summary>
+             Paginator for ListRules operation
+            </summary>
+        </member>
+        <member name="T:Amazon.RecycleBin.ConflictExceptionReason">
+            <summary>
+            Constants used for properties of type ConflictExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ConflictExceptionReason.INVALID_RULE_STATE">
+            <summary>
+            Constant INVALID_RULE_STATE for ConflictExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ConflictExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ConflictExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.ConflictExceptionReason.op_Implicit(System.String)~Amazon.RecycleBin.ConflictExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.LockState">
+            <summary>
+            Constants used for properties of type LockState.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.LockState.Locked">
+            <summary>
+            Constant Locked for LockState
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.LockState.Pending_unlock">
+            <summary>
+            Constant Pending_unlock for LockState
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.LockState.Unlocked">
+            <summary>
+            Constant Unlocked for LockState
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.LockState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.LockState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.LockState.op_Implicit(System.String)~Amazon.RecycleBin.LockState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.ResourceNotFoundExceptionReason">
+            <summary>
+            Constants used for properties of type ResourceNotFoundExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ResourceNotFoundExceptionReason.RULE_NOT_FOUND">
+            <summary>
+            Constant RULE_NOT_FOUND for ResourceNotFoundExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceNotFoundExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceNotFoundExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceNotFoundExceptionReason.op_Implicit(System.String)~Amazon.RecycleBin.ResourceNotFoundExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.ResourceType">
+            <summary>
+            Constants used for properties of type ResourceType.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ResourceType.EBS_SNAPSHOT">
+            <summary>
+            Constant EBS_SNAPSHOT for ResourceType
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ResourceType.EC2_IMAGE">
+            <summary>
+            Constant EC2_IMAGE for ResourceType
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.ResourceType.op_Implicit(System.String)~Amazon.RecycleBin.ResourceType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.RetentionPeriodUnit">
+            <summary>
+            Constants used for properties of type RetentionPeriodUnit.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.RetentionPeriodUnit.DAYS">
+            <summary>
+            Constant DAYS for RetentionPeriodUnit
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.RetentionPeriodUnit.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.RetentionPeriodUnit.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.RetentionPeriodUnit.op_Implicit(System.String)~Amazon.RecycleBin.RetentionPeriodUnit">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.RuleStatus">
+            <summary>
+            Constants used for properties of type RuleStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.RuleStatus.Available">
+            <summary>
+            Constant Available for RuleStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.RuleStatus.Pending">
+            <summary>
+            Constant Pending for RuleStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.RuleStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.RuleStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.RuleStatus.op_Implicit(System.String)~Amazon.RecycleBin.RuleStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.ServiceQuotaExceededExceptionReason">
+            <summary>
+            Constants used for properties of type ServiceQuotaExceededExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ServiceQuotaExceededExceptionReason.SERVICE_QUOTA_EXCEEDED">
+            <summary>
+            Constant SERVICE_QUOTA_EXCEEDED for ServiceQuotaExceededExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ServiceQuotaExceededExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ServiceQuotaExceededExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.ServiceQuotaExceededExceptionReason.op_Implicit(System.String)~Amazon.RecycleBin.ServiceQuotaExceededExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.UnlockDelayUnit">
+            <summary>
+            Constants used for properties of type UnlockDelayUnit.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.UnlockDelayUnit.DAYS">
+            <summary>
+            Constant DAYS for UnlockDelayUnit
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.UnlockDelayUnit.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.UnlockDelayUnit.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.UnlockDelayUnit.op_Implicit(System.String)~Amazon.RecycleBin.UnlockDelayUnit">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ValidationExceptionReason.INVALID_PAGE_TOKEN">
+            <summary>
+            Constant INVALID_PAGE_TOKEN for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.RecycleBin.ValidationExceptionReason.INVALID_PARAMETER_VALUE">
+            <summary>
+            Constant INVALID_PARAMETER_VALUE for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.RecycleBin.ValidationExceptionReason.op_Implicit(System.String)~Amazon.RecycleBin.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.AmazonRecycleBinClient">
+             <summary>
+             Implementation for accessing RecycleBin
+            
+             This is the <i>Recycle Bin API Reference</i>. This documentation provides descriptions
+             and syntax for each of the actions and data types in Recycle Bin.
+             
+              
+             <para>
+             Recycle Bin is a resource recovery feature that enables you to restore accidentally
+             deleted snapshots and EBS-backed AMIs. When using Recycle Bin, if your resources are
+             deleted, they are retained in the Recycle Bin for a time period that you specify.
+             </para>
+              
+             <para>
+             You can restore a resource from the Recycle Bin at any time before its retention period
+             expires. After you restore a resource from the Recycle Bin, the resource is removed
+             from the Recycle Bin, and you can then use it in the same way you use any other resource
+             of that type in your account. If the retention period expires and the resource is
+             not restored, the resource is permanently deleted from the Recycle Bin and is no longer
+             available for recovery. For more information about Recycle Bin, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html">
+             Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor">
+             <summary>
+             Constructs AmazonRecycleBinClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonRecycleBinClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(Amazon.RecycleBin.AmazonRecycleBinConfig)">
+             <summary>
+             Constructs AmazonRecycleBinClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonRecycleBinClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RecycleBin.AmazonRecycleBinConfig)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Credentials and an
+            AmazonRecycleBinClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonRecycleBinClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String,Amazon.RecycleBin.AmazonRecycleBinConfig)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRecycleBinClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonRecycleBinClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.#ctor(System.String,System.String,System.String,Amazon.RecycleBin.AmazonRecycleBinConfig)">
+            <summary>
+            Constructs AmazonRecycleBinClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRecycleBinClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonRecycleBinClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.RecycleBin.AmazonRecycleBinClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.CreateRuleAsync(Amazon.RecycleBin.Model.CreateRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-create-rule">
+            Create Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ServiceQuotaExceededException">
+            The request would cause a service quota for the number of tags per resource to be
+            exceeded.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/CreateRule">REST API Reference for CreateRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.DeleteRuleAsync(Amazon.RecycleBin.Model.DeleteRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-delete-rule">
+            Delete Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/DeleteRule">REST API Reference for DeleteRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.GetRuleAsync(Amazon.RecycleBin.Model.GetRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a Recycle Bin retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/GetRule">REST API Reference for GetRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.ListRulesAsync(Amazon.RecycleBin.Model.ListRulesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Recycle Bin retention rules in the Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRules service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRules service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/ListRules">REST API Reference for ListRules Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.ListTagsForResourceAsync(Amazon.RecycleBin.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags assigned to a retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.LockRuleAsync(Amazon.RecycleBin.Model.LockRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Locks a retention rule. A locked retention rule can't be modified or deleted.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the LockRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the LockRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/LockRule">REST API Reference for LockRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.TagResourceAsync(Amazon.RecycleBin.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Assigns tags to the specified retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ServiceQuotaExceededException">
+            The request would cause a service quota for the number of tags per resource to be
+            exceeded.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.UnlockRuleAsync(Amazon.RecycleBin.Model.UnlockRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Unlocks a retention rule. After a retention rule is unlocked, it can be modified or
+            deleted only after the unlock delay period expires.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UnlockRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UnlockRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UnlockRule">REST API Reference for UnlockRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.UntagResourceAsync(Amazon.RecycleBin.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Unassigns a tag from a retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.UpdateRuleAsync(Amazon.RecycleBin.Model.UpdateRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing Recycle Bin retention rule. You can update a retention rule's
+            description, resource tags, and retention period at any time after creation. You can't
+            update a retention rule's resource type after creation. For more information, see
+            <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-update-rule">
+            Update Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UpdateRule">REST API Reference for UpdateRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.AmazonRecycleBinClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.RecycleBin.IAmazonRecycleBin">
+             <summary>
+             Interface for accessing RecycleBin
+            
+             This is the <i>Recycle Bin API Reference</i>. This documentation provides descriptions
+             and syntax for each of the actions and data types in Recycle Bin.
+             
+              
+             <para>
+             Recycle Bin is a resource recovery feature that enables you to restore accidentally
+             deleted snapshots and EBS-backed AMIs. When using Recycle Bin, if your resources are
+             deleted, they are retained in the Recycle Bin for a time period that you specify.
+             </para>
+              
+             <para>
+             You can restore a resource from the Recycle Bin at any time before its retention period
+             expires. After you restore a resource from the Recycle Bin, the resource is removed
+             from the Recycle Bin, and you can then use it in the same way you use any other resource
+             of that type in your account. If the retention period expires and the resource is
+             not restored, the resource is permanently deleted from the Recycle Bin and is no longer
+             available for recovery. For more information about Recycle Bin, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html">
+             Recycle Bin</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.RecycleBin.IAmazonRecycleBin.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.CreateRuleAsync(Amazon.RecycleBin.Model.CreateRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-create-rule">
+            Create Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ServiceQuotaExceededException">
+            The request would cause a service quota for the number of tags per resource to be
+            exceeded.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/CreateRule">REST API Reference for CreateRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.DeleteRuleAsync(Amazon.RecycleBin.Model.DeleteRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a Recycle Bin retention rule. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-delete-rule">
+            Delete Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/DeleteRule">REST API Reference for DeleteRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.GetRuleAsync(Amazon.RecycleBin.Model.GetRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets information about a Recycle Bin retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/GetRule">REST API Reference for GetRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.ListRulesAsync(Amazon.RecycleBin.Model.ListRulesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Recycle Bin retention rules in the Region.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRules service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRules service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/ListRules">REST API Reference for ListRules Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.ListTagsForResourceAsync(Amazon.RecycleBin.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the tags assigned to a retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.LockRuleAsync(Amazon.RecycleBin.Model.LockRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Locks a retention rule. A locked retention rule can't be modified or deleted.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the LockRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the LockRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/LockRule">REST API Reference for LockRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.TagResourceAsync(Amazon.RecycleBin.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Assigns tags to the specified retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ServiceQuotaExceededException">
+            The request would cause a service quota for the number of tags per resource to be
+            exceeded.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.UnlockRuleAsync(Amazon.RecycleBin.Model.UnlockRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Unlocks a retention rule. After a retention rule is unlocked, it can be modified or
+            deleted only after the unlock delay period expires.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UnlockRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UnlockRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UnlockRule">REST API Reference for UnlockRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.UntagResourceAsync(Amazon.RecycleBin.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Unassigns a tag from a retention rule.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.UpdateRuleAsync(Amazon.RecycleBin.Model.UpdateRuleRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing Recycle Bin retention rule. You can update a retention rule's
+            description, resource tags, and retention period at any time after creation. You can't
+            update a retention rule's resource type after creation. For more information, see
+            <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-update-rule">
+            Update Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User
+            Guide</i>.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRule service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRule service method, as returned by RecycleBin.</returns>
+            <exception cref="T:Amazon.RecycleBin.Model.ConflictException">
+            The specified retention rule lock request can't be completed.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.InternalServerException">
+            The service could not respond to the request due to an internal problem.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ResourceNotFoundException">
+            The specified resource was not found.
+            </exception>
+            <exception cref="T:Amazon.RecycleBin.Model.ValidationException">
+            One or more of the parameters in the request is not valid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/UpdateRule">REST API Reference for UpdateRule Operation</seealso>
+        </member>
+        <member name="M:Amazon.RecycleBin.IAmazonRecycleBin.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1531 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.SageMakerRuntime</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig">
+            <summary>
+            Configuration for accessing Amazon SageMakerRuntime service
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon SageMakerRuntime service
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            SageMakerRuntime
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters">
+            <summary>
+            Contains parameters used for resolving SageMakerRuntime endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal SageMakerRuntimeEndpointProvider and SageMakerRuntimeEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters.#ctor">
+            <summary>
+            SageMakerRuntimeEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Endpoints.SageMakerRuntimeEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException">
+            <summary>
+             Common exception for the SageMakerRuntime service.
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonSageMakerRuntimeException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonSageMakerRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonSageMakerRuntimeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSageMakerRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSageMakerRuntimeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeEndpointProvider">
+            <summary>
+            Amazon SageMakerRuntime endpoint provider.
+            Resolves endpoint for given set of SageMakerRuntimeEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for SageMakerRuntimeEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeEndpointResolver">
+            <summary>
+            Amazon SageMakerRuntime endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for SageMakerRuntime service requests.
+            Collects values for SageMakerRuntimeEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses SageMakerRuntimeEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeMetadata">
+            <summary>
+            Service metadata for  Amazon SageMakerRuntime service
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Internal.AmazonSageMakerRuntimeMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeRequest">
+            <summary>
+            Base class for SageMakerRuntime operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InternalDependencyException">
+            <summary>
+            Your request caused an exception with an internal dependency. Contact customer support.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalDependencyException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalDependencyException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalDependencyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalDependencyException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalDependencyException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalDependencyException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalDependencyException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalDependencyException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalDependencyException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalDependencyException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InternalFailureException">
+            <summary>
+            An internal failure occurred.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalFailureException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalFailureException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalFailureException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalFailureException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalFailureException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.InternalFailureException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalDependencyExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalDependencyException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalDependencyExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalDependencyExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalDependencyExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalFailureException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncRequestMarshaller">
+            <summary>
+            InvokeEndpointAsync Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncRequestMarshaller.Marshall(Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvokeEndpointAsync operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointAsyncResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointRequestMarshaller">
+            <summary>
+            InvokeEndpoint Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointRequestMarshaller.Marshall(Amazon.SageMakerRuntime.Model.InvokeEndpointRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvokeEndpoint operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.InvokeEndpointResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelErrorExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ModelErrorException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelErrorExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelErrorExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelErrorExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelNotReadyExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ModelNotReadyException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelNotReadyExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelNotReadyExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ModelNotReadyExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ValidationErrorExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationErrorException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ValidationErrorExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ValidationErrorExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.Internal.MarshallTransformations.ValidationErrorExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest">
+            <summary>
+            Container for the parameters to the InvokeEndpointAsync operation.
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint in an asynchronous manner.
+            
+             
+            <para>
+            Inference requests sent to this API are enqueued for asynchronous processing. The
+            processing of the inference request may or may not complete before you receive a response
+            from this API. The response from this API will not contain the result of the inference
+            request but contain information about where you can locate it.
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all <code>POST</code> headers except those supported by the
+            API. Amazon SageMaker might add additional headers. You should not rely on the behavior
+            of headers outside those enumerated in the request syntax.
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.Accept">
+            <summary>
+            Gets and sets the property Accept. 
+            <para>
+            The desired MIME type of the inference in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            The MIME type of the input data in the request body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.CustomAttributes">
+            <summary>
+            Gets and sets the property CustomAttributes. 
+            <para>
+            Provides additional information about a request for an inference submitted to a model
+            hosted at an Amazon SageMaker endpoint. The information is an opaque value that is
+            forwarded verbatim. You could use this value, for example, to provide an ID that you
+            can use to track a request or to provide other metadata that a service endpoint was
+            programmed to process. The value must consist of no more than 1024 visible US-ASCII
+            characters as specified in <a href="https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6">Section
+            3.3.6. Field Value Components</a> of the Hypertext Transfer Protocol (HTTP/1.1). 
+            </para>
+             
+            <para>
+            The code in your model is responsible for setting or updating any custom attributes
+            in the response. If your code does not set this value in the response, an empty value
+            is returned. For example, if a custom attribute represents the trace ID, your model
+            can prepend the custom attribute with <code>Trace ID</code>: in your post-processing
+            function. 
+            </para>
+             
+            <para>
+            This feature is currently supported in the Amazon Web Services SDKs but not in the
+            Amazon SageMaker Python SDK. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.EndpointName">
+            <summary>
+            Gets and sets the property EndpointName. 
+            <para>
+            The name of the endpoint that you specified when you created the endpoint using the
+            <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">
+            <code>CreateEndpoint</code> </a> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.InferenceId">
+            <summary>
+            Gets and sets the property InferenceId. 
+            <para>
+            The identifier for the inference request. Amazon SageMaker will generate an identifier
+            for you if none is specified. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.InputLocation">
+            <summary>
+            Gets and sets the property InputLocation. 
+            <para>
+            The Amazon S3 URI where the inference request payload is stored.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.InvocationTimeoutSeconds">
+            <summary>
+            Gets and sets the property InvocationTimeoutSeconds. 
+            <para>
+            Maximum amount of time in seconds a request can be processed before it is marked as
+            expired. The default is 15 minutes, or 900 seconds.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest.RequestTTLSeconds">
+            <summary>
+            Gets and sets the property RequestTTLSeconds. 
+            <para>
+            Maximum age in seconds a request can be in the queue before it is marked as expired.
+            The default is 6 hours, or 21,600 seconds.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncResponse">
+            <summary>
+            This is the response object from the InvokeEndpointAsync operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncResponse.FailureLocation">
+            <summary>
+            Gets and sets the property FailureLocation. 
+            <para>
+            The Amazon S3 URI where the inference failure response payload is stored.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncResponse.InferenceId">
+            <summary>
+            Gets and sets the property InferenceId. 
+            <para>
+            Identifier for an inference request. This will be the same as the <code>InferenceId</code>
+            specified in the input. Amazon SageMaker will generate an identifier for you if you
+            do not specify one.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncResponse.OutputLocation">
+            <summary>
+            Gets and sets the property OutputLocation. 
+            <para>
+            The Amazon S3 URI where the inference response payload is stored.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest">
+            <summary>
+            Container for the parameters to the InvokeEndpoint operation.
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint. 
+            
+             
+            <para>
+            For an overview of Amazon SageMaker, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How
+            It Works</a>. 
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all POST headers except those supported by the API. Amazon
+            SageMaker might add additional headers. You should not rely on the behavior of headers
+            outside those enumerated in the request syntax. 
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+             
+            <para>
+            A customer's model containers must respond to requests within 60 seconds. The model
+            itself can have a maximum processing time of 60 seconds before responding to invocations.
+            If your model is going to take 50-60 seconds of processing time, the SDK socket timeout
+            should be set to be 70 seconds.
+            </para>
+             <note> 
+            <para>
+            Endpoints are scoped to an individual account, and are not public. The URL does not
+            contain the account ID, but Amazon SageMaker determines the account ID from the authentication
+            token that is supplied by the caller.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.Accept">
+            <summary>
+            Gets and sets the property Accept. 
+            <para>
+            The desired MIME type of the inference in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.Body">
+            <summary>
+            Gets and sets the property Body. 
+            <para>
+            Provides input data, in the format specified in the <code>ContentType</code> request
+            header. Amazon SageMaker passes all of the data in the body to the model. 
+            </para>
+             
+            <para>
+            For information about the format of the request body, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/cdf-inference.html">Common
+            Data Formats-Inference</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            The MIME type of the input data in the request body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.CustomAttributes">
+            <summary>
+            Gets and sets the property CustomAttributes. 
+            <para>
+            Provides additional information about a request for an inference submitted to a model
+            hosted at an Amazon SageMaker endpoint. The information is an opaque value that is
+            forwarded verbatim. You could use this value, for example, to provide an ID that you
+            can use to track a request or to provide other metadata that a service endpoint was
+            programmed to process. The value must consist of no more than 1024 visible US-ASCII
+            characters as specified in <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">Section
+            3.3.6. Field Value Components</a> of the Hypertext Transfer Protocol (HTTP/1.1). 
+            </para>
+             
+            <para>
+            The code in your model is responsible for setting or updating any custom attributes
+            in the response. If your code does not set this value in the response, an empty value
+            is returned. For example, if a custom attribute represents the trace ID, your model
+            can prepend the custom attribute with <code>Trace ID:</code> in your post-processing
+            function.
+            </para>
+             
+            <para>
+            This feature is currently supported in the Amazon Web Services SDKs but not in the
+            Amazon SageMaker Python SDK.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.EnableExplanations">
+            <summary>
+            Gets and sets the property EnableExplanations. 
+            <para>
+            An optional JMESPath expression used to override the <code>EnableExplanations</code>
+            parameter of the <code>ClarifyExplainerConfig</code> API. See the <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable">EnableExplanations</a>
+            section in the developer guide for more information. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.EndpointName">
+            <summary>
+            Gets and sets the property EndpointName. 
+            <para>
+            The name of the endpoint that you specified when you created the endpoint using the
+            <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html">CreateEndpoint</a>
+            API. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.InferenceId">
+            <summary>
+            Gets and sets the property InferenceId. 
+            <para>
+            If you provide a value, it is added to the captured data when you enable data capture
+            on the endpoint. For information about data capture, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html">Capture
+            Data</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.TargetContainerHostname">
+            <summary>
+            Gets and sets the property TargetContainerHostname. 
+            <para>
+            If the endpoint hosts multiple containers and is configured to use direct invocation,
+            this parameter specifies the host name of the container to invoke.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.TargetModel">
+            <summary>
+            Gets and sets the property TargetModel. 
+            <para>
+            The model to request for inference when invoking a multi-model endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointRequest.TargetVariant">
+            <summary>
+            Gets and sets the property TargetVariant. 
+            <para>
+            Specify the production variant to send the inference request to when invoking an endpoint
+            that is running two or more variants. Note that this parameter overrides the default
+            behavior for the endpoint, which is to distribute the invocation traffic based on
+            the variant weights.
+            </para>
+             
+            <para>
+            For information about how to use variant targeting to perform a/b testing, see <a
+            href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html">Test
+            models in production</a> 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.InvokeEndpointResponse">
+            <summary>
+            This is the response object from the InvokeEndpoint operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointResponse.Body">
+            <summary>
+            Gets and sets the property Body. 
+            <para>
+            Includes the inference provided by the model. 
+            </para>
+             
+            <para>
+            For information about the format of the response body, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/cdf-inference.html">Common
+            Data Formats-Inference</a>.
+            </para>
+             
+            <para>
+            If the explainer is activated, the body includes the explanations provided by the
+            model. For more information, see the <b>Response section</b> under <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-invoke-endpoint.html#clarify-online-explainability-response">Invoke
+            the Endpoint</a> in the Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointResponse.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            The MIME type of the inference returned in the response body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointResponse.CustomAttributes">
+            <summary>
+            Gets and sets the property CustomAttributes. 
+            <para>
+            Provides additional information in the response about the inference returned by a
+            model hosted at an Amazon SageMaker endpoint. The information is an opaque value that
+            is forwarded verbatim. You could use this value, for example, to return an ID received
+            in the <code>CustomAttributes</code> header of a request or other metadata that a
+            service endpoint was programmed to produce. The value must consist of no more than
+            1024 visible US-ASCII characters as specified in <a href="https://tools.ietf.org/html/rfc7230#section-3.2.6">Section
+            3.3.6. Field Value Components</a> of the Hypertext Transfer Protocol (HTTP/1.1). If
+            the customer wants the custom attribute returned, the model must set the custom attribute
+            to be included on the way back. 
+            </para>
+             
+            <para>
+            The code in your model is responsible for setting or updating any custom attributes
+            in the response. If your code does not set this value in the response, an empty value
+            is returned. For example, if a custom attribute represents the trace ID, your model
+            can prepend the custom attribute with <code>Trace ID:</code> in your post-processing
+            function.
+            </para>
+             
+            <para>
+            This feature is currently supported in the Amazon Web Services SDKs but not in the
+            Amazon SageMaker Python SDK.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.InvokeEndpointResponse.InvokedProductionVariant">
+            <summary>
+            Gets and sets the property InvokedProductionVariant. 
+            <para>
+            Identifies the production variant that was invoked.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.ModelErrorException">
+            <summary>
+            Model (owned by the customer in the container) returned 4xx or 5xx error code.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelErrorException.#ctor(System.String)">
+            <summary>
+            Constructs a new ModelErrorException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ModelErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelErrorException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ModelErrorException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelErrorException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ModelErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelErrorException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ModelErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.ModelErrorException.LogStreamArn">
+            <summary>
+            Gets and sets the property LogStreamArn. 
+            <para>
+             The Amazon Resource Name (ARN) of the log stream. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.ModelErrorException.OriginalMessage">
+            <summary>
+            Gets and sets the property OriginalMessage. 
+            <para>
+             Original message. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.Model.ModelErrorException.OriginalStatusCode">
+            <summary>
+            Gets and sets the property OriginalStatusCode. 
+            <para>
+             Original status code. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.ModelNotReadyException">
+            <summary>
+            Either a serverless endpoint variant's resources are still being provisioned, or a
+            multi-model endpoint is still downloading or loading the target model. Wait and try
+            your request again.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelNotReadyException.#ctor(System.String)">
+            <summary>
+            Constructs a new ModelNotReadyException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelNotReadyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ModelNotReadyException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelNotReadyException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ModelNotReadyException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelNotReadyException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ModelNotReadyException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ModelNotReadyException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ModelNotReadyException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.ServiceUnavailableException">
+            <summary>
+            The service is unavailable. Try your call again.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ServiceUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ServiceUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ServiceUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ServiceUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ServiceUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.Model.ValidationErrorException">
+            <summary>
+            Inspect your request and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ValidationErrorException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationErrorException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ValidationErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ValidationErrorException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationErrorException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ValidationErrorException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.Model.ValidationErrorException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationErrorException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient">
+             <summary>
+             Implementation for accessing SageMakerRuntime
+            
+             The Amazon SageMaker runtime API.
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor">
+             <summary>
+             Constructs AmazonSageMakerRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonSageMakerRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig)">
+             <summary>
+             Constructs AmazonSageMakerRuntimeClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonSageMakerRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Credentials and an
+            AmazonSageMakerRuntimeClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonSageMakerRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String,Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSageMakerRuntimeClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonSageMakerRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.#ctor(System.String,System.String,System.String,Amazon.SageMakerRuntime.AmazonSageMakerRuntimeConfig)">
+            <summary>
+            Constructs AmazonSageMakerRuntimeClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSageMakerRuntimeClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonSageMakerRuntimeClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.InvokeEndpointAsync(Amazon.SageMakerRuntime.Model.InvokeEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint. 
+            
+             
+            <para>
+            For an overview of Amazon SageMaker, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How
+            It Works</a>. 
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all POST headers except those supported by the API. Amazon
+            SageMaker might add additional headers. You should not rely on the behavior of headers
+            outside those enumerated in the request syntax. 
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+             
+            <para>
+            A customer's model containers must respond to requests within 60 seconds. The model
+            itself can have a maximum processing time of 60 seconds before responding to invocations.
+            If your model is going to take 50-60 seconds of processing time, the SDK socket timeout
+            should be set to be 70 seconds.
+            </para>
+             <note> 
+            <para>
+            Endpoints are scoped to an individual account, and are not public. The URL does not
+            contain the account ID, but Amazon SageMaker determines the account ID from the authentication
+            token that is supplied by the caller.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeEndpoint service method, as returned by SageMakerRuntime.</returns>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalDependencyException">
+            Your request caused an exception with an internal dependency. Contact customer support.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalFailureException">
+            An internal failure occurred.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ModelErrorException">
+            Model (owned by the customer in the container) returned 4xx or 5xx error code.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ModelNotReadyException">
+            Either a serverless endpoint variant's resources are still being provisioned, or a
+            multi-model endpoint is still downloading or loading the target model. Wait and try
+            your request again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ServiceUnavailableException">
+            The service is unavailable. Try your call again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ValidationErrorException">
+            Inspect your request and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/runtime.sagemaker-2017-05-13/InvokeEndpoint">REST API Reference for InvokeEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.InvokeEndpointAsyncAsync(Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest,System.Threading.CancellationToken)">
+            <summary>
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint in an asynchronous manner.
+            
+             
+            <para>
+            Inference requests sent to this API are enqueued for asynchronous processing. The
+            processing of the inference request may or may not complete before you receive a response
+            from this API. The response from this API will not contain the result of the inference
+            request but contain information about where you can locate it.
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all <code>POST</code> headers except those supported by the
+            API. Amazon SageMaker might add additional headers. You should not rely on the behavior
+            of headers outside those enumerated in the request syntax.
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeEndpointAsync service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeEndpointAsync service method, as returned by SageMakerRuntime.</returns>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalFailureException">
+            An internal failure occurred.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ServiceUnavailableException">
+            The service is unavailable. Try your call again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ValidationErrorException">
+            Inspect your request and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/runtime.sagemaker-2017-05-13/InvokeEndpointAsync">REST API Reference for InvokeEndpointAsync Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.AmazonSageMakerRuntimeClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.SageMakerRuntime.IAmazonSageMakerRuntime">
+             <summary>
+             Interface for accessing SageMakerRuntime
+            
+             The Amazon SageMaker runtime API.
+             </summary>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.IAmazonSageMakerRuntime.InvokeEndpointAsync(Amazon.SageMakerRuntime.Model.InvokeEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint. 
+            
+             
+            <para>
+            For an overview of Amazon SageMaker, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works.html">How
+            It Works</a>. 
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all POST headers except those supported by the API. Amazon
+            SageMaker might add additional headers. You should not rely on the behavior of headers
+            outside those enumerated in the request syntax. 
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpoint</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+             
+            <para>
+            A customer's model containers must respond to requests within 60 seconds. The model
+            itself can have a maximum processing time of 60 seconds before responding to invocations.
+            If your model is going to take 50-60 seconds of processing time, the SDK socket timeout
+            should be set to be 70 seconds.
+            </para>
+             <note> 
+            <para>
+            Endpoints are scoped to an individual account, and are not public. The URL does not
+            contain the account ID, but Amazon SageMaker determines the account ID from the authentication
+            token that is supplied by the caller.
+            </para>
+             </note>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeEndpoint service method, as returned by SageMakerRuntime.</returns>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalDependencyException">
+            Your request caused an exception with an internal dependency. Contact customer support.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalFailureException">
+            An internal failure occurred.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ModelErrorException">
+            Model (owned by the customer in the container) returned 4xx or 5xx error code.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ModelNotReadyException">
+            Either a serverless endpoint variant's resources are still being provisioned, or a
+            multi-model endpoint is still downloading or loading the target model. Wait and try
+            your request again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ServiceUnavailableException">
+            The service is unavailable. Try your call again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ValidationErrorException">
+            Inspect your request and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/runtime.sagemaker-2017-05-13/InvokeEndpoint">REST API Reference for InvokeEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.IAmazonSageMakerRuntime.InvokeEndpointAsyncAsync(Amazon.SageMakerRuntime.Model.InvokeEndpointAsyncRequest,System.Threading.CancellationToken)">
+            <summary>
+            After you deploy a model into production using Amazon SageMaker hosting services,
+            your client applications use this API to get inferences from the model hosted at the
+            specified endpoint in an asynchronous manner.
+            
+             
+            <para>
+            Inference requests sent to this API are enqueued for asynchronous processing. The
+            processing of the inference request may or may not complete before you receive a response
+            from this API. The response from this API will not contain the result of the inference
+            request but contain information about where you can locate it.
+            </para>
+             
+            <para>
+            Amazon SageMaker strips all <code>POST</code> headers except those supported by the
+            API. Amazon SageMaker might add additional headers. You should not rely on the behavior
+            of headers outside those enumerated in the request syntax.
+            </para>
+             
+            <para>
+            Calls to <code>InvokeEndpointAsync</code> are authenticated by using Amazon Web Services
+            Signature Version 4. For information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
+            Requests (Amazon Web Services Signature Version 4)</a> in the <i>Amazon S3 API Reference</i>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the InvokeEndpointAsync service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the InvokeEndpointAsync service method, as returned by SageMakerRuntime.</returns>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.InternalFailureException">
+            An internal failure occurred.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ServiceUnavailableException">
+            The service is unavailable. Try your call again.
+            </exception>
+            <exception cref="T:Amazon.SageMakerRuntime.Model.ValidationErrorException">
+            Inspect your request and try again.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/runtime.sagemaker-2017-05-13/InvokeEndpointAsync">REST API Reference for InvokeEndpointAsync Operation</seealso>
+        </member>
+        <member name="M:Amazon.SageMakerRuntime.IAmazonSageMakerRuntime.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

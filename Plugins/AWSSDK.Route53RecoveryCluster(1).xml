@@ -1,0 +1,2585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.Route53RecoveryCluster</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig">
+            <summary>
+            Configuration for accessing Amazon Route53RecoveryCluster service
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon Route53RecoveryCluster service
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            Route53RecoveryCluster
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters">
+            <summary>
+            Contains parameters used for resolving Route53RecoveryCluster endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal Route53RecoveryClusterEndpointProvider and Route53RecoveryClusterEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters.#ctor">
+            <summary>
+            Route53RecoveryClusterEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Endpoints.Route53RecoveryClusterEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException">
+            <summary>
+             Common exception for the Route53RecoveryCluster service.
+             </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonRoute53RecoveryClusterException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonRoute53RecoveryClusterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonRoute53RecoveryClusterException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRoute53RecoveryClusterException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonRoute53RecoveryClusterException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterEndpointProvider">
+            <summary>
+            Amazon Route53RecoveryCluster endpoint provider.
+            Resolves endpoint for given set of Route53RecoveryClusterEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for Route53RecoveryClusterEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterEndpointResolver">
+            <summary>
+            Amazon Route53RecoveryCluster endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for Route53RecoveryCluster service requests.
+            Collects values for Route53RecoveryClusterEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses Route53RecoveryClusterEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterMetadata">
+            <summary>
+            Service metadata for  Amazon Route53RecoveryCluster service
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Internal.AmazonRoute53RecoveryClusterMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            <summary>
+            You don't have sufficient permissions to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ConflictException">
+            <summary>
+            There was a conflict with this request. Try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. Identifier of the resource in use
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. Type of the resource in use
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            <summary>
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new EndpointTemporarilyUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of EndpointTemporarilyUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of EndpointTemporarilyUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of EndpointTemporarilyUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of EndpointTemporarilyUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateRequest">
+            <summary>
+            Container for the parameters to the GetRoutingControlState operation.
+            Get the state for a routing control. A routing control is a simple on/off switch that
+            you can use to route traffic to cells. When a routing control state is On, traffic
+            flows to a cell. When the state is Off, traffic does not flow. 
+            
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateRequest.RoutingControlArn">
+            <summary>
+            Gets and sets the property RoutingControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) for the routing control that you want to get the state
+            for.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateResponse">
+            <summary>
+            This is the response object from the GetRoutingControlState operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateResponse.RoutingControlArn">
+            <summary>
+            Gets and sets the property RoutingControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateResponse.RoutingControlName">
+            <summary>
+            Gets and sets the property RoutingControlName. 
+            <para>
+            The routing control name.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateResponse.RoutingControlState">
+            <summary>
+            Gets and sets the property RoutingControlState. 
+            <para>
+            The state of the routing control.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            <summary>
+            There was an unexpected error during processing of the request.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.InternalServerException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.EndpointTemporarilyUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for EndpointTemporarilyUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.EndpointTemporarilyUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.EndpointTemporarilyUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.EndpointTemporarilyUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateRequestMarshaller">
+            <summary>
+            GetRoutingControlState Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateRequestMarshaller.Marshall(Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetRoutingControlState operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.GetRoutingControlStateResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsRequestMarshaller">
+            <summary>
+            ListRoutingControls Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsRequestMarshaller.Marshall(Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListRoutingControls operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ListRoutingControlsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.RoutingControlUnmarshaller">
+            <summary>
+            Response Unmarshaller for RoutingControl Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.RoutingControlUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Route53RecoveryCluster#Model#RoutingControl,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.RoutingControlUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.RoutingControlUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ServiceLimitExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceLimitExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ServiceLimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ServiceLimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ServiceLimitExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateEntryMarshaller">
+            <summary>
+            UpdateRoutingControlStateEntry Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateEntryMarshaller.Marshall(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateEntry,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateEntryMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateRequestMarshaller">
+            <summary>
+            UpdateRoutingControlState Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateRequestMarshaller.Marshall(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateRoutingControlState operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStateResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesRequestMarshaller">
+            <summary>
+            UpdateRoutingControlStates Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesRequestMarshaller.Marshall(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateRoutingControlStates operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.UpdateRoutingControlStatesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#Route53RecoveryCluster#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest">
+            <summary>
+            Container for the parameters to the ListRoutingControls operation.
+            List routing control names and Amazon Resource Names (ARNs), as well as the routing
+            control state for each routing control, along with the control panel name and control
+            panel ARN for the routing controls. If you specify a control panel ARN, this call
+            lists the routing controls in the control panel. Otherwise, it lists all the routing
+            controls in the cluster.
+            
+             
+            <para>
+            A routing control is a simple on/off switch in Route 53 ARC that you can use to route
+            traffic to cells. When a routing control state is On, traffic flows to a cell. When
+            the state is Off, traffic does not flow.
+            </para>
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to use this API operation to list routing controls in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest.ControlPanelArn">
+            <summary>
+            Gets and sets the property ControlPanelArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the control panel of the routing controls to list.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The number of routing controls objects that you want to return with this call. The
+            default value is 500.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token for the next set of results. You receive this token from a previous call.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsResponse">
+            <summary>
+            This is the response object from the ListRoutingControls operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token for the next set of results. You receive this token from a previous call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsResponse.RoutingControls">
+            <summary>
+            Gets and sets the property RoutingControls. 
+            <para>
+            The list of routing controls.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            <summary>
+            The request references a routing control or control panel that was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. Hypothetical resource identifier that was not
+            found
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. Hypothetical resource type that was not found
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.RoutingControl">
+            <summary>
+            A routing control, which is a simple on/off switch that you can use to route traffic
+            to cells. When a routing control state is On, traffic flows to a cell. When the state
+            is Off, traffic does not flow.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.RoutingControl.ControlPanelArn">
+            <summary>
+            Gets and sets the property ControlPanelArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the control panel where the routing control is located.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.RoutingControl.ControlPanelName">
+            <summary>
+            Gets and sets the property ControlPanelName. 
+            <para>
+            The name of the control panel where the routing control is located.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.RoutingControl.RoutingControlArn">
+            <summary>
+            Gets and sets the property RoutingControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the routing control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.RoutingControl.RoutingControlName">
+            <summary>
+            Gets and sets the property RoutingControlName. 
+            <para>
+            The name of the routing control.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.RoutingControl.RoutingControlState">
+            <summary>
+            Gets and sets the property RoutingControlState. 
+            <para>
+            The current state of the routing control. When a routing control state is On, traffic
+            flows to a cell. When the state is Off, traffic does not flow. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException">
+            <summary>
+            The request can't update that many routing control states at the same time. Try again
+            with fewer routing control states.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceLimitExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceLimitExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceLimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.LimitCode">
+            <summary>
+            Gets and sets the property LimitCode. 
+            <para>
+            The code of the limit that was exceeded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The resource identifier of the limit that was exceeded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The resource type of the limit that was exceeded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The service code of the limit that was exceeded.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            <summary>
+            The request was denied because of request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateEntry">
+            <summary>
+            A routing control state entry.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateEntry.RoutingControlArn">
+            <summary>
+            Gets and sets the property RoutingControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) for a routing control state entry.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateEntry.RoutingControlState">
+            <summary>
+            Gets and sets the property RoutingControlState. 
+            <para>
+            The routing control state in a set of routing control state entries.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest">
+            <summary>
+            Container for the parameters to the UpdateRoutingControlState operation.
+            Set the state of the routing control to reroute traffic. You can set the value to
+            be On or Off. When the state is On, traffic flows to a cell. When the state is Off,
+            traffic does not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest.RoutingControlArn">
+            <summary>
+            Gets and sets the property RoutingControlArn. 
+            <para>
+            The Amazon Resource Name (ARN) for the routing control that you want to update the
+            state for.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest.RoutingControlState">
+            <summary>
+            Gets and sets the property RoutingControlState. 
+            <para>
+            The state of the routing control. You can set the value to be On or Off.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest.SafetyRulesToOverride">
+            <summary>
+            Gets and sets the property SafetyRulesToOverride. 
+            <para>
+            The Amazon Resource Names (ARNs) for the safety rules that you want to override when
+            you're updating the state of a routing control. You can override one safety rule or
+            multiple safety rules by including one or more ARNs, separated by commas.
+            </para>
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateResponse">
+            <summary>
+            This is the response object from the UpdateRoutingControlState operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest">
+            <summary>
+            Container for the parameters to the UpdateRoutingControlStates operation.
+            Set multiple routing control states. You can set the value for each state to be On
+            or Off. When the state is On, traffic flows to a cell. When it's Off, traffic does
+            not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest.SafetyRulesToOverride">
+            <summary>
+            Gets and sets the property SafetyRulesToOverride. 
+            <para>
+            The Amazon Resource Names (ARNs) for the safety rules that you want to override when
+            you're updating routing control states. You can override one safety rule or multiple
+            safety rules by including one or more ARNs, separated by commas.
+            </para>
+             
+            <para>
+            For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest.UpdateRoutingControlStateEntries">
+            <summary>
+            Gets and sets the property UpdateRoutingControlStateEntries. 
+            <para>
+            A set of routing control entries that you want to update.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesResponse">
+            <summary>
+            This is the response object from the UpdateRoutingControlStates operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            <summary>
+            There was a validation error on the request.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ValidationException.Fields">
+            <summary>
+            Gets and sets the property Fields.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ValidationExceptionField">
+            <summary>
+            There was a validation error on the request.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            Information about the validation exception.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The field that had the validation exception.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.IListRoutingControlsPaginator">
+             <summary>
+             Paginator for the ListRoutingControls operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.IListRoutingControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.IListRoutingControlsPaginator.RoutingControls">
+            <summary>
+            Enumerable containing all of the RoutingControls
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.IRoute53RecoveryClusterPaginatorFactory">
+             <summary>
+             Paginators for the Route53RecoveryCluster service
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.IRoute53RecoveryClusterPaginatorFactory.ListRoutingControls(Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest)">
+             <summary>
+             Paginator for ListRoutingControls operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsPaginator">
+            <summary>
+            Base class for ListRoutingControls paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.Model.ListRoutingControlsPaginator.RoutingControls">
+            <summary>
+            Enumerable containing all of the RoutingControls
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.Model.Route53RecoveryClusterPaginatorFactory">
+             <summary>
+             Paginators for the Route53RecoveryCluster service
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.Model.Route53RecoveryClusterPaginatorFactory.ListRoutingControls(Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest)">
+             <summary>
+             Paginator for ListRoutingControls operation
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterRequest">
+            <summary>
+            Base class for Route53RecoveryCluster operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.RoutingControlState">
+            <summary>
+            Constants used for properties of type RoutingControlState.
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.RoutingControlState.Off">
+            <summary>
+            Constant Off for RoutingControlState
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.RoutingControlState.On">
+            <summary>
+            Constant On for RoutingControlState
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.RoutingControlState.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.RoutingControlState.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.RoutingControlState.op_Implicit(System.String)~Amazon.Route53RecoveryCluster.RoutingControlState">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.Route53RecoveryCluster.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.ValidationExceptionReason.op_Implicit(System.String)~Amazon.Route53RecoveryCluster.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient">
+             <summary>
+             Implementation for accessing Route53RecoveryCluster
+            
+             Welcome to the Routing Control (Recovery Cluster) API Reference Guide for Amazon Route
+             53 Application Recovery Controller.
+             
+              
+             <para>
+             With Route 53 ARC, you can use routing control with extreme reliability to recover
+             applications by rerouting traffic across Availability Zones or Amazon Web Services
+             Regions. Routing controls are simple on/off switches hosted on a highly available
+             cluster in Route 53 ARC. A cluster provides a set of five redundant Regional endpoints
+             against which you can run API calls to get or update the state of routing controls.
+             To implement failover, you set one routing control On and another one Off, to reroute
+             traffic from one Availability Zone or Amazon Web Services Region to another. 
+             </para>
+              
+             <para>
+              <i>Be aware that you must specify a Regional endpoint for a cluster when you work
+             with API cluster operations to get or update routing control states in Route 53 ARC.</i>
+             In addition, you must specify the US West (Oregon) Region for Route 53 ARC API calls.
+             For example, use the parameter <code>--region us-west-2</code> with AWS CLI commands.
+             For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.api.html">
+             Get and update routing control states using the API</a> in the Amazon Route 53 Application
+             Recovery Controller Developer Guide.
+             </para>
+              
+             <para>
+             This API guide includes information about the API operations for how to get and update
+             routing control states in Route 53 ARC. To work with routing control in Route 53 ARC,
+             you must first create the required components (clusters, control panels, and routing
+             controls) using the recovery cluster configuration API.
+             </para>
+              
+             <para>
+             For more information about working with routing control in Route 53 ARC, see the following:
+             </para>
+              <ul> <li> 
+             <para>
+             Create clusters, control panels, and routing controls by using API operations. For
+             more information, see the <a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/">Recovery
+             Control Configuration API Reference Guide for Amazon Route 53 Application Recovery
+             Controller</a>.
+             </para>
+              </li> <li> 
+             <para>
+             Learn about the components in recovery control, including clusters, routing controls,
+             and control panels, and how to work with Route 53 ARC in the Amazon Web Services console.
+             For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/introduction-components.html#introduction-components-routing">
+             Recovery control components</a> in the Amazon Route 53 Application Recovery Controller
+             Developer Guide.
+             </para>
+              </li> <li> 
+             <para>
+             Route 53 ARC also provides readiness checks that continually audit resources to help
+             make sure that your applications are scaled and ready to handle failover traffic.
+             For more information about the related API operations, see the <a href="https://docs.aws.amazon.com/recovery-readiness/latest/api/">Recovery
+             Readiness API Reference Guide for Amazon Route 53 Application Recovery Controller</a>.
+             </para>
+              </li> <li> 
+             <para>
+             For more information about creating resilient applications and preparing for recovery
+             readiness with Route 53 ARC, see the <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/">Amazon
+             Route 53 Application Recovery Controller Developer Guide</a>.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor">
+             <summary>
+             Constructs AmazonRoute53RecoveryClusterClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonRoute53RecoveryClusterClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig)">
+             <summary>
+             Constructs AmazonRoute53RecoveryClusterClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonRoute53RecoveryClusterClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Credentials and an
+            AmazonRoute53RecoveryClusterClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonRoute53RecoveryClusterClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String,Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRoute53RecoveryClusterClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonRoute53RecoveryClusterClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.#ctor(System.String,System.String,System.String,Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterConfig)">
+            <summary>
+            Constructs AmazonRoute53RecoveryClusterClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonRoute53RecoveryClusterClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonRoute53RecoveryClusterClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.GetRoutingControlStateAsync(Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get the state for a routing control. A routing control is a simple on/off switch that
+            you can use to route traffic to cells. When a routing control state is On, traffic
+            flows to a cell. When the state is Off, traffic does not flow. 
+            
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRoutingControlState service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRoutingControlState service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState">REST API Reference for GetRoutingControlState Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.ListRoutingControlsAsync(Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            List routing control names and Amazon Resource Names (ARNs), as well as the routing
+            control state for each routing control, along with the control panel name and control
+            panel ARN for the routing controls. If you specify a control panel ARN, this call
+            lists the routing controls in the control panel. Otherwise, it lists all the routing
+            controls in the cluster.
+            
+             
+            <para>
+            A routing control is a simple on/off switch in Route 53 ARC that you can use to route
+            traffic to cells. When a routing control state is On, traffic flows to a cell. When
+            the state is Off, traffic does not flow.
+            </para>
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to use this API operation to list routing controls in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRoutingControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRoutingControls service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/ListRoutingControls">REST API Reference for ListRoutingControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.UpdateRoutingControlStateAsync(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest,System.Threading.CancellationToken)">
+            <summary>
+            Set the state of the routing control to reroute traffic. You can set the value to
+            be On or Off. When the state is On, traffic flows to a cell. When the state is Off,
+            traffic does not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRoutingControlState service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRoutingControlState service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ConflictException">
+            There was a conflict with this request. Try again.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState">REST API Reference for UpdateRoutingControlState Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.UpdateRoutingControlStatesAsync(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Set multiple routing control states. You can set the value for each state to be On
+            or Off. When the state is On, traffic flows to a cell. When it's Off, traffic does
+            not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRoutingControlStates service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRoutingControlStates service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ConflictException">
+            There was a conflict with this request. Try again.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException">
+            The request can't update that many routing control states at the same time. Try again
+            with fewer routing control states.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates">REST API Reference for UpdateRoutingControlStates Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.AmazonRoute53RecoveryClusterClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster">
+             <summary>
+             Interface for accessing Route53RecoveryCluster
+            
+             Welcome to the Routing Control (Recovery Cluster) API Reference Guide for Amazon Route
+             53 Application Recovery Controller.
+             
+              
+             <para>
+             With Route 53 ARC, you can use routing control with extreme reliability to recover
+             applications by rerouting traffic across Availability Zones or Amazon Web Services
+             Regions. Routing controls are simple on/off switches hosted on a highly available
+             cluster in Route 53 ARC. A cluster provides a set of five redundant Regional endpoints
+             against which you can run API calls to get or update the state of routing controls.
+             To implement failover, you set one routing control On and another one Off, to reroute
+             traffic from one Availability Zone or Amazon Web Services Region to another. 
+             </para>
+              
+             <para>
+              <i>Be aware that you must specify a Regional endpoint for a cluster when you work
+             with API cluster operations to get or update routing control states in Route 53 ARC.</i>
+             In addition, you must specify the US West (Oregon) Region for Route 53 ARC API calls.
+             For example, use the parameter <code>--region us-west-2</code> with AWS CLI commands.
+             For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.api.html">
+             Get and update routing control states using the API</a> in the Amazon Route 53 Application
+             Recovery Controller Developer Guide.
+             </para>
+              
+             <para>
+             This API guide includes information about the API operations for how to get and update
+             routing control states in Route 53 ARC. To work with routing control in Route 53 ARC,
+             you must first create the required components (clusters, control panels, and routing
+             controls) using the recovery cluster configuration API.
+             </para>
+              
+             <para>
+             For more information about working with routing control in Route 53 ARC, see the following:
+             </para>
+              <ul> <li> 
+             <para>
+             Create clusters, control panels, and routing controls by using API operations. For
+             more information, see the <a href="https://docs.aws.amazon.com/recovery-cluster/latest/api/">Recovery
+             Control Configuration API Reference Guide for Amazon Route 53 Application Recovery
+             Controller</a>.
+             </para>
+              </li> <li> 
+             <para>
+             Learn about the components in recovery control, including clusters, routing controls,
+             and control panels, and how to work with Route 53 ARC in the Amazon Web Services console.
+             For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/introduction-components.html#introduction-components-routing">
+             Recovery control components</a> in the Amazon Route 53 Application Recovery Controller
+             Developer Guide.
+             </para>
+              </li> <li> 
+             <para>
+             Route 53 ARC also provides readiness checks that continually audit resources to help
+             make sure that your applications are scaled and ready to handle failover traffic.
+             For more information about the related API operations, see the <a href="https://docs.aws.amazon.com/recovery-readiness/latest/api/">Recovery
+             Readiness API Reference Guide for Amazon Route 53 Application Recovery Controller</a>.
+             </para>
+              </li> <li> 
+             <para>
+             For more information about creating resilient applications and preparing for recovery
+             readiness with Route 53 ARC, see the <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/">Amazon
+             Route 53 Application Recovery Controller Developer Guide</a>.
+             </para>
+              </li> </ul>
+             </summary>
+        </member>
+        <member name="P:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.GetRoutingControlStateAsync(Amazon.Route53RecoveryCluster.Model.GetRoutingControlStateRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get the state for a routing control. A routing control is a simple on/off switch that
+            you can use to route traffic to cells. When a routing control state is On, traffic
+            flows to a cell. When the state is Off, traffic does not flow. 
+            
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRoutingControlState service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRoutingControlState service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/GetRoutingControlState">REST API Reference for GetRoutingControlState Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.ListRoutingControlsAsync(Amazon.Route53RecoveryCluster.Model.ListRoutingControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            List routing control names and Amazon Resource Names (ARNs), as well as the routing
+            control state for each routing control, along with the control panel name and control
+            panel ARN for the routing controls. If you specify a control panel ARN, this call
+            lists the routing controls in the control panel. Otherwise, it lists all the routing
+            controls in the cluster.
+            
+             
+            <para>
+            A routing control is a simple on/off switch in Route 53 ARC that you can use to route
+            traffic to cells. When a routing control state is On, traffic flows to a cell. When
+            the state is Off, traffic does not flow.
+            </para>
+             
+            <para>
+            Before you can create a routing control, you must first create a cluster, and then
+            host the control in a control panel on the cluster. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.create.html">
+            Create routing control structures</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide. You access one of the endpoints for the cluster to get
+            or update the routing control state to redirect traffic for your application. 
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to use this API operation to list routing controls in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            Learn more about working with routing controls in the following topics in the Amazon
+            Route 53 Application Recovery Controller Developer Guide:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls in Route 53 ARC</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRoutingControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRoutingControls service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/ListRoutingControls">REST API Reference for ListRoutingControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.UpdateRoutingControlStateAsync(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStateRequest,System.Threading.CancellationToken)">
+            <summary>
+            Set the state of the routing control to reroute traffic. You can set the value to
+            be On or Off. When the state is On, traffic flows to a cell. When the state is Off,
+            traffic does not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRoutingControlState service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRoutingControlState service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ConflictException">
+            There was a conflict with this request. Try again.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlState">REST API Reference for UpdateRoutingControlState Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.UpdateRoutingControlStatesAsync(Amazon.Route53RecoveryCluster.Model.UpdateRoutingControlStatesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Set multiple routing control states. You can set the value for each state to be On
+            or Off. When the state is On, traffic flows to a cell. When it's Off, traffic does
+            not flow.
+            
+             
+            <para>
+            With Route 53 ARC, you can add safety rules for routing controls, which are safeguards
+            for routing control state updates that help prevent unexpected outcomes, like fail
+            open traffic routing. However, there are scenarios when you might want to bypass the
+            routing control safeguards that are enforced with safety rules that you've configured.
+            For example, you might want to fail over quickly for disaster recovery, and one or
+            more safety rules might be unexpectedly preventing you from updating a routing control
+            state to reroute traffic. In a "break glass" scenario like this, you can override
+            one or more safety rules to change a routing control state and fail over your application.
+            </para>
+             
+            <para>
+            The <code>SafetyRulesToOverride</code> property enables you override one or more safety
+            rules and update routing control states. For more information, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+            Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery
+            Controller Developer Guide.
+            </para>
+             
+            <para>
+             <i>You must specify Regional endpoints when you work with API cluster operations
+            to get or update routing control states in Route 53 ARC.</i> 
+            </para>
+             
+            <para>
+            To see a code example for getting a routing control state, including accessing Regional
+            cluster endpoints in sequence, see <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples_actions.html">API
+            examples</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.update.html">
+            Viewing and updating routing control states</a> 
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
+            with routing controls overall</a> 
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateRoutingControlStates service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateRoutingControlStates service method, as returned by Route53RecoveryCluster.</returns>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.AccessDeniedException">
+            You don't have sufficient permissions to perform this action.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ConflictException">
+            There was a conflict with this request. Try again.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.EndpointTemporarilyUnavailableException">
+            The cluster endpoint isn't available. Try another cluster endpoint.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.InternalServerException">
+            There was an unexpected error during processing of the request.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ResourceNotFoundException">
+            The request references a routing control or control panel that was not found.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ServiceLimitExceededException">
+            The request can't update that many routing control states at the same time. Try again
+            with fewer routing control states.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ThrottlingException">
+            The request was denied because of request throttling.
+            </exception>
+            <exception cref="T:Amazon.Route53RecoveryCluster.Model.ValidationException">
+            There was a validation error on the request.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/route53-recovery-cluster-2019-12-02/UpdateRoutingControlStates">REST API Reference for UpdateRoutingControlStates Operation</seealso>
+        </member>
+        <member name="M:Amazon.Route53RecoveryCluster.IAmazonRoute53RecoveryCluster.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

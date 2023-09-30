@@ -1,0 +1,2011 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ElasticInference</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ElasticInference.AmazonElasticInferenceConfig">
+            <summary>
+            Configuration for accessing Amazon ElasticInference service
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ElasticInference service
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ElasticInference
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ElasticInference endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ElasticInferenceEndpointProvider and ElasticInferenceEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters.#ctor">
+            <summary>
+            ElasticInferenceEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Endpoints.ElasticInferenceEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.AmazonElasticInferenceException">
+            <summary>
+             Common exception for the ElasticInference service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonElasticInferenceException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonElasticInferenceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonElasticInferenceException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonElasticInferenceException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonElasticInferenceException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ElasticInference.Internal.AmazonElasticInferenceEndpointProvider">
+            <summary>
+            Amazon ElasticInference endpoint provider.
+            Resolves endpoint for given set of ElasticInferenceEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Internal.AmazonElasticInferenceEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ElasticInferenceEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Internal.AmazonElasticInferenceEndpointResolver">
+            <summary>
+            Amazon ElasticInference endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ElasticInference service requests.
+            Collects values for ElasticInferenceEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ElasticInferenceEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Internal.AmazonElasticInferenceMetadata">
+            <summary>
+            Service metadata for  Amazon ElasticInference service
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Internal.AmazonElasticInferenceMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Internal.AmazonElasticInferenceMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.AcceleratorType">
+            <summary>
+            The details of an Elastic Inference Accelerator type.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorType.AcceleratorTypeName">
+            <summary>
+            Gets and sets the property AcceleratorTypeName. 
+            <para>
+             The name of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorType.MemoryInfo">
+            <summary>
+            Gets and sets the property MemoryInfo. 
+            <para>
+             The memory information of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorType.ThroughputInfo">
+            <summary>
+            Gets and sets the property ThroughputInfo. 
+            <para>
+             The throughput information of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.AcceleratorTypeOffering">
+            <summary>
+            The offering for an Elastic Inference Accelerator type.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorTypeOffering.AcceleratorType">
+            <summary>
+            Gets and sets the property AcceleratorType. 
+            <para>
+             The name of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorTypeOffering.Location">
+            <summary>
+            Gets and sets the property Location. 
+            <para>
+             The location for the offering. It will return either the region, availability zone
+            or availability zone id for the offering depending on the locationType value. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.AcceleratorTypeOffering.LocationType">
+            <summary>
+            Gets and sets the property LocationType. 
+            <para>
+             The location type for the offering. It can assume the following values: region: defines
+            that the offering is at the regional level. availability-zone: defines that the offering
+            is at the availability zone level. availability-zone-id: defines that the offering
+            is at the availability zone level, defined by the availability zone id. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.BadRequestException">
+            <summary>
+            Raised when a malformed input has been provided to the API.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.BadRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new BadRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.BadRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.BadRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.BadRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.BadRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of BadRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest">
+            <summary>
+            Container for the parameters to the DescribeAcceleratorOfferings operation.
+            Describes the locations in which a given accelerator type or set of types is present
+            in a given region. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest.AcceleratorTypes">
+            <summary>
+            Gets and sets the property AcceleratorTypes. 
+            <para>
+             The list of accelerator types to describe. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest.LocationType">
+            <summary>
+            Gets and sets the property LocationType. 
+            <para>
+             The location type that you want to describe accelerator type offerings for. It can
+            assume the following values: region: will return the accelerator type offering at
+            the regional level. availability-zone: will return the accelerator type offering at
+            the availability zone level. availability-zone-id: will return the accelerator type
+            offering at the availability zone level returning the availability zone id. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsResponse">
+            <summary>
+            This is the response object from the DescribeAcceleratorOfferings operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsResponse.AcceleratorTypeOfferings">
+            <summary>
+            Gets and sets the property AcceleratorTypeOfferings. 
+            <para>
+             The list of accelerator type offerings for a specific location. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorsRequest">
+            <summary>
+            Container for the parameters to the DescribeAccelerators operation.
+            Describes information over a provided set of accelerators belonging to an account.
+            
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsRequest.AcceleratorIds">
+            <summary>
+            Gets and sets the property AcceleratorIds. 
+            <para>
+             The IDs of the accelerators to describe. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsRequest.Filters">
+            <summary>
+            Gets and sets the property Filters. 
+            <para>
+             One or more filters. Filter names and values are case-sensitive. Valid filter names
+            are: accelerator-types: can provide a list of accelerator type names to filter for.
+            instance-id: can provide a list of EC2 instance ids to filter for. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+             The total number of items to return in the command's output. If the total number
+            of items available is more than the value specified, a NextToken is provided in the
+            command's output. To resume pagination, provide the NextToken value in the starting-token
+            argument of a subsequent command. Do not use the NextToken response element directly
+            outside of the AWS CLI. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+             A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorsResponse">
+            <summary>
+            This is the response object from the DescribeAccelerators operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsResponse.AcceleratorSet">
+            <summary>
+            Gets and sets the property AcceleratorSet. 
+            <para>
+             The details of the Elastic Inference Accelerators. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+             A token to specify where to start paginating. This is the NextToken from a previously
+            truncated response. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorTypesRequest">
+            <summary>
+            Container for the parameters to the DescribeAcceleratorTypes operation.
+            Describes the accelerator types available in a given region, as well as their characteristics,
+            such as memory and throughput. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorTypesResponse">
+            <summary>
+            This is the response object from the DescribeAcceleratorTypes operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorTypesResponse.AcceleratorTypes">
+            <summary>
+            Gets and sets the property AcceleratorTypes. 
+            <para>
+             The available accelerator types. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ElasticInferenceAccelerator">
+            <summary>
+            The details of an Elastic Inference Accelerator.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAccelerator.AcceleratorHealth">
+            <summary>
+            Gets and sets the property AcceleratorHealth. 
+            <para>
+             The health of the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAccelerator.AcceleratorId">
+            <summary>
+            Gets and sets the property AcceleratorId. 
+            <para>
+             The ID of the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAccelerator.AcceleratorType">
+            <summary>
+            Gets and sets the property AcceleratorType. 
+            <para>
+             The type of the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAccelerator.AttachedResource">
+            <summary>
+            Gets and sets the property AttachedResource. 
+            <para>
+             The ARN of the resource that the Elastic Inference Accelerator is attached to. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAccelerator.AvailabilityZone">
+            <summary>
+            Gets and sets the property AvailabilityZone. 
+            <para>
+             The availability zone where the Elastic Inference Accelerator is present. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ElasticInferenceAcceleratorHealth">
+            <summary>
+            The health details of an Elastic Inference Accelerator.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ElasticInferenceAcceleratorHealth.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+             The health status of the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Filter">
+            <summary>
+            A filter expression for the Elastic Inference Accelerator list.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Filter.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+             The filter name for the Elastic Inference Accelerator list. It can assume the following
+            values: accelerator-type: the type of Elastic Inference Accelerator to filter for.
+            instance-id: an EC2 instance id to filter for. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Filter.Values">
+            <summary>
+            Gets and sets the property Values. 
+            <para>
+             The values for the filter of the Elastic Inference Accelerator list. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.InternalServerException">
+            <summary>
+            Raised when an unexpected error occurred during request processing.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeOfferingUnmarshaller">
+            <summary>
+            Response Unmarshaller for AcceleratorTypeOffering Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeOfferingUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#AcceleratorTypeOffering,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeOfferingUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeOfferingUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeUnmarshaller">
+            <summary>
+            Response Unmarshaller for AcceleratorType Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#AcceleratorType,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.AcceleratorTypeUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for BadRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.BadRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsRequestMarshaller">
+            <summary>
+            DescribeAcceleratorOfferings Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsRequestMarshaller.Marshall(Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeAcceleratorOfferings operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorOfferingsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsRequestMarshaller">
+            <summary>
+            DescribeAccelerators Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsRequestMarshaller.Marshall(Amazon.ElasticInference.Model.DescribeAcceleratorsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeAccelerators operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesRequestMarshaller">
+            <summary>
+            DescribeAcceleratorTypes Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesRequestMarshaller.Marshall(Amazon.ElasticInference.Model.DescribeAcceleratorTypesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DescribeAcceleratorTypes operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.DescribeAcceleratorTypesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorHealthUnmarshaller">
+            <summary>
+            Response Unmarshaller for ElasticInferenceAcceleratorHealth Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorHealthUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#ElasticInferenceAcceleratorHealth,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorHealthUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorHealthUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorUnmarshaller">
+            <summary>
+            Response Unmarshaller for ElasticInferenceAccelerator Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#ElasticInferenceAccelerator,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ElasticInferenceAcceleratorUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.FilterMarshaller">
+            <summary>
+            Filter Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.FilterMarshaller.Marshall(Amazon.ElasticInference.Model.Filter,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.ElasticInference.Model.Internal.MarshallTransformations.FilterMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.KeyValuePairUnmarshaller">
+            <summary>
+            Response Unmarshaller for KeyValuePair Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.KeyValuePairUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#KeyValuePair,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.KeyValuePairUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.KeyValuePairUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.ElasticInference.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.MemoryInfoUnmarshaller">
+            <summary>
+            Response Unmarshaller for MemoryInfo Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.MemoryInfoUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ElasticInference#Model#MemoryInfo,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.MemoryInfoUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.MemoryInfoUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.ElasticInference.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.ElasticInference.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.KeyValuePair">
+            <summary>
+            A throughput entry for an Elastic Inference Accelerator type.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.KeyValuePair.Key">
+            <summary>
+            Gets and sets the property Key. 
+            <para>
+             The throughput value of the Elastic Inference Accelerator type. It can assume the
+            following values: TFLOPS16bit: the throughput expressed in 16bit TeraFLOPS. TFLOPS32bit:
+            the throughput expressed in 32bit TeraFLOPS. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.KeyValuePair.Value">
+            <summary>
+            Gets and sets the property Value. 
+            <para>
+             The throughput value of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Returns all tags of an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The ARN of the Elastic Inference Accelerator to list the tags for. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+             The tags of the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.MemoryInfo">
+            <summary>
+            The memory information of an Elastic Inference Accelerator type.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.MemoryInfo.SizeInMiB">
+            <summary>
+            Gets and sets the property SizeInMiB. 
+            <para>
+             The size in mebibytes of the Elastic Inference Accelerator type. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            <summary>
+            Raised when the requested resource cannot be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds the specified tags to an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The ARN of the Elastic Inference Accelerator to tag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+             The tags to add to the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes the specified tags from an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+             The ARN of the Elastic Inference Accelerator to untag. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+             The list of tags to remove from the Elastic Inference Accelerator. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.DescribeAcceleratorsPaginator">
+            <summary>
+            Base class for DescribeAccelerators paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.DescribeAcceleratorsPaginator.AcceleratorSet">
+            <summary>
+            Enumerable containing all of the AcceleratorSet
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.ElasticInferencePaginatorFactory">
+             <summary>
+             Paginators for the ElasticInference service
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.ElasticInferencePaginatorFactory.DescribeAccelerators(Amazon.ElasticInference.Model.DescribeAcceleratorsRequest)">
+             <summary>
+             Paginator for DescribeAccelerators operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.IDescribeAcceleratorsPaginator">
+             <summary>
+             Paginator for the DescribeAccelerators operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.IDescribeAcceleratorsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.Model.IDescribeAcceleratorsPaginator.AcceleratorSet">
+            <summary>
+            Enumerable containing all of the AcceleratorSet
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.Model.IElasticInferencePaginatorFactory">
+             <summary>
+             Paginators for the ElasticInference service
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.Model.IElasticInferencePaginatorFactory.DescribeAccelerators(Amazon.ElasticInference.Model.DescribeAcceleratorsRequest)">
+             <summary>
+             Paginator for DescribeAccelerators operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.AmazonElasticInferenceRequest">
+            <summary>
+            Base class for ElasticInference operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ElasticInference.LocationType">
+            <summary>
+            Constants used for properties of type LocationType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ElasticInference.LocationType.AvailabilityZone">
+            <summary>
+            Constant AvailabilityZone for LocationType
+            </summary>
+        </member>
+        <member name="F:Amazon.ElasticInference.LocationType.AvailabilityZoneId">
+            <summary>
+            Constant AvailabilityZoneId for LocationType
+            </summary>
+        </member>
+        <member name="F:Amazon.ElasticInference.LocationType.Region">
+            <summary>
+            Constant Region for LocationType
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.LocationType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.LocationType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ElasticInference.LocationType.op_Implicit(System.String)~Amazon.ElasticInference.LocationType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ElasticInference.AmazonElasticInferenceClient">
+             <summary>
+             Implementation for accessing ElasticInference
+            
+             Elastic Inference public APIs. 
+             
+              
+             <para>
+              February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+             Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+             to options that offer better price and performance. After April 15, 2023, new customers
+             will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+             Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+             during the past 30-day period are considered current customers and will be able to
+             continue using the service. 
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor">
+             <summary>
+             Constructs AmazonElasticInferenceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonElasticInferenceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(Amazon.ElasticInference.AmazonElasticInferenceConfig)">
+             <summary>
+             Constructs AmazonElasticInferenceClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonElasticInferenceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ElasticInference.AmazonElasticInferenceConfig)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Credentials and an
+            AmazonElasticInferenceClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonElasticInferenceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String,Amazon.ElasticInference.AmazonElasticInferenceConfig)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonElasticInferenceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonElasticInferenceClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.#ctor(System.String,System.String,System.String,Amazon.ElasticInference.AmazonElasticInferenceConfig)">
+            <summary>
+            Constructs AmazonElasticInferenceClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonElasticInferenceClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonElasticInferenceClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ElasticInference.AmazonElasticInferenceClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.DescribeAcceleratorOfferingsAsync(Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes the locations in which a given accelerator type or set of types is present
+            in a given region. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAcceleratorOfferings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAcceleratorOfferings service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAcceleratorOfferings">REST API Reference for DescribeAcceleratorOfferings Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.DescribeAcceleratorsAsync(Amazon.ElasticInference.Model.DescribeAcceleratorsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes information over a provided set of accelerators belonging to an account.
+            
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAccelerators service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAccelerators service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAccelerators">REST API Reference for DescribeAccelerators Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.DescribeAcceleratorTypesAsync(Amazon.ElasticInference.Model.DescribeAcceleratorTypesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes the accelerator types available in a given region, as well as their characteristics,
+            such as memory and throughput. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAcceleratorTypes service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAcceleratorTypes service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAcceleratorTypes">REST API Reference for DescribeAcceleratorTypes Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.ListTagsForResourceAsync(Amazon.ElasticInference.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns all tags of an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.TagResourceAsync(Amazon.ElasticInference.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds the specified tags to an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.UntagResourceAsync(Amazon.ElasticInference.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags from an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.AmazonElasticInferenceClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.ElasticInference.IAmazonElasticInference">
+             <summary>
+             Interface for accessing ElasticInference
+            
+             Elastic Inference public APIs. 
+             
+              
+             <para>
+              February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+             Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+             to options that offer better price and performance. After April 15, 2023, new customers
+             will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+             Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+             during the past 30-day period are considered current customers and will be able to
+             continue using the service. 
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.ElasticInference.IAmazonElasticInference.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.DescribeAcceleratorOfferingsAsync(Amazon.ElasticInference.Model.DescribeAcceleratorOfferingsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes the locations in which a given accelerator type or set of types is present
+            in a given region. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAcceleratorOfferings service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAcceleratorOfferings service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAcceleratorOfferings">REST API Reference for DescribeAcceleratorOfferings Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.DescribeAcceleratorsAsync(Amazon.ElasticInference.Model.DescribeAcceleratorsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes information over a provided set of accelerators belonging to an account.
+            
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAccelerators service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAccelerators service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAccelerators">REST API Reference for DescribeAccelerators Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.DescribeAcceleratorTypesAsync(Amazon.ElasticInference.Model.DescribeAcceleratorTypesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Describes the accelerator types available in a given region, as well as their characteristics,
+            such as memory and throughput. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DescribeAcceleratorTypes service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DescribeAcceleratorTypes service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/DescribeAcceleratorTypes">REST API Reference for DescribeAcceleratorTypes Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.ListTagsForResourceAsync(Amazon.ElasticInference.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns all tags of an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.TagResourceAsync(Amazon.ElasticInference.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds the specified tags to an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.UntagResourceAsync(Amazon.ElasticInference.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes the specified tags from an Elastic Inference Accelerator. 
+            
+             
+            <para>
+             February 15, 2023: Starting April 15, 2023, AWS will not onboard new customers to
+            Amazon Elastic Inference (EI), and will help current customers migrate their workloads
+            to options that offer better price and performance. After April 15, 2023, new customers
+            will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker,
+            Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once
+            during the past 30-day period are considered current customers and will be able to
+            continue using the service. 
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by ElasticInference.</returns>
+            <exception cref="T:Amazon.ElasticInference.Model.BadRequestException">
+            Raised when a malformed input has been provided to the API.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.InternalServerException">
+            Raised when an unexpected error occurred during request processing.
+            </exception>
+            <exception cref="T:Amazon.ElasticInference.Model.ResourceNotFoundException">
+            Raised when the requested resource cannot be found.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/elastic-inference-2017-07-25/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.ElasticInference.IAmazonElasticInference.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

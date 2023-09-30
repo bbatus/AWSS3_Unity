@@ -1,0 +1,2216 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.SSOOIDC</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.SSOOIDC.Internal.IGetSsoTokenContext">
+            <summary>
+            This interface allows for testing to provide stubs for time consuming events like Sleep
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Internal.AmazonSSOOIDCEndpointProvider">
+            <summary>
+            Amazon SSOOIDC endpoint provider.
+            Resolves endpoint for given set of SSOOIDCEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Internal.AmazonSSOOIDCEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for SSOOIDCEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Internal.AmazonSSOOIDCEndpointResolver">
+            <summary>
+            Amazon SSOOIDC endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for SSOOIDC service requests.
+            Collects values for SSOOIDCEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses SSOOIDCEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Internal.AmazonSSOOIDCMetadata">
+            <summary>
+            Service metadata for  Amazon SSOOIDC service
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Internal.AmazonSSOOIDCMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Internal.AmazonSSOOIDCMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.AmazonSSOOIDCClient">
+             <summary>
+             Implementation for accessing SSOOIDC
+            
+             AWS IAM Identity Center (successor to AWS Single Sign-On) OpenID Connect (OIDC) is
+             a web service that enables a client (such as AWS CLI or a native application) to register
+             with IAM Identity Center. The service also enables the client to fetch the user’s
+             access token upon successful authentication and authorization with IAM Identity Center.
+             
+              <note> 
+             <para>
+             Although AWS Single Sign-On was renamed, the <code>sso</code> and <code>identitystore</code>
+             API namespaces will continue to retain their original name for backward compatibility
+             purposes. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">IAM
+             Identity Center rename</a>.
+             </para>
+              </note> 
+             <para>
+              <b>Considerations for Using This Guide</b> 
+             </para>
+              
+             <para>
+             Before you begin using this guide, we recommend that you first review the following
+             important information about how the IAM Identity Center OIDC service works.
+             </para>
+              <ul> <li> 
+             <para>
+             The IAM Identity Center OIDC service currently implements only the portions of the
+             OAuth 2.0 Device Authorization Grant standard (<a href="https://tools.ietf.org/html/rfc8628">https://tools.ietf.org/html/rfc8628</a>)
+             that are necessary to enable single sign-on authentication with the AWS CLI. Support
+             for other OIDC flows frequently needed for native applications, such as Authorization
+             Code Flow (+ PKCE), will be addressed in future releases.
+             </para>
+              </li> <li> 
+             <para>
+             The service emits only OIDC access tokens, such that obtaining a new token (For example,
+             token refresh) requires explicit user re-authentication.
+             </para>
+              </li> <li> 
+             <para>
+             The access tokens provided by this service grant access to all AWS account entitlements
+             assigned to an IAM Identity Center user, not just a particular application.
+             </para>
+              </li> <li> 
+             <para>
+             The documentation in this guide does not describe the mechanism to convert the access
+             token into AWS Auth (“sigv4”) credentials for use with IAM-protected AWS service endpoints.
+             For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/PortalAPIReference/API_GetRoleCredentials.html">GetRoleCredentials</a>
+             in the <i>IAM Identity Center Portal API Reference Guide</i>.
+             </para>
+              </li> </ul> 
+             <para>
+             For general information about IAM Identity Center, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">What
+             is IAM Identity Center?</a> in the <i>IAM Identity Center User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor">
+             <summary>
+             Constructs AmazonSSOOIDCClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonSSOOIDCClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(Amazon.SSOOIDC.AmazonSSOOIDCConfig)">
+             <summary>
+             Constructs AmazonSSOOIDCClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonSSOOIDCClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.SSOOIDC.AmazonSSOOIDCConfig)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Credentials and an
+            AmazonSSOOIDCClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonSSOOIDCClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String,Amazon.SSOOIDC.AmazonSSOOIDCConfig)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSSOOIDCClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonSSOOIDCClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.#ctor(System.String,System.String,System.String,Amazon.SSOOIDC.AmazonSSOOIDCConfig)">
+            <summary>
+            Constructs AmazonSSOOIDCClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonSSOOIDCClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonSSOOIDCClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.CreateTokenAsync(Amazon.SSOOIDC.Model.CreateTokenRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates and returns an access token for the authorized client. The access token issued
+            will be used to fetch short-term credentials for the assigned roles in the AWS account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateToken service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateToken service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.AuthorizationPendingException">
+            Indicates that a request to authorize a client with an access user session token is
+            pending.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.ExpiredTokenException">
+            Indicates that the token issued by the service is expired and is no longer valid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientException">
+            Indicates that the <code>clientId</code> or <code>clientSecret</code> in the request
+            is invalid. For example, this can occur when a client sends an incorrect <code>clientId</code>
+            or an expired <code>clientSecret</code>.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidGrantException">
+            Indicates that a request contains an invalid grant. This can occur if a client makes
+            a <a>CreateToken</a> request with an invalid grant type.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidScopeException">
+            Indicates that the scope provided in the request is invalid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.SlowDownException">
+            Indicates that the client is making the request too frequently and is more than the
+            service can handle.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnauthorizedClientException">
+            Indicates that the client is not currently authorized to make the request. This can
+            happen when a <code>clientId</code> is not issued for a public client.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException">
+            Indicates that the grant type in the request is not supported by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken">REST API Reference for CreateToken Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.RegisterClientAsync(Amazon.SSOOIDC.Model.RegisterClientRequest,System.Threading.CancellationToken)">
+            <summary>
+            Registers a client with IAM Identity Center. This allows clients to initiate device
+            authorization. The output should be persisted for reuse through many authentication
+            requests.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RegisterClient service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RegisterClient service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientMetadataException">
+            Indicates that the client information sent in the request during registration is invalid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidScopeException">
+            Indicates that the scope provided in the request is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient">REST API Reference for RegisterClient Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.StartDeviceAuthorizationAsync(Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates device authorization by requesting a pair of verification codes from the
+            authorization service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartDeviceAuthorization service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartDeviceAuthorization service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientException">
+            Indicates that the <code>clientId</code> or <code>clientSecret</code> in the request
+            is invalid. For example, this can occur when a client sends an incorrect <code>clientId</code>
+            or an expired <code>clientSecret</code>.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.SlowDownException">
+            Indicates that the client is making the request too frequently and is more than the
+            service can handle.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnauthorizedClientException">
+            Indicates that the client is not currently authorized to make the request. This can
+            happen when a <code>clientId</code> is not issued for a public client.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization">REST API Reference for StartDeviceAuthorization Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.SSOOIDC.IAmazonSSOOIDC">
+             <summary>
+             Interface for accessing SSOOIDC
+            
+             AWS IAM Identity Center (successor to AWS Single Sign-On) OpenID Connect (OIDC) is
+             a web service that enables a client (such as AWS CLI or a native application) to register
+             with IAM Identity Center. The service also enables the client to fetch the user’s
+             access token upon successful authentication and authorization with IAM Identity Center.
+             
+              <note> 
+             <para>
+             Although AWS Single Sign-On was renamed, the <code>sso</code> and <code>identitystore</code>
+             API namespaces will continue to retain their original name for backward compatibility
+             purposes. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html#renamed">IAM
+             Identity Center rename</a>.
+             </para>
+              </note> 
+             <para>
+              <b>Considerations for Using This Guide</b> 
+             </para>
+              
+             <para>
+             Before you begin using this guide, we recommend that you first review the following
+             important information about how the IAM Identity Center OIDC service works.
+             </para>
+              <ul> <li> 
+             <para>
+             The IAM Identity Center OIDC service currently implements only the portions of the
+             OAuth 2.0 Device Authorization Grant standard (<a href="https://tools.ietf.org/html/rfc8628">https://tools.ietf.org/html/rfc8628</a>)
+             that are necessary to enable single sign-on authentication with the AWS CLI. Support
+             for other OIDC flows frequently needed for native applications, such as Authorization
+             Code Flow (+ PKCE), will be addressed in future releases.
+             </para>
+              </li> <li> 
+             <para>
+             The service emits only OIDC access tokens, such that obtaining a new token (For example,
+             token refresh) requires explicit user re-authentication.
+             </para>
+              </li> <li> 
+             <para>
+             The access tokens provided by this service grant access to all AWS account entitlements
+             assigned to an IAM Identity Center user, not just a particular application.
+             </para>
+              </li> <li> 
+             <para>
+             The documentation in this guide does not describe the mechanism to convert the access
+             token into AWS Auth (“sigv4”) credentials for use with IAM-protected AWS service endpoints.
+             For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/PortalAPIReference/API_GetRoleCredentials.html">GetRoleCredentials</a>
+             in the <i>IAM Identity Center Portal API Reference Guide</i>.
+             </para>
+              </li> </ul> 
+             <para>
+             For general information about IAM Identity Center, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">What
+             is IAM Identity Center?</a> in the <i>IAM Identity Center User Guide</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.IAmazonSSOOIDC.CreateTokenAsync(Amazon.SSOOIDC.Model.CreateTokenRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates and returns an access token for the authorized client. The access token issued
+            will be used to fetch short-term credentials for the assigned roles in the AWS account.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateToken service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateToken service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.AccessDeniedException">
+            You do not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.AuthorizationPendingException">
+            Indicates that a request to authorize a client with an access user session token is
+            pending.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.ExpiredTokenException">
+            Indicates that the token issued by the service is expired and is no longer valid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientException">
+            Indicates that the <code>clientId</code> or <code>clientSecret</code> in the request
+            is invalid. For example, this can occur when a client sends an incorrect <code>clientId</code>
+            or an expired <code>clientSecret</code>.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidGrantException">
+            Indicates that a request contains an invalid grant. This can occur if a client makes
+            a <a>CreateToken</a> request with an invalid grant type.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidScopeException">
+            Indicates that the scope provided in the request is invalid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.SlowDownException">
+            Indicates that the client is making the request too frequently and is more than the
+            service can handle.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnauthorizedClientException">
+            Indicates that the client is not currently authorized to make the request. This can
+            happen when a <code>clientId</code> is not issued for a public client.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException">
+            Indicates that the grant type in the request is not supported by the service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/CreateToken">REST API Reference for CreateToken Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.IAmazonSSOOIDC.RegisterClientAsync(Amazon.SSOOIDC.Model.RegisterClientRequest,System.Threading.CancellationToken)">
+            <summary>
+            Registers a client with IAM Identity Center. This allows clients to initiate device
+            authorization. The output should be persisted for reuse through many authentication
+            requests.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RegisterClient service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RegisterClient service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientMetadataException">
+            Indicates that the client information sent in the request during registration is invalid.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidScopeException">
+            Indicates that the scope provided in the request is invalid.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/RegisterClient">REST API Reference for RegisterClient Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.IAmazonSSOOIDC.StartDeviceAuthorizationAsync(Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Initiates device authorization by requesting a pair of verification codes from the
+            authorization service.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartDeviceAuthorization service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartDeviceAuthorization service method, as returned by SSOOIDC.</returns>
+            <exception cref="T:Amazon.SSOOIDC.Model.InternalServerException">
+            Indicates that an error from the service occurred while trying to process a request.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidClientException">
+            Indicates that the <code>clientId</code> or <code>clientSecret</code> in the request
+            is invalid. For example, this can occur when a client sends an incorrect <code>clientId</code>
+            or an expired <code>clientSecret</code>.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.SlowDownException">
+            Indicates that the client is making the request too frequently and is more than the
+            service can handle.
+            </exception>
+            <exception cref="T:Amazon.SSOOIDC.Model.UnauthorizedClientException">
+            Indicates that the client is not currently authorized to make the request. This can
+            happen when a <code>clientId</code> is not issued for a public client.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/sso-oidc-2019-06-10/StartDeviceAuthorization">REST API Reference for StartDeviceAuthorization Operation</seealso>
+        </member>
+        <member name="M:Amazon.SSOOIDC.IAmazonSSOOIDC.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.SSOOIDC.AmazonSSOOIDCConfig">
+            <summary>
+            Configuration for accessing Amazon SSOOIDC service
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon SSOOIDC service
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            SSOOIDC
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.AmazonSSOOIDCDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters">
+            <summary>
+            Contains parameters used for resolving SSOOIDC endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal SSOOIDCEndpointProvider and SSOOIDCEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters.#ctor">
+            <summary>
+            SSOOIDCEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Endpoints.SSOOIDCEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.AmazonSSOOIDCException">
+            <summary>
+             Common exception for the SSOOIDC service.
+             </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonSSOOIDCException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonSSOOIDCException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonSSOOIDCException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSSOOIDCException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.AmazonSSOOIDCException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonSSOOIDCException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.AccessDeniedException">
+            <summary>
+            You do not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.AccessDeniedException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.AccessDeniedException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.AuthorizationPendingException">
+            <summary>
+            Indicates that a request to authorize a client with an access user session token is
+            pending.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AuthorizationPendingException.#ctor(System.String)">
+            <summary>
+            Constructs a new AuthorizationPendingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AuthorizationPendingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AuthorizationPendingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AuthorizationPendingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AuthorizationPendingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AuthorizationPendingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AuthorizationPendingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.AuthorizationPendingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AuthorizationPendingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.AuthorizationPendingException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.AuthorizationPendingException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.CreateTokenRequest">
+            <summary>
+            Container for the parameters to the CreateToken operation.
+            Creates and returns an access token for the authorized client. The access token issued
+            will be used to fetch short-term credentials for the assigned roles in the AWS account.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.ClientId">
+            <summary>
+            Gets and sets the property ClientId. 
+            <para>
+            The unique identifier string for each client. This value should come from the persisted
+            result of the <a>RegisterClient</a> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.ClientSecret">
+            <summary>
+            Gets and sets the property ClientSecret. 
+            <para>
+            A secret string generated for the client. This value should come from the persisted
+            result of the <a>RegisterClient</a> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.Code">
+            <summary>
+            Gets and sets the property Code. 
+            <para>
+            The authorization code received from the authorization service. This parameter is
+            required to perform an authorization grant request to get access to a token.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.DeviceCode">
+            <summary>
+            Gets and sets the property DeviceCode. 
+            <para>
+            Used only when calling this API for the device code grant type. This short-term code
+            is used to identify this authentication attempt. This should come from an in-memory
+            reference to the result of the <a>StartDeviceAuthorization</a> API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.GrantType">
+            <summary>
+            Gets and sets the property GrantType. 
+            <para>
+            Supports grant types for the authorization code, refresh token, and device code request.
+            For device code requests, specify the following value:
+            </para>
+             
+            <para>
+             <code>urn:ietf:params:oauth:grant-type:<i>device_code</i> </code> 
+            </para>
+             
+            <para>
+            For information about how to obtain the device code, see the <a>StartDeviceAuthorization</a>
+            topic.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.RedirectUri">
+            <summary>
+            Gets and sets the property RedirectUri. 
+            <para>
+            The location of the application that will receive the authorization code. Users authorize
+            the service to send the request to this location.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.RefreshToken">
+            <summary>
+            Gets and sets the property RefreshToken. 
+            <para>
+            Currently, <code>refreshToken</code> is not yet implemented and is not supported.
+            For more information about the features and limitations of the current IAM Identity
+            Center OIDC implementation, see <i>Considerations for Using this Guide</i> in the
+            <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">IAM
+            Identity Center OIDC API Reference</a>.
+            </para>
+             
+            <para>
+            The token used to obtain an access token in the event that the access token is invalid
+            or expired.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenRequest.Scope">
+            <summary>
+            Gets and sets the property Scope. 
+            <para>
+            The list of scopes that is defined by the client. Upon authorization, this list is
+            used to restrict permissions when granting an access token.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.CreateTokenRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.CreateTokenResponse">
+            <summary>
+            This is the response object from the CreateToken operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenResponse.AccessToken">
+            <summary>
+            Gets and sets the property AccessToken. 
+            <para>
+            An opaque token to access IAM Identity Center resources assigned to a user.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenResponse.ExpiresIn">
+            <summary>
+            Gets and sets the property ExpiresIn. 
+            <para>
+            Indicates the time in seconds when an access token will expire.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenResponse.IdToken">
+            <summary>
+            Gets and sets the property IdToken. 
+            <para>
+            Currently, <code>idToken</code> is not yet implemented and is not supported. For more
+            information about the features and limitations of the current IAM Identity Center
+            OIDC implementation, see <i>Considerations for Using this Guide</i> in the <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">IAM
+            Identity Center OIDC API Reference</a>.
+            </para>
+             
+            <para>
+            The identifier of the user that associated with the access token, if present.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenResponse.RefreshToken">
+            <summary>
+            Gets and sets the property RefreshToken. 
+            <para>
+            Currently, <code>refreshToken</code> is not yet implemented and is not supported.
+            For more information about the features and limitations of the current IAM Identity
+            Center OIDC implementation, see <i>Considerations for Using this Guide</i> in the
+            <a href="https://docs.aws.amazon.com/singlesignon/latest/OIDCAPIReference/Welcome.html">IAM
+            Identity Center OIDC API Reference</a>.
+            </para>
+             
+            <para>
+            A token that, if present, can be used to refresh a previously issued access token
+            that might have expired.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.CreateTokenResponse.TokenType">
+            <summary>
+            Gets and sets the property TokenType. 
+            <para>
+            Used to notify the client that the returned token is an access token. The supported
+            type is <code>BearerToken</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.ExpiredTokenException">
+            <summary>
+            Indicates that the token issued by the service is expired and is no longer valid.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.ExpiredTokenException.#ctor(System.String)">
+            <summary>
+            Constructs a new ExpiredTokenException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.ExpiredTokenException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.ExpiredTokenException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.ExpiredTokenException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.ExpiredTokenException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ExpiredTokenException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.ExpiredTokenException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.ExpiredTokenException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InternalServerException">
+            <summary>
+            Indicates that an error from the service occurred while trying to process a request.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InternalServerException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InternalServerException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AuthorizationPendingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AuthorizationPendingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AuthorizationPendingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AuthorizationPendingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.AuthorizationPendingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenRequestMarshaller">
+            <summary>
+            CreateToken Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenRequestMarshaller.Marshall(Amazon.SSOOIDC.Model.CreateTokenRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateToken operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.CreateTokenResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ExpiredTokenException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.ExpiredTokenExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidClientException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientMetadataExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidClientMetadataException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientMetadataExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientMetadataExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidClientMetadataExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidGrantExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidGrantException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidGrantExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidGrantExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidGrantExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidScopeExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidScopeException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidScopeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidScopeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.InvalidScopeExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientRequestMarshaller">
+            <summary>
+            RegisterClient Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientRequestMarshaller.Marshall(Amazon.SSOOIDC.Model.RegisterClientRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for RegisterClient operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.RegisterClientResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.SlowDownExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for SlowDownException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.SlowDownExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.SlowDownExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.SlowDownExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationRequestMarshaller">
+            <summary>
+            StartDeviceAuthorization Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationRequestMarshaller.Marshall(Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StartDeviceAuthorization operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.StartDeviceAuthorizationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnauthorizedClientExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnauthorizedClientException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnauthorizedClientExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnauthorizedClientExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnauthorizedClientExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnsupportedGrantTypeExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnsupportedGrantTypeException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnsupportedGrantTypeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnsupportedGrantTypeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.Internal.MarshallTransformations.UnsupportedGrantTypeExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InvalidClientException">
+            <summary>
+            Indicates that the <code>clientId</code> or <code>clientSecret</code> in the request
+            is invalid. For example, this can occur when a client sends an incorrect <code>clientId</code>
+            or an expired <code>clientSecret</code>.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidClientException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidClientException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidClientException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidClientException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidClientException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidClientException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidClientException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InvalidClientMetadataException">
+            <summary>
+            Indicates that the client information sent in the request during registration is invalid.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientMetadataException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidClientMetadataException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientMetadataException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidClientMetadataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientMetadataException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidClientMetadataException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientMetadataException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidClientMetadataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidClientMetadataException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidClientMetadataException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidClientMetadataException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidClientMetadataException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InvalidGrantException">
+            <summary>
+            Indicates that a request contains an invalid grant. This can occur if a client makes
+            a <a>CreateToken</a> request with an invalid grant type.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidGrantException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidGrantException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidGrantException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidGrantException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidGrantException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidGrantException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidGrantException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidGrantException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidGrantException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidGrantException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidGrantException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidGrantException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InvalidRequestException">
+            <summary>
+            Indicates that something is wrong with the input to the request. For example, a required
+            parameter might be missing or out of range.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidRequestException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidRequestException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.InvalidScopeException">
+            <summary>
+            Indicates that the scope provided in the request is invalid.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidScopeException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidScopeException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidScopeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidScopeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidScopeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidScopeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidScopeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidScopeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.InvalidScopeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidScopeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidScopeException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.InvalidScopeException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.RegisterClientRequest">
+            <summary>
+            Container for the parameters to the RegisterClient operation.
+            Registers a client with IAM Identity Center. This allows clients to initiate device
+            authorization. The output should be persisted for reuse through many authentication
+            requests.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientRequest.ClientName">
+            <summary>
+            Gets and sets the property ClientName. 
+            <para>
+            The friendly name of the client.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientRequest.ClientType">
+            <summary>
+            Gets and sets the property ClientType. 
+            <para>
+            The type of client. The service supports only <code>public</code> as a client type.
+            Anything other than public will be rejected by the service.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientRequest.Scopes">
+            <summary>
+            Gets and sets the property Scopes. 
+            <para>
+            The list of scopes that are defined by the client. Upon authorization, this list is
+            used to restrict permissions when granting an access token.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.RegisterClientRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.RegisterClientResponse">
+            <summary>
+            This is the response object from the RegisterClient operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.AuthorizationEndpoint">
+            <summary>
+            Gets and sets the property AuthorizationEndpoint. 
+            <para>
+            The endpoint where the client can request authorization.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.ClientId">
+            <summary>
+            Gets and sets the property ClientId. 
+            <para>
+            The unique identifier string for each client. This client uses this identifier to
+            get authenticated by the service in subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.ClientIdIssuedAt">
+            <summary>
+            Gets and sets the property ClientIdIssuedAt. 
+            <para>
+            Indicates the time at which the <code>clientId</code> and <code>clientSecret</code>
+            were issued.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.ClientSecret">
+            <summary>
+            Gets and sets the property ClientSecret. 
+            <para>
+            A secret string generated for the client. The client will use this string to get authenticated
+            by the service in subsequent calls.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.ClientSecretExpiresAt">
+            <summary>
+            Gets and sets the property ClientSecretExpiresAt. 
+            <para>
+            Indicates the time at which the <code>clientId</code> and <code>clientSecret</code>
+            will become invalid.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.RegisterClientResponse.TokenEndpoint">
+            <summary>
+            Gets and sets the property TokenEndpoint. 
+            <para>
+            The endpoint where the client can get an access token.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.SlowDownException">
+            <summary>
+            Indicates that the client is making the request too frequently and is more than the
+            service can handle.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.SlowDownException.#ctor(System.String)">
+            <summary>
+            Constructs a new SlowDownException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.SlowDownException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of SlowDownException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.SlowDownException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of SlowDownException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.SlowDownException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of SlowDownException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.SlowDownException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of SlowDownException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.SlowDownException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.SlowDownException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest">
+            <summary>
+            Container for the parameters to the StartDeviceAuthorization operation.
+            Initiates device authorization by requesting a pair of verification codes from the
+            authorization service.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest.ClientId">
+            <summary>
+            Gets and sets the property ClientId. 
+            <para>
+            The unique identifier string for the client that is registered with IAM Identity Center.
+            This value should come from the persisted result of the <a>RegisterClient</a> API
+            operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest.ClientSecret">
+            <summary>
+            Gets and sets the property ClientSecret. 
+            <para>
+            A secret string that is generated for the client. This value should come from the
+            persisted result of the <a>RegisterClient</a> API operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest.StartUrl">
+            <summary>
+            Gets and sets the property StartUrl. 
+            <para>
+            The URL for the AWS access portal. For more information, see <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/using-the-portal.html">Using
+            the AWS access portal</a> in the <i>IAM Identity Center User Guide</i>.
+            </para>
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.StartDeviceAuthorizationRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse">
+            <summary>
+            This is the response object from the StartDeviceAuthorization operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.DeviceCode">
+            <summary>
+            Gets and sets the property DeviceCode. 
+            <para>
+            The short-lived code that is used by the device when polling for a session token.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.ExpiresIn">
+            <summary>
+            Gets and sets the property ExpiresIn. 
+            <para>
+            Indicates the number of seconds in which the verification code will become invalid.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.Interval">
+            <summary>
+            Gets and sets the property Interval. 
+            <para>
+            Indicates the number of seconds the client must wait between attempts when polling
+            for a session.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.UserCode">
+            <summary>
+            Gets and sets the property UserCode. 
+            <para>
+            A one-time user verification code. This is needed to authorize an in-use device.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.VerificationUri">
+            <summary>
+            Gets and sets the property VerificationUri. 
+            <para>
+            The URI of the verification page that takes the <code>userCode</code> to authorize
+            the device.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.StartDeviceAuthorizationResponse.VerificationUriComplete">
+            <summary>
+            Gets and sets the property VerificationUriComplete. 
+            <para>
+            An alternate URL that the client can use to automatically launch a browser. This process
+            skips the manual step in which the user visits the verification page and enters their
+            code.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.UnauthorizedClientException">
+            <summary>
+            Indicates that the client is not currently authorized to make the request. This can
+            happen when a <code>clientId</code> is not issued for a public client.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnauthorizedClientException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnauthorizedClientException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnauthorizedClientException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedClientException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnauthorizedClientException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedClientException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnauthorizedClientException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedClientException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnauthorizedClientException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedClientException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.UnauthorizedClientException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.UnauthorizedClientException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException">
+            <summary>
+            Indicates that the grant type in the request is not supported by the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnsupportedGrantTypeException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnsupportedGrantTypeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnsupportedGrantTypeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedGrantTypeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedGrantTypeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.Error">
+            <summary>
+            Gets and sets the property Error.
+            </summary>
+        </member>
+        <member name="P:Amazon.SSOOIDC.Model.UnsupportedGrantTypeException.Error_description">
+            <summary>
+            Gets and sets the property Error_description.
+            </summary>
+        </member>
+        <member name="T:Amazon.SSOOIDC.AmazonSSOOIDCRequest">
+            <summary>
+            Base class for SSOOIDC operation requests.
+            </summary>
+        </member>
+    </members>
+</doc>

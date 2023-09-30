@@ -1,0 +1,1155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.CloudTrailData</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.CloudTrailData.AmazonCloudTrailDataConfig">
+            <summary>
+            Configuration for accessing Amazon CloudTrailData service
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon CloudTrailData service
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            CloudTrailData
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters">
+            <summary>
+            Contains parameters used for resolving CloudTrailData endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal CloudTrailDataEndpointProvider and CloudTrailDataEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters.#ctor">
+            <summary>
+            CloudTrailDataEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Endpoints.CloudTrailDataEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.AmazonCloudTrailDataException">
+            <summary>
+             Common exception for the CloudTrailData service.
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonCloudTrailDataException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonCloudTrailDataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonCloudTrailDataException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonCloudTrailDataException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonCloudTrailDataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataEndpointProvider">
+            <summary>
+            Amazon CloudTrailData endpoint provider.
+            Resolves endpoint for given set of CloudTrailDataEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for CloudTrailDataEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataEndpointResolver">
+            <summary>
+            Amazon CloudTrailData endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for CloudTrailData service requests.
+            Collects values for CloudTrailDataEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses CloudTrailDataEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataMetadata">
+            <summary>
+            Service metadata for  Amazon CloudTrailData service
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Internal.AmazonCloudTrailDataMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.AmazonCloudTrailDataRequest">
+            <summary>
+            Base class for CloudTrailData operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.AuditEvent">
+            <summary>
+            An event from a source outside of Amazon Web Services that you want CloudTrail to
+            log.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.AuditEvent.EventData">
+            <summary>
+            Gets and sets the property EventData. 
+            <para>
+            The content of an audit event that comes from the event, such as <code>userIdentity</code>,
+            <code>userAgent</code>, and <code>eventSource</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.AuditEvent.EventDataChecksum">
+            <summary>
+            Gets and sets the property EventDataChecksum. 
+            <para>
+            A checksum is a base64-SHA256 algorithm that helps you verify that CloudTrail receives
+            the event that matches with the checksum. Calculate the checksum by running a command
+            like the following:
+            </para>
+             
+            <para>
+             <code>printf %s <i>$eventdata</i> | openssl dgst -binary -sha256 | base64</code>
+            
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.AuditEvent.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The original event ID from the source event.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.AuditEventResultEntry">
+            <summary>
+            A response that includes successful and failed event results.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.AuditEventResultEntry.EventID">
+            <summary>
+            Gets and sets the property EventID. 
+            <para>
+            The event ID assigned by CloudTrail.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.AuditEventResultEntry.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The original event ID from the source event.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException">
+            <summary>
+            The caller's account ID must be the same as the channel owner's account ID.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException.#ctor(System.String)">
+            <summary>
+            Constructs a new ChannelInsufficientPermissionException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ChannelInsufficientPermissionException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ChannelInsufficientPermissionException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelInsufficientPermissionException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelInsufficientPermissionException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.ChannelNotFoundException">
+            <summary>
+            The channel could not be found.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ChannelNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ChannelNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ChannelNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException">
+            <summary>
+            The schema type of the event is not supported.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException.#ctor(System.String)">
+            <summary>
+            Constructs a new ChannelUnsupportedSchemaException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ChannelUnsupportedSchemaException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ChannelUnsupportedSchemaException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelUnsupportedSchemaException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ChannelUnsupportedSchemaException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException">
+            <summary>
+            Two or more entries in the request have the same event ID.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException.#ctor(System.String)">
+            <summary>
+            Constructs a new DuplicatedAuditEventIdException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of DuplicatedAuditEventIdException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of DuplicatedAuditEventIdException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of DuplicatedAuditEventIdException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of DuplicatedAuditEventIdException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventMarshaller">
+            <summary>
+            AuditEvent Marshaller
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventMarshaller.Marshall(Amazon.CloudTrailData.Model.AuditEvent,Amazon.Runtime.Internal.Transform.JsonMarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="requestObject"></param>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventMarshaller.Instance">
+            <summary>
+            Singleton Marshaller.
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventResultEntryUnmarshaller">
+            <summary>
+            Response Unmarshaller for AuditEventResultEntry Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventResultEntryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#CloudTrailData#Model#AuditEventResultEntry,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventResultEntryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.AuditEventResultEntryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelInsufficientPermissionExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ChannelInsufficientPermissionException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelInsufficientPermissionExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelInsufficientPermissionExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelInsufficientPermissionExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ChannelNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelUnsupportedSchemaExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ChannelUnsupportedSchemaException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelUnsupportedSchemaExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelUnsupportedSchemaExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ChannelUnsupportedSchemaExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.DuplicatedAuditEventIdExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for DuplicatedAuditEventIdException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.DuplicatedAuditEventIdExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.DuplicatedAuditEventIdExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.DuplicatedAuditEventIdExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.InvalidChannelARNExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidChannelARNException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.InvalidChannelARNExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.InvalidChannelARNExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.InvalidChannelARNExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsRequestMarshaller">
+            <summary>
+            PutAuditEvents Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsRequestMarshaller.Marshall(Amazon.CloudTrailData.Model.PutAuditEventsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PutAuditEvents operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.PutAuditEventsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ResultErrorEntryUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResultErrorEntry Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ResultErrorEntryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#CloudTrailData#Model#ResultErrorEntry,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ResultErrorEntryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.ResultErrorEntryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.UnsupportedOperationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnsupportedOperationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.UnsupportedOperationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.UnsupportedOperationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.Internal.MarshallTransformations.UnsupportedOperationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.InvalidChannelARNException">
+            <summary>
+            The specified channel ARN is not a valid channel ARN.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.InvalidChannelARNException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidChannelARNException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.InvalidChannelARNException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidChannelARNException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.InvalidChannelARNException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidChannelARNException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.InvalidChannelARNException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidChannelARNException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.InvalidChannelARNException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidChannelARNException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.PutAuditEventsRequest">
+            <summary>
+            Container for the parameters to the PutAuditEvents operation.
+            Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>,
+            accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail
+            to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code>
+            request.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.PutAuditEventsRequest.AuditEvents">
+            <summary>
+            Gets and sets the property AuditEvents. 
+            <para>
+            The JSON payload of events that you want to ingest. You can also point to the JSON
+            event payload in a file.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.PutAuditEventsRequest.ChannelArn">
+            <summary>
+            Gets and sets the property ChannelArn. 
+            <para>
+            The ARN or ID (the ARN suffix) of a channel.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.PutAuditEventsRequest.ExternalId">
+            <summary>
+            Gets and sets the property ExternalId. 
+            <para>
+            A unique identifier that is conditionally required when the channel's resource policy
+            includes an external ID. This value can be any string, such as a passphrase or account
+            number.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.PutAuditEventsResponse">
+            <summary>
+            This is the response object from the PutAuditEvents operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.PutAuditEventsResponse.Failed">
+            <summary>
+            Gets and sets the property Failed. 
+            <para>
+            Lists events in the provided event payload that could not be ingested into CloudTrail,
+            and includes the error code and error message returned for events that could not be
+            ingested.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.PutAuditEventsResponse.Successful">
+            <summary>
+            Gets and sets the property Successful. 
+            <para>
+            Lists events in the provided event payload that were successfully ingested into CloudTrail.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.ResultErrorEntry">
+            <summary>
+            Includes the error code and error message for events that could not be ingested by
+            CloudTrail.
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.ResultErrorEntry.ErrorCode">
+            <summary>
+            Gets and sets the property ErrorCode. 
+            <para>
+            The error code for events that could not be ingested by CloudTrail. Possible error
+            codes include: <code>FieldTooLong</code>, <code>FieldNotFound</code>, <code>InvalidChecksum</code>,
+            <code>InvalidData</code>, <code>InvalidRecipient</code>, <code>InvalidEventSource</code>,
+            <code>AccountNotSubscribed</code>, <code>Throttling</code>, and <code>InternalFailure</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.ResultErrorEntry.ErrorMessage">
+            <summary>
+            Gets and sets the property ErrorMessage. 
+            <para>
+            The message that describes the error for events that could not be ingested by CloudTrail.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.CloudTrailData.Model.ResultErrorEntry.Id">
+            <summary>
+            Gets and sets the property Id. 
+            <para>
+            The original event ID from the source event that could not be ingested by CloudTrail.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.CloudTrailData.Model.UnsupportedOperationException">
+            <summary>
+            The operation requested is not supported in this region or account.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.UnsupportedOperationException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnsupportedOperationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.UnsupportedOperationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnsupportedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.UnsupportedOperationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnsupportedOperationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.UnsupportedOperationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.Model.UnsupportedOperationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedOperationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.CloudTrailData.AmazonCloudTrailDataClient">
+             <summary>
+             Implementation for accessing CloudTrailData
+            
+             The CloudTrail Data Service lets you ingest events into CloudTrail from any source
+             in your hybrid environments, such as in-house or SaaS applications hosted on-premises
+             or in the cloud, virtual machines, or containers. You can store, access, analyze,
+             troubleshoot and take action on this data without maintaining multiple log aggregators
+             and reporting tools. After you run <code>PutAuditEvents</code> to ingest your application
+             activity into CloudTrail, you can use CloudTrail Lake to search, query, and analyze
+             the data that is logged from your applications.
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor">
+             <summary>
+             Constructs AmazonCloudTrailDataClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonCloudTrailDataClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(Amazon.CloudTrailData.AmazonCloudTrailDataConfig)">
+             <summary>
+             Constructs AmazonCloudTrailDataClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonCloudTrailDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.CloudTrailData.AmazonCloudTrailDataConfig)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Credentials and an
+            AmazonCloudTrailDataClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonCloudTrailDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String,Amazon.CloudTrailData.AmazonCloudTrailDataConfig)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonCloudTrailDataClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonCloudTrailDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.#ctor(System.String,System.String,System.String,Amazon.CloudTrailData.AmazonCloudTrailDataConfig)">
+            <summary>
+            Constructs AmazonCloudTrailDataClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonCloudTrailDataClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonCloudTrailDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.CloudTrailData.AmazonCloudTrailDataClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.PutAuditEventsAsync(Amazon.CloudTrailData.Model.PutAuditEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>,
+            accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail
+            to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code>
+            request.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutAuditEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutAuditEvents service method, as returned by CloudTrailData.</returns>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException">
+            The caller's account ID must be the same as the channel owner's account ID.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelNotFoundException">
+            The channel could not be found.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException">
+            The schema type of the event is not supported.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException">
+            Two or more entries in the request have the same event ID.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.InvalidChannelARNException">
+            The specified channel ARN is not a valid channel ARN.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.UnsupportedOperationException">
+            The operation requested is not supported in this region or account.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-data-2021-08-11/PutAuditEvents">REST API Reference for PutAuditEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudTrailData.AmazonCloudTrailDataClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.CloudTrailData.IAmazonCloudTrailData">
+             <summary>
+             Interface for accessing CloudTrailData
+            
+             The CloudTrail Data Service lets you ingest events into CloudTrail from any source
+             in your hybrid environments, such as in-house or SaaS applications hosted on-premises
+             or in the cloud, virtual machines, or containers. You can store, access, analyze,
+             troubleshoot and take action on this data without maintaining multiple log aggregators
+             and reporting tools. After you run <code>PutAuditEvents</code> to ingest your application
+             activity into CloudTrail, you can use CloudTrail Lake to search, query, and analyze
+             the data that is logged from your applications.
+             </summary>
+        </member>
+        <member name="M:Amazon.CloudTrailData.IAmazonCloudTrailData.PutAuditEventsAsync(Amazon.CloudTrailData.Model.PutAuditEventsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Ingests your application events into CloudTrail Lake. A required parameter, <code>auditEvents</code>,
+            accepts the JSON records (also called <i>payload</i>) of events that you want CloudTrail
+            to ingest. You can add up to 100 of these events (or up to 1 MB) per <code>PutAuditEvents</code>
+            request.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutAuditEvents service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutAuditEvents service method, as returned by CloudTrailData.</returns>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelInsufficientPermissionException">
+            The caller's account ID must be the same as the channel owner's account ID.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelNotFoundException">
+            The channel could not be found.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.ChannelUnsupportedSchemaException">
+            The schema type of the event is not supported.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.DuplicatedAuditEventIdException">
+            Two or more entries in the request have the same event ID.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.InvalidChannelARNException">
+            The specified channel ARN is not a valid channel ARN.
+            </exception>
+            <exception cref="T:Amazon.CloudTrailData.Model.UnsupportedOperationException">
+            The operation requested is not supported in this region or account.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/cloudtrail-data-2021-08-11/PutAuditEvents">REST API Reference for PutAuditEvents Operation</seealso>
+        </member>
+        <member name="M:Amazon.CloudTrailData.IAmazonCloudTrailData.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

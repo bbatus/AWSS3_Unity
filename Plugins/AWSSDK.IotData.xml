@@ -1,0 +1,2791 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.IotData</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.IotData.AmazonIotDataClient">
+             <summary>
+             Implementation for accessing IotData
+            
+             IoT data 
+             <para>
+             IoT data enables secure, bi-directional communication between Internet-connected things
+             (such as sensors, actuators, embedded devices, or smart appliances) and the Amazon
+             Web Services cloud. It implements a broker for applications and things to publish
+             messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is
+             a persistent representation of your things and their state in the Amazon Web Services
+             cloud.
+             </para>
+              
+             <para>
+             Find the endpoint address for actions in IoT data by running this CLI command:
+             </para>
+              
+             <para>
+              <code>aws iot describe-endpoint --endpoint-type iot:Data-ATS</code> 
+             </para>
+              
+             <para>
+             The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon
+             Web ServicesSignature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String)">
+             <summary>
+             Constructs AmazonIotDataClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="serviceUrl">The URL of the search or document service.</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(Amazon.IotData.AmazonIotDataConfig)">
+             <summary>
+             Constructs AmazonIotDataClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonIotDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String,Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Credentials
+            </summary>
+            <param name="serviceUrl">The URL of the search or document service.</param>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.IotData.AmazonIotDataConfig)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Credentials and an
+            AmazonIotDataClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonIotDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="serviceUrl">The URL of the search or document service.</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String,System.String,Amazon.IotData.AmazonIotDataConfig)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonIotDataClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonIotDataClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="serviceUrl">The URL of the search or document service.</param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.#ctor(System.String,System.String,System.String,Amazon.IotData.AmazonIotDataConfig)">
+            <summary>
+            Constructs AmazonIotDataClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonIotDataClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonIotDataClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.DeleteThingShadowAsync(Amazon.IotData.Model.DeleteThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow">REST API Reference for DeleteThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.GetRetainedMessageAsync(Amazon.IotData.Model.GetRetainedMessageRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the details of a single retained message for the specified topic.
+            
+             
+            <para>
+            This action returns the message payload of the retained message, which can incur messaging
+            costs. To list only the topic names of the retained messages, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">GetRetainedMessage</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRetainedMessage service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRetainedMessage service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage">REST API Reference for GetRetainedMessage Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.GetThingShadowAsync(Amazon.IotData.Model.GetThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow">REST API Reference for GetThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.ListNamedShadowsForThingAsync(Amazon.IotData.Model.ListNamedShadowsForThingRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the shadows for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListNamedShadowsForThing</a>
+            action.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListNamedShadowsForThing service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListNamedShadowsForThing service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing">REST API Reference for ListNamedShadowsForThing Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.ListRetainedMessagesAsync(Amazon.IotData.Model.ListRetainedMessagesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists summary information about the retained messages stored for the account.
+            
+             
+            <para>
+            This action returns only the topic names of the retained messages. It doesn't return
+            any message payloads. Although this action doesn't return a message payload, it can
+            still incur messaging costs.
+            </para>
+             
+            <para>
+            To get the message payload of a retained message, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_GetRetainedMessage.html">GetRetainedMessage</a>
+            with the topic name of the retained message.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">ListRetainedMessages</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRetainedMessages service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRetainedMessages service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages">REST API Reference for ListRetainedMessages Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.PublishAsync(Amazon.IotData.Model.PublishRequest,System.Threading.CancellationToken)">
+            <summary>
+            Publishes an MQTT message.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">Publish</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about MQTT messages, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html">MQTT
+            Protocol</a> in the IoT Developer Guide.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the Publish service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the Publish service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish">REST API Reference for Publish Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.UpdateThingShadowAsync(Amazon.IotData.Model.UpdateThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.ConflictException">
+            The specified version does not match the version of the document.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.RequestEntityTooLargeException">
+            The payload exceeds the maximum size allowed.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow">REST API Reference for UpdateThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.IotData.AmazonIotDataConfig">
+            <summary>
+            Configuration for accessing Amazon CloudSearchDomain service
+            </summary>
+            <summary>
+            Configuration for accessing Amazon IotData service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataConfig.Validate">
+            <summary>
+            Validate that the config object is properly configured.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.AmazonIotDataDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon IotData service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            IotData
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.AmazonIotDataDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Endpoints.IotDataEndpointParameters">
+            <summary>
+            Contains parameters used for resolving IotData endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal IotDataEndpointProvider and IotDataEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Endpoints.IotDataEndpointParameters.#ctor">
+            <summary>
+            IotDataEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Endpoints.IotDataEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Endpoints.IotDataEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Endpoints.IotDataEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Endpoints.IotDataEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.AmazonIotDataException">
+            <summary>
+             Common exception for the IotData service.
+             </summary>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonIotDataException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonIotDataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonIotDataException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonIotDataException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.AmazonIotDataException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonIotDataException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Internal.AmazonIotDataEndpointProvider">
+            <summary>
+            Amazon IotData endpoint provider.
+            Resolves endpoint for given set of IotDataEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Internal.AmazonIotDataEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for IotDataEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Internal.AmazonIotDataEndpointResolver">
+            <summary>
+            Amazon IotData endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for IotData service requests.
+            Collects values for IotDataEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses IotDataEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Internal.AmazonIotDataMetadata">
+            <summary>
+            Service metadata for  Amazon IotData service
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Internal.AmazonIotDataMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Internal.AmazonIotDataMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.AmazonIotDataRequest">
+            <summary>
+            Base class for IotData operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ConflictException">
+            <summary>
+            The specified version does not match the version of the document.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.DeleteThingShadowRequest">
+            <summary>
+            Container for the parameters to the DeleteThingShadow operation.
+            Deletes the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.DeleteThingShadowRequest.ShadowName">
+            <summary>
+            Gets and sets the property ShadowName. 
+            <para>
+            The name of the shadow.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.DeleteThingShadowRequest.ThingName">
+            <summary>
+            Gets and sets the property ThingName. 
+            <para>
+            The name of the thing.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.DeleteThingShadowResponse">
+            <summary>
+            The output from the DeleteThingShadow operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.DeleteThingShadowResponse.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The state information, in JSON format.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.GetRetainedMessageRequest">
+            <summary>
+            Container for the parameters to the GetRetainedMessage operation.
+            Gets the details of a single retained message for the specified topic.
+            
+             
+            <para>
+            This action returns the message payload of the retained message, which can incur messaging
+            costs. To list only the topic names of the retained messages, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">GetRetainedMessage</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageRequest.Topic">
+            <summary>
+            Gets and sets the property Topic. 
+            <para>
+            The topic name of the retained message to retrieve.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.GetRetainedMessageResponse">
+            <summary>
+            The output from the GetRetainedMessage operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageResponse.LastModifiedTime">
+            <summary>
+            Gets and sets the property LastModifiedTime. 
+            <para>
+            The Epoch date and time, in milliseconds, when the retained message was stored by
+            IoT.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageResponse.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The Base64-encoded message payload of the retained message body.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageResponse.Qos">
+            <summary>
+            Gets and sets the property Qos. 
+            <para>
+            The quality of service (QoS) level used to publish the retained message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageResponse.Topic">
+            <summary>
+            Gets and sets the property Topic. 
+            <para>
+            The topic name to which the retained message was published.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetRetainedMessageResponse.UserProperties">
+            <summary>
+            Gets and sets the property UserProperties. 
+            <para>
+            A base64-encoded JSON string that includes an array of JSON objects, or null if the
+            retained message doesn't include any user properties.
+            </para>
+             
+            <para>
+            The following example <code>userProperties</code> parameter is a JSON string that
+            represents two user properties. Note that it will be base64-encoded:
+            </para>
+             
+            <para>
+             <code>[{"deviceName": "alpha"}, {"deviceCnt": "45"}]</code> 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.GetThingShadowRequest">
+            <summary>
+            Container for the parameters to the GetThingShadow operation.
+            Gets the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetThingShadowRequest.ShadowName">
+            <summary>
+            Gets and sets the property ShadowName. 
+            <para>
+            The name of the shadow.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetThingShadowRequest.ThingName">
+            <summary>
+            Gets and sets the property ThingName. 
+            <para>
+            The name of the thing.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.GetThingShadowResponse">
+            <summary>
+            The output from the GetThingShadow operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.GetThingShadowResponse.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The state information, in JSON format.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.InternalFailureException">
+            <summary>
+            An unexpected error has occurred.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.InternalFailureException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalFailureException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InternalFailureException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InternalFailureException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InternalFailureException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InternalFailureException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalFailureException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowRequestMarshaller">
+            <summary>
+            DeleteThingShadow Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowRequestMarshaller.Marshall(Amazon.IotData.Model.DeleteThingShadowRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteThingShadow operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.DeleteThingShadowResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageRequestMarshaller">
+            <summary>
+            GetRetainedMessage Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageRequestMarshaller.Marshall(Amazon.IotData.Model.GetRetainedMessageRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetRetainedMessage operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.GetRetainedMessageResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowRequestMarshaller">
+            <summary>
+            GetThingShadow Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowRequestMarshaller.Marshall(Amazon.IotData.Model.GetThingShadowRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetThingShadow operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.GetThingShadowResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalFailureException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.InternalFailureExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InvalidRequestException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.InvalidRequestExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingRequestMarshaller">
+            <summary>
+            ListNamedShadowsForThing Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingRequestMarshaller.Marshall(Amazon.IotData.Model.ListNamedShadowsForThingRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListNamedShadowsForThing operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ListNamedShadowsForThingResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesRequestMarshaller">
+            <summary>
+            ListRetainedMessages Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesRequestMarshaller.Marshall(Amazon.IotData.Model.ListRetainedMessagesRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListRetainedMessages operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ListRetainedMessagesResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.MethodNotAllowedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for MethodNotAllowedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.MethodNotAllowedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.MethodNotAllowedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.MethodNotAllowedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.PublishRequestMarshaller">
+            <summary>
+            Publish Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.PublishRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.PublishRequestMarshaller.Marshall(Amazon.IotData.Model.PublishRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.PublishRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.PublishResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for Publish operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.PublishResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.PublishResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.PublishResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.RequestEntityTooLargeExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for RequestEntityTooLargeException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.RequestEntityTooLargeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.RequestEntityTooLargeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.RequestEntityTooLargeExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.RetainedMessageSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for RetainedMessageSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.RetainedMessageSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#IotData#Model#RetainedMessageSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.RetainedMessageSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.RetainedMessageSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnauthorizedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.UnauthorizedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.UnsupportedDocumentEncodingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for UnsupportedDocumentEncodingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UnsupportedDocumentEncodingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UnsupportedDocumentEncodingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.UnsupportedDocumentEncodingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowRequestMarshaller">
+            <summary>
+            UpdateThingShadow Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowRequestMarshaller.Marshall(Amazon.IotData.Model.UpdateThingShadowRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateThingShadow operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.IotData.Model.Internal.MarshallTransformations.UpdateThingShadowResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.IotData.Model.InvalidRequestException">
+            <summary>
+            The request is not valid.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.InvalidRequestException.#ctor(System.String)">
+            <summary>
+            Constructs a new InvalidRequestException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InvalidRequestException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InvalidRequestException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InvalidRequestException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.InvalidRequestException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InvalidRequestException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.ListNamedShadowsForThingRequest">
+            <summary>
+            Container for the parameters to the ListNamedShadowsForThing operation.
+            Lists the shadows for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListNamedShadowsForThing</a>
+            action.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to retrieve the next set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingRequest.PageSize">
+            <summary>
+            Gets and sets the property PageSize. 
+            <para>
+            The result page size.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingRequest.ThingName">
+            <summary>
+            Gets and sets the property ThingName. 
+            <para>
+            The name of the thing.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ListNamedShadowsForThingResponse">
+            <summary>
+            This is the response object from the ListNamedShadowsForThing operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to use to get the next set of results, or <b>null</b> if there are no additional
+            results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingResponse.Results">
+            <summary>
+            Gets and sets the property Results. 
+            <para>
+            The list of shadows for the specified thing.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListNamedShadowsForThingResponse.Timestamp">
+            <summary>
+            Gets and sets the property Timestamp. 
+            <para>
+            The Epoch date and time the response was generated by IoT.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ListRetainedMessagesRequest">
+            <summary>
+            Container for the parameters to the ListRetainedMessages operation.
+            Lists summary information about the retained messages stored for the account.
+            
+             
+            <para>
+            This action returns only the topic names of the retained messages. It doesn't return
+            any message payloads. Although this action doesn't return a message payload, it can
+            still incur messaging costs.
+            </para>
+             
+            <para>
+            To get the message payload of a retained message, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_GetRetainedMessage.html">GetRetainedMessage</a>
+            with the topic name of the retained message.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">ListRetainedMessages</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of results to return at one time.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            To retrieve the next set of results, the <code>nextToken</code> value from a previous
+            response; otherwise <b>null</b> to receive the first set of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ListRetainedMessagesResponse">
+            <summary>
+            This is the response object from the ListRetainedMessages operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token for the next set of results, or null if there are no additional results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesResponse.RetainedTopics">
+            <summary>
+            Gets and sets the property RetainedTopics. 
+            <para>
+            A summary list the account's retained messages. The information returned doesn't include
+            the message payloads of the retained messages.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.MethodNotAllowedException">
+            <summary>
+            The specified combination of HTTP verb and URI is not supported.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.MethodNotAllowedException.#ctor(System.String)">
+            <summary>
+            Constructs a new MethodNotAllowedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.MethodNotAllowedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of MethodNotAllowedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.MethodNotAllowedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of MethodNotAllowedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.MethodNotAllowedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of MethodNotAllowedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.MethodNotAllowedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of MethodNotAllowedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.PublishRequest">
+            <summary>
+            Container for the parameters to the Publish operation.
+            Publishes an MQTT message.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">Publish</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about MQTT messages, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html">MQTT
+            Protocol</a> in the IoT Developer Guide.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.ContentType">
+            <summary>
+            Gets and sets the property ContentType. 
+            <para>
+            A UTF-8 encoded string that describes the content of the publishing message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.CorrelationData">
+            <summary>
+            Gets and sets the property CorrelationData. 
+            <para>
+            The base64-encoded binary data used by the sender of the request message to identify
+            which request the response message is for when it's received. <code>correlationData</code>
+            is an HTTP header value in the API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.MessageExpiry">
+            <summary>
+            Gets and sets the property MessageExpiry. 
+            <para>
+            A user-defined integer value that represents the message expiry interval in seconds.
+            If absent, the message doesn't expire. For more information about the limits of <code>messageExpiry</code>,
+            see <a href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html#message-broker-limits">Amazon
+            Web Services IoT Core message broker and protocol limits and quotas </a> from the
+            Amazon Web Services Reference Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The message body. MQTT accepts text, binary, and empty (null) message payloads.
+            </para>
+             
+            <para>
+            Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes
+            the retained message identified by <b>topic</b> from Amazon Web Services IoT Core.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.PayloadFormatIndicator">
+            <summary>
+            Gets and sets the property PayloadFormatIndicator. 
+            <para>
+            An <code>Enum</code> string value that indicates whether the payload is formatted
+            as UTF-8. <code>payloadFormatIndicator</code> is an HTTP header value in the API.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.Qos">
+            <summary>
+            Gets and sets the property Qos. 
+            <para>
+            The Quality of Service (QoS) level. The default QoS level is 0.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.ResponseTopic">
+            <summary>
+            Gets and sets the property ResponseTopic. 
+            <para>
+            A UTF-8 encoded string that's used as the topic name for a response message. The response
+            topic is used to describe the topic which the receiver should publish to as part of
+            the request-response flow. The topic must not contain wildcard characters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.Retain">
+            <summary>
+            Gets and sets the property Retain. 
+            <para>
+            A Boolean value that determines whether to set the RETAIN flag when the message is
+            published.
+            </para>
+             
+            <para>
+            Setting the RETAIN flag causes the message to be retained and sent to new subscribers
+            to the topic.
+            </para>
+             
+            <para>
+            Valid values: <code>true</code> | <code>false</code> 
+            </para>
+             
+            <para>
+            Default value: <code>false</code> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.Topic">
+            <summary>
+            Gets and sets the property Topic. 
+            <para>
+            The name of the MQTT topic.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.PublishRequest.UserProperties">
+            <summary>
+            Gets and sets the property UserProperties. 
+            <para>
+            A JSON string that contains an array of JSON objects. If you don’t use Amazon Web
+            Services SDK or CLI, you must encode the JSON string to base64 format before adding
+            it to the HTTP header. <code>userProperties</code> is an HTTP header value in the
+            API.
+            </para>
+             
+            <para>
+            The following example <code>userProperties</code> parameter is a JSON string which
+            represents two User Properties. Note that it needs to be base64-encoded:
+            </para>
+             
+            <para>
+             <code>[{"deviceName": "alpha"}, {"deviceCnt": "45"}]</code> 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.PublishResponse">
+            <summary>
+            This is the response object from the Publish operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.RequestEntityTooLargeException">
+            <summary>
+            The payload exceeds the maximum size allowed.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.RequestEntityTooLargeException.#ctor(System.String)">
+            <summary>
+            Constructs a new RequestEntityTooLargeException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.RequestEntityTooLargeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of RequestEntityTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.RequestEntityTooLargeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of RequestEntityTooLargeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.RequestEntityTooLargeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of RequestEntityTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.RequestEntityTooLargeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of RequestEntityTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.RetainedMessageSummary">
+            <summary>
+            Information about a single retained message.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.RetainedMessageSummary.LastModifiedTime">
+            <summary>
+            Gets and sets the property LastModifiedTime. 
+            <para>
+            The Epoch date and time, in milliseconds, when the retained message was stored by
+            IoT.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.RetainedMessageSummary.PayloadSize">
+            <summary>
+            Gets and sets the property PayloadSize. 
+            <para>
+            The size of the retained message's payload in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.RetainedMessageSummary.Qos">
+            <summary>
+            Gets and sets the property Qos. 
+            <para>
+            The quality of service (QoS) level used to publish the retained message.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.RetainedMessageSummary.Topic">
+            <summary>
+            Gets and sets the property Topic. 
+            <para>
+            The topic name to which the retained message was published.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ServiceUnavailableException">
+            <summary>
+            The service is temporarily unavailable.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.ServiceUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ServiceUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ServiceUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ServiceUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ServiceUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.ThrottlingException">
+            <summary>
+            The rate exceeds the limit.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.UnauthorizedException">
+            <summary>
+            You are not authorized to perform this operation.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnauthorizedException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnauthorizedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnauthorizedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnauthorizedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnauthorizedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnauthorizedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnauthorizedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            <summary>
+            The document encoding is not supported.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnsupportedDocumentEncodingException.#ctor(System.String)">
+            <summary>
+            Constructs a new UnsupportedDocumentEncodingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnsupportedDocumentEncodingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of UnsupportedDocumentEncodingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnsupportedDocumentEncodingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of UnsupportedDocumentEncodingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnsupportedDocumentEncodingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedDocumentEncodingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.IotData.Model.UnsupportedDocumentEncodingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of UnsupportedDocumentEncodingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.IotData.Model.UpdateThingShadowRequest">
+            <summary>
+            Container for the parameters to the UpdateThingShadow operation.
+            Updates the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.UpdateThingShadowRequest.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The state information, in JSON format.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.UpdateThingShadowRequest.ShadowName">
+            <summary>
+            Gets and sets the property ShadowName. 
+            <para>
+            The name of the shadow.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.UpdateThingShadowRequest.ThingName">
+            <summary>
+            Gets and sets the property ThingName. 
+            <para>
+            The name of the thing.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.UpdateThingShadowResponse">
+            <summary>
+            The output from the UpdateThingShadow operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.UpdateThingShadowResponse.Payload">
+            <summary>
+            Gets and sets the property Payload. 
+            <para>
+            The state information, in JSON format.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.IIotDataPaginatorFactory">
+             <summary>
+             Paginators for the IotData service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.IIotDataPaginatorFactory.ListRetainedMessages(Amazon.IotData.Model.ListRetainedMessagesRequest)">
+             <summary>
+             Paginator for ListRetainedMessages operation
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.IListRetainedMessagesPaginator">
+             <summary>
+             Paginator for the ListRetainedMessages operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.IListRetainedMessagesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.IListRetainedMessagesPaginator.RetainedTopics">
+            <summary>
+            Enumerable containing all of the RetainedTopics
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.IotDataPaginatorFactory">
+             <summary>
+             Paginators for the IotData service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.Model.IotDataPaginatorFactory.ListRetainedMessages(Amazon.IotData.Model.ListRetainedMessagesRequest)">
+             <summary>
+             Paginator for ListRetainedMessages operation
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.Model.ListRetainedMessagesPaginator">
+            <summary>
+            Base class for ListRetainedMessages paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.IotData.Model.ListRetainedMessagesPaginator.RetainedTopics">
+            <summary>
+            Enumerable containing all of the RetainedTopics
+            </summary>
+        </member>
+        <member name="T:Amazon.IotData.PayloadFormatIndicator">
+            <summary>
+            Constants used for properties of type PayloadFormatIndicator.
+            </summary>
+        </member>
+        <member name="F:Amazon.IotData.PayloadFormatIndicator.UNSPECIFIED_BYTES">
+            <summary>
+            Constant UNSPECIFIED_BYTES for PayloadFormatIndicator
+            </summary>
+        </member>
+        <member name="F:Amazon.IotData.PayloadFormatIndicator.UTF8_DATA">
+            <summary>
+            Constant UTF8_DATA for PayloadFormatIndicator
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.PayloadFormatIndicator.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.PayloadFormatIndicator.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.IotData.PayloadFormatIndicator.op_Implicit(System.String)~Amazon.IotData.PayloadFormatIndicator">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.IotData.IAmazonIotData">
+             <summary>
+             Interface for accessing IotData
+            
+             IoT data 
+             <para>
+             IoT data enables secure, bi-directional communication between Internet-connected things
+             (such as sensors, actuators, embedded devices, or smart appliances) and the Amazon
+             Web Services cloud. It implements a broker for applications and things to publish
+             messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is
+             a persistent representation of your things and their state in the Amazon Web Services
+             cloud.
+             </para>
+              
+             <para>
+             Find the endpoint address for actions in IoT data by running this CLI command:
+             </para>
+              
+             <para>
+              <code>aws iot describe-endpoint --endpoint-type iot:Data-ATS</code> 
+             </para>
+              
+             <para>
+             The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon
+             Web ServicesSignature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
+             </para>
+             </summary>
+        </member>
+        <member name="P:Amazon.IotData.IAmazonIotData.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.DeleteThingShadowAsync(Amazon.IotData.Model.DeleteThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/DeleteThingShadow">REST API Reference for DeleteThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.GetRetainedMessageAsync(Amazon.IotData.Model.GetRetainedMessageRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the details of a single retained message for the specified topic.
+            
+             
+            <para>
+            This action returns the message payload of the retained message, which can incur messaging
+            costs. To list only the topic names of the retained messages, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">GetRetainedMessage</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetRetainedMessage service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetRetainedMessage service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetRetainedMessage">REST API Reference for GetRetainedMessage Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.GetThingShadowAsync(Amazon.IotData.Model.GetThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/GetThingShadow">REST API Reference for GetThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.ListNamedShadowsForThingAsync(Amazon.IotData.Model.ListNamedShadowsForThingRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the shadows for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListNamedShadowsForThing</a>
+            action.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListNamedShadowsForThing service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListNamedShadowsForThing service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ResourceNotFoundException">
+            The specified resource does not exist.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListNamedShadowsForThing">REST API Reference for ListNamedShadowsForThing Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.ListRetainedMessagesAsync(Amazon.IotData.Model.ListRetainedMessagesRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists summary information about the retained messages stored for the account.
+            
+             
+            <para>
+            This action returns only the topic names of the retained messages. It doesn't return
+            any message payloads. Although this action doesn't return a message payload, it can
+            still incur messaging costs.
+            </para>
+             
+            <para>
+            To get the message payload of a retained message, call <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_GetRetainedMessage.html">GetRetainedMessage</a>
+            with the topic name of the retained message.
+            </para>
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions">ListRetainedMessages</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListRetainedMessages service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListRetainedMessages service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/ListRetainedMessages">REST API Reference for ListRetainedMessages Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.PublishAsync(Amazon.IotData.Model.PublishRequest,System.Threading.CancellationToken)">
+            <summary>
+            Publishes an MQTT message.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">Publish</a>
+            action.
+            </para>
+             
+            <para>
+            For more information about MQTT messages, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html">MQTT
+            Protocol</a> in the IoT Developer Guide.
+            </para>
+             
+            <para>
+            For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
+            Web Services IoT Core pricing - Messaging</a>.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the Publish service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the Publish service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/Publish">REST API Reference for Publish Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.UpdateThingShadowAsync(Amazon.IotData.Model.UpdateThingShadowRequest,System.Threading.CancellationToken)">
+            <summary>
+            Updates the shadow for the specified thing.
+            
+             
+            <para>
+            Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateThingShadow</a>
+            action.
+            </para>
+             
+            <para>
+            For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a>
+            in the IoT Developer Guide.
+            </para>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateThingShadow service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateThingShadow service method, as returned by IotData.</returns>
+            <exception cref="T:Amazon.IotData.Model.ConflictException">
+            The specified version does not match the version of the document.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InternalFailureException">
+            An unexpected error has occurred.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.InvalidRequestException">
+            The request is not valid.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.MethodNotAllowedException">
+            The specified combination of HTTP verb and URI is not supported.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.RequestEntityTooLargeException">
+            The payload exceeds the maximum size allowed.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ServiceUnavailableException">
+            The service is temporarily unavailable.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.ThrottlingException">
+            The rate exceeds the limit.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnauthorizedException">
+            You are not authorized to perform this operation.
+            </exception>
+            <exception cref="T:Amazon.IotData.Model.UnsupportedDocumentEncodingException">
+            The document encoding is not supported.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/iot-data-2015-05-28/UpdateThingShadow">REST API Reference for UpdateThingShadow Operation</seealso>
+        </member>
+        <member name="M:Amazon.IotData.IAmazonIotData.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

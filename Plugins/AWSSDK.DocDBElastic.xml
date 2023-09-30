@@ -1,0 +1,3732 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.DocDBElastic</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.DocDBElastic.AmazonDocDBElasticConfig">
+            <summary>
+            Configuration for accessing Amazon DocDBElastic service
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon DocDBElastic service
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            DocDBElastic
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters">
+            <summary>
+            Contains parameters used for resolving DocDBElastic endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal DocDBElasticEndpointProvider and DocDBElasticEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters.#ctor">
+            <summary>
+            DocDBElasticEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Endpoints.DocDBElasticEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.AmazonDocDBElasticException">
+            <summary>
+             Common exception for the DocDBElastic service.
+             </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonDocDBElasticException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonDocDBElasticException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonDocDBElasticException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonDocDBElasticException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonDocDBElasticException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Internal.AmazonDocDBElasticEndpointProvider">
+            <summary>
+            Amazon DocDBElastic endpoint provider.
+            Resolves endpoint for given set of DocDBElasticEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Internal.AmazonDocDBElasticEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for DocDBElasticEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Internal.AmazonDocDBElasticEndpointResolver">
+            <summary>
+            Amazon DocDBElastic endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for DocDBElastic service requests.
+            Collects values for DocDBElasticEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses DocDBElasticEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Internal.AmazonDocDBElasticMetadata">
+            <summary>
+            Service metadata for  Amazon DocDBElastic service
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Internal.AmazonDocDBElasticMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Internal.AmazonDocDBElasticMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            <summary>
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Cluster">
+            <summary>
+            Returns information about a specific Elastic DocumentDB cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.AdminUserName">
+            <summary>
+            Gets and sets the property AdminUserName. 
+            <para>
+            The name of the Elastic DocumentDB cluster administrator.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.AuthType">
+            <summary>
+            Gets and sets the property AuthType. 
+            <para>
+            The authentication type for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.ClusterEndpoint">
+            <summary>
+            Gets and sets the property ClusterEndpoint. 
+            <para>
+            The URL used to connect to the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.ClusterName">
+            <summary>
+            Gets and sets the property ClusterName. 
+            <para>
+            The name of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.CreateTime">
+            <summary>
+            Gets and sets the property CreateTime. 
+            <para>
+            The time when the Elastic DocumentDB cluster was created in Universal Coordinated
+            Time (UTC).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.KmsKeyId">
+            <summary>
+            Gets and sets the property KmsKeyId. 
+            <para>
+            The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.PreferredMaintenanceWindow">
+            <summary>
+            Gets and sets the property PreferredMaintenanceWindow. 
+            <para>
+            The weekly time range during which system maintenance can occur, in Universal Coordinated
+            Time (UTC).
+            </para>
+             
+            <para>
+             <i>Format</i>: <code>ddd:hh24:mi-ddd:hh24:mi</code> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.ShardCapacity">
+            <summary>
+            Gets and sets the property ShardCapacity. 
+            <para>
+            The capacity of each shard in the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.ShardCount">
+            <summary>
+            Gets and sets the property ShardCount. 
+            <para>
+            The number of shards in the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.SubnetIds">
+            <summary>
+            Gets and sets the property SubnetIds. 
+            <para>
+            The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Cluster.VpcSecurityGroupIds">
+            <summary>
+            Gets and sets the property VpcSecurityGroupIds. 
+            <para>
+            A list of EC2 VPC security groups associated with this cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ClusterInList">
+            <summary>
+            A list of Elastic DocumentDB cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterInList.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterInList.ClusterName">
+            <summary>
+            Gets and sets the property ClusterName. 
+            <para>
+            The name of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterInList.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ClusterSnapshot">
+            <summary>
+            Returns information about a specific Elastic DocumentDB snapshot.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.AdminUserName">
+            <summary>
+            Gets and sets the property AdminUserName. 
+            <para>
+            The name of the Elastic DocumentDB cluster administrator.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.ClusterCreationTime">
+            <summary>
+            Gets and sets the property ClusterCreationTime. 
+            <para>
+            The time when the Elastic DocumentDB cluster was created in Universal Coordinated
+            Time (UTC).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.KmsKeyId">
+            <summary>
+            Gets and sets the property KmsKeyId. 
+            <para>
+            The KMS key identifier to use to encrypt the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.SnapshotArn">
+            <summary>
+            Gets and sets the property SnapshotArn. 
+            <para>
+            The arn of the Elastic DocumentDB snapshot
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.SnapshotCreationTime">
+            <summary>
+            Gets and sets the property SnapshotCreationTime. 
+            <para>
+            The time when the Elastic DocumentDB snapshot was created in Universal Coordinated
+            Time (UTC).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.SnapshotName">
+            <summary>
+            Gets and sets the property SnapshotName. 
+            <para>
+            The name of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.SubnetIds">
+            <summary>
+            Gets and sets the property SubnetIds. 
+            <para>
+            A list of the IDs of subnets associated with the DB cluster snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshot.VpcSecurityGroupIds">
+            <summary>
+            Gets and sets the property VpcSecurityGroupIds. 
+            <para>
+            A list of the IDs of the VPC security groups associated with the cluster snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ClusterSnapshotInList">
+            <summary>
+            A list of Elastic DocumentDB snapshots.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshotInList.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshotInList.SnapshotArn">
+            <summary>
+            Gets and sets the property SnapshotArn. 
+            <para>
+            The arn of the Elastic DocumentDB snapshot
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshotInList.SnapshotCreationTime">
+            <summary>
+            Gets and sets the property SnapshotCreationTime. 
+            <para>
+            The time when the Elastic DocumentDB snapshot was created in Universal Coordinated
+            Time (UTC).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshotInList.SnapshotName">
+            <summary>
+            Gets and sets the property SnapshotName. 
+            <para>
+            The name of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ClusterSnapshotInList.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ConflictException">
+            <summary>
+            There was an access conflict.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ConflictException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource where there was an access conflict.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ConflictException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource where there was an access conflict.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.CreateClusterRequest">
+            <summary>
+            Container for the parameters to the CreateCluster operation.
+            Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.AdminUserName">
+            <summary>
+            Gets and sets the property AdminUserName. 
+            <para>
+            The name of the Elastic DocumentDB cluster administrator.
+            </para>
+             
+            <para>
+             <i>Constraints</i>:
+            </para>
+             <ul> <li> 
+            <para>
+            Must be from 1 to 63 letters or numbers.
+            </para>
+             </li> <li> 
+            <para>
+            The first character must be a letter.
+            </para>
+             </li> <li> 
+            <para>
+            Cannot be a reserved word.
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.AdminUserPassword">
+            <summary>
+            Gets and sets the property AdminUserPassword. 
+            <para>
+            The password for the Elastic DocumentDB cluster administrator and can contain any
+            printable ASCII characters.
+            </para>
+             
+            <para>
+             <i>Constraints</i>:
+            </para>
+             <ul> <li> 
+            <para>
+            Must contain from 8 to 100 characters.
+            </para>
+             </li> <li> 
+            <para>
+            Cannot contain a forward slash (/), double quote ("), or the "at" symbol (@).
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.AuthType">
+            <summary>
+            Gets and sets the property AuthType. 
+            <para>
+            The authentication type for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            The client token for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.ClusterName">
+            <summary>
+            Gets and sets the property ClusterName. 
+            <para>
+            The name of the new Elastic DocumentDB cluster. This parameter is stored as a lowercase
+            string.
+            </para>
+             
+            <para>
+             <i>Constraints</i>:
+            </para>
+             <ul> <li> 
+            <para>
+            Must contain from 1 to 63 letters, numbers, or hyphens.
+            </para>
+             </li> <li> 
+            <para>
+            The first character must be a letter.
+            </para>
+             </li> <li> 
+            <para>
+            Cannot end with a hyphen or contain two consecutive hyphens.
+            </para>
+             </li> </ul> 
+            <para>
+             <i>Example</i>: <code>my-cluster</code> 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.KmsKeyId">
+            <summary>
+            Gets and sets the property KmsKeyId. 
+            <para>
+            The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+            </para>
+             
+            <para>
+            The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key.
+            If you are creating a cluster using the same Amazon account that owns this KMS encryption
+            key, you can use the KMS key alias instead of the ARN as the KMS encryption key.
+            </para>
+             
+            <para>
+            If an encryption key is not specified, Elastic DocumentDB uses the default encryption
+            key that KMS creates for your account. Your account has a different default encryption
+            key for each Amazon Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.PreferredMaintenanceWindow">
+            <summary>
+            Gets and sets the property PreferredMaintenanceWindow. 
+            <para>
+            The weekly time range during which system maintenance can occur, in Universal Coordinated
+            Time (UTC).
+            </para>
+             
+            <para>
+             <i>Format</i>: <code>ddd:hh24:mi-ddd:hh24:mi</code> 
+            </para>
+             
+            <para>
+             <i>Default</i>: a 30-minute window selected at random from an 8-hour block of time
+            for each Amazon Web Services Region, occurring on a random day of the week.
+            </para>
+             
+            <para>
+             <i>Valid days</i>: Mon, Tue, Wed, Thu, Fri, Sat, Sun
+            </para>
+             
+            <para>
+             <i>Constraints</i>: Minimum 30-minute window.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.ShardCapacity">
+            <summary>
+            Gets and sets the property ShardCapacity. 
+            <para>
+            The capacity of each shard in the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.ShardCount">
+            <summary>
+            Gets and sets the property ShardCount. 
+            <para>
+            The number of shards to create in the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.SubnetIds">
+            <summary>
+            Gets and sets the property SubnetIds. 
+            <para>
+            The Amazon EC2 subnet IDs for the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The tags to be assigned to the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterRequest.VpcSecurityGroupIds">
+            <summary>
+            Gets and sets the property VpcSecurityGroupIds. 
+            <para>
+            A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.CreateClusterResponse">
+            <summary>
+            This is the response object from the CreateCluster operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterResponse.Cluster">
+            <summary>
+            Gets and sets the property Cluster. 
+            <para>
+            The new Elastic DocumentDB cluster that has been created.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest">
+            <summary>
+            Container for the parameters to the CreateClusterSnapshot operation.
+            Creates a snapshot of a cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster that the snapshot will be taken from.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest.SnapshotName">
+            <summary>
+            Gets and sets the property SnapshotName. 
+            <para>
+            The name of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The tags to be assigned to the new Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.CreateClusterSnapshotResponse">
+            <summary>
+            This is the response object from the CreateClusterSnapshot operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.CreateClusterSnapshotResponse.Snapshot">
+            <summary>
+            Gets and sets the property Snapshot. 
+            <para>
+            Returns information about the new Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.DeleteClusterRequest">
+            <summary>
+            Container for the parameters to the DeleteCluster operation.
+            Delete a Elastic DocumentDB cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.DeleteClusterRequest.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster that is to be deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.DeleteClusterResponse">
+            <summary>
+            This is the response object from the DeleteCluster operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.DeleteClusterResponse.Cluster">
+            <summary>
+            Gets and sets the property Cluster. 
+            <para>
+            Returns information about the newly deleted Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.DeleteClusterSnapshotRequest">
+            <summary>
+            Container for the parameters to the DeleteClusterSnapshot operation.
+            Delete a Elastic DocumentDB snapshot.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.DeleteClusterSnapshotRequest.SnapshotArn">
+            <summary>
+            Gets and sets the property SnapshotArn. 
+            <para>
+            The arn of the Elastic DocumentDB snapshot that is to be deleted.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.DeleteClusterSnapshotResponse">
+            <summary>
+            This is the response object from the DeleteClusterSnapshot operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.DeleteClusterSnapshotResponse.Snapshot">
+            <summary>
+            Gets and sets the property Snapshot. 
+            <para>
+            Returns information about the newly deleted Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.GetClusterRequest">
+            <summary>
+            Container for the parameters to the GetCluster operation.
+            Returns information about a specific Elastic DocumentDB cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.GetClusterRequest.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.GetClusterResponse">
+            <summary>
+            This is the response object from the GetCluster operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.GetClusterResponse.Cluster">
+            <summary>
+            Gets and sets the property Cluster. 
+            <para>
+            Returns information about a specific Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.GetClusterSnapshotRequest">
+            <summary>
+            Container for the parameters to the GetClusterSnapshot operation.
+            Returns information about a specific Elastic DocumentDB snapshot
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.GetClusterSnapshotRequest.SnapshotArn">
+            <summary>
+            Gets and sets the property SnapshotArn. 
+            <para>
+            The arn of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.GetClusterSnapshotResponse">
+            <summary>
+            This is the response object from the GetClusterSnapshot operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.GetClusterSnapshotResponse.Snapshot">
+            <summary>
+            Gets and sets the property Snapshot. 
+            <para>
+            Returns information about a specific Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.InternalServerException">
+            <summary>
+            There was an internal server error.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterInListUnmarshaller">
+            <summary>
+            Response Unmarshaller for ClusterInList Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterInListUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DocDBElastic#Model#ClusterInList,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterInListUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterInListUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotInListUnmarshaller">
+            <summary>
+            Response Unmarshaller for ClusterSnapshotInList Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotInListUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DocDBElastic#Model#ClusterSnapshotInList,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotInListUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotInListUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotUnmarshaller">
+            <summary>
+            Response Unmarshaller for ClusterSnapshot Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DocDBElastic#Model#ClusterSnapshot,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterSnapshotUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterUnmarshaller">
+            <summary>
+            Response Unmarshaller for Cluster Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DocDBElastic#Model#Cluster,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ClusterUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller">
+            <summary>
+            CreateCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.CreateClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotRequestMarshaller">
+            <summary>
+            CreateClusterSnapshot Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateClusterSnapshot operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.CreateClusterSnapshotResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller">
+            <summary>
+            DeleteCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.DeleteClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotRequestMarshaller">
+            <summary>
+            DeleteClusterSnapshot Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.DeleteClusterSnapshotRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteClusterSnapshot operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.DeleteClusterSnapshotResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller">
+            <summary>
+            GetCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.GetClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotRequestMarshaller">
+            <summary>
+            GetClusterSnapshot Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.GetClusterSnapshotRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetClusterSnapshot operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.GetClusterSnapshotResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsRequestMarshaller">
+            <summary>
+            ListClusterSnapshots Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListClusterSnapshots operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClusterSnapshotsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller">
+            <summary>
+            ListClusters Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.ListClustersRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListClusters operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListClustersResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller">
+            <summary>
+            ListTagsForResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.ListTagsForResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListTagsForResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ListTagsForResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotRequestMarshaller">
+            <summary>
+            RestoreClusterFromSnapshot Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for RestoreClusterFromSnapshot operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.RestoreClusterFromSnapshotResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller">
+            <summary>
+            TagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.TagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for TagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.TagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller">
+            <summary>
+            UntagResource Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.UntagResourceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UntagResource operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UntagResourceResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller">
+            <summary>
+            UpdateCluster Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Marshall(Amazon.DocDBElastic.Model.UpdateClusterRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for UpdateCluster operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.UpdateClusterResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationExceptionField Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#DocDBElastic#Model#ValidationExceptionField,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionFieldUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest">
+            <summary>
+            Container for the parameters to the ListClusterSnapshots operation.
+            Returns information about Elastic DocumentDB snapshots for a specified cluster.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of entries to recieve in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The nextToken which is used the get the next page of data.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClusterSnapshotsResponse">
+            <summary>
+            This is the response object from the ListClusterSnapshots operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The response will provide a nextToken if there is more data beyond the maxResults.
+            </para>
+             
+            <para>
+            If there is no more data in the responce, the nextToken will not be returned.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsResponse.Snapshots">
+            <summary>
+            Gets and sets the property Snapshots. 
+            <para>
+            A list of Elastic DocumentDB snapshots for a specified cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClustersRequest">
+            <summary>
+            Container for the parameters to the ListClusters operation.
+            Returns information about provisioned Elastic DocumentDB clusters.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of entries to recieve in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The nextToken which is used the get the next page of data.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClustersResponse">
+            <summary>
+            This is the response object from the ListClusters operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersResponse.Clusters">
+            <summary>
+            Gets and sets the property Clusters. 
+            <para>
+            A list of Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The response will provide a nextToken if there is more data beyond the maxResults.
+            </para>
+             
+            <para>
+            If there is no more data in the responce, the nextToken will not be returned.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListTagsForResourceRequest">
+            <summary>
+            Container for the parameters to the ListTagsForResource operation.
+            Lists all tags on a Elastic DocumentDB resource
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListTagsForResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The arn of the Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListTagsForResourceResponse">
+            <summary>
+            This is the response object from the ListTagsForResource operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListTagsForResourceResponse.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The list of tags for the specified Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            <summary>
+            The specified resource could not be located.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ResourceNotFoundException.ResourceId">
+            <summary>
+            Gets and sets the property ResourceId. 
+            <para>
+            The ID of the resource that could not be located.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ResourceNotFoundException.ResourceType">
+            <summary>
+            Gets and sets the property ResourceType. 
+            <para>
+            The type of the resource that could not be found.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest">
+            <summary>
+            Container for the parameters to the RestoreClusterFromSnapshot operation.
+            Restores a Elastic DocumentDB cluster from a snapshot.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.ClusterName">
+            <summary>
+            Gets and sets the property ClusterName. 
+            <para>
+            The name of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.KmsKeyId">
+            <summary>
+            Gets and sets the property KmsKeyId. 
+            <para>
+            The KMS key identifier to use to encrypt the new Elastic DocumentDB cluster.
+            </para>
+             
+            <para>
+            The KMS key identifier is the Amazon Resource Name (ARN) for the KMS encryption key.
+            If you are creating a cluster using the same Amazon account that owns this KMS encryption
+            key, you can use the KMS key alias instead of the ARN as the KMS encryption key.
+            </para>
+             
+            <para>
+            If an encryption key is not specified here, Elastic DocumentDB uses the default encryption
+            key that KMS creates for your account. Your account has a different default encryption
+            key for each Amazon Region.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.SnapshotArn">
+            <summary>
+            Gets and sets the property SnapshotArn. 
+            <para>
+            The arn of the Elastic DocumentDB snapshot.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.SubnetIds">
+            <summary>
+            Gets and sets the property SubnetIds. 
+            <para>
+            The Amazon EC2 subnet IDs for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            A list of the tag names to be assigned to the restored DB cluster, in the form of
+            an array of key-value pairs in which the key is the tag name and the value is the
+            key value.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest.VpcSecurityGroupIds">
+            <summary>
+            Gets and sets the property VpcSecurityGroupIds. 
+            <para>
+            A list of EC2 VPC security groups to associate with the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotResponse">
+            <summary>
+            This is the response object from the RestoreClusterFromSnapshot operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotResponse.Cluster">
+            <summary>
+            Gets and sets the property Cluster. 
+            <para>
+            Returns information about a the restored Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            <summary>
+            The service quota for the action was exceeded.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.TagResourceRequest">
+            <summary>
+            Container for the parameters to the TagResource operation.
+            Adds metadata tags to a Elastic DocumentDB resource
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.TagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The arn of the Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.TagResourceRequest.Tags">
+            <summary>
+            Gets and sets the property Tags. 
+            <para>
+            The tags to be assigned to the Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.TagResourceResponse">
+            <summary>
+            This is the response object from the TagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            <summary>
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The number of seconds to wait before retrying the operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.UntagResourceRequest">
+            <summary>
+            Container for the parameters to the UntagResource operation.
+            Removes metadata tags to a Elastic DocumentDB resource
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UntagResourceRequest.ResourceArn">
+            <summary>
+            Gets and sets the property ResourceArn. 
+            <para>
+            The arn of the Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UntagResourceRequest.TagKeys">
+            <summary>
+            Gets and sets the property TagKeys. 
+            <para>
+            The tag keys to be removed from the Elastic DocumentDB resource.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.UntagResourceResponse">
+            <summary>
+            This is the response object from the UntagResource operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.UpdateClusterRequest">
+            <summary>
+            Container for the parameters to the UpdateCluster operation.
+            Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password,
+            upgrading API version setting up a backup window and maintenance window
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.AdminUserPassword">
+            <summary>
+            Gets and sets the property AdminUserPassword. 
+            <para>
+            The password for the Elastic DocumentDB cluster administrator. This password can contain
+            any printable ASCII character except forward slash (/), double quote ("), or the "at"
+            symbol (@).
+            </para>
+             
+            <para>
+             <i>Constraints</i>: Must contain from 8 to 100 characters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.AuthType">
+            <summary>
+            Gets and sets the property AuthType. 
+            <para>
+            The authentication type for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.ClientToken">
+            <summary>
+            Gets and sets the property ClientToken. 
+            <para>
+            The client token for the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.ClusterArn">
+            <summary>
+            Gets and sets the property ClusterArn. 
+            <para>
+            The arn of the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.PreferredMaintenanceWindow">
+            <summary>
+            Gets and sets the property PreferredMaintenanceWindow. 
+            <para>
+            The weekly time range during which system maintenance can occur, in Universal Coordinated
+            Time (UTC).
+            </para>
+             
+            <para>
+             <i>Format</i>: <code>ddd:hh24:mi-ddd:hh24:mi</code> 
+            </para>
+             
+            <para>
+             <i>Default</i>: a 30-minute window selected at random from an 8-hour block of time
+            for each Amazon Web Services Region, occurring on a random day of the week.
+            </para>
+             
+            <para>
+             <i>Valid days</i>: Mon, Tue, Wed, Thu, Fri, Sat, Sun
+            </para>
+             
+            <para>
+             <i>Constraints</i>: Minimum 30-minute window.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.ShardCapacity">
+            <summary>
+            Gets and sets the property ShardCapacity. 
+            <para>
+            The capacity of each shard in the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.ShardCount">
+            <summary>
+            Gets and sets the property ShardCount. 
+            <para>
+            The number of shards to create in the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.SubnetIds">
+            <summary>
+            Gets and sets the property SubnetIds. 
+            <para>
+            The number of shards to create in the Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterRequest.VpcSecurityGroupIds">
+            <summary>
+            Gets and sets the property VpcSecurityGroupIds. 
+            <para>
+            A list of EC2 VPC security groups to associate with the new Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.UpdateClusterResponse">
+            <summary>
+            This is the response object from the UpdateCluster operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.UpdateClusterResponse.Cluster">
+            <summary>
+            Gets and sets the property Cluster. 
+            <para>
+            Returns information about the updated Elastic DocumentDB cluster.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ValidationException">
+            <summary>
+            A structure defining a validation exception.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ValidationException.FieldList">
+            <summary>
+            Gets and sets the property FieldList. 
+            <para>
+            A list of the fields in which the validation exception occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ValidationException.Reason">
+            <summary>
+            Gets and sets the property Reason. 
+            <para>
+            The reason why the validation exception occurred (one of <code>unknownOperation</code>,
+            <code>cannotParse</code>, <code>fieldValidationFailed</code>, or <code>other</code>).
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ValidationExceptionField">
+            <summary>
+            A specific field in which a given validation exception occurred.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ValidationExceptionField.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            An error message describing the validation exception in this field.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ValidationExceptionField.Name">
+            <summary>
+            Gets and sets the property Name. 
+            <para>
+            The name of the field where the validation exception occurred.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.DocDBElasticPaginatorFactory">
+             <summary>
+             Paginators for the DocDBElastic service
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.DocDBElasticPaginatorFactory.ListClusters(Amazon.DocDBElastic.Model.ListClustersRequest)">
+             <summary>
+             Paginator for ListClusters operation
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.DocDBElasticPaginatorFactory.ListClusterSnapshots(Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest)">
+             <summary>
+             Paginator for ListClusterSnapshots operation
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.IDocDBElasticPaginatorFactory">
+             <summary>
+             Paginators for the DocDBElastic service
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.IDocDBElasticPaginatorFactory.ListClusters(Amazon.DocDBElastic.Model.ListClustersRequest)">
+             <summary>
+             Paginator for ListClusters operation
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Model.IDocDBElasticPaginatorFactory.ListClusterSnapshots(Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest)">
+             <summary>
+             Paginator for ListClusterSnapshots operation
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.IListClusterSnapshotsPaginator">
+             <summary>
+             Paginator for the ListClusterSnapshots operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.IListClusterSnapshotsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.IListClusterSnapshotsPaginator.Snapshots">
+            <summary>
+            Enumerable containing all of the Snapshots
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.IListClustersPaginator">
+             <summary>
+             Paginator for the ListClusters operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.IListClustersPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.IListClustersPaginator.Clusters">
+            <summary>
+            Enumerable containing all of the Clusters
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClusterSnapshotsPaginator">
+            <summary>
+            Base class for ListClusterSnapshots paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClusterSnapshotsPaginator.Snapshots">
+            <summary>
+            Enumerable containing all of the Snapshots
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Model.ListClustersPaginator">
+            <summary>
+            Base class for ListClusters paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.Model.ListClustersPaginator.Clusters">
+            <summary>
+            Enumerable containing all of the Clusters
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.AmazonDocDBElasticRequest">
+            <summary>
+            Base class for DocDBElastic operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Auth">
+            <summary>
+            Constants used for properties of type Auth.
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Auth.PLAIN_TEXT">
+            <summary>
+            Constant PLAIN_TEXT for Auth
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Auth.SECRET_ARN">
+            <summary>
+            Constant SECRET_ARN for Auth
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Auth.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Auth.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Auth.op_Implicit(System.String)~Amazon.DocDBElastic.Auth">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DocDBElastic.Status">
+            <summary>
+            Constants used for properties of type Status.
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.ACTIVE">
+            <summary>
+            Constant ACTIVE for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.CREATING">
+            <summary>
+            Constant CREATING for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.DELETING">
+            <summary>
+            Constant DELETING for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.INACCESSIBLE_ENCRYPTION_CREDS">
+            <summary>
+            Constant INACCESSIBLE_ENCRYPTION_CREDS for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.INVALID_SECURITY_GROUP_ID">
+            <summary>
+            Constant INVALID_SECURITY_GROUP_ID for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.INVALID_SUBNET_ID">
+            <summary>
+            Constant INVALID_SUBNET_ID for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.IP_ADDRESS_LIMIT_EXCEEDED">
+            <summary>
+            Constant IP_ADDRESS_LIMIT_EXCEEDED for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.UPDATING">
+            <summary>
+            Constant UPDATING for Status
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.Status.VPC_ENDPOINT_LIMIT_EXCEEDED">
+            <summary>
+            Constant VPC_ENDPOINT_LIMIT_EXCEEDED for Status
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Status.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Status.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.Status.op_Implicit(System.String)~Amazon.DocDBElastic.Status">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DocDBElastic.ValidationExceptionReason">
+            <summary>
+            Constants used for properties of type ValidationExceptionReason.
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.ValidationExceptionReason.CannotParse">
+            <summary>
+            Constant CannotParse for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.ValidationExceptionReason.FieldValidationFailed">
+            <summary>
+            Constant FieldValidationFailed for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.ValidationExceptionReason.Other">
+            <summary>
+            Constant Other for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="F:Amazon.DocDBElastic.ValidationExceptionReason.UnknownOperation">
+            <summary>
+            Constant UnknownOperation for ValidationExceptionReason
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.ValidationExceptionReason.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.ValidationExceptionReason.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.DocDBElastic.ValidationExceptionReason.op_Implicit(System.String)~Amazon.DocDBElastic.ValidationExceptionReason">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.DocDBElastic.AmazonDocDBElasticClient">
+             <summary>
+             Implementation for accessing DocDBElastic
+            
+             The new Amazon Elastic DocumentDB service endpoint.
+             </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor">
+             <summary>
+             Constructs AmazonDocDBElasticClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonDocDBElasticClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(Amazon.DocDBElastic.AmazonDocDBElasticConfig)">
+             <summary>
+             Constructs AmazonDocDBElasticClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonDocDBElasticClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.DocDBElastic.AmazonDocDBElasticConfig)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Credentials and an
+            AmazonDocDBElasticClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonDocDBElasticClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String,Amazon.DocDBElastic.AmazonDocDBElasticConfig)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonDocDBElasticClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonDocDBElasticClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.#ctor(System.String,System.String,System.String,Amazon.DocDBElastic.AmazonDocDBElasticConfig)">
+            <summary>
+            Constructs AmazonDocDBElasticClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonDocDBElasticClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonDocDBElasticClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.DocDBElastic.AmazonDocDBElasticClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.CreateClusterAsync(Amazon.DocDBElastic.Model.CreateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CreateCluster">REST API Reference for CreateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.CreateClusterSnapshotAsync(Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a snapshot of a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CreateClusterSnapshot">REST API Reference for CreateClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.DeleteClusterAsync(Amazon.DocDBElastic.Model.DeleteClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete a Elastic DocumentDB cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/DeleteCluster">REST API Reference for DeleteCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.DeleteClusterSnapshotAsync(Amazon.DocDBElastic.Model.DeleteClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete a Elastic DocumentDB snapshot.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/DeleteClusterSnapshot">REST API Reference for DeleteClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.GetClusterAsync(Amazon.DocDBElastic.Model.GetClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a specific Elastic DocumentDB cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/GetCluster">REST API Reference for GetCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.GetClusterSnapshotAsync(Amazon.DocDBElastic.Model.GetClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a specific Elastic DocumentDB snapshot
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/GetClusterSnapshot">REST API Reference for GetClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.ListClustersAsync(Amazon.DocDBElastic.Model.ListClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about provisioned Elastic DocumentDB clusters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusters service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListClusters">REST API Reference for ListClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.ListClusterSnapshotsAsync(Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about Elastic DocumentDB snapshots for a specified cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusterSnapshots service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusterSnapshots service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListClusterSnapshots">REST API Reference for ListClusterSnapshots Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.ListTagsForResourceAsync(Amazon.DocDBElastic.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all tags on a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.RestoreClusterFromSnapshotAsync(Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Restores a Elastic DocumentDB cluster from a snapshot.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RestoreClusterFromSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RestoreClusterFromSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/RestoreClusterFromSnapshot">REST API Reference for RestoreClusterFromSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.TagResourceAsync(Amazon.DocDBElastic.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds metadata tags to a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.UntagResourceAsync(Amazon.DocDBElastic.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes metadata tags to a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.UpdateClusterAsync(Amazon.DocDBElastic.Model.UpdateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password,
+            upgrading API version setting up a backup window and maintenance window
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/UpdateCluster">REST API Reference for UpdateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.AmazonDocDBElasticClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.DocDBElastic.IAmazonDocDBElastic">
+             <summary>
+             Interface for accessing DocDBElastic
+            
+             The new Amazon Elastic DocumentDB service endpoint.
+             </summary>
+        </member>
+        <member name="P:Amazon.DocDBElastic.IAmazonDocDBElastic.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.CreateClusterAsync(Amazon.DocDBElastic.Model.CreateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new Elastic DocumentDB cluster and returns its Cluster structure.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CreateCluster">REST API Reference for CreateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.CreateClusterSnapshotAsync(Amazon.DocDBElastic.Model.CreateClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates a snapshot of a cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/CreateClusterSnapshot">REST API Reference for CreateClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.DeleteClusterAsync(Amazon.DocDBElastic.Model.DeleteClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete a Elastic DocumentDB cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/DeleteCluster">REST API Reference for DeleteCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.DeleteClusterSnapshotAsync(Amazon.DocDBElastic.Model.DeleteClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete a Elastic DocumentDB snapshot.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/DeleteClusterSnapshot">REST API Reference for DeleteClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.GetClusterAsync(Amazon.DocDBElastic.Model.GetClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a specific Elastic DocumentDB cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/GetCluster">REST API Reference for GetCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.GetClusterSnapshotAsync(Amazon.DocDBElastic.Model.GetClusterSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about a specific Elastic DocumentDB snapshot
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetClusterSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetClusterSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/GetClusterSnapshot">REST API Reference for GetClusterSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.ListClustersAsync(Amazon.DocDBElastic.Model.ListClustersRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about provisioned Elastic DocumentDB clusters.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusters service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusters service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListClusters">REST API Reference for ListClusters Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.ListClusterSnapshotsAsync(Amazon.DocDBElastic.Model.ListClusterSnapshotsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns information about Elastic DocumentDB snapshots for a specified cluster.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListClusterSnapshots service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListClusterSnapshots service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListClusterSnapshots">REST API Reference for ListClusterSnapshots Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.ListTagsForResourceAsync(Amazon.DocDBElastic.Model.ListTagsForResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all tags on a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListTagsForResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListTagsForResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/ListTagsForResource">REST API Reference for ListTagsForResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.RestoreClusterFromSnapshotAsync(Amazon.DocDBElastic.Model.RestoreClusterFromSnapshotRequest,System.Threading.CancellationToken)">
+            <summary>
+            Restores a Elastic DocumentDB cluster from a snapshot.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the RestoreClusterFromSnapshot service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the RestoreClusterFromSnapshot service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ServiceQuotaExceededException">
+            The service quota for the action was exceeded.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/RestoreClusterFromSnapshot">REST API Reference for RestoreClusterFromSnapshot Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.TagResourceAsync(Amazon.DocDBElastic.Model.TagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Adds metadata tags to a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the TagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the TagResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/TagResource">REST API Reference for TagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.UntagResourceAsync(Amazon.DocDBElastic.Model.UntagResourceRequest,System.Threading.CancellationToken)">
+            <summary>
+            Removes metadata tags to a Elastic DocumentDB resource
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UntagResource service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UntagResource service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/UntagResource">REST API Reference for UntagResource Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.UpdateClusterAsync(Amazon.DocDBElastic.Model.UpdateClusterRequest,System.Threading.CancellationToken)">
+            <summary>
+            Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password,
+            upgrading API version setting up a backup window and maintenance window
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the UpdateCluster service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the UpdateCluster service method, as returned by DocDBElastic.</returns>
+            <exception cref="T:Amazon.DocDBElastic.Model.AccessDeniedException">
+            An exception that occurs when there are not sufficient permissions to perform an action.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ConflictException">
+            There was an access conflict.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.InternalServerException">
+            There was an internal server error.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ResourceNotFoundException">
+            The specified resource could not be located.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ThrottlingException">
+            ThrottlingException will be thrown when request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.DocDBElastic.Model.ValidationException">
+            A structure defining a validation exception.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/docdb-elastic-2022-11-28/UpdateCluster">REST API Reference for UpdateCluster Operation</seealso>
+        </member>
+        <member name="M:Amazon.DocDBElastic.IAmazonDocDBElastic.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

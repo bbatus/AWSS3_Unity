@@ -1,0 +1,318 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "AWSSDK.Extensions.CrtIntegration/1.0.0": {
+        "dependencies": {
+          "AWSCRT-AUTH": "0.4.3",
+          "AWSCRT-CHECKSUMS": "0.4.3",
+          "AWSSDK.Core": "1.0.0",
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "AWSSDK.Extensions.CrtIntegration.dll": {}
+        }
+      },
+      "AWSCRT/0.4.3": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Runtime.Loader": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/aws-crt.dll": {
+            "assemblyVersion": "0.4.3.0",
+            "fileVersion": "0.4.3.0"
+          }
+        }
+      },
+      "AWSCRT-AUTH/0.4.3": {
+        "dependencies": {
+          "AWSCRT": "0.4.3",
+          "AWSCRT-HTTP": "0.4.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/aws-crt-auth.dll": {
+            "assemblyVersion": "0.4.3.0",
+            "fileVersion": "0.4.3.0"
+          }
+        }
+      },
+      "AWSCRT-CHECKSUMS/0.4.3": {
+        "dependencies": {
+          "AWSCRT": "0.4.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/aws-crt-checksums.dll": {
+            "assemblyVersion": "0.4.3.0",
+            "fileVersion": "0.4.3.0"
+          }
+        }
+      },
+      "AWSCRT-HTTP/0.4.3": {
+        "dependencies": {
+          "AWSCRT": "0.4.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/aws-crt-http.dll": {
+            "assemblyVersion": "0.4.3.0",
+            "fileVersion": "0.4.3.0"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.CSharp.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "System.Runtime.Loader/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.Loader.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.6.27129.4"
+          }
+        }
+      },
+      "AWSSDK.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0"
+        },
+        "runtime": {
+          "AWSSDK.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AWSSDK.Extensions.CrtIntegration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AWSCRT/0.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KomdgP8zNa73PLlnTmqw5ZFUjiH0W5xrU6zydZE+999BGbMqX8/YHz1UVsOmNLKSdrXnz792CvtUILaLk0QDIA==",
+      "path": "awscrt/0.4.3",
+      "hashPath": "awscrt.0.4.3.nupkg.sha512"
+    },
+    "AWSCRT-AUTH/0.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U3/EZUjRGwu6L6178soBFiUin3EvE06zvPs8pNpzdEINRMo3iCc5PT08AkoMc+JuT+zPH4u3T7OOMVI8l8rZhQ==",
+      "path": "awscrt-auth/0.4.3",
+      "hashPath": "awscrt-auth.0.4.3.nupkg.sha512"
+    },
+    "AWSCRT-CHECKSUMS/0.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8cUrl2RW5RXqrmZjaCg0L/jt2is5uwL8/EgbczNdUatIy7kkp/oBDPDEFaFrABzqd0PHPQJ1n+E1IE+bt5ivag==",
+      "path": "awscrt-checksums/0.4.3",
+      "hashPath": "awscrt-checksums.0.4.3.nupkg.sha512"
+    },
+    "AWSCRT-HTTP/0.4.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3QbK9fVQwR2gzNVW2wVmjMmfX/XK62GEPdJxSUnifMmdmDAhOMxFf2lxbVCVnypi4LOsjOMIJeoms3CROJUGnw==",
+      "path": "awscrt-http/0.4.3",
+      "hashPath": "awscrt-http.0.4.3.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Am6l4Vpn3/K32daEqZI+FFr96OlZkgwK2LcT3pZ2zWubR5zTPW3/FkO1Rat9kb7oQOa4rxgl9LJHc5tspCWfg==",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h72yhGeRUoYcYKwqDykp9JywSQsphmQblpNkqHzwJ+43KA+l/v1POq2oOosOqjuKRv9rEtsU2vPN6+Z19YJt+w==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mmxOA8KgpqsWp18rqJtsQlBCrBVIUyKdsgIOtInQo1FsVLqtyu33M9MMNsELpEJIMs1QGNrDcv/i0Zx8hTiMpg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BLQ4BtGtPctOeSzf9MwFWj2wk5fhCVg4565CFARgmhQv/4wbEij1w72EZfk6d5lYli4X+SXQc/jciaLfkbR0dA==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zHOP91QwiUFT8SczAgb1tbP/Qk1YvnWfttHNzC0646mQUdWZztz6Bm016JhbMWP8Nn8TRNfJawYXGh0CBcSLHA==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EXyc+gMlZRJOFt8Gro/UkEKzdz8iFdhuUSStcnZVaW8RT7Wx1lGfNcC5TZba4ZjJe+xvqW7YwCK2+QBUdLMDVg==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0JbnyA4IyCwHjvPtcDexY5W2l5uRUd1FRTwHi2GDh4OBu4bzQT/Xjk3TriWjWGLslVt0fMZfGrmqYw02fHhoeQ==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "System.Runtime.Loader/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "path": "system.runtime.loader/4.3.0",
+      "hashPath": "system.runtime.loader.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8sTr0qW2TFDg7zdbKOaI+cwmFBFVptZERd5DOuTma3izpmytUsFrt6maWNnMMECvYrMYwcgiwqbowm3G3VmQNg==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uwkh22WCt9ufStYrPBIoGJ2mscrMm/LRkKfbYkrrOz4D5y+lHd7cNfeJP3rYB+vcVrWgtdqkjRQF48tyJSOajA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "path": "system.threading.tasks.extensions/4.5.2",
+      "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    },
+    "AWSSDK.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

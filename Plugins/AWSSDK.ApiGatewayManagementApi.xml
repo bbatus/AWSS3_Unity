@@ -1,0 +1,1086 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ApiGatewayManagementApi</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig">
+            <summary>
+            Configuration for accessing Amazon ApiGatewayManagementApi service
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ApiGatewayManagementApi service
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ApiGatewayManagementApi
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ApiGatewayManagementApi endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ApiGatewayManagementApiEndpointProvider and ApiGatewayManagementApiEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters.#ctor">
+            <summary>
+            ApiGatewayManagementApiEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Endpoints.ApiGatewayManagementApiEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException">
+            <summary>
+             Common exception for the ApiGatewayManagementApi service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonApiGatewayManagementApiException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonApiGatewayManagementApiException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonApiGatewayManagementApiException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonApiGatewayManagementApiException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonApiGatewayManagementApiException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiEndpointProvider">
+            <summary>
+            Amazon ApiGatewayManagementApi endpoint provider.
+            Resolves endpoint for given set of ApiGatewayManagementApiEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ApiGatewayManagementApiEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiEndpointResolver">
+            <summary>
+            Amazon ApiGatewayManagementApi endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ApiGatewayManagementApi service requests.
+            Collects values for ApiGatewayManagementApiEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ApiGatewayManagementApiEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiMetadata">
+            <summary>
+            Service metadata for  Amazon ApiGatewayManagementApi service
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Internal.AmazonApiGatewayManagementApiMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiRequest">
+            <summary>
+            Base class for ApiGatewayManagementApi operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.DeleteConnectionRequest">
+            <summary>
+            Container for the parameters to the DeleteConnection operation.
+            Delete the connection with the provided id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.DeleteConnectionRequest.ConnectionId">
+            <summary>
+            Gets and sets the property ConnectionId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.DeleteConnectionResponse">
+            <summary>
+            This is the response object from the DeleteConnection operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            <summary>
+            The caller is not authorized to invoke this operation.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.ForbiddenException.#ctor(System.String)">
+            <summary>
+            Constructs a new ForbiddenException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.ForbiddenException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ForbiddenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.ForbiddenException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ForbiddenException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.ForbiddenException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ForbiddenException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.ForbiddenException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ForbiddenException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.GetConnectionRequest">
+            <summary>
+            Container for the parameters to the GetConnection operation.
+            Get information about the connection with the provided id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.GetConnectionRequest.ConnectionId">
+            <summary>
+            Gets and sets the property ConnectionId.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.GetConnectionResponse">
+            <summary>
+            This is the response object from the GetConnection operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.GetConnectionResponse.ConnectedAt">
+            <summary>
+            Gets and sets the property ConnectedAt. 
+            <para>
+            The time in ISO 8601 format for when the connection was established.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.GetConnectionResponse.Identity">
+            <summary>
+            Gets and sets the property Identity.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.GetConnectionResponse.LastActiveAt">
+            <summary>
+            Gets and sets the property LastActiveAt. 
+            <para>
+            The time in ISO 8601 format for when the connection was last active.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            <summary>
+            The connection with the provided id no longer exists.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.GoneException.#ctor(System.String)">
+            <summary>
+            Constructs a new GoneException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.GoneException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of GoneException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.GoneException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of GoneException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.GoneException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of GoneException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.GoneException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of GoneException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Identity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Identity.SourceIp">
+            <summary>
+            Gets and sets the property SourceIp. 
+            <para>
+            The source IP address of the TCP connection making the request to API Gateway.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Identity.UserAgent">
+            <summary>
+            Gets and sets the property UserAgent. 
+            <para>
+            The User Agent of the API caller.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionRequestMarshaller">
+            <summary>
+            DeleteConnection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionRequestMarshaller.Marshall(Amazon.ApiGatewayManagementApi.Model.DeleteConnectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteConnection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.DeleteConnectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.ForbiddenExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ForbiddenException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.ForbiddenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.ForbiddenExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.ForbiddenExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionRequestMarshaller">
+            <summary>
+            GetConnection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionRequestMarshaller.Marshall(Amazon.ApiGatewayManagementApi.Model.GetConnectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetConnection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GetConnectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GoneExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for GoneException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GoneExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GoneExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.GoneExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.IdentityUnmarshaller">
+            <summary>
+            Response Unmarshaller for Identity Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.IdentityUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ApiGatewayManagementApi#Model#Identity,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.IdentityUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.IdentityUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for LimitExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.LimitExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PayloadTooLargeExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for PayloadTooLargeException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PayloadTooLargeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PayloadTooLargeExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PayloadTooLargeExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionRequestMarshaller">
+            <summary>
+            PostToConnection Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionRequestMarshaller.Marshall(Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PostToConnection operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.Internal.MarshallTransformations.PostToConnectionResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            <summary>
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.LimitExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new LimitExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.LimitExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.LimitExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.LimitExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.LimitExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of LimitExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException">
+            <summary>
+            The data has exceeded the maximum size allowed.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException.#ctor(System.String)">
+            <summary>
+            Constructs a new PayloadTooLargeException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of PayloadTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of PayloadTooLargeException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of PayloadTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of PayloadTooLargeException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest">
+            <summary>
+            Container for the parameters to the PostToConnection operation.
+            Sends the provided data to the specified connection.
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest.ConnectionId">
+            <summary>
+            Gets and sets the property ConnectionId. 
+            <para>
+            The identifier of the connection that a specific client is using.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest.Data">
+            <summary>
+            Gets and sets the property Data. 
+            <para>
+            The data to be sent to the client specified by its connection id.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.Model.PostToConnectionResponse">
+            <summary>
+            This is the response object from the PostToConnection operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient">
+             <summary>
+             Implementation for accessing ApiGatewayManagementApi
+            
+             The Amazon API Gateway Management API allows you to directly manage runtime aspects
+             of your deployed APIs. To use it, you must explicitly set the SDK's endpoint to point
+             to the endpoint of your deployed API. The endpoint will be of the form https://{api-id}.execute-api.{region}.amazonaws.com/{stage},
+             or will be the endpoint corresponding to your API's custom domain and base path, if
+             applicable.
+             </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor">
+             <summary>
+             Constructs AmazonApiGatewayManagementApiClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonApiGatewayManagementApiClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig)">
+             <summary>
+             Constructs AmazonApiGatewayManagementApiClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonApiGatewayManagementApiClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Credentials and an
+            AmazonApiGatewayManagementApiClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonApiGatewayManagementApiClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String,Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonApiGatewayManagementApiClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonApiGatewayManagementApiClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.#ctor(System.String,System.String,System.String,Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiConfig)">
+            <summary>
+            Constructs AmazonApiGatewayManagementApiClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonApiGatewayManagementApiClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonApiGatewayManagementApiClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.DeleteConnectionAsync(Amazon.ApiGatewayManagementApi.Model.DeleteConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete the connection with the provided id.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection">REST API Reference for DeleteConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.GetConnectionAsync(Amazon.ApiGatewayManagementApi.Model.GetConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get information about the connection with the provided id.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection">REST API Reference for GetConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.PostToConnectionAsync(Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends the provided data to the specified connection.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PostToConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PostToConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException">
+            The data has exceeded the maximum size allowed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection">REST API Reference for PostToConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.AmazonApiGatewayManagementApiClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.ApiGatewayManagementApi.IAmazonApiGatewayManagementApi">
+             <summary>
+             Interface for accessing ApiGatewayManagementApi
+            
+             The Amazon API Gateway Management API allows you to directly manage runtime aspects
+             of your deployed APIs. To use it, you must explicitly set the SDK's endpoint to point
+             to the endpoint of your deployed API. The endpoint will be of the form https://{api-id}.execute-api.{region}.amazonaws.com/{stage},
+             or will be the endpoint corresponding to your API's custom domain and base path, if
+             applicable.
+             </summary>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.IAmazonApiGatewayManagementApi.DeleteConnectionAsync(Amazon.ApiGatewayManagementApi.Model.DeleteConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete the connection with the provided id.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/DeleteConnection">REST API Reference for DeleteConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.IAmazonApiGatewayManagementApi.GetConnectionAsync(Amazon.ApiGatewayManagementApi.Model.GetConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get information about the connection with the provided id.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/GetConnection">REST API Reference for GetConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.IAmazonApiGatewayManagementApi.PostToConnectionAsync(Amazon.ApiGatewayManagementApi.Model.PostToConnectionRequest,System.Threading.CancellationToken)">
+            <summary>
+            Sends the provided data to the specified connection.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PostToConnection service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PostToConnection service method, as returned by ApiGatewayManagementApi.</returns>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.ForbiddenException">
+            The caller is not authorized to invoke this operation.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.GoneException">
+            The connection with the provided id no longer exists.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.LimitExceededException">
+            The client is sending more than the allowed number of requests per unit of time or
+            the WebSocket client side buffer is full.
+            </exception>
+            <exception cref="T:Amazon.ApiGatewayManagementApi.Model.PayloadTooLargeException">
+            The data has exceeded the maximum size allowed.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/apigatewaymanagementapi-2018-11-29/PostToConnection">REST API Reference for PostToConnection Operation</seealso>
+        </member>
+        <member name="M:Amazon.ApiGatewayManagementApi.IAmazonApiGatewayManagementApi.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

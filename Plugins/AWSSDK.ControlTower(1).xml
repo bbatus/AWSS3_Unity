@@ -1,0 +1,1771 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.ControlTower</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.ControlTower.AmazonControlTowerConfig">
+            <summary>
+            Configuration for accessing Amazon ControlTower service
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon ControlTower service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            ControlTower
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters">
+            <summary>
+            Contains parameters used for resolving ControlTower endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal ControlTowerEndpointProvider and ControlTowerEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters.#ctor">
+            <summary>
+            ControlTowerEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Endpoints.ControlTowerEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.AmazonControlTowerException">
+            <summary>
+             Common exception for the ControlTower service.
+             </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonControlTowerException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonControlTowerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonControlTowerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonControlTowerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonControlTowerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Internal.AmazonControlTowerEndpointProvider">
+            <summary>
+            Amazon ControlTower endpoint provider.
+            Resolves endpoint for given set of ControlTowerEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Internal.AmazonControlTowerEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for ControlTowerEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Internal.AmazonControlTowerEndpointResolver">
+            <summary>
+            Amazon ControlTower endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for ControlTower service requests.
+            Collects values for ControlTowerEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses ControlTowerEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Internal.AmazonControlTowerMetadata">
+            <summary>
+            Service metadata for  Amazon ControlTower service
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Internal.AmazonControlTowerMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Internal.AmazonControlTowerMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.AccessDeniedException">
+            <summary>
+            User does not have sufficient access to perform this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ConflictException">
+            <summary>
+            Updating or deleting a resource can cause an inconsistent state.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ControlOperation">
+            <summary>
+            An operation performed by the control.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ControlOperation.EndTime">
+            <summary>
+            Gets and sets the property EndTime. 
+            <para>
+            The time that the operation finished.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ControlOperation.OperationType">
+            <summary>
+            Gets and sets the property OperationType. 
+            <para>
+            One of <code>ENABLE_CONTROL</code> or <code>DISABLE_CONTROL</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ControlOperation.StartTime">
+            <summary>
+            Gets and sets the property StartTime. 
+            <para>
+            The time that the operation began.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ControlOperation.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            One of <code>IN_PROGRESS</code>, <code>SUCEEDED</code>, or <code>FAILED</code>.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ControlOperation.StatusMessage">
+            <summary>
+            Gets and sets the property StatusMessage. 
+            <para>
+            If the operation result is <code>FAILED</code>, this string contains a message explaining
+            why the operation failed.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.DisableControlRequest">
+            <summary>
+            Container for the parameters to the DisableControl operation.
+            This API call turns off a control. It starts an asynchronous operation that deletes
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources will vary according to the control that you specify.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.DisableControlRequest.ControlIdentifier">
+            <summary>
+            Gets and sets the property ControlIdentifier. 
+            <para>
+            The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls
+            are permitted, with the exception of the <b>Region deny</b> guardrail.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.DisableControlRequest.TargetIdentifier">
+            <summary>
+            Gets and sets the property TargetIdentifier. 
+            <para>
+            The ARN of the organizational unit.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.DisableControlResponse">
+            <summary>
+            This is the response object from the DisableControl operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.DisableControlResponse.OperationIdentifier">
+            <summary>
+            Gets and sets the property OperationIdentifier. 
+            <para>
+            The ID of the asynchronous operation, which is used to track status. The operation
+            is available for 90 days.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.EnableControlRequest">
+            <summary>
+            Container for the parameters to the EnableControl operation.
+            This API call activates a control. It starts an asynchronous operation that creates
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources created will vary according to the control that you specify.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.EnableControlRequest.ControlIdentifier">
+            <summary>
+            Gets and sets the property ControlIdentifier. 
+            <para>
+            The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls
+            are permitted, with the exception of the <b>Region deny</b> guardrail.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.EnableControlRequest.TargetIdentifier">
+            <summary>
+            Gets and sets the property TargetIdentifier. 
+            <para>
+            The ARN of the organizational unit.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.EnableControlResponse">
+            <summary>
+            This is the response object from the EnableControl operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.EnableControlResponse.OperationIdentifier">
+            <summary>
+            Gets and sets the property OperationIdentifier. 
+            <para>
+            The ID of the asynchronous operation, which is used to track status. The operation
+            is available for 90 days.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.EnabledControlSummary">
+            <summary>
+            A summary of enabled controls.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.EnabledControlSummary.ControlIdentifier">
+            <summary>
+            Gets and sets the property ControlIdentifier. 
+            <para>
+            The ARN of the control. Only <b>Strongly recommended</b> and <b>Elective</b> controls
+            are permitted, with the exception of the <b>Region deny</b> guardrail.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.GetControlOperationRequest">
+            <summary>
+            Container for the parameters to the GetControlOperation operation.
+            Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code>
+            operation. Displays a message in case of error. Details for an operation are available
+            for 90 days.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.GetControlOperationRequest.OperationIdentifier">
+            <summary>
+            Gets and sets the property OperationIdentifier. 
+            <para>
+            The ID of the asynchronous operation, which is used to track status. The operation
+            is available for 90 days.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.GetControlOperationResponse">
+            <summary>
+            This is the response object from the GetControlOperation operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.GetControlOperationResponse.ControlOperation">
+            <summary>
+            Gets and sets the property ControlOperation.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.InternalServerException">
+            <summary>
+            Unexpected error during processing of request.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.InternalServerException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ControlOperationUnmarshaller">
+            <summary>
+            Response Unmarshaller for ControlOperation Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ControlOperationUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlTower#Model#ControlOperation,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ControlOperationUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ControlOperationUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlRequestMarshaller">
+            <summary>
+            DisableControl Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlRequestMarshaller.Marshall(Amazon.ControlTower.Model.DisableControlRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DisableControl operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.DisableControlResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlRequestMarshaller">
+            <summary>
+            EnableControl Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlRequestMarshaller.Marshall(Amazon.ControlTower.Model.EnableControlRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for EnableControl operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnableControlResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnabledControlSummaryUnmarshaller">
+            <summary>
+            Response Unmarshaller for EnabledControlSummary Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnabledControlSummaryUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#ControlTower#Model#EnabledControlSummary,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnabledControlSummaryUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.EnabledControlSummaryUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationRequestMarshaller">
+            <summary>
+            GetControlOperation Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationRequestMarshaller.Marshall(Amazon.ControlTower.Model.GetControlOperationRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetControlOperation operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.GetControlOperationResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsRequestMarshaller">
+            <summary>
+            ListEnabledControls Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsRequestMarshaller.Marshall(Amazon.ControlTower.Model.ListEnabledControlsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListEnabledControls operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ListEnabledControlsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceQuotaExceededException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ServiceQuotaExceededExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ListEnabledControlsRequest">
+            <summary>
+            Container for the parameters to the ListEnabledControls operation.
+            Lists the controls enabled by AWS Control Tower on the specified organizational unit
+            and the accounts it contains.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            How many results to return per API call.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            The token to continue the list from a previous API call with the same parameters.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsRequest.TargetIdentifier">
+            <summary>
+            Gets and sets the property TargetIdentifier. 
+            <para>
+            The ARN of the organizational unit.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ListEnabledControlsResponse">
+            <summary>
+            This is the response object from the ListEnabledControls operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsResponse.EnabledControls">
+            <summary>
+            Gets and sets the property EnabledControls. 
+            <para>
+            Lists the controls enabled by AWS Control Tower on the specified organizational unit
+            and the accounts it contains.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Retrieves the next page of results. If the string is empty, the current response is
+            the end of the results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            <summary>
+            Request references a resource which does not exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ServiceQuotaExceededException">
+            <summary>
+            Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ServiceQuotaExceededException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceQuotaExceededException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ServiceQuotaExceededException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ServiceQuotaExceededException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ServiceQuotaExceededException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceQuotaExceededException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ThrottlingException">
+            <summary>
+            Request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ThrottlingException.QuotaCode">
+            <summary>
+            Gets and sets the property QuotaCode. 
+            <para>
+            The ID of the service quota that was exceeded.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ThrottlingException.RetryAfterSeconds">
+            <summary>
+            Gets and sets the property RetryAfterSeconds. 
+            <para>
+            The number of seconds the caller should wait before retrying.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ThrottlingException.ServiceCode">
+            <summary>
+            Gets and sets the property ServiceCode. 
+            <para>
+            The ID of the service that is associated with the error.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ThrottlingException.Retryable">
+            <summary>
+            Flag indicating if the exception is retryable and the associated retry
+            details. A null value indicates that the exception is not retryable.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ValidationException">
+            <summary>
+            The input fails to satisfy the constraints specified by an AWS service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ControlTowerPaginatorFactory">
+             <summary>
+             Paginators for the ControlTower service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.ControlTowerPaginatorFactory.ListEnabledControls(Amazon.ControlTower.Model.ListEnabledControlsRequest)">
+             <summary>
+             Paginator for ListEnabledControls operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.IControlTowerPaginatorFactory">
+             <summary>
+             Paginators for the ControlTower service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.Model.IControlTowerPaginatorFactory.ListEnabledControls(Amazon.ControlTower.Model.ListEnabledControlsRequest)">
+             <summary>
+             Paginator for ListEnabledControls operation
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.IListEnabledControlsPaginator">
+             <summary>
+             Paginator for the ListEnabledControls operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.IListEnabledControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.IListEnabledControlsPaginator.EnabledControls">
+            <summary>
+            Enumerable containing all of the EnabledControls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.Model.ListEnabledControlsPaginator">
+            <summary>
+            Base class for ListEnabledControls paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.ControlTower.Model.ListEnabledControlsPaginator.EnabledControls">
+            <summary>
+            Enumerable containing all of the EnabledControls
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.AmazonControlTowerRequest">
+            <summary>
+            Base class for ControlTower operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.ControlTower.ControlOperationStatus">
+            <summary>
+            Constants used for properties of type ControlOperationStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlTower.ControlOperationStatus.FAILED">
+            <summary>
+            Constant FAILED for ControlOperationStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlTower.ControlOperationStatus.IN_PROGRESS">
+            <summary>
+            Constant IN_PROGRESS for ControlOperationStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlTower.ControlOperationStatus.SUCCEEDED">
+            <summary>
+            Constant SUCCEEDED for ControlOperationStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationStatus.op_Implicit(System.String)~Amazon.ControlTower.ControlOperationStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.ControlTower.ControlOperationType">
+            <summary>
+            Constants used for properties of type ControlOperationType.
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlTower.ControlOperationType.DISABLE_CONTROL">
+            <summary>
+            Constant DISABLE_CONTROL for ControlOperationType
+            </summary>
+        </member>
+        <member name="F:Amazon.ControlTower.ControlOperationType.ENABLE_CONTROL">
+            <summary>
+            Constant ENABLE_CONTROL for ControlOperationType
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.ControlTower.ControlOperationType.op_Implicit(System.String)~Amazon.ControlTower.ControlOperationType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Amazon.ControlTower.AmazonControlTowerClient" -->
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor">
+             <summary>
+             Constructs AmazonControlTowerClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonControlTowerClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(Amazon.ControlTower.AmazonControlTowerConfig)">
+             <summary>
+             Constructs AmazonControlTowerClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonControlTowerClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.ControlTower.AmazonControlTowerConfig)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Credentials and an
+            AmazonControlTowerClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonControlTowerClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String,Amazon.ControlTower.AmazonControlTowerConfig)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonControlTowerClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonControlTowerClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.#ctor(System.String,System.String,System.String,Amazon.ControlTower.AmazonControlTowerConfig)">
+            <summary>
+            Constructs AmazonControlTowerClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonControlTowerClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonControlTowerClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.ControlTower.AmazonControlTowerClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.DisableControlAsync(Amazon.ControlTower.Model.DisableControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            This API call turns off a control. It starts an asynchronous operation that deletes
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources will vary according to the control that you specify.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DisableControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DisableControl service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableControl">REST API Reference for DisableControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.EnableControlAsync(Amazon.ControlTower.Model.EnableControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            This API call activates a control. It starts an asynchronous operation that creates
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources created will vary according to the control that you specify.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the EnableControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the EnableControl service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableControl">REST API Reference for EnableControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.GetControlOperationAsync(Amazon.ControlTower.Model.GetControlOperationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code>
+            operation. Displays a message in case of error. Details for an operation are available
+            for 90 days.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetControlOperation service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetControlOperation service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetControlOperation">REST API Reference for GetControlOperation Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.ListEnabledControlsAsync(Amazon.ControlTower.Model.ListEnabledControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the controls enabled by AWS Control Tower on the specified organizational unit
+            and the accounts it contains.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEnabledControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEnabledControls service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledControls">REST API Reference for ListEnabledControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.AmazonControlTowerClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Amazon.ControlTower.IAmazonControlTower" -->
+        <member name="P:Amazon.ControlTower.IAmazonControlTower.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.ControlTower.IAmazonControlTower.DisableControlAsync(Amazon.ControlTower.Model.DisableControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            This API call turns off a control. It starts an asynchronous operation that deletes
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources will vary according to the control that you specify.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DisableControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DisableControl service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/DisableControl">REST API Reference for DisableControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.IAmazonControlTower.EnableControlAsync(Amazon.ControlTower.Model.EnableControlRequest,System.Threading.CancellationToken)">
+            <summary>
+            This API call activates a control. It starts an asynchronous operation that creates
+            AWS resources on the specified organizational unit and the accounts it contains. The
+            resources created will vary according to the control that you specify.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the EnableControl service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the EnableControl service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ConflictException">
+            Updating or deleting a resource can cause an inconsistent state.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ServiceQuotaExceededException">
+            Request would cause a service quota to be exceeded. The limit is 10 concurrent operations.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/EnableControl">REST API Reference for EnableControl Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.IAmazonControlTower.GetControlOperationAsync(Amazon.ControlTower.Model.GetControlOperationRequest,System.Threading.CancellationToken)">
+            <summary>
+            Returns the status of a particular <code>EnableControl</code> or <code>DisableControl</code>
+            operation. Displays a message in case of error. Details for an operation are available
+            for 90 days.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetControlOperation service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetControlOperation service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/GetControlOperation">REST API Reference for GetControlOperation Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.IAmazonControlTower.ListEnabledControlsAsync(Amazon.ControlTower.Model.ListEnabledControlsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists the controls enabled by AWS Control Tower on the specified organizational unit
+            and the accounts it contains.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEnabledControls service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEnabledControls service method, as returned by ControlTower.</returns>
+            <exception cref="T:Amazon.ControlTower.Model.AccessDeniedException">
+            User does not have sufficient access to perform this action.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.InternalServerException">
+            Unexpected error during processing of request.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ResourceNotFoundException">
+            Request references a resource which does not exist.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ThrottlingException">
+            Request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.ControlTower.Model.ValidationException">
+            The input fails to satisfy the constraints specified by an AWS service.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/controltower-2018-05-10/ListEnabledControls">REST API Reference for ListEnabledControls Operation</seealso>
+        </member>
+        <member name="M:Amazon.ControlTower.IAmazonControlTower.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

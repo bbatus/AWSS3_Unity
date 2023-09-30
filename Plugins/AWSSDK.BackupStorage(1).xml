@@ -1,0 +1,2990 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.BackupStorage</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.BackupStorage.AmazonBackupStorageConfig">
+            <summary>
+            Configuration for accessing Amazon BackupStorage service
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon BackupStorage service
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            BackupStorage
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters">
+            <summary>
+            Contains parameters used for resolving BackupStorage endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal BackupStorageEndpointProvider and BackupStorageEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters.#ctor">
+            <summary>
+            BackupStorageEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Endpoints.BackupStorageEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.AmazonBackupStorageException">
+            <summary>
+             Common exception for the BackupStorage service.
+             </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonBackupStorageException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonBackupStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonBackupStorageException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBackupStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonBackupStorageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Internal.AmazonBackupStorageEndpointProvider">
+            <summary>
+            Amazon BackupStorage endpoint provider.
+            Resolves endpoint for given set of BackupStorageEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Internal.AmazonBackupStorageEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for BackupStorageEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Internal.AmazonBackupStorageEndpointResolver">
+            <summary>
+            Amazon BackupStorage endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for BackupStorage service requests.
+            Collects values for BackupStorageEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses BackupStorageEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Internal.AmazonBackupStorageMetadata">
+            <summary>
+            Service metadata for  Amazon BackupStorage service
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Internal.AmazonBackupStorageMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Internal.AmazonBackupStorageMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.BackupObject">
+            <summary>
+            Object
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.ChunksCount">
+            <summary>
+            Gets and sets the property ChunksCount. Number of chunks in object
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.MetadataString">
+            <summary>
+            Gets and sets the property MetadataString. Metadata string associated with the Object
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.Name">
+            <summary>
+            Gets and sets the property Name. Object name
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.ObjectChecksum">
+            <summary>
+            Gets and sets the property ObjectChecksum. Object checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.ObjectChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ObjectChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.BackupObject.ObjectToken">
+            <summary>
+            Gets and sets the property ObjectToken. Object token
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Chunk">
+            <summary>
+            Chunk
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Chunk.Checksum">
+            <summary>
+            Gets and sets the property Checksum. Chunk checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Chunk.ChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Chunk.ChunkToken">
+            <summary>
+            Gets and sets the property ChunkToken. Chunk token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Chunk.Index">
+            <summary>
+            Gets and sets the property Index. Chunk index
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Chunk.Length">
+            <summary>
+            Gets and sets the property Length. Chunk length
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.DataAlreadyExistsException">
+            <summary>
+            Non-retryable exception. Attempted to create already existing object or chunk. This
+            message contains a checksum of already presented data.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.DataAlreadyExistsException.#ctor(System.String)">
+            <summary>
+            Constructs a new DataAlreadyExistsException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.DataAlreadyExistsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of DataAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.DataAlreadyExistsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of DataAlreadyExistsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.DataAlreadyExistsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of DataAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.DataAlreadyExistsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of DataAlreadyExistsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.DataAlreadyExistsException.Checksum">
+            <summary>
+            Gets and sets the property Checksum. Data checksum used
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.DataAlreadyExistsException.ChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ChecksumAlgorithm. Checksum algorithm used
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.DeleteObjectRequest">
+            <summary>
+            Container for the parameters to the DeleteObject operation.
+            Delete Object from the incremental base Backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.DeleteObjectRequest.BackupJobId">
+            <summary>
+            Gets and sets the property BackupJobId. Backup job Id for the in-progress backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.DeleteObjectRequest.ObjectName">
+            <summary>
+            Gets and sets the property ObjectName. The name of the Object.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.DeleteObjectResponse">
+            <summary>
+            This is the response object from the DeleteObject operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.GetChunkRequest">
+            <summary>
+            Container for the parameters to the GetChunk operation.
+            Gets the specified object's chunk.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkRequest.ChunkToken">
+            <summary>
+            Gets and sets the property ChunkToken. Chunk token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkRequest.StorageJobId">
+            <summary>
+            Gets and sets the property StorageJobId. Storage job id
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.GetChunkResponse">
+            <summary>
+            This is the response object from the GetChunk operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkResponse.Checksum">
+            <summary>
+            Gets and sets the property Checksum. Data checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkResponse.ChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkResponse.Data">
+            <summary>
+            Gets and sets the property Data. Chunk data
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetChunkResponse.Length">
+            <summary>
+            Gets and sets the property Length. Data length
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.GetChunkResponse.Dispose">
+            <summary>
+            Disposes of all managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.GetObjectMetadataRequest">
+            <summary>
+            Container for the parameters to the GetObjectMetadata operation.
+            Get metadata associated with an Object.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataRequest.ObjectToken">
+            <summary>
+            Gets and sets the property ObjectToken. Object token.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataRequest.StorageJobId">
+            <summary>
+            Gets and sets the property StorageJobId. Backup job id for the in-progress backup.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.GetObjectMetadataResponse">
+            <summary>
+            This is the response object from the GetObjectMetadata operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataResponse.MetadataBlob">
+            <summary>
+            Gets and sets the property MetadataBlob. Metadata blob.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataResponse.MetadataBlobChecksum">
+            <summary>
+            Gets and sets the property MetadataBlobChecksum. MetadataBlob checksum.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataResponse.MetadataBlobChecksumAlgorithm">
+            <summary>
+            Gets and sets the property MetadataBlobChecksumAlgorithm. Checksum algorithm.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataResponse.MetadataBlobLength">
+            <summary>
+            Gets and sets the property MetadataBlobLength. The size of MetadataBlob.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.GetObjectMetadataResponse.MetadataString">
+            <summary>
+            Gets and sets the property MetadataString. Metadata string.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.GetObjectMetadataResponse.Dispose">
+            <summary>
+            Disposes of all managed and unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            <summary>
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IllegalArgumentException.#ctor(System.String)">
+            <summary>
+            Constructs a new IllegalArgumentException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IllegalArgumentException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of IllegalArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IllegalArgumentException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of IllegalArgumentException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IllegalArgumentException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of IllegalArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IllegalArgumentException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of IllegalArgumentException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.BackupObjectUnmarshaller">
+            <summary>
+            Response Unmarshaller for BackupObject Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.BackupObjectUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#BackupStorage#Model#BackupObject,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.BackupObjectUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.BackupObjectUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ChunkUnmarshaller">
+            <summary>
+            Response Unmarshaller for Chunk Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ChunkUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#BackupStorage#Model#Chunk,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ChunkUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ChunkUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DataAlreadyExistsExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for DataAlreadyExistsException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DataAlreadyExistsExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DataAlreadyExistsExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DataAlreadyExistsExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectRequestMarshaller">
+            <summary>
+            DeleteObject Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectRequestMarshaller.Marshall(Amazon.BackupStorage.Model.DeleteObjectRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteObject operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.DeleteObjectResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkRequestMarshaller">
+            <summary>
+            GetChunk Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkRequestMarshaller.Marshall(Amazon.BackupStorage.Model.GetChunkRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetChunk operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkResponseUnmarshaller.HasStreamingProperty">
+            <summary>
+            Overriden to return true indicating the response contains streaming data.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetChunkResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataRequestMarshaller">
+            <summary>
+            GetObjectMetadata Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataRequestMarshaller.Marshall(Amazon.BackupStorage.Model.GetObjectMetadataRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for GetObjectMetadata operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataResponseUnmarshaller.HasStreamingProperty">
+            <summary>
+            Overriden to return true indicating the response contains streaming data.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.GetObjectMetadataResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.IllegalArgumentExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for IllegalArgumentException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.IllegalArgumentExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.IllegalArgumentExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.IllegalArgumentExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.KMSInvalidKeyUsageExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for KMSInvalidKeyUsageException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.KMSInvalidKeyUsageExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.KMSInvalidKeyUsageExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.KMSInvalidKeyUsageExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksRequestMarshaller">
+            <summary>
+            ListChunks Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksRequestMarshaller.Marshall(Amazon.BackupStorage.Model.ListChunksRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListChunks operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListChunksResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsRequestMarshaller">
+            <summary>
+            ListObjects Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsRequestMarshaller.Marshall(Amazon.BackupStorage.Model.ListObjectsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListObjects operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ListObjectsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteRequestMarshaller">
+            <summary>
+            NotifyObjectComplete Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteRequestMarshaller.Marshall(Amazon.BackupStorage.Model.NotifyObjectCompleteRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for NotifyObjectComplete operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotifyObjectCompleteResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotReadableInputStreamExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for NotReadableInputStreamException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotReadableInputStreamExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotReadableInputStreamExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.NotReadableInputStreamExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkRequestMarshaller">
+            <summary>
+            PutChunk Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkRequestMarshaller.Marshall(Amazon.BackupStorage.Model.PutChunkRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PutChunk operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutChunkResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectRequestMarshaller">
+            <summary>
+            PutObject Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectRequestMarshaller.Marshall(Amazon.BackupStorage.Model.PutObjectRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for PutObject operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.PutObjectResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.RetryableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for RetryableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.RetryableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.RetryableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.RetryableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceInternalExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceInternalException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceInternalExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceInternalExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceInternalExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ServiceUnavailableException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ServiceUnavailableExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectRequestMarshaller">
+            <summary>
+            StartObject Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectRequestMarshaller.Marshall(Amazon.BackupStorage.Model.StartObjectRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for StartObject operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.StartObjectResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            <summary>
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException.#ctor(System.String)">
+            <summary>
+            Constructs a new KMSInvalidKeyUsageException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of KMSInvalidKeyUsageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of KMSInvalidKeyUsageException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of KMSInvalidKeyUsageException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of KMSInvalidKeyUsageException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListChunksRequest">
+            <summary>
+            Container for the parameters to the ListChunks operation.
+            List chunks in a given Object
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. Maximum number of chunks
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. Pagination token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksRequest.ObjectToken">
+            <summary>
+            Gets and sets the property ObjectToken. Object token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksRequest.StorageJobId">
+            <summary>
+            Gets and sets the property StorageJobId. Storage job id
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListChunksResponse">
+            <summary>
+            This is the response object from the ListChunks operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksResponse.ChunkList">
+            <summary>
+            Gets and sets the property ChunkList. List of chunks
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. Pagination token
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListObjectsRequest">
+            <summary>
+            Container for the parameters to the ListObjects operation.
+            List all Objects in a given Backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.CreatedAfter">
+            <summary>
+            Gets and sets the property CreatedAfter. (Optional) Created after filter
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.CreatedBefore">
+            <summary>
+            Gets and sets the property CreatedBefore. (Optional) Created before filter
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. Maximum objects count
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. Pagination token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.StartingObjectName">
+            <summary>
+            Gets and sets the property StartingObjectName. Optional, specifies the starting Object
+            name to list from. Ignored if NextToken is not NULL
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.StartingObjectPrefix">
+            <summary>
+            Gets and sets the property StartingObjectPrefix. Optional, specifies the starting
+            Object prefix to list from. Ignored if NextToken is not NULL
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsRequest.StorageJobId">
+            <summary>
+            Gets and sets the property StorageJobId. Storage job id
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListObjectsResponse">
+            <summary>
+            This is the response object from the ListObjects operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. Pagination token
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsResponse.ObjectList">
+            <summary>
+            Gets and sets the property ObjectList. Object list
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest">
+            <summary>
+            Container for the parameters to the NotifyObjectComplete operation.
+            Complete upload
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.BackupJobId">
+            <summary>
+            Gets and sets the property BackupJobId. Backup job Id for the in-progress backup
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.MetadataBlob">
+            <summary>
+            Gets and sets the property MetadataBlob. Optional metadata associated with an Object.
+            Maximum length is 4MB.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.MetadataBlobChecksum">
+            <summary>
+            Gets and sets the property MetadataBlobChecksum. Checksum of MetadataBlob.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.MetadataBlobChecksumAlgorithm">
+            <summary>
+            Gets and sets the property MetadataBlobChecksumAlgorithm. Checksum algorithm.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.MetadataBlobLength">
+            <summary>
+            Gets and sets the property MetadataBlobLength. The size of MetadataBlob.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.MetadataString">
+            <summary>
+            Gets and sets the property MetadataString. Optional metadata associated with an Object.
+            Maximum string length is 256 bytes.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.ObjectChecksum">
+            <summary>
+            Gets and sets the property ObjectChecksum. Object checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.ObjectChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ObjectChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.UploadId">
+            <summary>
+            Gets and sets the property UploadId. Upload Id for the in-progress upload
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotifyObjectCompleteRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.NotifyObjectCompleteResponse">
+            <summary>
+            This is the response object from the NotifyObjectComplete operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteResponse.ObjectChecksum">
+            <summary>
+            Gets and sets the property ObjectChecksum. Object checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.NotifyObjectCompleteResponse.ObjectChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ObjectChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            <summary>
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotReadableInputStreamException.#ctor(System.String)">
+            <summary>
+            Constructs a new NotReadableInputStreamException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotReadableInputStreamException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of NotReadableInputStreamException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotReadableInputStreamException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of NotReadableInputStreamException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotReadableInputStreamException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of NotReadableInputStreamException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.NotReadableInputStreamException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of NotReadableInputStreamException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.PutChunkRequest">
+            <summary>
+            Container for the parameters to the PutChunk operation.
+            Upload chunk.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.BackupJobId">
+            <summary>
+            Gets and sets the property BackupJobId. Backup job Id for the in-progress backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.Checksum">
+            <summary>
+            Gets and sets the property Checksum. Data checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.ChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.ChunkIndex">
+            <summary>
+            Gets and sets the property ChunkIndex. Describes this chunk's position relative to
+            the other chunks
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.Data">
+            <summary>
+            Gets and sets the property Data. Data to be uploaded
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.Length">
+            <summary>
+            Gets and sets the property Length. Data length
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkRequest.UploadId">
+            <summary>
+            Gets and sets the property UploadId. Upload Id for the in-progress upload.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.PutChunkRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.PutChunkResponse">
+            <summary>
+            This is the response object from the PutChunk operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkResponse.ChunkChecksum">
+            <summary>
+            Gets and sets the property ChunkChecksum. Chunk checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutChunkResponse.ChunkChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ChunkChecksumAlgorithm. Checksum algorithm
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.PutObjectRequest">
+            <summary>
+            Container for the parameters to the PutObject operation.
+            Upload object that can store object metadata String and data blob in single API call
+            using inline chunk field.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.BackupJobId">
+            <summary>
+            Gets and sets the property BackupJobId. Backup job Id for the in-progress backup.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.InlineChunk">
+            <summary>
+            Gets and sets the property InlineChunk. Inline chunk data to be uploaded.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.InlineChunkChecksum">
+            <summary>
+            Gets and sets the property InlineChunkChecksum. Inline chunk checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.InlineChunkChecksumAlgorithm">
+            <summary>
+            Gets and sets the property InlineChunkChecksumAlgorithm. Inline chunk checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.InlineChunkLength">
+            <summary>
+            Gets and sets the property InlineChunkLength. Length of the inline chunk data.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.MetadataString">
+            <summary>
+            Gets and sets the property MetadataString. Store user defined metadata like backup
+            checksum, disk ids, restore metadata etc.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.ObjectChecksum">
+            <summary>
+            Gets and sets the property ObjectChecksum. object checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.ObjectChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ObjectChecksumAlgorithm. object checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.ObjectName">
+            <summary>
+            Gets and sets the property ObjectName. The name of the Object to be uploaded.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectRequest.ThrowOnDuplicate">
+            <summary>
+            Gets and sets the property ThrowOnDuplicate. Throw an exception if Object name is
+            already exist.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.PutObjectRequest.CreateSigner">
+            <summary>
+            Get the signer to use for this request.
+            </summary>
+            <returns>A signer for this request.</returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.PutObjectResponse">
+            <summary>
+            This is the response object from the PutObject operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectResponse.InlineChunkChecksum">
+            <summary>
+            Gets and sets the property InlineChunkChecksum. Inline chunk checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectResponse.InlineChunkChecksumAlgorithm">
+            <summary>
+            Gets and sets the property InlineChunkChecksumAlgorithm. Inline chunk checksum algorithm
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectResponse.ObjectChecksum">
+            <summary>
+            Gets and sets the property ObjectChecksum. object checksum
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.PutObjectResponse.ObjectChecksumAlgorithm">
+            <summary>
+            Gets and sets the property ObjectChecksumAlgorithm. object checksum algorithm
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            <summary>
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.RetryableException">
+            <summary>
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.RetryableException.#ctor(System.String)">
+            <summary>
+            Constructs a new RetryableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.RetryableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of RetryableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.RetryableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of RetryableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.RetryableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of RetryableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.RetryableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of RetryableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            <summary>
+            Deprecated. To be removed from the model.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceInternalException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceInternalException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceInternalException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceInternalException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceInternalException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceInternalException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceInternalException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceInternalException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceInternalException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceInternalException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            <summary>
+            Retryable exception, indicates internal server error.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceUnavailableException.#ctor(System.String)">
+            <summary>
+            Constructs a new ServiceUnavailableException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceUnavailableException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceUnavailableException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceUnavailableException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ServiceUnavailableException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ServiceUnavailableException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.StartObjectRequest">
+            <summary>
+            Container for the parameters to the StartObject operation.
+            Start upload containing one or many chunks.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.StartObjectRequest.BackupJobId">
+            <summary>
+            Gets and sets the property BackupJobId. Backup job Id for the in-progress backup
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.StartObjectRequest.ObjectName">
+            <summary>
+            Gets and sets the property ObjectName. Name for the object.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.StartObjectRequest.ThrowOnDuplicate">
+            <summary>
+            Gets and sets the property ThrowOnDuplicate. Throw an exception if Object name is
+            already exist.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.StartObjectResponse">
+            <summary>
+            This is the response object from the StartObject operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.StartObjectResponse.UploadId">
+            <summary>
+            Gets and sets the property UploadId. Upload Id for a given upload.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ThrottlingException">
+            <summary>
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.BackupStoragePaginatorFactory">
+             <summary>
+             Paginators for the BackupStorage service
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.BackupStoragePaginatorFactory.ListChunks(Amazon.BackupStorage.Model.ListChunksRequest)">
+             <summary>
+             Paginator for ListChunks operation
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.BackupStoragePaginatorFactory.ListObjects(Amazon.BackupStorage.Model.ListObjectsRequest)">
+             <summary>
+             Paginator for ListObjects operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.IBackupStoragePaginatorFactory">
+             <summary>
+             Paginators for the BackupStorage service
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IBackupStoragePaginatorFactory.ListChunks(Amazon.BackupStorage.Model.ListChunksRequest)">
+             <summary>
+             Paginator for ListChunks operation
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.Model.IBackupStoragePaginatorFactory.ListObjects(Amazon.BackupStorage.Model.ListObjectsRequest)">
+             <summary>
+             Paginator for ListObjects operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.IListChunksPaginator">
+             <summary>
+             Paginator for the ListChunks operation
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.IListChunksPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.IListObjectsPaginator">
+             <summary>
+             Paginator for the ListObjects operation
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.IListObjectsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListChunksPaginator">
+            <summary>
+            Base class for ListChunks paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListChunksPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.Model.ListObjectsPaginator">
+            <summary>
+            Base class for ListObjects paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.Model.ListObjectsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.AmazonBackupStorageRequest">
+            <summary>
+            Base class for BackupStorage operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.BackupStorage.DataChecksumAlgorithm">
+            <summary>
+            Constants used for properties of type DataChecksumAlgorithm.
+            </summary>
+        </member>
+        <member name="F:Amazon.BackupStorage.DataChecksumAlgorithm.SHA256">
+            <summary>
+            Constant SHA256 for DataChecksumAlgorithm
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.DataChecksumAlgorithm.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.DataChecksumAlgorithm.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.DataChecksumAlgorithm.op_Implicit(System.String)~Amazon.BackupStorage.DataChecksumAlgorithm">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.SummaryChecksumAlgorithm">
+            <summary>
+            Constants used for properties of type SummaryChecksumAlgorithm.
+            </summary>
+        </member>
+        <member name="F:Amazon.BackupStorage.SummaryChecksumAlgorithm.SUMMARY">
+            <summary>
+            Constant SUMMARY for SummaryChecksumAlgorithm
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.SummaryChecksumAlgorithm.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.SummaryChecksumAlgorithm.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.BackupStorage.SummaryChecksumAlgorithm.op_Implicit(System.String)~Amazon.BackupStorage.SummaryChecksumAlgorithm">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.AmazonBackupStorageClient">
+             <summary>
+             Implementation for accessing BackupStorage
+            
+             The frontend service for Cryo Storage.
+             </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor">
+             <summary>
+             Constructs AmazonBackupStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonBackupStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(Amazon.BackupStorage.AmazonBackupStorageConfig)">
+             <summary>
+             Constructs AmazonBackupStorageClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonBackupStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.BackupStorage.AmazonBackupStorageConfig)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Credentials and an
+            AmazonBackupStorageClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonBackupStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String,Amazon.BackupStorage.AmazonBackupStorageConfig)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBackupStorageClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonBackupStorageClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.#ctor(System.String,System.String,System.String,Amazon.BackupStorage.AmazonBackupStorageConfig)">
+            <summary>
+            Constructs AmazonBackupStorageClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonBackupStorageClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonBackupStorageClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.BackupStorage.AmazonBackupStorageClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.DeleteObjectAsync(Amazon.BackupStorage.Model.DeleteObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete Object from the incremental base Backup.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/DeleteObject">REST API Reference for DeleteObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.GetChunkAsync(Amazon.BackupStorage.Model.GetChunkRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the specified object's chunk.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetChunk service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetChunk service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/GetChunk">REST API Reference for GetChunk Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.GetObjectMetadataAsync(Amazon.BackupStorage.Model.GetObjectMetadataRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get metadata associated with an Object.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetObjectMetadata service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetObjectMetadata service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/GetObjectMetadata">REST API Reference for GetObjectMetadata Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.ListChunksAsync(Amazon.BackupStorage.Model.ListChunksRequest,System.Threading.CancellationToken)">
+            <summary>
+            List chunks in a given Object
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListChunks service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListChunks service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/ListChunks">REST API Reference for ListChunks Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.ListObjectsAsync(Amazon.BackupStorage.Model.ListObjectsRequest,System.Threading.CancellationToken)">
+            <summary>
+            List all Objects in a given Backup.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListObjects service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListObjects service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/ListObjects">REST API Reference for ListObjects Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.NotifyObjectCompleteAsync(Amazon.BackupStorage.Model.NotifyObjectCompleteRequest,System.Threading.CancellationToken)">
+            <summary>
+            Complete upload
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the NotifyObjectComplete service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the NotifyObjectComplete service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/NotifyObjectComplete">REST API Reference for NotifyObjectComplete Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.PutChunkAsync(Amazon.BackupStorage.Model.PutChunkRequest,System.Threading.CancellationToken)">
+            <summary>
+            Upload chunk.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutChunk service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutChunk service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/PutChunk">REST API Reference for PutChunk Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.PutObjectAsync(Amazon.BackupStorage.Model.PutObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Upload object that can store object metadata String and data blob in single API call
+            using inline chunk field.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/PutObject">REST API Reference for PutObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.StartObjectAsync(Amazon.BackupStorage.Model.StartObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Start upload containing one or many chunks.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.DataAlreadyExistsException">
+            Non-retryable exception. Attempted to create already existing object or chunk. This
+            message contains a checksum of already presented data.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/StartObject">REST API Reference for StartObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.AmazonBackupStorageClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.BackupStorage.IAmazonBackupStorage">
+             <summary>
+             Interface for accessing BackupStorage
+            
+             The frontend service for Cryo Storage.
+             </summary>
+        </member>
+        <member name="P:Amazon.BackupStorage.IAmazonBackupStorage.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.DeleteObjectAsync(Amazon.BackupStorage.Model.DeleteObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Delete Object from the incremental base Backup.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/DeleteObject">REST API Reference for DeleteObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.GetChunkAsync(Amazon.BackupStorage.Model.GetChunkRequest,System.Threading.CancellationToken)">
+            <summary>
+            Gets the specified object's chunk.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetChunk service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetChunk service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/GetChunk">REST API Reference for GetChunk Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.GetObjectMetadataAsync(Amazon.BackupStorage.Model.GetObjectMetadataRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get metadata associated with an Object.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the GetObjectMetadata service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the GetObjectMetadata service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/GetObjectMetadata">REST API Reference for GetObjectMetadata Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.ListChunksAsync(Amazon.BackupStorage.Model.ListChunksRequest,System.Threading.CancellationToken)">
+            <summary>
+            List chunks in a given Object
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListChunks service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListChunks service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/ListChunks">REST API Reference for ListChunks Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.ListObjectsAsync(Amazon.BackupStorage.Model.ListObjectsRequest,System.Threading.CancellationToken)">
+            <summary>
+            List all Objects in a given Backup.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListObjects service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListObjects service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/ListObjects">REST API Reference for ListObjects Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.NotifyObjectCompleteAsync(Amazon.BackupStorage.Model.NotifyObjectCompleteRequest,System.Threading.CancellationToken)">
+            <summary>
+            Complete upload
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the NotifyObjectComplete service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the NotifyObjectComplete service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/NotifyObjectComplete">REST API Reference for NotifyObjectComplete Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.PutChunkAsync(Amazon.BackupStorage.Model.PutChunkRequest,System.Threading.CancellationToken)">
+            <summary>
+            Upload chunk.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutChunk service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutChunk service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/PutChunk">REST API Reference for PutChunk Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.PutObjectAsync(Amazon.BackupStorage.Model.PutObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Upload object that can store object metadata String and data blob in single API call
+            using inline chunk field.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the PutObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the PutObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.KMSInvalidKeyUsageException">
+            Non-retryable exception. Indicates the KMS key usage is incorrect. See exception message
+            for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.NotReadableInputStreamException">
+            Retryalble exception. Indicated issues while reading an input stream due to the networking
+            issues or connection drop on the client side.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/PutObject">REST API Reference for PutObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.StartObjectAsync(Amazon.BackupStorage.Model.StartObjectRequest,System.Threading.CancellationToken)">
+            <summary>
+            Start upload containing one or many chunks.
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the StartObject service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the StartObject service method, as returned by BackupStorage.</returns>
+            <exception cref="T:Amazon.BackupStorage.Model.AccessDeniedException">
+            
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.DataAlreadyExistsException">
+            Non-retryable exception. Attempted to create already existing object or chunk. This
+            message contains a checksum of already presented data.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.IllegalArgumentException">
+            Non-retryable exception, indicates client error (wrong argument passed to API). See
+            exception message for details.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ResourceNotFoundException">
+            Non-retryable exception. Attempted to make an operation on non-existing or expired
+            resource.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.RetryableException">
+            Retryable exception. In general indicates internal failure that can be fixed by retry.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceInternalException">
+            Deprecated. To be removed from the model.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ServiceUnavailableException">
+            Retryable exception, indicates internal server error.
+            </exception>
+            <exception cref="T:Amazon.BackupStorage.Model.ThrottlingException">
+            Increased rate over throttling limits. Can be retried with exponential backoff.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/backupstorage-2018-04-10/StartObject">REST API Reference for StartObject Operation</seealso>
+        </member>
+        <member name="M:Amazon.BackupStorage.IAmazonBackupStorage.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>

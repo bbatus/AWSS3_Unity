@@ -1,0 +1,2409 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AWSSDK.S3Outposts</name>
+    </assembly>
+    <members>
+        <member name="T:Amazon.S3Outposts.AmazonS3OutpostsConfig">
+            <summary>
+            Configuration for accessing Amazon S3Outposts service
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsConfig.ServiceId">
+            <summary>
+             The ServiceId, which is the unique identifier for a service.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsConfig.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsConfig.RegionEndpointServiceName">
+            <summary>
+            The constant used to lookup in the region hash the endpoint.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsConfig.ServiceVersion">
+            <summary>
+            Gets the ServiceVersion property.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsConfig.UserAgent">
+            <summary>
+            Gets the value of UserAgent property.
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration">
+            <summary>
+            Configuration for accessing Amazon S3Outposts service
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.GetAllConfigurations">
+            <summary>
+            Collection of all <see cref="T:Amazon.Runtime.DefaultConfiguration"/>s supported by
+            S3Outposts
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.Standard">
+            <summary>
+            <p>The STANDARD mode provides the latest recommended default values that should be safe to run in most scenarios</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.InRegion">
+            <summary>
+            <p>The IN_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services from within the same AWS region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.CrossRegion">
+            <summary>
+            <p>The CROSS_REGION mode builds on the standard mode and includes optimization tailored for applications which call AWS services in a different region</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.Mobile">
+            <summary>
+            <p>The MOBILE mode builds on the standard mode and includes optimization tailored for mobile applications</p><p>Note that the default values vended from this mode might change as best practices may evolve. As a result, it is encouraged to perform tests when upgrading the SDK</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.Auto">
+            <summary>
+            <p>The AUTO mode is an experimental mode that builds on the standard mode. The SDK will attempt to discover the execution environment to determine the appropriate settings automatically.</p><p>Note that the auto detection is heuristics-based and does not guarantee 100% accuracy. STANDARD mode will be used if the execution environment cannot be determined. The auto detection might query <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html">EC2 Instance Metadata service</a>, which might introduce latency. Therefore we recommend choosing an explicit defaults_mode instead if startup latency is critical to your application</p>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsDefaultConfiguration.Legacy">
+            <summary>
+            <p>The LEGACY mode provides default settings that vary per SDK and were used prior to establishment of defaults_mode</p>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters">
+            <summary>
+            Contains parameters used for resolving S3Outposts endpoints
+            Parameters can be sourced from client config and service operations
+            Used by internal S3OutpostsEndpointProvider and S3OutpostsEndpointResolver
+            Can be used by custom EndpointProvider, see ClientConfig.EndpointProvider
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters.#ctor">
+            <summary>
+            S3OutpostsEndpointParameters constructor
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters.Region">
+            <summary>
+            Region parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters.UseDualStack">
+            <summary>
+            UseDualStack parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters.UseFIPS">
+            <summary>
+            UseFIPS parameter
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Endpoints.S3OutpostsEndpointParameters.Endpoint">
+            <summary>
+            Endpoint parameter
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.AmazonS3OutpostsException">
+            <summary>
+             Common exception for the S3Outposts service.
+             </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsException.#ctor(System.String)">
+            <summary>
+            Construct instance of AmazonS3OutpostsException
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AmazonS3OutpostsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AmazonS3OutpostsException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonS3OutpostsException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AmazonS3OutpostsException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Internal.AmazonS3OutpostsEndpointProvider">
+            <summary>
+            Amazon S3Outposts endpoint provider.
+            Resolves endpoint for given set of S3OutpostsEndpointParameters.
+            Can throw AmazonClientException if endpoint resolution is unsuccessful.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Internal.AmazonS3OutpostsEndpointProvider.ResolveEndpoint(Amazon.Runtime.Endpoints.EndpointParameters)">
+            <summary>
+            Resolve endpoint for S3OutpostsEndpointParameters
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Internal.AmazonS3OutpostsEndpointResolver">
+            <summary>
+            Amazon S3Outposts endpoint resolver.
+            Custom PipelineHandler responsible for resolving endpoint and setting authentication parameters for S3Outposts service requests.
+            Collects values for S3OutpostsEndpointParameters and then tries to resolve endpoint by calling 
+            ResolveEndpoint method on GlobalEndpoints.Provider if present, otherwise uses S3OutpostsEndpointProvider.
+            Responsible for setting authentication and http headers provided by resolved endpoint.
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Internal.AmazonS3OutpostsMetadata">
+            <summary>
+            Service metadata for  Amazon S3Outposts service
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Internal.AmazonS3OutpostsMetadata.ServiceId">
+            <summary>
+            Gets the value of the Service Id.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Internal.AmazonS3OutpostsMetadata.OperationNameMapping">
+            <summary>
+            Gets the dictionary that gives mapping of renamed operations
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            <summary>
+            Access was denied for this action.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.AccessDeniedException.#ctor(System.String)">
+            <summary>
+            Constructs a new AccessDeniedException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.AccessDeniedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.AccessDeniedException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.AccessDeniedException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.AccessDeniedException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of AccessDeniedException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ConflictException">
+            <summary>
+            There was a conflict with this action, and it could not be completed.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ConflictException.#ctor(System.String)">
+            <summary>
+            Constructs a new ConflictException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ConflictException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ConflictException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ConflictException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ConflictException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ConflictException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.CreateEndpointRequest">
+            <summary>
+            Container for the parameters to the CreateEndpoint operation.
+            Creates an endpoint and associates it with the specified Outpost.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointRequest.AccessType">
+            <summary>
+            Gets and sets the property AccessType. 
+            <para>
+            The type of access for the network connectivity for the Amazon S3 on Outposts endpoint.
+            To use the Amazon Web Services VPC, choose <code>Private</code>. To use the endpoint
+            with an on-premises network, choose <code>CustomerOwnedIp</code>. If you choose <code>CustomerOwnedIp</code>,
+            you must also provide the customer-owned IP address pool (CoIP pool).
+            </para>
+             <note> 
+            <para>
+             <code>Private</code> is the default access type value.
+            </para>
+             </note>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointRequest.CustomerOwnedIpv4Pool">
+            <summary>
+            Gets and sets the property CustomerOwnedIpv4Pool. 
+            <para>
+            The ID of the customer-owned IPv4 address pool (CoIP pool) for the endpoint. IP addresses
+            are allocated from this pool for the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointRequest.OutpostId">
+            <summary>
+            Gets and sets the property OutpostId. 
+            <para>
+            The ID of the Outposts. 
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointRequest.SecurityGroupId">
+            <summary>
+            Gets and sets the property SecurityGroupId. 
+            <para>
+            The ID of the security group to use with the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointRequest.SubnetId">
+            <summary>
+            Gets and sets the property SubnetId. 
+            <para>
+            The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost
+            that has Amazon S3 on Outposts provisioned.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.CreateEndpointResponse">
+            <summary>
+            This is the response object from the CreateEndpoint operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.CreateEndpointResponse.EndpointArn">
+            <summary>
+            Gets and sets the property EndpointArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.DeleteEndpointRequest">
+            <summary>
+            Container for the parameters to the DeleteEndpoint operation.
+            Deletes an endpoint.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.DeleteEndpointRequest.EndpointId">
+            <summary>
+            Gets and sets the property EndpointId. 
+            <para>
+            The ID of the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.DeleteEndpointRequest.OutpostId">
+            <summary>
+            Gets and sets the property OutpostId. 
+            <para>
+            The ID of the Outposts. 
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.DeleteEndpointResponse">
+            <summary>
+            This is the response object from the DeleteEndpoint operation.
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Endpoint">
+            <summary>
+            Amazon S3 on Outposts Access Points simplify managing data access at scale for shared
+            datasets in S3 on Outposts. S3 on Outposts uses endpoints to connect to Outposts buckets
+            so that you can perform actions within your virtual private cloud (VPC). For more
+            information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/WorkingWithS3Outposts.html">
+            Accessing S3 on Outposts using VPC-only access points</a> in the <i>Amazon Simple
+            Storage Service User Guide</i>.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.AccessType">
+            <summary>
+            Gets and sets the property AccessType. 
+            <para>
+            The type of connectivity used to access the Amazon S3 on Outposts endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.CidrBlock">
+            <summary>
+            Gets and sets the property CidrBlock. 
+            <para>
+            The VPC CIDR committed by this endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.CreationTime">
+            <summary>
+            Gets and sets the property CreationTime. 
+            <para>
+            The time the endpoint was created.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.CustomerOwnedIpv4Pool">
+            <summary>
+            Gets and sets the property CustomerOwnedIpv4Pool. 
+            <para>
+            The ID of the customer-owned IPv4 address pool used for the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.EndpointArn">
+            <summary>
+            Gets and sets the property EndpointArn. 
+            <para>
+            The Amazon Resource Name (ARN) of the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.FailedReason">
+            <summary>
+            Gets and sets the property FailedReason. 
+            <para>
+            The failure reason, if any, for a create or delete endpoint operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.NetworkInterfaces">
+            <summary>
+            Gets and sets the property NetworkInterfaces. 
+            <para>
+            The network interface of the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.OutpostsId">
+            <summary>
+            Gets and sets the property OutpostsId. 
+            <para>
+            The ID of the Outposts.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.SecurityGroupId">
+            <summary>
+            Gets and sets the property SecurityGroupId. 
+            <para>
+            The ID of the security group used for the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.Status">
+            <summary>
+            Gets and sets the property Status. 
+            <para>
+            The status of the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.SubnetId">
+            <summary>
+            Gets and sets the property SubnetId. 
+            <para>
+            The ID of the subnet used for the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Endpoint.VpcId">
+            <summary>
+            Gets and sets the property VpcId. 
+            <para>
+            The ID of the VPC used for the endpoint.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.FailedReason">
+            <summary>
+            The failure reason, if any, for a create or delete endpoint operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.FailedReason.ErrorCode">
+            <summary>
+            Gets and sets the property ErrorCode. 
+            <para>
+            The failure code, if any, for a create or delete endpoint operation.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.FailedReason.Message">
+            <summary>
+            Gets and sets the property Message. 
+            <para>
+            Additional error details describing the endpoint failure and recommended action.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.InternalServerException">
+            <summary>
+            There was an exception with the internal server.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.InternalServerException.#ctor(System.String)">
+            <summary>
+            Constructs a new InternalServerException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.InternalServerException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.InternalServerException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.InternalServerException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.InternalServerException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of InternalServerException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for AccessDeniedException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.AccessDeniedExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ConflictException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ConflictExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointRequestMarshaller">
+            <summary>
+            CreateEndpoint Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointRequestMarshaller.Marshall(Amazon.S3Outposts.Model.CreateEndpointRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for CreateEndpoint operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.CreateEndpointResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointRequestMarshaller">
+            <summary>
+            DeleteEndpoint Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointRequestMarshaller.Marshall(Amazon.S3Outposts.Model.DeleteEndpointRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for DeleteEndpoint operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.DeleteEndpointResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.EndpointUnmarshaller">
+            <summary>
+            Response Unmarshaller for Endpoint Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.EndpointUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#S3Outposts#Model#Endpoint,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.EndpointUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.EndpointUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.FailedReasonUnmarshaller">
+            <summary>
+            Response Unmarshaller for FailedReason Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.FailedReasonUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#S3Outposts#Model#FailedReason,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.FailedReasonUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.FailedReasonUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for InternalServerException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.InternalServerExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsRequestMarshaller">
+            <summary>
+            ListEndpoints Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsRequestMarshaller.Marshall(Amazon.S3Outposts.Model.ListEndpointsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListEndpoints operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListEndpointsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3RequestMarshaller">
+            <summary>
+            ListOutpostsWithS3 Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3RequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3RequestMarshaller.Marshall(Amazon.S3Outposts.Model.ListOutpostsWithS3Request)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3RequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3ResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListOutpostsWithS3 operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3ResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3ResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListOutpostsWithS3ResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsRequestMarshaller">
+            <summary>
+            ListSharedEndpoints Request Marshaller
+            </summary>       
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsRequestMarshaller.Marshall(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsRequestMarshaller.Marshall(Amazon.S3Outposts.Model.ListSharedEndpointsRequest)">
+            <summary>
+            Marshaller the request object to the HTTP request.
+            </summary>  
+            <param name="publicRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsRequestMarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsResponseUnmarshaller">
+            <summary>
+            Response Unmarshaller for ListSharedEndpoints operation
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsResponseUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsResponseUnmarshaller.UnmarshallException(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,System.Exception,System.Net.HttpStatusCode)">
+            <summary>
+            Unmarshaller error response to exception.
+            </summary>  
+            <param name="context"></param>
+            <param name="innerException"></param>
+            <param name="statusCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ListSharedEndpointsResponseUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.NetworkInterfaceUnmarshaller">
+            <summary>
+            Response Unmarshaller for NetworkInterface Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.NetworkInterfaceUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#S3Outposts#Model#NetworkInterface,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.NetworkInterfaceUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.NetworkInterfaceUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostOfflineExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for OutpostOfflineException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostOfflineExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostOfflineExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostOfflineExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostUnmarshaller">
+            <summary>
+            Response Unmarshaller for Outpost Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostUnmarshaller.Amazon#Runtime#Internal#Transform#IUnmarshaller{Amazon#S3Outposts#Model#Outpost,Amazon#Runtime#Internal#Transform#XmlUnmarshallerContext}#Unmarshall(Amazon.Runtime.Internal.Transform.XmlUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.OutpostUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ResourceNotFoundException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ResourceNotFoundExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ThrottlingException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ThrottlingExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller">
+            <summary>
+            Response Unmarshaller for ValidationException Object
+            </summary>  
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Unmarshall(Amazon.Runtime.Internal.Transform.JsonUnmarshallerContext,Amazon.Runtime.Internal.ErrorResponse)">
+            <summary>
+            Unmarshaller the response from the service to the response class.
+            </summary>  
+            <param name="context"></param>
+            <param name="errorResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Internal.MarshallTransformations.ValidationExceptionUnmarshaller.Instance">
+            <summary>
+            Gets the singleton.
+            </summary>  
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListEndpointsRequest">
+            <summary>
+            Container for the parameters to the ListEndpoints operation.
+            Lists endpoints associated with the specified Outpost. 
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of endpoints that will be returned in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If a previous response from this operation included a <code>NextToken</code> value,
+            provide that value here to retrieve the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListEndpointsResponse">
+            <summary>
+            This is the response object from the ListEndpoints operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsResponse.Endpoints">
+            <summary>
+            Gets and sets the property Endpoints. 
+            <para>
+            The list of endpoints associated with the specified Outpost.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>,
+            you can include this value in subsequent calls to this operation to retrieve more
+            results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListOutpostsWithS3Request">
+            <summary>
+            Container for the parameters to the ListOutpostsWithS3 operation.
+            Lists the Outposts with S3 on Outposts capacity for your Amazon Web Services account.
+            Includes S3 on Outposts that you have access to as the Outposts owner, or as a shared
+            user from Resource Access Manager (RAM).
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Request.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of Outposts to return. The limit is 100.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Request.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            When you can get additional results from the <code>ListOutpostsWithS3</code> call,
+            a <code>NextToken</code> parameter is returned in the output. You can then pass in
+            a subsequent command to the <code>NextToken</code> parameter to continue listing additional
+            Outposts.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListOutpostsWithS3Response">
+            <summary>
+            This is the response object from the ListOutpostsWithS3 operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Response.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            Returns a token that you can use to call <code>ListOutpostsWithS3</code> again and
+            receive additional results, if there are any.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Response.Outposts">
+            <summary>
+            Gets and sets the property Outposts. 
+            <para>
+            Returns the list of Outposts that have the following characteristics:
+            </para>
+             <ul> <li> 
+            <para>
+            outposts that have S3 provisioned
+            </para>
+             </li> <li> 
+            <para>
+            outposts that are <code>Active</code> (not pending any provisioning nor decommissioned)
+            </para>
+             </li> <li> 
+            <para>
+            outposts to which the the calling Amazon Web Services account has access
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListSharedEndpointsRequest">
+            <summary>
+            Container for the parameters to the ListSharedEndpoints operation.
+            Lists all endpoints associated with an Outpost that has been shared by Amazon Web
+            Services Resource Access Manager (RAM).
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsRequest.MaxResults">
+            <summary>
+            Gets and sets the property MaxResults. 
+            <para>
+            The maximum number of endpoints that will be returned in the response.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsRequest.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If a previous response from this operation included a <code>NextToken</code> value,
+            you can provide that value here to retrieve the next page of results.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsRequest.OutpostId">
+            <summary>
+            Gets and sets the property OutpostId. 
+            <para>
+            The ID of the Amazon Web Services Outpost.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListSharedEndpointsResponse">
+            <summary>
+            This is the response object from the ListSharedEndpoints operation.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsResponse.Endpoints">
+            <summary>
+            Gets and sets the property Endpoints. 
+            <para>
+            The list of endpoints associated with the specified Outpost that have been shared
+            by Amazon Web Services Resource Access Manager (RAM).
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsResponse.NextToken">
+            <summary>
+            Gets and sets the property NextToken. 
+            <para>
+            If the number of endpoints associated with the specified Outpost exceeds <code>MaxResults</code>,
+            you can include this value in subsequent calls to this operation to retrieve more
+            results.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.NetworkInterface">
+            <summary>
+            The container for the network interface.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.NetworkInterface.NetworkInterfaceId">
+            <summary>
+            Gets and sets the property NetworkInterfaceId. 
+            <para>
+            The ID for the network interface.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.Outpost">
+            <summary>
+            Contains the details for the Outpost object.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Outpost.CapacityInBytes">
+            <summary>
+            Gets and sets the property CapacityInBytes. 
+            <para>
+            The Amazon S3 capacity of the outpost in bytes.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Outpost.OutpostArn">
+            <summary>
+            Gets and sets the property OutpostArn. 
+            <para>
+            Specifies the unique Amazon Resource Name (ARN) for the outpost.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Outpost.OutpostId">
+            <summary>
+            Gets and sets the property OutpostId. 
+            <para>
+            Specifies the unique identifier for the outpost.
+            </para>
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.Outpost.OwnerId">
+            <summary>
+            Gets and sets the property OwnerId. 
+            <para>
+            Returns the Amazon Web Services account ID of the outpost owner. Useful for comparing
+            owned versus shared outposts.
+            </para>
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.OutpostOfflineException">
+            <summary>
+            The service link connection to your Outposts home Region is down. Check your connection
+            and try again.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.OutpostOfflineException.#ctor(System.String)">
+            <summary>
+            Constructs a new OutpostOfflineException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.OutpostOfflineException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of OutpostOfflineException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.OutpostOfflineException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of OutpostOfflineException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.OutpostOfflineException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OutpostOfflineException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.OutpostOfflineException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of OutpostOfflineException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            <summary>
+            The requested resource was not found.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ResourceNotFoundException.#ctor(System.String)">
+            <summary>
+            Constructs a new ResourceNotFoundException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ResourceNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ResourceNotFoundException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ResourceNotFoundException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ResourceNotFoundException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ResourceNotFoundException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ThrottlingException">
+            <summary>
+            The request was denied due to request throttling.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ThrottlingException.#ctor(System.String)">
+            <summary>
+            Constructs a new ThrottlingException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ThrottlingException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ThrottlingException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ThrottlingException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ThrottlingException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ThrottlingException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ValidationException">
+            <summary>
+            There was an exception validating this data.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ValidationException.#ctor(System.String)">
+            <summary>
+            Constructs a new ValidationException with the specified error
+            message.
+            </summary>
+            <param name="message">
+            Describes the error encountered.
+            </param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ValidationException.#ctor(System.Exception)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ValidationException.#ctor(System.String,System.Exception,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.ValidationException.#ctor(System.String,Amazon.Runtime.ErrorType,System.String,System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Construct instance of ValidationException
+            </summary>
+            <param name="message"></param>
+            <param name="errorType"></param>
+            <param name="errorCode"></param>
+            <param name="requestId"></param>
+            <param name="statusCode"></param>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.IListEndpointsPaginator">
+             <summary>
+             Paginator for the ListEndpoints operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListEndpointsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListEndpointsPaginator.Endpoints">
+            <summary>
+            Enumerable containing all of the Endpoints
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.IListOutpostsWithS3Paginator">
+             <summary>
+             Paginator for the ListOutpostsWithS3 operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListOutpostsWithS3Paginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListOutpostsWithS3Paginator.Outposts">
+            <summary>
+            Enumerable containing all of the Outposts
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.IListSharedEndpointsPaginator">
+             <summary>
+             Paginator for the ListSharedEndpoints operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListSharedEndpointsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.IListSharedEndpointsPaginator.Endpoints">
+            <summary>
+            Enumerable containing all of the Endpoints
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.IS3OutpostsPaginatorFactory">
+             <summary>
+             Paginators for the S3Outposts service
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.IS3OutpostsPaginatorFactory.ListEndpoints(Amazon.S3Outposts.Model.ListEndpointsRequest)">
+             <summary>
+             Paginator for ListEndpoints operation
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.IS3OutpostsPaginatorFactory.ListOutpostsWithS3(Amazon.S3Outposts.Model.ListOutpostsWithS3Request)">
+             <summary>
+             Paginator for ListOutpostsWithS3 operation
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.IS3OutpostsPaginatorFactory.ListSharedEndpoints(Amazon.S3Outposts.Model.ListSharedEndpointsRequest)">
+             <summary>
+             Paginator for ListSharedEndpoints operation
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListEndpointsPaginator">
+            <summary>
+            Base class for ListEndpoints paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListEndpointsPaginator.Endpoints">
+            <summary>
+            Enumerable containing all of the Endpoints
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListOutpostsWithS3Paginator">
+            <summary>
+            Base class for ListOutpostsWithS3 paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Paginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListOutpostsWithS3Paginator.Outposts">
+            <summary>
+            Enumerable containing all of the Outposts
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.ListSharedEndpointsPaginator">
+            <summary>
+            Base class for ListSharedEndpoints paginators.
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsPaginator.Responses">
+            <summary>
+            Enumerable containing all full responses for the operation
+            </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.Model.ListSharedEndpointsPaginator.Endpoints">
+            <summary>
+            Enumerable containing all of the Endpoints
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.Model.S3OutpostsPaginatorFactory">
+             <summary>
+             Paginators for the S3Outposts service
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.S3OutpostsPaginatorFactory.ListEndpoints(Amazon.S3Outposts.Model.ListEndpointsRequest)">
+             <summary>
+             Paginator for ListEndpoints operation
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.S3OutpostsPaginatorFactory.ListOutpostsWithS3(Amazon.S3Outposts.Model.ListOutpostsWithS3Request)">
+             <summary>
+             Paginator for ListOutpostsWithS3 operation
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.Model.S3OutpostsPaginatorFactory.ListSharedEndpoints(Amazon.S3Outposts.Model.ListSharedEndpointsRequest)">
+             <summary>
+             Paginator for ListSharedEndpoints operation
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.AmazonS3OutpostsRequest">
+            <summary>
+            Base class for S3Outposts operation requests.
+            </summary>
+        </member>
+        <member name="T:Amazon.S3Outposts.EndpointAccessType">
+            <summary>
+            Constants used for properties of type EndpointAccessType.
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointAccessType.CustomerOwnedIp">
+            <summary>
+            Constant CustomerOwnedIp for EndpointAccessType
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointAccessType.Private">
+            <summary>
+            Constant Private for EndpointAccessType
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointAccessType.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointAccessType.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointAccessType.op_Implicit(System.String)~Amazon.S3Outposts.EndpointAccessType">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.S3Outposts.EndpointStatus">
+            <summary>
+            Constants used for properties of type EndpointStatus.
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointStatus.Available">
+            <summary>
+            Constant Available for EndpointStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointStatus.Create_Failed">
+            <summary>
+            Constant Create_Failed for EndpointStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointStatus.Delete_Failed">
+            <summary>
+            Constant Delete_Failed for EndpointStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointStatus.Deleting">
+            <summary>
+            Constant Deleting for EndpointStatus
+            </summary>
+        </member>
+        <member name="F:Amazon.S3Outposts.EndpointStatus.Pending">
+            <summary>
+            Constant Pending for EndpointStatus
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointStatus.#ctor(System.String)">
+            <summary>
+            This constant constructor does not need to be called if the constant
+            you are attempting to use is already defined as a static instance of 
+            this class.
+            This constructor should be used to construct constants that are not
+            defined as statics, for instance if attempting to use a feature that is
+            newer than the current version of the SDK.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointStatus.FindValue(System.String)">
+            <summary>
+            Finds the constant for the unique value.
+            </summary>
+            <param name="value">The unique value for the constant</param>
+            <returns>The constant for the unique value</returns>
+        </member>
+        <member name="M:Amazon.S3Outposts.EndpointStatus.op_Implicit(System.String)~Amazon.S3Outposts.EndpointStatus">
+            <summary>
+            Utility method to convert strings to the constant class.
+            </summary>
+            <param name="value">The string value to convert to the constant class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Amazon.S3Outposts.AmazonS3OutpostsClient">
+             <summary>
+             Implementation for accessing S3Outposts
+            
+             Amazon S3 on Outposts provides access to S3 on Outposts operations.
+             </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor">
+             <summary>
+             Constructs AmazonS3OutpostsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(Amazon.RegionEndpoint)">
+             <summary>
+             Constructs AmazonS3OutpostsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(Amazon.S3Outposts.AmazonS3OutpostsConfig)">
+             <summary>
+             Constructs AmazonS3OutpostsClient with the credentials loaded from the application's
+             default configuration, and if unsuccessful from the Instance Profile service on an EC2 instance.
+             
+             Example App.config with credentials set. 
+             <code>
+             &lt;?xml version="1.0" encoding="utf-8" ?&gt;
+             &lt;configuration&gt;
+                 &lt;appSettings&gt;
+                     &lt;add key="AWSProfileName" value="AWS Default"/&gt;
+                 &lt;/appSettings&gt;
+             &lt;/configuration&gt;
+             </code>
+            
+             </summary>
+             <param name="config">The AmazonS3OutpostsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(Amazon.Runtime.AWSCredentials)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Credentials
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(Amazon.Runtime.AWSCredentials,Amazon.S3Outposts.AmazonS3OutpostsConfig)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Credentials and an
+            AmazonS3OutpostsClient Configuration object.
+            </summary>
+            <param name="credentials">AWS Credentials</param>
+            <param name="clientConfig">The AmazonS3OutpostsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String,Amazon.S3Outposts.AmazonS3OutpostsConfig)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonS3OutpostsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="clientConfig">The AmazonS3OutpostsClient Configuration Object</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String,System.String,Amazon.RegionEndpoint)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID and AWS Secret Key
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="region">The region to connect.</param>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.#ctor(System.String,System.String,System.String,Amazon.S3Outposts.AmazonS3OutpostsConfig)">
+            <summary>
+            Constructs AmazonS3OutpostsClient with AWS Access Key ID, AWS Secret Key and an
+            AmazonS3OutpostsClient Configuration object. 
+            </summary>
+            <param name="awsAccessKeyId">AWS Access Key ID</param>
+            <param name="awsSecretAccessKey">AWS Secret Access Key</param>
+            <param name="awsSessionToken">AWS Session Token</param>
+            <param name="clientConfig">The AmazonS3OutpostsClient Configuration Object</param>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsClient.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.CreateSigner">
+            <summary>
+            Creates the signer for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.CustomizeRuntimePipeline(Amazon.Runtime.Internal.RuntimePipeline)">
+            <summary>
+            Customizes the runtime pipeline.
+            </summary>
+            <param name="pipeline">Runtime pipeline for the current client.</param>
+        </member>
+        <member name="P:Amazon.S3Outposts.AmazonS3OutpostsClient.ServiceMetadata">
+            <summary>
+            Capture metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.Dispose(System.Boolean)">
+            <summary>
+            Disposes the service client.
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.CreateEndpointAsync(Amazon.S3Outposts.Model.CreateEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an endpoint and associates it with the specified Outpost.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateEndpoint service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ConflictException">
+            There was a conflict with this action, and it could not be completed.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.OutpostOfflineException">
+            The service link connection to your Outposts home Region is down. Check your connection
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint">REST API Reference for CreateEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.DeleteEndpointAsync(Amazon.S3Outposts.Model.DeleteEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an endpoint.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteEndpoint service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.OutpostOfflineException">
+            The service link connection to your Outposts home Region is down. Check your connection
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint">REST API Reference for DeleteEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.ListEndpointsAsync(Amazon.S3Outposts.Model.ListEndpointsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists endpoints associated with the specified Outpost. 
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEndpoints service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEndpoints service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints">REST API Reference for ListEndpoints Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.ListOutpostsWithS3Async(Amazon.S3Outposts.Model.ListOutpostsWithS3Request,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Outposts with S3 on Outposts capacity for your Amazon Web Services account.
+            Includes S3 on Outposts that you have access to as the Outposts owner, or as a shared
+            user from Resource Access Manager (RAM).
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListOutpostsWithS3 service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListOutpostsWithS3 service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListOutpostsWithS3">REST API Reference for ListOutpostsWithS3 Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.ListSharedEndpointsAsync(Amazon.S3Outposts.Model.ListSharedEndpointsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all endpoints associated with an Outpost that has been shared by Amazon Web
+            Services Resource Access Manager (RAM).
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSharedEndpoints service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSharedEndpoints service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListSharedEndpoints">REST API Reference for ListSharedEndpoints Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.AmazonS3OutpostsClient.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+        <member name="T:Amazon.S3Outposts.IAmazonS3Outposts">
+             <summary>
+             Interface for accessing S3Outposts
+            
+             Amazon S3 on Outposts provides access to S3 on Outposts operations.
+             </summary>
+        </member>
+        <member name="P:Amazon.S3Outposts.IAmazonS3Outposts.Paginators">
+            <summary>
+            Paginators for the service
+            </summary>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.CreateEndpointAsync(Amazon.S3Outposts.Model.CreateEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            Creates an endpoint and associates it with the specified Outpost.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the CreateEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the CreateEndpoint service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ConflictException">
+            There was a conflict with this action, and it could not be completed.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.OutpostOfflineException">
+            The service link connection to your Outposts home Region is down. Check your connection
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/CreateEndpoint">REST API Reference for CreateEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.DeleteEndpointAsync(Amazon.S3Outposts.Model.DeleteEndpointRequest,System.Threading.CancellationToken)">
+            <summary>
+            Deletes an endpoint.
+            
+             <note> 
+            <para>
+            It can take up to 5 minutes for this action to finish.
+            </para>
+             </note>  
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_ListEndpoints.html">ListEndpoints</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the DeleteEndpoint service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the DeleteEndpoint service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.OutpostOfflineException">
+            The service link connection to your Outposts home Region is down. Check your connection
+            and try again.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/DeleteEndpoint">REST API Reference for DeleteEndpoint Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.ListEndpointsAsync(Amazon.S3Outposts.Model.ListEndpointsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists endpoints associated with the specified Outpost. 
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListEndpoints service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListEndpoints service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListEndpoints">REST API Reference for ListEndpoints Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.ListOutpostsWithS3Async(Amazon.S3Outposts.Model.ListOutpostsWithS3Request,System.Threading.CancellationToken)">
+            <summary>
+            Lists the Outposts with S3 on Outposts capacity for your Amazon Web Services account.
+            Includes S3 on Outposts that you have access to as the Outposts owner, or as a shared
+            user from Resource Access Manager (RAM).
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListOutpostsWithS3 service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListOutpostsWithS3 service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListOutpostsWithS3">REST API Reference for ListOutpostsWithS3 Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.ListSharedEndpointsAsync(Amazon.S3Outposts.Model.ListSharedEndpointsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Lists all endpoints associated with an Outpost that has been shared by Amazon Web
+            Services Resource Access Manager (RAM).
+            
+             
+            <para>
+            Related actions include:
+            </para>
+             <ul> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_CreateEndpoint.html">CreateEndpoint</a>
+            
+            </para>
+             </li> <li> 
+            <para>
+             <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
+            
+            </para>
+             </li> </ul>
+            </summary>
+            <param name="request">Container for the necessary parameters to execute the ListSharedEndpoints service method.</param>
+            <param name="cancellationToken">
+                A cancellation token that can be used by other objects or threads to receive notice of cancellation.
+            </param>
+            
+            <returns>The response from the ListSharedEndpoints service method, as returned by S3Outposts.</returns>
+            <exception cref="T:Amazon.S3Outposts.Model.AccessDeniedException">
+            Access was denied for this action.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.InternalServerException">
+            There was an exception with the internal server.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ResourceNotFoundException">
+            The requested resource was not found.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ThrottlingException">
+            The request was denied due to request throttling.
+            </exception>
+            <exception cref="T:Amazon.S3Outposts.Model.ValidationException">
+            There was an exception validating this data.
+            </exception>
+            <seealso href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/ListSharedEndpoints">REST API Reference for ListSharedEndpoints Operation</seealso>
+        </member>
+        <member name="M:Amazon.S3Outposts.IAmazonS3Outposts.DetermineServiceOperationEndpoint(Amazon.Runtime.AmazonWebServiceRequest)">
+            <summary>
+            Returns the endpoint that will be used for a particular request.
+            </summary>
+            <param name="request">Request for the desired service operation.</param>
+            <returns>The resolved endpoint for the given request.</returns>
+        </member>
+    </members>
+</doc>
